@@ -1,0 +1,107 @@
+<?xml version='1.0'?>
+
+<robot name="usafabot">
+
+<!-- * * * Link Definitions * * * -->
+        <link name="base_footprint"/>
+
+        <link name="imu_link"/>
+
+	<link name="base_link">
+	<visual>
+	  <origin xyz="0 0 .035" rpy="1.5708 0 1.5708" />
+	  <geometry>
+		  <mesh filename="package://usafabot_description/meshes/bottom_chassis.stl" scale=".001 .001 .001"/>
+	  </geometry>
+	  <material name="black">
+		<color rgba="0 0 0 1"/>
+	  </material>
+	</visual>
+	</link>
+
+	<link name="top_chassis">
+	<visual>
+	  <origin xyz="0 0 0" rpy="0 0 1.5708" />
+	  <geometry>
+		<mesh filename="package://usafabot_description/meshes/top_chassis.stl" scale=".001 .001 .001"/>
+	  </geometry>
+	  <material name="blue">
+		<color rgba="0 .5 1 1"/>
+	  </material>
+	</visual>
+	</link>
+
+	<link name="right_wheel">
+	<visual>
+	  <origin xyz="0 0 0" rpy="0 0 1.5708" />
+	  <geometry>
+		<mesh filename="package://usafabot_description/meshes/rviz_wheel1.stl" scale=".001 .001 .001"/>
+	  </geometry>
+	  <material name="grey">
+		<color rgba=".5 .5 .5 1"/>
+	  </material>
+	</visual>
+	</link>
+
+	<link name="left_wheel">
+	<visual>
+	  <origin xyz="0 0 0" rpy="0 3.1415 1.5708" />
+	  <geometry>
+		<mesh filename="package://usafabot_description/meshes/rviz_wheel2.stl" scale=".001 .001 .001"/>
+	  </geometry>
+	  <material name="grey">
+		<color rgba=".5 .5 .5 1"/>
+	  </material>
+	</visual>
+	</link>
+  
+	<link name="laser">
+	<visual>
+	  <origin xyz="0 0 0" rpy="0 0 0" />
+	  <geometry>
+		<cylinder radius="0.035" length="0.055"/>
+	  </geometry>
+	  <material name="black">
+		<color rgba="0 0 0 1"/>
+	  </material>
+	</visual>
+	</link>
+ 
+	<!-- * * * Joint Definitions * * * -->
+        <joint name="base_joint" type="fixed">
+                <parent link="base_footprint"/>
+		<child link ="base_link"/>
+		<origin xyz="0.0 0.0 0.035" rpy="0 0 0"/>
+	</joint>		
+
+        <joint name="joint_top_chassis" type="fixed">
+		<parent link="base_link"/>
+		<child link="top_chassis"/>
+	</joint>
+	
+	<joint name="joint_left_wheel" type="continuous">
+		<parent link="base_link"/>
+		<child link="left_wheel"/>
+		<origin xyz="0 -.0728 0" rpy="0 0 0" />
+		<axis xyz="1 0 0" />
+	</joint>
+	
+	<joint name="joint_right_wheel" type="continuous">
+		<parent link="base_link"/>
+		<child link="right_wheel"/>
+		<origin xyz="0 .0728 0" rpy="0 0 0" />
+		<axis xyz="1 0 0" />
+	</joint>
+
+	<joint name="joint_lidar" type="fixed">
+		<parent link="base_link" />
+		<child link="laser" />
+		<origin xyz="-.05 0 0.0825" rpy="0 0 -1.5708" />
+	</joint>
+
+	<joint name="joint_imu" type="fixed">
+		<parent link="base_link" />
+		<child link="imu_link" />
+		<origin xyz="0 0 .05" rpy="0 0 0" />
+	</joint>
+</robot>

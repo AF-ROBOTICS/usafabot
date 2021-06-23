@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <param name="robot_description" command="cat $(find usafabot_description)/urdf/usafabot.urdf"/>
+  
+  
+  <!-- BEGIN ROBOT 0-->
+
+    <!-- Publish robot states -->
+    <node 
+        name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    />
+    
+    <!-- Publish joint transforms -->
+    <node
+        name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"
+    />
+
+    <!-- Sends commands to robot and gets wheel speeds from robot -->
+    <node
+        name="serial" pkg="usafabot" type="usafabot_serial.py"
+    /> 
+    
+    <!-- IMU -->
+    <node name="um7_IMU" pkg="um7" type="um7_driver">
+        <param name="port" type="string" value="/dev/ttyACM1"/>
+    </node>
+
+
+    <include file="$(find usafabot)/launch/include/rplidar.launch"/>
+
+
+</launch>
