@@ -2,10 +2,15 @@
 
 <launch>
 
-  <param name="robot_description" command="cat $(find usafabot_description)/urdf/usafabot.urdf"/>
+  <param name="robot_description" command="cat $(find usafabot)/urdf/usafabot.urdf"/>
   
   
-  <!-- BEGIN ROBOT 0-->
+  <!-- BEGIN ROBOT-->
+
+    <node
+        name="bot_to_map" pkg="tf2_ros" type="static_transform_publisher"
+        args="0 0 0 0 0 0 map base_footprint"
+    />
 
     <!-- Publish robot states -->
     <node 

@@ -11,7 +11,7 @@
 	<visual>
 	  <origin xyz="0 0 .035" rpy="1.5708 0 1.5708" />
 	  <geometry>
-		  <mesh filename="package://usafabot_description/meshes/bottom_chassis.stl" scale=".001 .001 .001"/>
+		  <mesh filename="package://usafabot/meshes/bottom_chassis.stl" scale=".001 .001 .001"/>
 	  </geometry>
 	  <material name="black">
 		<color rgba="0 0 0 1"/>
@@ -23,7 +23,7 @@
 	<visual>
 	  <origin xyz="0 0 0" rpy="0 0 1.5708" />
 	  <geometry>
-		<mesh filename="package://usafabot_description/meshes/top_chassis.stl" scale=".001 .001 .001"/>
+		<mesh filename="package://usafabot/meshes/top_chassis.stl" scale=".001 .001 .001"/>
 	  </geometry>
 	  <material name="blue">
 		<color rgba="0 .5 1 1"/>
@@ -35,7 +35,7 @@
 	<visual>
 	  <origin xyz="0 0 0" rpy="0 0 1.5708" />
 	  <geometry>
-		<mesh filename="package://usafabot_description/meshes/rviz_wheel1.stl" scale=".001 .001 .001"/>
+		<mesh filename="package://usafabot/meshes/rviz_wheel1.stl" scale=".001 .001 .001"/>
 	  </geometry>
 	  <material name="grey">
 		<color rgba=".5 .5 .5 1"/>
@@ -47,7 +47,7 @@
 	<visual>
 	  <origin xyz="0 0 0" rpy="0 3.1415 1.5708" />
 	  <geometry>
-		<mesh filename="package://usafabot_description/meshes/rviz_wheel2.stl" scale=".001 .001 .001"/>
+		<mesh filename="package://usafabot/meshes/rviz_wheel2.stl" scale=".001 .001 .001"/>
 	  </geometry>
 	  <material name="grey">
 		<color rgba=".5 .5 .5 1"/>
