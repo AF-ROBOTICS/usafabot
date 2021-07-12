@@ -6,7 +6,7 @@ import sys
 from geometry_msgs.msg import Twist
 from usafabot.msg import WheelVelocity
 
-## TiBot
+## USAFABOT
 #
 #  Connects to the MSP 432 over serial and writes linear/angular velocity
 #   to enable the TI_Bot to drive towards the target destination.
@@ -15,7 +15,7 @@ from usafabot.msg import WheelVelocity
 #   Topic: cmd_vel
 #     Msg type: Twist
 #     Freq: 100 Hz
-class TiBot:
+class USAFABOT:
     def __init__(self):
         self.wv = WheelVelocity()
         rospy.Timer(rospy.Duration(.1), self.callback_read)
@@ -79,7 +79,7 @@ class TiBot:
                         print("Connected to TI-RSLK Max at", Port)   
                         return ser
                     
-        print("TI Bot not found...exiting")
+        print("USAFABOT not found...exiting")
         sys.exit()
         
     def handler(self):
@@ -98,8 +98,8 @@ class TiBot:
         print("shutting down")
     
 if __name__ == '__main__':
-    rospy.init_node('ti_bot', anonymous = True)
+    rospy.init_node('USAFABOT', anonymous = True)
     
     # list available ports for that the MSP432 is using
-    T = TiBot()
-    T.handler()
+    U = USAFABOT()
+    U.handler()
