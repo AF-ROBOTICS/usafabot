@@ -98,7 +98,7 @@ class USAFABOT:
         print("shutting down")
     
 if __name__ == '__main__':
-    rospy.init_node('USAFABOT', anonymous = True)
+    rospy.init_node('usafabot_serial', anonymous = True)
     
     # list available ports for that the MSP432 is using
     U = USAFABOT()
