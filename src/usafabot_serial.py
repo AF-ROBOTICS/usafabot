@@ -21,7 +21,7 @@ class USAFABOT:
         rospy.Timer(rospy.Duration(.1), self.callback_read)
         
         # Initialize a serial w/ the MSP432 microcontroller
-        self.ser = self.find_ti()
+        self.ser = self.find_usafabot()
      
         self.pub = rospy.Publisher('wheel_speeds', WheelVelocity, queue_size=100)
      
@@ -53,7 +53,7 @@ class USAFABOT:
             print("Invalid data:")
             
 
-    def find_ti(self):
+    def find_usafabot(self):
         test = "start\r".encode('ascii')
         ports = list(port_list.comports())
         for Port, Desc, Hwid in sorted(ports):
@@ -69,14 +69,14 @@ class USAFABOT:
                 response = ser.readline()
                 print(response)
                 if(response.decode('ascii') == "start\n"):
-                    print("Connected to TI-RSLK Max at", Port)   
+                    print("Connected to USAFABOT at", Port)   
                     return ser
                 else:
                     ser.write(test)
                     response= ser.readline()
                     print(response)
                     if(response.decode('ascii') == "start\n"):
-                        print("Connected to TI-RSLK Max at", Port)   
+                        print("Connected to USAFABOT at", Port)   
                         return ser
                     
         print("USAFABOT not found...exiting")
