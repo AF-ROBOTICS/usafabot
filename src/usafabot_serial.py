@@ -3,43 +3,45 @@ import rospy
 import serial.tools.list_ports as port_list
 import serial
 import sys
+# TODO
+# Remove Twist and add custom message
 from geometry_msgs.msg import Twist
 from usafabot.msg import WheelVelocity
 
 ## USAFABOT
 #
-#  Connects to the MSP 432 over serial and writes linear/angular velocity
-#   to enable the TI_Bot to drive towards the target destination.
-#
-#  Subscriber
-#   Topic: cmd_vel
-#     Msg type: Twist
-#     Freq: 100 Hz
+#  Connects to the MSP432 over serial and writes linear/angular velocity
+#   to enable the USAFABOT to drive accordingly.
 class USAFABOT:
     def __init__(self):
+        # class variable to store the velocity of the wheels
         self.wv = WheelVelocity()
+        # read wheel speed from robot at 10 Hz
         rospy.Timer(rospy.Duration(.1), self.callback_read)
         
-        # Initialize a serial w/ the MSP432 microcontroller
+        # Initialize a serial connection w/ the MSP432 microcontroller
         self.ser = self.find_usafabot()
      
+        # publisher to send wheel speeds over the wheel_speeds topic
         self.pub = rospy.Publisher('wheel_speeds', WheelVelocity, queue_size=100)
      
-        rospy.Subscriber('cmd_vel', Twist, self.callback_write)
-        
+        # TODO
+        # change topic and message to match new custom message per instructions
+        rospy.Subscriber('cmd_vel', Twist, self.callback_write)        
 
     # Subscriber function that gets linear/angular velocity
-    # values from controller and writes to MSP_432
-    # Topic: Cmd_vel
-    # Msg type: Twist
+    # values from controller and writes to MSP432
     def callback_write(self, data):
         try:
+            # TODO
+            # update message field names for data to match custom message
             input = str(data.linear.x) + ',' + str(data.angular.z) + '\r\n'
             self.ser.write(input.encode())
             print(input)
         except serial.SerialException:
             print("Serial port not open")
         
+    # Function to get wheel speeds from MSP432 and publish over wheel_speeds topic
     def callback_read(self, event):
         try:
             velocities = self.ser.readline()
@@ -52,7 +54,8 @@ class USAFABOT:
         except:
             print("Invalid data:")
             
-
+    # Helper function to connect to the USAFABOT. Checks each serial connection to Pi
+    # until it finds the correct one (MSP432 is running code to respond to a request)
     def find_usafabot(self):
         test = "start\r".encode('ascii')
         ports = list(port_list.comports())
