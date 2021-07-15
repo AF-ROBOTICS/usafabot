@@ -26,7 +26,8 @@
 	/>
 -->
 
-	<!-- Node to send commands to robot and gets wheel speeds from robot -->
+	<!-- Node to send
+ commands to robot and gets wheel speeds from robot -->
 	<node
 		name="serial" pkg="usafabot" type="usafabot_serial.py"
 	/> 
