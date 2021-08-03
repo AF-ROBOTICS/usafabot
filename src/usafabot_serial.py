@@ -11,7 +11,9 @@ from usafabot.msg import WheelVelocity
 ## USAFABOT
 #
 #  Connects to the MSP432 over serial and writes linear/angular velocity
-#   to enable the USAFABOT to drive accordingly.
+#   to enable the USAFABOT to drive accordingly. The robot operates well around
+#   with a linear velocity between 0.05 m/s and 0.25 m/s and an angular velocity of 
+#   0.5 m/s and 1.5 m/s.
 class USAFABOT:
     def __init__(self):
         # class variable to store the velocity of the wheels
