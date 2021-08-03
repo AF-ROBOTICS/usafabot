@@ -12,7 +12,6 @@ find_package(catkin REQUIRED COMPONENTS
   robot_state_publisher
   sensor_msgs
   std_msgs
-  usafabot_description
   message_generation
   rospy
 )
