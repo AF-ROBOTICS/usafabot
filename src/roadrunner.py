@@ -45,6 +45,7 @@ class Roadrunner:
         self.br = tf2_ros.TransformBroadcaster()
 
         self.odom_pub = rospy.Publisher("odom", Odometry, queue_size = 50)
+        self.pos_pub = rospy.Publisher("curr_pos", Pose, queue_size = 50)
 
         self.ctrl_c = False
 
@@ -160,6 +161,7 @@ class Roadrunner:
             odom.pose.pose = self.rr_pose
             odom.twist.twist = self.rr_vel
             self.odom_pub.publish(odom)
+            self.pos_pub.publish(self.rr_pose)
 
     def shutdownhook(self):
         self.ctrl_c = True
