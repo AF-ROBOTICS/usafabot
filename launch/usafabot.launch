@@ -2,11 +2,12 @@
 
 <launch>
 	<arg name="hostname" default="$(env HOSTNAME)" />
+	
+	<!-- A urdf file describes the physical configuration of the robot for simulation -->
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot)/urdf/usafabot.xacro' robot_name:=$(arg hostname)"/>
 
 	<!-- BEGIN ROBOT-->
 	<group ns="$(arg hostname)">
-		<!-- A urdf file describes the physical configuration of the robot for simulation -->
-		<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot)/urdf/usafabot.xacro' robot_name:=$(arg hostname)"/>
 
 
 		<node
