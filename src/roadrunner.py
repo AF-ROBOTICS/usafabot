@@ -162,7 +162,7 @@ class Roadrunner:
             self.odom_pub.publish(odom)
 
     def shutdownhook(self):
-        ctrl_c = True
+        self.ctrl_c = True
         rospy.loginfo("Shutting down roadrunner.")
         self.rr.close_link()
 
