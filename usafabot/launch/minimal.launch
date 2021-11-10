@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<launch>
+	<arg name="hostname" default="$(env HOSTNAME)" />
+	
+	<!-- A urdf file describes the physical configuration of the robot for simulation -->
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro' robot_name:=$(arg hostname)"/>
+
+	<!-- BEGIN ROBOT-->
+	<group ns="$(arg hostname)">
+
+
+		<node
+			name="bot_to_map" pkg="tf2_ros" type="static_transform_publisher"
+			args="0 0 0 0 0 0 map $(arg hostname)_odom" 
+		/>
+
+		<!-- Publish robot states -->
+		<node 
+			name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+		/>
+
+		<!-- Publish joint transforms -->
+		<node
+			name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"
+		/>
+
+		<!-- Node to send commands to robot and gets wheel speeds from robot -->
+		<node
+			name="serial" pkg="usafabot" type="usafabot_serial.py"
+		/> 
+	</group>
+</launch>
