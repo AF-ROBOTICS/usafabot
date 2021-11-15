@@ -11,6 +11,9 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   usafabot_description
   usafabot_gazebo
+  amcl
+  move_base
+  gmapping
 )
 
 ## System dependencies are found with CMake's conventions
@@ -105,7 +108,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES usafabot_navigation
-#  CATKIN_DEPENDS rospy usafabot_description usafabot_gazebo
+CATKIN_DEPENDS rospy usafabot_description usafabot_gazebo amcl move_base gmapping
 #  DEPENDS system_lib
 )
 
