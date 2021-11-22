@@ -14,7 +14,7 @@
   <!-- rviz -->
   <node
 	pkg="rviz" type="rviz" name="rviz" 
-	args="-d $(find usafabot_gazebo)/rviz/basic_rviz.rviz"
+	args="-d $(find usafabot_gazebo)/rviz/gazebo_rviz.rviz"
   />
 
 
