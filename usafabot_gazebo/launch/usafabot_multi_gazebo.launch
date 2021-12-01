@@ -2,8 +2,6 @@
 
 <launch>
 
-  <param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
-
   <!-- start world -->
   <node 
   	name="gazebo" pkg="gazebo_ros" type="gazebo" respawn="false"
