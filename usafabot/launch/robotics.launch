@@ -16,10 +16,10 @@
   <node name="serial" pkg="usafabot" type="usafabot_serial.py" />
 
   <node name="um7_IMU" pkg="um7" type="um7_driver">
-    <param name="port" type="string" value="/dev/ttyACM1" />
+    <param name="port" type="string" value="/dev/ttyACM3" />
   </node>
 	
   <include file="$(find usafabot)/launch/include/rplidar.launch" />
   
-  <node pkg="rosservice" type="rosservice" name="imu/reset" args="call --wait true true true"/>
+  <node pkg="rosservice" type="rosservice" name="reset" args="call --wait /imu/reset true true true"/>
 </launch>

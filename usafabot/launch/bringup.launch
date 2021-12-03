@@ -19,5 +19,5 @@
 
   <include file="$(find usafabot)/launch/include/rplidar.launch" />
   
-  <node pkg="rosservice" type="rosservice" name="imu/reset" args="call --wait true true true"/>
+  <node pkg="rosservice" type="rosservice" name="reset" args="call --wait /imu/reset true true true"/>
 </launch>
