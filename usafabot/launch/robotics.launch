@@ -1,16 +1,12 @@
 <?xml version="1.0"?>
 
 <launch>
-	<arg name="hostname" default="$(env HOSTNAME)" />
-	
-	<!-- BEGIN ROBOT-->
-	<group ns="$(arg hostname)">
 		<!-- A urdf file describes the physical configuration of the robot for simulation -->
-		<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro' robot_name:=$(arg hostname)"/>	
+		<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>	
 
 		<node
 			name="bot_to_map" pkg="tf2_ros" type="static_transform_publisher"
-			args="0 0 0 0 0 0 map $(arg hostname)_base_footprint" 
+			args="0 0 0 0 0 0 map base_footprint" 
 		/>
 
 		<!-- Publish robot states -->
@@ -35,5 +31,4 @@
 		</node>
 			<include file="$(find usafabot)/launch/include/rplidar.launch"
 		/>
-	</group>
 </launch>
