@@ -1,30 +1,22 @@
 <?xml version="1.0"?>
 
 <launch>
-	<arg name="hostname" default="$(env HOSTNAME)" />
-	
-	<!-- BEGIN ROBOT-->
-	<group ns="$(arg hostname)">
-		<!-- A urdf file describes the physical configuration of the robot for simulation -->
-		<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro' robot_name:=$(arg hostname)"/>
+  <arg name="hostname" default="$(env HOSTNAME)" />
 
-		<!-- Publish robot states -->
-		<node 
-			name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
-		/>
+  <!-- BEGIN ROBOT-->
+  <group ns="$(arg hostname)">
+    <!-- A urdf file describes the physical configuration of the robot for simulation -->
+    <param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro' robot_name:=$(arg hostname)"/>
 
-		<!-- Publish joint transforms -->
-		<node
-			name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"
-		/>
+    <!-- Publish robot states -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
 
-		<!-- Node to send commands to robot and gets wheel speeds from robot -->
-		<node
-			name="serial" pkg="usafabot" type="usafabot_serial.py"
-		/> 
+    <!-- Publish joint transforms -->
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
 
-		<node
-			name="roadrunner" pkg="usafabot" type="roadrunner.py"
-		/>
-	</group>
+    <!-- Node to send commands to robot and gets wheel speeds from robot -->
+    <node name="serial" pkg="usafabot" type="usafabot_serial.py" /> 
+
+    <node name="roadrunner" pkg="usafabot" type="roadrunner.py"  />
+  </group>
 </launch>

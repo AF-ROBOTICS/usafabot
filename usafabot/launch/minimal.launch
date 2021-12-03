@@ -1,27 +1,18 @@
 <?xml version="1.0"?>
 
 <launch>	
-	<!-- A urdf file describes the physical configuration of the robot for simulation -->
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+  <!-- A urdf file describes the physical configuration of the robot for simulation -->
+  <param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
 
-	<node
-		name="bot_to_map" pkg="tf2_ros" type="static_transform_publisher"
-		args="0 0 0 0 0 0 map base_footprint" 
-	/>
+  <node name="bot_to_map" pkg="tf2_ros" type="static_transform_publisher" args="0 0 0 0 0 0 map base_footprint" />
 
-	<!-- Publish robot states -->
-	<node 
-		name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
-	/>
+  <!-- Publish robot states -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
 
-	<!-- Publish joint transforms -->
-	<node
-		name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"
-	/>
+  <!-- Publish joint transforms -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
 
-	<!-- Node to send commands to robot and gets wheel speeds from robot -->
-	<node
-		name="serial" pkg="usafabot" type="usafabot_serial.py"
-	/> 
+  <!-- Node to send commands to robot and gets wheel speeds from robot -->
+  <node name="serial" pkg="usafabot" type="usafabot_serial.py" /> 
 
 </launch>
