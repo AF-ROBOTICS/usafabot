@@ -1,0 +1,96 @@
+\documentclass{handout}
+
+
+\SetCourseTitle{ECE495: Fundamentals of Robotics Research}
+\SetHandoutTitle{Module 3 - Python3 for Robotics}
+%\SetDueDate{8 Sep at 0715 (via Gradescope)}
+%\ShowAllBlanks
+
+%\showsoln \setsolncolor{red}
+
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
+	\hspace{-2.5pt}}
+\newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
+
+\usepackage{hyperref}
+
+\definecolor{code}{HTML}{ECF8F4}
+\definecolor{comments}{HTML}{5269A5}
+
+\usepackage[T1]{fontenc}
+\lstset{%
+	language=bash, upquote=true,
+	otherkeywords={rostopic, rosnode, rosrun, roscore, cd, ls, sudo, nano, echo, mkdir, touch, chmod, catkin\_make, rosmsg, rosservice, catkin\_create\_pkg, rospack, ssh, rosed},
+	showspaces=false, showtabs=false, showstringspaces=false, upquote=true, tabsize=4,
+	literate={~} {$\sim$}{1},
+	showstringspaces=false,
+	xleftmargin=0.06\textwidth,
+	linewidth=0.99\textwidth,
+	columns=fullflexible,
+	backgroundcolor=\color{code},
+	keepspaces=true,
+	breaklines=true,
+	basicstyle={\small\fontfamily{fvm}\fontseries{m}\selectfont},
+	keywordstyle={\small\fontfamily{fvm}\fontseries{b}\selectfont},
+	commentstyle={\color{comments}\small\fontfamily{fvm}\itshape\selectfont},
+	belowcaptionskip=10pt,
+	float=h
+}
+
+\graphicspath{{./figs/}}
+
+\begin{document}
+\maketitle
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.75\textwidth]{Cover.PNG}
+\end{figure}
+
+\textbf{Lesson Objectives:}
+\begin{enumerate} \setlength\itemsep{0em}
+	\item Learn fundamental concepts of Python
+	\item Learn basic syntax of Python
+	\item Understand Object Oriented Programming
+	\item Develop basic operational understanding of Python through application
+\end{enumerate}
+
+\textbf{Agenda:}
+\begin{enumerate} \setlength\itemsep{0em}
+	\item The Construct: Python3 for Robotics.
+\end{enumerate}
+
+\newpage
+\clearpage
+\pagebreak
+
+\section{The Construct: Python3 for Robotics.}
+In the next few lessons you will use the free online ROS education program called The Construct. We will now look at the Python3 programming language as it relates to robotics.
+
+\begin{enumerate}
+	\item Browse to \url{https://app.theconstructsim.com/} and login.
+	\item In the left menu, select \textbf{Courses}.
+	\item Within the \textit{Course Catalog}, filter by \textbf{Basic ROS}.
+	\item Find the \textit{Python3 For Robotics} course and click \textbf{Start Learning}.
+\end{enumerate}
+
+\section{Assignments.}
+	\begin{todolist}
+		\item \textbf{Due beginning of Lesson 8} - Unit 1: Introduction \& Unit 2: Python Essentials
+		\item \textbf{Due beginning of Lesson 9} - Unit 3: Conditional Statements \& Loops \& Unit 4: Functions 
+		\item \textbf{Due beginning of Lesson 10} - Unit 5: Python Classes \& OOP \& EXAM - Ultimate Code Foundation Challenge
+	\end{todolist}
+
+\section{Next time.}
+	\begin{itemize}
+		\item \textbf{Lesson 8} - Unit 1 \& 2 quiz
+		\item \textbf{Lesson 9} - Unit 3 \& 4 quiz
+		\item \textbf{Lesson 10} - Module 4: Driving the robot using Teleop Twist Keyboard
+	\end{itemize}
+
+\end{document}
