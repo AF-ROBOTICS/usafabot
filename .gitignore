@@ -1,2 +1,8 @@
 # ignore all jupyter notebook checkpoints anywhere in the repository
 **/.ipynb_checkpoints
+
+# ignore all LaTeX aux files
+**/*.log
+**/*.aux
+**/*.out
+**/*.synctex.gz

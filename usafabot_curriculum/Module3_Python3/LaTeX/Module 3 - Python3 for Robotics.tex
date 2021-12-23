@@ -62,35 +62,56 @@
 
 \textbf{Agenda:}
 \begin{enumerate} \setlength\itemsep{0em}
-	\item The Construct: Python3 for Robotics.
+	\item Python3 Jupyter Notebook.
+	\item ICE3 Jupyter Notebook.
 \end{enumerate}
 
 \newpage
 \clearpage
 \pagebreak
 
-\section{The Construct: Python3 for Robotics.}
-In the next few lessons you will use the free online ROS education program called The Construct. We will now look at the Python3 programming language as it relates to robotics.
+\section{Python3 Jupyter Notebook.}
+We will use a Jupyter Notebook to practice and provide a Python3 refresher.
 
 \begin{enumerate}
-	\item Browse to \url{https://app.theconstructsim.com/} and login.
-	\item In the left menu, select \textbf{Courses}.
-	\item Within the \textit{Course Catalog}, filter by \textbf{Basic ROS}.
-	\item Find the \textit{Python3 For Robotics} course and click \textbf{Start Learning}.
+	\item On the master, open the Jupyter Notebook server:
+	
+\begin{lstlisting}[language=bash]
+dfec@master:~$ roscd usafabot_curriculum/Module3_Python3
+dfec@master:~$ jupyter-notebook
+\end{lstlisting}
+	
+	\item Open the Python3 Jupyter Notebook, "Module3\_Python3.ipynb", and follow the instructions within the notebook.
+	
+\end{enumerate}
+
+\section{ICE3 Jupyter Notebook.}
+The ICE3 Jupyter Notebook will guide you through implementation of a chat client/server using ROS and Python3.
+
+\begin{enumerate}\setlength\itemsep{1em}
+	\item On the master, open the Jupyter Notebook server (if it is not already open):
+\begin{lstlisting}[language=bash]
+dfec@master:~$ roscd usafabot_curriculum/Module3_Python3
+dfec@master:~$ jupyter-notebook
+\end{lstlisting}
+	
+	\item Open the ICE3 Jupyter Notebook, "ICE3\_Client.ipynb" and follow the instructions within the notebook. 
+\end{enumerate}
+
+\textbf{Checkpoint. Take a screenshot or show the instructor the following:}
+\begin{enumerate}
+	\item The output of each of the code blocks within the "ICE3\_ROS.ipynb" notebook.
 \end{enumerate}
 
 \section{Assignments.}
 	\begin{todolist}
-		\item \textbf{Due beginning of Lesson 8} - Unit 1: Introduction \& Unit 2: Python Essentials
-		\item \textbf{Due beginning of Lesson 9} - Unit 3: Conditional Statements \& Loops \& Unit 4: Functions 
-		\item \textbf{Due beginning of Lesson 10} - Unit 5: Python Classes \& OOP \& EXAM - Ultimate Code Foundation Challenge
+		\item Complete Jupyter Notebooks if not accomplished during class.
 	\end{todolist}
 
 \section{Next time.}
 	\begin{itemize}
-		\item \textbf{Lesson 8} - Unit 1 \& 2 quiz
-		\item \textbf{Lesson 9} - Unit 3 \& 4 quiz
-		\item \textbf{Lesson 10} - Module 4: Driving the robot using Teleop Twist Keyboard
+		\item \textbf{Lesson 8} - Quiz and ICE 3
+		\item \textbf{Lesson 9} - Quiz and Module 4 - Driving the Robot
 	\end{itemize}
 
 \end{document}
