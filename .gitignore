@@ -1,6 +1,9 @@
 # ignore all jupyter notebook checkpoints anywhere in the repository
 **/.ipynb_checkpoints
 
+# ignore student entered scripts
+**/my_scripts
+
 # ignore all LaTeX aux files
 **/*.log
 **/*.aux
