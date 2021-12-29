@@ -25,7 +25,7 @@
 \usepackage[T1]{fontenc}
 \lstset{%
 	language=bash, upquote=true,
-	otherkeywords={rostopic, rosnode, rosrun, roscore, cd, ls, sudo, nano, echo, mkdir, touch, chmod, catkin\_make, rosmsg, rosservice, catkin\_create\_pkg, rospack, ssh, rosed},
+	otherkeywords={rostopic, rosnode, rosrun, roscore, cd, sudo, nano, echo, mkdir, touch, chmod, catkin\_make, rosmsg, rosservice, catkin\_create\_pkg, rospack, ssh, rosed},
 	showspaces=false, showtabs=false, showstringspaces=false, upquote=true, tabsize=4,
 	literate={~} {$\sim$}{1},
 	showstringspaces=false,
@@ -196,14 +196,43 @@ pi@robotX:~$ git config --global user.name "Lastname1 Lastname2"
 \begin{lstlisting}[language=bash]
 dfec@masterX:~$ git pull
 \end{lstlisting}
-	\item Complete work on your master code
+	\item Complete work on the master. For example, accomplish the following:
+	\begin{enumerate}
+		\item Create a file in your repo (from the \texttt{ece495\_master\_spring2022-USERNAME} folder)
+
+\begin{lstlisting}[language=bash]
+dfec@masterX:~$ touch readme.md
+dfec@masterX:~$ nano readme.md	
+\end{lstlisting}
+
+\item Copy the following to the file completing with your own information:
+\begin{lstlisting}
+# ECE495 Fundamentals of Robotics
+## Master System
+This repository stores all code for the master computer
+
+### Team Member 1
+Name:
+Go by name:
+Hometown:
+Desired AFSC:
+Clubs/IC Sports:
+### Team member 2
+Name:
+Go by name:
+Hometown:
+Desired AFSC:
+Clubs/IC Sports:
+\end{lstlisting}
+\item Hit 'ctrl+s' then 'ctrl+x' to save and exit the editor.
+	\end{enumerate}
 	\item Add the files that will be uploaded to your repository:
 \begin{lstlisting}[language=bash]
 dfec@masterX:~$ git add -A
 \end{lstlisting}
 	\item Commit your changes to the repository with a message:
 \begin{lstlisting}[language=bash]
-dfec@masterX:~$ git commit -m "Completed lab2 code on the master and it works great!"
+dfec@masterX:~$ git commit -m "Completed readme on the master!"
 \end{lstlisting}
 	\item Push your changes to the repository:
 \begin{lstlisting}[language=bash]
@@ -213,14 +242,43 @@ dfec@masterX:~$ git push
 \begin{lstlisting}[language=bash]
 pi@robotX:~$ git pull
 \end{lstlisting}
-	\item Complete work on your robot code
+		\item Complete work on the robot. For example, accomplish the following:
+	\begin{enumerate}
+		\item Create a file in your repo (from the \texttt{ece495\_robot\_spring2022-USERNAME} folder)
+		
+\begin{lstlisting}[language=bash]
+pi@robotX:~$ touch readme.md
+pi@robotX:~$ nano readme.md	
+\end{lstlisting}
+		
+		\item Copy the following to the file completing with your own information:
+\begin{lstlisting}
+# ECE495 Fundamentals of Robotics
+## Robot System
+This repository stores all code for the robot computer
+
+### Team Member 1
+Name:
+Go by name:
+Hometown:
+Desired AFSC:
+Clubs/IC Sports:
+### Team member 2
+Name:
+Go by name:
+Hometown:
+Desired AFSC:
+Clubs/IC Sports:
+\end{lstlisting}
+\item Hit 'ctrl+s' then 'ctrl+x' to save and exit the editor.
+	\end{enumerate}
 \item Add the files that will be uploaded to your repository:
 \begin{lstlisting}[language=bash]
 pi@robotX:~$ git add -A
 \end{lstlisting}
 \item Commit your changes to the repository with a message:
 \begin{lstlisting}[language=bash]
-pi@robotX:~$ git commit -m "Completed lab2 updates on the robot and it works great!"
+pi@robotX:~$ git commit -m "Completed readme on the robot!"
 \end{lstlisting}
 \item Push your changes to the repository:
 \begin{lstlisting}[language=bash]
