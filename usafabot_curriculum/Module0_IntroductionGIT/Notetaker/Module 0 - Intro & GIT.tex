@@ -90,7 +90,7 @@
 
 \subsection{Enable SSH connection to your GitHub account}
 \begin{enumerate}
-	\item Open a terminal on your master.
+	\item Open a terminal on your master (ctrl+alt+t).
 	\item The same student as step 1.1.2 do the following:
 	\begin{enumerate}
 		\item Generate a new SSH key, substituting your GitHub email address:
@@ -108,7 +108,7 @@ dfec@masterX:~$ ssh-add ~/.ssh/id_ed25519
 \begin{lstlisting}[language=bash]
 dfec@masterX:~$ nano ~/.ssh/id_ed25519.pub
 \end{lstlisting}
-		\item Select the contents of the file (ensure it has your GIT email at the end), right click, and select copy.
+		\item Select the contents of the file (maximize the window and ensure it has your GIT email at the end), right click, and select copy.
 		\item Open a web browser and sign in to your GitHub account.
 \newpage
 \clearpage
@@ -142,7 +142,7 @@ dfec@masterX:~$ ssh pi@robotX
 \end{enumerate}
 \subsection{Clone repository to your master.}
 \begin{enumerate}
-\item Open your master GitHub repository and copy your repo address using the SSH mode:
+\item On the master, open the \textbf{master} GitHub repository and copy your repo address using the SSH mode:
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=.4\textwidth]{clone.png}
@@ -173,7 +173,7 @@ dfec@masterX:~$ ssh pi@robotX
 \begin{lstlisting}[language=bash]
 pi@robotX:~$ cd robot_ws/src
 \end{lstlisting}
-	\item Clone the repository:
+	\item Clone the \textbf{robot} repository:
 \begin{lstlisting}[language=bash]
 dfec@masterX:~$ git clone git@github.com:ECE495/ece495_robot_spring2022-USERNAME.git
 \end{lstlisting}
@@ -184,8 +184,6 @@ pi@robotX:~$ git config --global user.email "you@example.com"
 pi@robotX:~$ git config --global user.name "Lastname1 Lastname2"
 \end{lstlisting}
 \end{enumerate}
-
-\textbf{Checkpoint. Show the instructor the cloned repositories on the robot and master:}
 
 \subsection{Repository Management:}
 \textbf{**IMPORTANT**}: It is vital that you \textbf{ALWAYS} pull when you start working on your code on one system and \textbf{ALWAYS} push when you are done working on your code on that system.
@@ -201,8 +199,8 @@ dfec@masterX:~$ git pull
 		\item Create a file in your repo (from the \texttt{ece495\_master\_spring2022-USERNAME} folder)
 
 \begin{lstlisting}[language=bash]
-dfec@masterX:~$ touch readme.md
-dfec@masterX:~$ nano readme.md	
+dfec@masterX:~$ touch README.md
+dfec@masterX:~$ nano README.md	
 \end{lstlisting}
 
 \item Copy the following to the file completing with your own information:
@@ -232,7 +230,7 @@ dfec@masterX:~$ git add -A
 \end{lstlisting}
 	\item Commit your changes to the repository with a message:
 \begin{lstlisting}[language=bash]
-dfec@masterX:~$ git commit -m "Completed readme on the master!"
+dfec@masterX:~$ git commit -m "Completed README on the master!"
 \end{lstlisting}
 	\item Push your changes to the repository:
 \begin{lstlisting}[language=bash]
@@ -247,8 +245,8 @@ pi@robotX:~$ git pull
 		\item Create a file in your repo (from the \texttt{ece495\_robot\_spring2022-USERNAME} folder)
 		
 \begin{lstlisting}[language=bash]
-pi@robotX:~$ touch readme.md
-pi@robotX:~$ nano readme.md	
+pi@robotX:~$ touch README.md
+pi@robotX:~$ nano README.md	
 \end{lstlisting}
 		
 		\item Copy the following to the file completing with your own information:
@@ -278,7 +276,7 @@ pi@robotX:~$ git add -A
 \end{lstlisting}
 \item Commit your changes to the repository with a message:
 \begin{lstlisting}[language=bash]
-pi@robotX:~$ git commit -m "Completed readme on the robot!"
+pi@robotX:~$ git commit -m "Completed README on the robot!"
 \end{lstlisting}
 \item Push your changes to the repository:
 \begin{lstlisting}[language=bash]
@@ -288,6 +286,7 @@ pi@robotX:~$ git push
 
 \textbf{**BOTTOM LINE**}: Ensure you pull changes, make edits, and push your changes \textbf{EVERY TIME} you work on the master or robot!
 
+\textbf{Checkpoint. Show the instructor both repositories with READMEs on the GitHub website.}
 
 \section{Assignments.}
 \begin{todolist}
