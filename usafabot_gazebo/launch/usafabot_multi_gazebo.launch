@@ -9,7 +9,7 @@
   />
 
   <group ns="usafabot0">	
-    	 <param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+    	 <param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot0"/>
@@ -31,7 +31,7 @@
   </group>
 
   <group ns="usafabot1">	
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot1"/>
@@ -53,7 +53,7 @@
   </group>
 
   <group ns="usafabot2">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot2"/>
@@ -75,7 +75,7 @@
   </group>
 
   <group ns="usafabot3">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot3"/>
@@ -97,7 +97,7 @@
   </group>
   
   <group ns="usafabot4">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot4"/>
@@ -119,7 +119,7 @@
   </group>
   
   <group ns="usafabot5">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot5"/>
@@ -141,7 +141,7 @@
   </group>
   
   <group ns="usafabot6">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot6"/>
@@ -163,7 +163,7 @@
   </group>
   
   <group ns="usafabot7">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot7"/>
@@ -185,7 +185,7 @@
   </group>
    
   <group ns="usafabot8">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot8"/>
@@ -207,7 +207,7 @@
   </group>
   
   <group ns="usafabot9">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot9"/>
@@ -229,7 +229,7 @@
   </group>
   
   <group ns="usafabot10">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot10"/>
@@ -251,7 +251,7 @@
   </group>
   
   <group ns="usafabot11">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot11"/>
@@ -273,7 +273,7 @@
   </group>
   
   <group ns="usafabot12">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot12"/>
@@ -295,7 +295,7 @@
   </group>
   
   <group ns="usafabot13">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot13"/>
@@ -317,7 +317,7 @@
   </group>
   
   <group ns="usafabot14">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot14"/>
@@ -339,7 +339,7 @@
   </group>
   
   <group ns="usafabot15">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot15"/>
@@ -361,7 +361,7 @@
   </group>
   
   <group ns="usafabot16">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot16"/>
@@ -383,7 +383,7 @@
   </group>
   
   <group ns="usafabot17">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot17"/>
@@ -405,7 +405,7 @@
   </group>
   
   <group ns="usafabot18">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot18"/>
@@ -427,7 +427,7 @@
   </group>
   
   <group ns="usafabot19">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot19"/>
@@ -449,7 +449,7 @@
   </group>
   
   <group ns="usafabot20">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot20"/>
@@ -471,7 +471,7 @@
   </group>
   
   <group ns="usafabot21">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot21"/>
@@ -493,7 +493,7 @@
   </group>
   
   <group ns="usafabot22">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot22"/>
@@ -515,7 +515,7 @@
   </group>
   
   <group ns="usafabot23">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot23"/>
@@ -537,7 +537,7 @@
   </group>
   
   <group ns="usafabot24">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot24"/>
