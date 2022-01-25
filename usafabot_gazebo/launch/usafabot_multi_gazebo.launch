@@ -16,7 +16,7 @@
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot0 -x 0 -y 2.2 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!--
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -26,10 +26,10 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
-  
+
   <group ns="usafabot1">	
 	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
@@ -38,7 +38,7 @@
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot1 -x 0 -y 2.4 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!--
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -48,7 +48,7 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
 
@@ -60,7 +60,7 @@
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot2 -x 0 -y 2.6 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!--
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -70,10 +70,10 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
-  
+
   <group ns="usafabot3">
 	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
@@ -82,7 +82,7 @@
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot3 -x 0 -y 2.8 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!--
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -92,7 +92,7 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
@@ -104,7 +104,7 @@
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot4 -x 0 -y 3.2 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!--
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -114,7 +114,7 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
@@ -126,7 +126,7 @@
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot5 -x 0 -y 3.4 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!--
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -136,7 +136,7 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
@@ -148,7 +148,7 @@
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot6 -x 0 -y 3.6 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!--
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -158,7 +158,7 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
@@ -170,7 +170,7 @@
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot7 -x 0 -y 3.8 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!--
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -180,10 +180,10 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
-  
+   
   <group ns="usafabot8">
 	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
@@ -192,7 +192,7 @@
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot8 -x 2.4 -y 6 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!--
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -202,7 +202,7 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
@@ -214,7 +214,7 @@
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot9 -x 2.6 -y 6 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!--
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -224,7 +224,7 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
@@ -236,7 +236,7 @@
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot10 -x 2.8 -y 6 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!--
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -246,7 +246,7 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
@@ -258,7 +258,7 @@
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot11 -x 3.2 -y 6 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!--
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -268,7 +268,7 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
@@ -280,7 +280,7 @@
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot12 -x 3.4 -y 6 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!--
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -290,7 +290,7 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
@@ -302,7 +302,7 @@
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot13 -x 3.6 -y 6 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!-- 
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -312,7 +312,7 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
@@ -324,7 +324,7 @@
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot14 -x 3.8 -y 6 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!-- 
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -334,7 +334,7 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
@@ -346,7 +346,7 @@
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot15 -x 6 -y 3.4 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!-- 
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -356,7 +356,7 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
@@ -368,7 +368,7 @@
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot16 -x 6 -y 3.2 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!-- 
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -378,7 +378,7 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
@@ -390,7 +390,7 @@
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot17 -x 6 -y 2.8 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!-- 
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -400,7 +400,7 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
@@ -412,7 +412,7 @@
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot18 -x 6 -y 2.6 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!-- 
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -422,7 +422,7 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
@@ -434,7 +434,7 @@
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot19 -x 3.6 -y 0 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!-- 
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -444,7 +444,7 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
@@ -456,7 +456,7 @@
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot20 -x 3.4 -y 0 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!-- 
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -466,7 +466,7 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
@@ -478,7 +478,7 @@
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot21 -x 3.2 -y 0 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!-- 
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -488,7 +488,7 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
@@ -500,7 +500,7 @@
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot22 -x 2.8 -y 0 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!-- 
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -510,7 +510,7 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
@@ -522,7 +522,7 @@
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot23 -x 2.6 -y 0 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!-- 
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -532,7 +532,7 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
@@ -544,7 +544,7 @@
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot24 -x 2.4 -y 0 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!-- 
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -554,7 +554,7 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
 
