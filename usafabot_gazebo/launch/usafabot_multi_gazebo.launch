@@ -9,14 +9,14 @@
   />
 
   <group ns="usafabot0">	
-    	 <param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+    	 <param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot0"/>
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot0 -x 0 -y 2.2 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!--
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -26,19 +26,19 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
-  
+
   <group ns="usafabot1">	
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot1"/>
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot1 -x 0 -y 2.4 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!--
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -48,19 +48,19 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
 
   <group ns="usafabot2">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot2"/>
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot2 -x 0 -y 2.6 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!--
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -70,19 +70,19 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
-  
+
   <group ns="usafabot3">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot3"/>
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot3 -x 0 -y 2.8 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!--
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -92,19 +92,19 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
   <group ns="usafabot4">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot4"/>
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot4 -x 0 -y 3.2 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!--
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -114,19 +114,19 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
   <group ns="usafabot5">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot5"/>
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot5 -x 0 -y 3.4 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!--
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -136,19 +136,19 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
   <group ns="usafabot6">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot6"/>
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot6 -x 0 -y 3.6 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!--
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -158,19 +158,19 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
   <group ns="usafabot7">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot7"/>
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot7 -x 0 -y 3.8 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!--
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -180,19 +180,19 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
-  
+   
   <group ns="usafabot8">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot8"/>
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot8 -x 2.4 -y 6 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!--
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -202,19 +202,19 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
   <group ns="usafabot9">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot9"/>
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot9 -x 2.6 -y 6 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!--
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -224,19 +224,19 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
   <group ns="usafabot10">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot10"/>
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot10 -x 2.8 -y 6 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!--
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -246,19 +246,19 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
   <group ns="usafabot11">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot11"/>
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot11 -x 3.2 -y 6 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!--
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -268,19 +268,19 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
   <group ns="usafabot12">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot12"/>
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot12 -x 3.4 -y 6 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!--
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -290,19 +290,19 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
   <group ns="usafabot13">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot13"/>
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot13 -x 3.6 -y 6 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!-- 
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -312,19 +312,19 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
   <group ns="usafabot14">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot14"/>
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot14 -x 3.8 -y 6 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!-- 
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -334,19 +334,19 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
   <group ns="usafabot15">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot15"/>
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot15 -x 6 -y 3.4 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!-- 
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -356,19 +356,19 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
   <group ns="usafabot16">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot16"/>
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot16 -x 6 -y 3.2 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!-- 
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -378,19 +378,19 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
   <group ns="usafabot17">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot17"/>
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot17 -x 6 -y 2.8 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!-- 
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -400,19 +400,19 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
   <group ns="usafabot18">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot18"/>
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot18 -x 6 -y 2.6 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!-- 
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -422,19 +422,19 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
   <group ns="usafabot19">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot19"/>
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot19 -x 3.6 -y 0 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!-- 
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -444,19 +444,19 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
   <group ns="usafabot20">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot20"/>
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot20 -x 3.4 -y 0 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!-- 
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -466,19 +466,19 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
   <group ns="usafabot21">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot21"/>
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot21 -x 3.2 -y 0 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!-- 
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -488,19 +488,19 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
   <group ns="usafabot22">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot22"/>
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot22 -x 2.8 -y 0 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!-- 
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -510,19 +510,19 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
   <group ns="usafabot23">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot23"/>
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot23 -x 2.6 -y 0 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!-- 
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -532,19 +532,19 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
   
   <group ns="usafabot24">
-	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf_multi.xacro'"/>
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" value="usafabot24"/>
     </node>
 	
 	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot24 -x 2.4 -y 0 -z 0 -Y 1.5708 -param robot_description" />
-	
+	<!-- 
 	<node
 	name="controller"
 	pkg="capstone21-22"
@@ -554,7 +554,7 @@
 	name="position"
 	pkg="usafabot_gazebo"
 	type="pos_transform.py"
-	/>
+	/>-->
 
   </group>
 
