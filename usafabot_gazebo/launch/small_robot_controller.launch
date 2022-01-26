@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+  <group ns="usafabot0">
+
+	<node
+	name="small_controller"
+	pkg="capstone21-22"
+	type="small_controller.py"
+	output="screen"
+	/>
+
+  </group>
+  <group ns="usafabot22">
+
+	<node
+	name="small_controller"
+	pkg="capstone21-22"
+	type="small_controller.py"
+	output="screen"
+	/>
+
+  </group>
+    <group ns="usafabot23">
+
+	<node
+	name="small_controller"
+	pkg="capstone21-22"
+	type="small_controller.py"
+	output="screen"
+	/>
+  </group>
+
+</launch>
