@@ -60,6 +60,10 @@
   </gazebo>
   
   
+  <gazebo reference="base_scan">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+  
   <!-- LIDAR --><!--
   <gazebo reference="base_scan">
     <material>Gazebo/FlatBlack</material>
@@ -94,6 +98,9 @@
     </sensor>
   </gazebo>-->
   
+  <gazebo reference="camera_link">
+    <material>Gazebo/Black</material>
+  </gazebo>
   <!-- CAMERA --><!--
   <gazebo reference="camera_link">
     <material>Gazebo/Black</material>
