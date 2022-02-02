@@ -1,4 +1,5 @@
 ##### Requirements to run USAFABOT for all courseware #####
+pyserial
 squaternion
 dlib
 numpy
