@@ -2,7 +2,7 @@
 
 <launch>
   <!-- A urdf file describes the physical configuration of the robot for simulation -->
-  <param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro' robot_name:=$(arg hostname)"/>	
+  <param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'" />	
 
   <!-- Publish robot states -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
