@@ -67,7 +67,7 @@ uint32_t Time = 0;
 int32_t UL, UR;             // Controller output PWM duty 2 to 14,998
 
 // Semaphores
-int Running = 0; // 0 means stopped
+volatile int Running = 0; // 0 means stopped
 
 int32_t Kp = 5;
 int32_t Ki = 2;
