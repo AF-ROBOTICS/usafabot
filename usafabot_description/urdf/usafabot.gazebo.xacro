@@ -136,6 +136,7 @@
     </sensor>
   </gazebo>
   
+  <!-- IMU -->
   <gazebo reference="imu_link">
     <sensor type="imu" name="imu">
       <always_on>true</always_on>
@@ -144,7 +145,6 @@
     <material>Gazebo/FlatBlack</material>
   </gazebo>
   
-  <!-- IMU -->
   <gazebo>
     <plugin name="imu_plugin" filename="libgazebo_ros_imu.so">
       <alwaysOn>true</alwaysOn>
