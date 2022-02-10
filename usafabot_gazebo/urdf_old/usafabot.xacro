@@ -1,0 +1,187 @@
+<?xml version='1.0'?>
+
+<robot name="usafabot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:arg name="robot_namespace" default=""/>
+
+  <xacro:property name="namespace" value="$(arg robot_namespace)" />
+
+  <xacro:include filename="$(find usafabot_gazebo)/urdf/usafabot.gazebo" />
+  <xacro:include filename="$(find usafabot_gazebo)/urdf/materials.xacro" />
+  <xacro:include filename="$(find usafabot_gazebo)/urdf/macros.xacro" />
+
+   <!-- Base Link -->
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="1.570795 0 0" />
+      <geometry>
+          <mesh filename="package://usafabot_gazebo/meshes/bottom_chassis.stl" scale=".001 .001 .001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+
+    <!-- Base collision -->
+    <collision>
+      <origin xyz="0 0.006 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14046 0.17219 0.0679"/>
+      </geometry>
+    </collision>
+
+    <!-- Back caster -->
+
+    <collision>
+      <origin xyz="0 .06 -.014" rpy="0 0 0" />
+      <geometry>
+        <sphere radius=".021"/>
+      </geometry>
+    </collision>
+
+    <!-- Front caster -->
+<!--
+    <collision>
+      <origin xyz="0 -.25 -.07" rpy="0 0 0" />
+      <geometry>
+        <sphere radius=".105"/>
+      </geometry>
+    </collision>
+-->
+    <!-- Base inertial -->
+    <inertial>
+    <mass value="5"/>
+    <inertia ixx="0.13" ixy="0.0" ixz="0.0"
+             iyy="0.21" iyz="0.0" izz="0.13"/>
+    </inertial>
+
+
+  </link>
+
+  <!-- Top Chassis -->
+  <link name="top_chassis">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://usafabot_gazebo/meshes/top_chassis.stl" scale=".001 .001 .001"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0 .5 1 1"/>
+      </material>
+    </visual>
+
+    <!-- Top chassis collision -->
+    <!-- <collision>
+      <origin xyz="0 0 0" rpy="0 1.570795 0" />
+      <geometry>
+        <cylinder length=".008" radius="0.033" />
+      </geometry>
+    </collision> -->
+
+    <!-- Top chassis inertial -->
+    <inertial>
+    <mass value="0.5"/>
+    <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+             iyy="0.005" iyz="0.0" izz="0.005"/>
+    </inertial>
+
+  </link>
+
+  <joint name="joint_top_chassis" type="fixed">
+    <parent link="base_link"/>
+    <child link="top_chassis"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+
+  <!-- Right Wheel -->
+  <link name="right_wheel">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://usafabot_gazebo/meshes/rviz_wheel1.stl" scale=".001 .001 .001"/>
+      </geometry>
+      <material name="grey">
+        <color rgba=".5 .5 .5 1"/>
+      </material>
+    </visual>
+
+    <!-- Wheel collision -->
+    <collision>
+      <origin xyz="0 0 0" rpy="0 1.570795 0" />
+      <geometry>
+        <cylinder length=".008" radius="0.033" />
+      </geometry>
+    </collision>
+
+    <!-- Wheel inertial -->
+    <inertial>
+    <mass value="0.5"/>
+    <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+             iyy="0.005" iyz="0.0" izz="0.005"/>
+    </inertial>
+
+  </link>
+
+  <joint name="joint_right_wheel" type="continuous">
+    <parent link="base_link"/>
+    <child link="right_wheel"/>
+    <origin xyz=".0728 0 0" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+  </joint>
+
+  <!-- Left Wheel -->
+  <link name="left_wheel">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 3.1415 0" />
+      <geometry>
+        <mesh filename="package://usafabot_gazebo/meshes/rviz_wheel2.stl" scale=".001 .001 .001"/>
+      </geometry>
+      <material name="grey">
+        <color rgba=".5 .5 .5 1"/>
+      </material>
+    </visual>
+    <!-- Wheel collision -->
+    <collision>
+      <origin xyz="0 0 0" rpy="0 1.570795 0" />
+      <geometry>
+        <cylinder length=".008" radius="0.033" />
+      </geometry>
+    </collision>
+
+    <!-- Wheel inertial -->
+    <inertial>
+    <mass value="0.5"/>
+    <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+             iyy="0.005" iyz="0.0" izz="0.005"/>
+    </inertial>
+
+  </link>
+
+  <joint name="joint_left_wheel" type="continuous">
+    <parent link="base_link"/>
+    <child link="left_wheel"/>
+    <origin xyz="-.0728 0 0" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+  </joint>
+
+  <!-- LIDAR -->
+  <link name="lidar">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.03" />
+      </geometry>
+      <material name="red">
+        <color rgba=".5 0 0 1"/>
+      </material>
+    </visual>
+  </link>
+  <joint name="joint_lidar" type="fixed">
+    <parent link="base_link" />
+    <child link="lidar" />
+    <origin xyz="0 .03 0.07" rpy="0 0 0" />
+    <axis xyz="0 0 0" />
+  </joint>
+
+
+</robot>

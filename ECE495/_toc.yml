@@ -1,0 +1,39 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+#chapters:
+#- file: markdown
+#- file: notebooks
+
+format: jb-book
+root: intro
+parts:
+  - caption: ROBOT SETUP
+    chapters:
+    - file: robot_setup.md
+  - caption: MODULE 00
+    chapters:
+    - file: Module0.md
+  - caption: MODULE 01
+    chapters:
+    - file: Module1.md
+    - file: ICE1_Listener.md
+    - file: ICE1_ROS.md
+    - file: ICE1_Talker.md
+  - caption: MODULE 02
+    chapters:
+    - file: ICE2_Linux.md
+  - caption: MODULE 03
+    chapters:
+    - file: Module3_Python3.md
+    - file: Module3_ROS.md
+    - file: Module3_RPSComputer.md
+    - file: ICE3_ROS.md
+    - file: ICE3_Client.md
+    - file: ICE3_Server.md
+  - caption: MODULE 04
+    chapters:
+    - file: ICE4_DrivingTheRobot.md
+  - caption: MODULE 05
+    chapters:
+    - file: ICE5_CustomMessages.md
+    - file: Lab1_CustomMessages.md

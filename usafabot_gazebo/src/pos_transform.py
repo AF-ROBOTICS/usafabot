@@ -52,8 +52,8 @@ class Position:
 
             # math magic
             q = Quaternion(pose.orientation.w, pose.orientation.x, pose.orientation.y, pose.orientation.z)
-            e = q.to_euler(degrees=True)
-            q = Quaternion.from_euler(e[0], e[1], e[2]-90, degrees=True)
+            #e = q.to_euler(degrees=True)
+            #q = Quaternion.from_euler(e[0], e[1], e[2]-90, degrees=True)
             pose.orientation.x = q.x
             pose.orientation.y = q.y
             pose.orientation.z = q.z
