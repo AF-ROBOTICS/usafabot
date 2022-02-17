@@ -27,7 +27,5 @@
   
   
   <include file="$(find usafabot_navigation)/launch/gmapping.launch"/>
-  
-  </node pkg="usafabot_navigation" type="usafabot_broadcaster" name="usafabot_broadcaster" />
 
 </launch>

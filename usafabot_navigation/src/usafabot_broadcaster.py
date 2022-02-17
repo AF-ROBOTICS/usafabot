@@ -77,7 +77,6 @@ class broadcaster:
         self.x += delta_x
         self.y += delta_y
 
-        # Double check that this is correct instead of map -> odom
         # robot transform in world (point directly center of two wheels)
         self.robot.header.stamp = curr_time
         self.robot.header.frame_id = "odom"
