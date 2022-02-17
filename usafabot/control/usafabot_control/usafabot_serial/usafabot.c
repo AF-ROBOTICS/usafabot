@@ -1,7 +1,7 @@
 // BeyerBot v1.0
 // Runs on MSP432
 // Integration of control systems and UART
-// Capt Steven Beyer
+// Mr. Steven Beyer
 // 26 November 2019
 
 /*
@@ -75,14 +75,14 @@ int32_t Ki = 2;
 int32_t Ka = 0;
 int32_t Kb = 0;
 
-float desiredL, desiredR;     // Desired speed
+volatile float desiredL, desiredR;     // Desired speed
 float actualL, actualR;   // Actual speed
 float ErrorL, ErrorR;     // Actual - Desired
 float PrevErrorL, PrevErrorR;     // previous errors
 int i = 0;
 float v_r = 0, v_l = 0;
 float w_r = 0, w_l = 0;
-float actualV_r = 0, actualV_l = 0;
+volatile float actualV_r = 0, actualV_l = 0;
 float xLin = 0; // m/s
 float zAng = 0; // rad/s
 
@@ -147,7 +147,7 @@ void Controller(void){
                 actualV_l = 0;
             }
             else{
-                // PI Controller
+                // PID Controller
                 ErrorL = abs(desiredL) - abs(actualL);
                 ErrorR = abs(desiredR) - abs(actualR);
                 UR = UR+Ka*ErrorR+Kb*PrevErrorR;
@@ -217,7 +217,6 @@ void main(void){
     // initialize variables
     UR = UL = PWMNOMINAL;
     char buf[40];   // commands from UART
-
 
     int result = 0; // number of variables written by sscanf
 
