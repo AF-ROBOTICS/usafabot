@@ -1,6 +1,2 @@
-.DS_Store
-
-
-# ignore metadata
-tirslk_maze_1_00_00/.metadata/*
-tirslk_maze_1_00_00/.jxbrowser-data/*
+/.metadata/
+/Debug/
