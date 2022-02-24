@@ -3,7 +3,7 @@
 
   <xacro:arg name="laser_visual" default="false"/>
   <xacro:arg name="imu_visual"   default="false"/>
-  
+
   <gazebo>
     <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
       <commandTopic>cmd_vel</commandTopic>
@@ -26,17 +26,17 @@
       <rosDebugLevel>na</rosDebugLevel>
     </plugin>
   </gazebo>
-  
+
     <gazebo reference="caster_front_link">
-        <turnGravityOff>false</turnGravityOff> 
+        <turnGravityOff>false</turnGravityOff>
         <mu1 value="0.0"/>
         <mu2 value="0.0"/>
         <slip1 value="1.0"/>
         <slip2 value="1.0"/>
     </gazebo>
-    
+
     <gazebo reference="caster_back_link">
-        <turnGravityOff>false</turnGravityOff> 
+        <turnGravityOff>false</turnGravityOff>
         <mu1 value="0.0"/>
         <mu2 value="0.0"/>
         <slip1 value="1.0"/>
@@ -58,8 +58,8 @@
   <gazebo reference="right_wheel_link">
     <material>Gazebo/Black</material>
   </gazebo>
-  
-  
+
+
   <!-- LIDAR -->
   <gazebo reference="base_scan">
     <material>Gazebo/FlatBlack</material>
@@ -72,8 +72,8 @@
           <horizontal>
             <samples>360</samples>
             <resolution>1</resolution>
-            <min_angle>0.0</min_angle>
-            <max_angle>6.28319</max_angle>
+            <min_angle>-3.14159</min_angle>
+            <max_angle>3.14159</max_angle>
           </horizontal>
         </scan>
         <range>
@@ -93,7 +93,7 @@
       </plugin>
     </sensor>
   </gazebo>
-  
+
   <!-- CAMERA -->
   <gazebo reference="camera_link">
     <material>Gazebo/Black</material>
@@ -135,7 +135,7 @@
       </plugin>
     </sensor>
   </gazebo>
-  
+
   <!-- IMU -->
   <gazebo reference="imu_link">
     <sensor type="imu" name="imu">
@@ -144,7 +144,7 @@
     </sensor>
     <material>Gazebo/FlatBlack</material>
   </gazebo>
-  
+
   <gazebo>
     <plugin name="imu_plugin" filename="libgazebo_ros_imu.so">
       <alwaysOn>true</alwaysOn>
