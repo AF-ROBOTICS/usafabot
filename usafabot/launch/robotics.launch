@@ -4,6 +4,7 @@
   <!-- A urdf file describes the physical configuration of the robot for simulation -->
   <param name="robot_description" command="$(find xacro)/xacro '$(find usafabot_description)/urdf/usafabot.urdf.xacro'"/>	
 
+  <!-- A transform that enables rviz to visualize the robot -->
   <node name="bot_to_map" pkg="tf2_ros" type="static_transform_publisher" args="0 0 0 0 0 0 map base_footprint" />
 
   <!-- Publish robot states -->
@@ -15,11 +16,17 @@
   <!-- Node to send commands to robot and gets wheel speeds from robot -->
   <node name="serial" pkg="usafabot" type="usafabot_serial.py" />
 
+  <!-- start the um7 IMU node setting correct port -->
   <node name="um7_IMU" pkg="um7" type="um7_driver">
     <param name="port" type="string" value="/dev/ttyACM1" />
   </node>
-	
-  <include file="$(find usafabot)/launch/include/rplidar.launch" />
   
+  <!-- make a call to the um7 service to reset gyros, EKF, mag_ref --> 
   <node pkg="rosservice" type="rosservice" name="reset" args="call --wait /imu/reset true true true"/>
+	
+  <!-- call the rplidar launch file -->
+  <!--
+  <include file="$(find usafabot)/launch/include/rplidar.launch" />
+  -->
+  
 </launch>

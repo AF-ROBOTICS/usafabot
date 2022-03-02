@@ -37,5 +37,9 @@
     <arg name="headless" value="false"/>
     <arg name="debug" value="false"/>
   </include>
+  
+  <!--imu topic converter used to create imu topic used in um7 for real robot-->
+  <!--allows code used on real robot to be tested on simulation-->
+  <node pkg="usafabot_gazebo" type="imu_converter.py" name="imu_converter"/>
 
 </launch>
