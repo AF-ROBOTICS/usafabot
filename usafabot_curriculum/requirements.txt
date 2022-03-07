@@ -3,3 +3,4 @@ pyserial
 squaternion
 dlib
 numpy
+imutils
