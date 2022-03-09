@@ -4,3 +4,4 @@ squaternion
 dlib
 numpy
 imutils
+jupyter_contrib_nbextensions
