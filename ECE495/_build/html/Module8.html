@@ -1,0 +1,873 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LIDAR &#8212; ECE495</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Launch Files" href="Module7.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/beyer_bot.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">ECE495</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Getting Started
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ROBOT SETUP
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="robot_setup.html">
+   Robot Setup
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 00
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module0.html">
+   Intro &amp; GIT
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 01
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module1.html">
+   Robotics Operating System (ROS)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 02
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module2.html">
+   Linux for Robotics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 03
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module3.html">
+   Python3 for Robotics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 04
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module4.html">
+   Driving the Robot
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 05
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module5.html">
+   Custom Messages
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 06
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module6.html">
+   Inertial Measurement Unit
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 07
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module7.html">
+   Launch Files
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 08
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   LIDAR
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Module8.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule8.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-class-exercise-8">
+   In-Class Exercise 8
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#purpose">
+     Purpose
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     LIDAR
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#videos">
+       Videos:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setup">
+     Setup
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#testing-lidar">
+     Testing LIDAR
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lidar-subscriber">
+     LIDAR Subscriber
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#checkpoint">
+     Checkpoint
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#summary">
+     Summary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cleanup">
+     Cleanup
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lab-3">
+   Lab 3
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Purpose
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#master">
+     Master
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Setup:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#controller-py">
+       controller.py
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#launch-file">
+       Launch File
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#run-your-nodes">
+     Run your nodes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#report">
+     Report
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#turn-in-requirements">
+     Turn-in Requirements
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>LIDAR</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-class-exercise-8">
+   In-Class Exercise 8
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#purpose">
+     Purpose
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     LIDAR
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#videos">
+       Videos:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setup">
+     Setup
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#testing-lidar">
+     Testing LIDAR
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lidar-subscriber">
+     LIDAR Subscriber
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#checkpoint">
+     Checkpoint
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#summary">
+     Summary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cleanup">
+     Cleanup
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lab-3">
+   Lab 3
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Purpose
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#master">
+     Master
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Setup:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#controller-py">
+       controller.py
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#launch-file">
+       Launch File
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#run-your-nodes">
+     Run your nodes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#report">
+     Report
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#turn-in-requirements">
+     Turn-in Requirements
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="lidar">
+<h1>LIDAR<a class="headerlink" href="#lidar" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="in-class-exercise-8">
+<h2>In-Class Exercise 8<a class="headerlink" href="#in-class-exercise-8" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p><strong>You must open this file as a Jupyter Notebook (link below) to run code</strong></p>
+<p><a class="reference external" href="http://localhost:8888/notebooks/ICE8_LIDAR.ipynb">Run this file as an executable Jupyter Notebook</a></p>
+<div class="section" id="purpose">
+<h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h3>
+<p>In this lesson we will enable the robot to avoid obstacles. Many sensors provide obstacle avoidance capabilities: camera, sonar, infrared, LIDAR, etc. All of these will work to enable the robot to avoid obstacles, but we will use LIDAR as it is an affordable, but very capable solution.</p>
+</div>
+<div class="section" id="id1">
+<h3>LIDAR<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://www.slamtec.com/en/Lidar/A1">Slamtec’s RPLIDAR A1</a> is a 360 deg Laser Range Scanner. It is based on laser triangulation ranging principle and uses high-speed vision acquisition and processing hardware developed by Slamtec. It measures distance data in more than 8000 times per second. It has a detection range of 12 meters and an angular resolution of 1 degree. The distance resolution is 0.2 cm. It has a minimum detection rate of .15 meters.</p>
+<img src="figs/rplidar.png" width="864" height="878">
+<div class="section" id="videos">
+<h4>Videos:<a class="headerlink" href="#videos" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=EYbhNSUnIdU">Airborne LiDAR</a></p>
+<p><a class="reference external" href="https://youtu.be/BSBfk9PPd4c?t=129">Slamtec RPLIDAR A1 product video</a></p>
+</div>
+</div>
+<div class="section" id="setup">
+<h3>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="http://wiki.ros.org/rplidar">RPLIDAR ROS</a> package is pre-installed on your <strong>Master</strong> and <strong>Robot</strong>. But as always, trust, but verify. Open a new terminal on your <strong>Master</strong> and run the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rospack find rplidar_ros
+</pre></div>
+</div>
+<p>If installed, the command should return the absolute path to the package, similar to:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/home/pi/master_ws/src/rplidar_ros
+</pre></div>
+</div>
+<p>If the command instead returns an error, then you need to install the package. This package has not been compiled for ROS Noetic, so you must download the source code into the workspace source folder. When you install a ROS package from source, you have to manually download any dependencies (using rosdep) and then compile it.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/master_ws/src
+git clone https://github.com/ros-drivers/um7.git
+<span class="nb">cd</span> ~/master_ws
+rosdep install --from-paths src --ignore-src -r -y
+catkin_make
+<span class="nb">source</span> ~/.bashrc
+</pre></div>
+</div>
+<p>Create an ssh connection to your <strong>Robot</strong> and repeat the above.</p>
+</div>
+<div class="section" id="testing-lidar">
+<h3>Testing LIDAR<a class="headerlink" href="#testing-lidar" title="Permalink to this headline">¶</a></h3>
+<p>Open a new terminal on the master and run roscore and setup for statistics:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>roscore
+rosparam <span class="nb">set</span> enable_statistics <span class="nb">true</span>
+</pre></div>
+</div>
+<p>Select the terminal with the secure shell connection to your <strong>Robot</strong> and open the <code class="docutils literal notranslate"><span class="pre">robotics.launch</span></code> file. The launch file already calls the <code class="docutils literal notranslate"><span class="pre">rplidar.launch</span></code> file, so uncomment the last line in the launch file (remove <code class="docutils literal notranslate"><span class="pre">&lt;!--</span></code> and <code class="docutils literal notranslate"><span class="pre">--&gt;</span></code>above the following so it looks like:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- call the rplidar launch file --&gt;</span>
+<span class="nt">&lt;include</span> <span class="na">file=</span><span class="s">&quot;$(find usafabot)/launch/include/rplidar.launch&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>📝️ <strong>Note:</strong> The <code class="docutils literal notranslate"><span class="pre">robotics.launch</span></code> file also gives us some additional visualization capabilities (remember the Unified Robot Description Format (urdf) file at the top of the launch file? This will provide us a cool USAFABot model in our simulation!)</p>
+</div></blockquote>
+<p>Run the launch file on the <strong>Robot</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>roslaunch usafabot robotics.launch
+</pre></div>
+</div>
+<p>In a new terminal on teh <strong>Master</strong>, run rviz:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosrun rviz rviz
+</pre></div>
+</div>
+<p>This should open a window that we can use to visualize ROS components of our system.</p>
+<p>Select the drop down under “Global Options” → “Fixed Frame” and ensure “map” is selected.</p>
+<img src="figs/map.png" width="296" height="152">
+<p>Below the “Displays” panel select “Add”.</p>
+<img src="figs/add.PNG" width="483" height="945">
+<p>Select “RobotModel” and click “OK”.</p>
+<img src="figs/robotmodel.png" width="520" height="715">
+<p>You should now see a model of the USAFABot in the center of your <strong>rviz</strong> map.</p>
+<p>Below the “Displays” panel select “Add”.</p>
+<p>Select “LaserScan” and click “OK”.</p>
+<img src="figs/laserscan.png" width="520" height="715">
+<p>You should now see a “LaserScan” drop down under the “Displays” panel. Expand it.</p>
+<p>Click the empty space to the right of “Topic” and select the “/scan” topic.</p>
+<img src="figs/scan.png" width="329" height="570">
+<p>You should now see red dots fill the <strong>rviz</strong> map where obstacles exist. You can increase the size of these using the “Size (m)” setting within the “LaserScan” panel.</p>
+<p>In a new terminal on the <strong>Master</strong>, run the <strong>rplidar Node Client</strong> toold provided by the <strong>rplidar</strong> ROS package:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosrun rplidar_ros rplidarNodeClient
+</pre></div>
+</div>
+<p>This should provide distance data from objects at specific angle increments. If we kill the <strong>rplidarNodeClient</strong> node, we can investigate what information the <strong>rplidar_ros</strong> launch file is sending.</p>
+<p>Type the following and observe the command output:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rostopic list
+rostopic info /scan
+rostopic <span class="nb">type</span> /scan
+rostopic <span class="nb">type</span> /scan <span class="p">|</span> rosmsg show
+rostopic <span class="nb">echo</span> /scan
+</pre></div>
+</div>
+<p>At this point you can kill all nodes on the master, but keep the <strong>rplidar_ros</strong> launch file running on the <strong>Robot</strong>.</p>
+</div>
+<div class="section" id="lidar-subscriber">
+<h3>LIDAR Subscriber<a class="headerlink" href="#lidar-subscriber" title="Permalink to this headline">¶</a></h3>
+<p>In this section we will build a subscriber that will print the range data from the RPLIDAR A1 Range Scanner.</p>
+<ol>
+<li><p>Browse to a terminal on the <strong>Master</strong> and create an <code class="docutils literal notranslate"><span class="pre">ice8</span></code> package:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/master_ws/src/ece495_master_spring2022-USERNAME/
+catkin_create_pkg ice8 rospy sensor_msgs rplidar_ros geometry_msgs
+<span class="nb">cd</span> ~/master_ws
+catkin_make
+<span class="nb">source</span> ~/.bashrc
+</pre></div>
+</div>
+</li>
+<li><p>Create an lidar node:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>roscd ice8/src
+touch lidar_sub.py
+</pre></div>
+</div>
+</li>
+<li><p>Copy and complete the below code using the GUI editor tool, <strong>Thonny</strong>. Browse to the subscriber you just created and double-click. This will open the file in <strong>Thonny</strong> (if it is open in any other editor, stop, raise your hand, and get help from an instructor)</p></li>
+</ol>
+<blockquote>
+<div><p>💡️ <strong>Tip</strong>: Look for the <strong>“TODO”</strong> tag which indicates where you should insert your own code.</p>
+</div></blockquote>
+<p>The code should obtain the list of range data from the LIDAR launch file running on the robot, convert the angles from 0 to 180 degrees and 0 to -180 degrees to 0 to 360 degrees. Lastly, the subscriber will print the average distance of obstacles 30 degrees off the nose of the robot.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="kn">import</span> <span class="nn">rospy</span><span class="o">,</span> <span class="nn">math</span>
+<span class="c1"># TODO: import correct message</span>
+
+<span class="c1"># lambda function to convert rad to deg</span>
+<span class="n">RAD2DEG</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">((</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="mf">180.</span><span class="o">/</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+<span class="c1"># convert LaserScan degree from -180 - 180 degs to 0 - 360 degs</span>
+<span class="n">DEG_CONV</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">deg</span><span class="p">:</span> <span class="n">deg</span> <span class="o">+</span> <span class="mi">360</span> <span class="k">if</span> <span class="n">deg</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">deg</span>
+
+<span class="k">class</span> <span class="nc">LIDAR</span><span class="p">:</span>    
+    <span class="sd">&quot;&quot;&quot;Class to read lidar data from RPLidar A1 using the rplidar_ros pkg&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># TODO: create a subscriber to the scan topic published by the rplidar launch file</span>
+
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">ctrl_c</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">rospy</span><span class="o">.</span><span class="n">on_shutdown</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">shutdownhook</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">callback_lidar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scan</span><span class="p">):</span>
+    	<span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">ctrl_c</span><span class="p">:</span>
+	    	<span class="n">degrees</span> <span class="o">=</span> <span class="p">[]</span>
+	    	<span class="n">ranges</span> <span class="o">=</span> <span class="p">[]</span>
+	    	
+	    	<span class="c1"># determine how many scans were taken during rotation</span>
+	        <span class="n">count</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">scan</span><span class="o">.</span><span class="n">scan_time</span> <span class="o">/</span> <span class="n">scan</span><span class="o">.</span><span class="n">time_increment</span><span class="p">)</span>
+	        
+	        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">count</span><span class="p">):</span>
+	            <span class="c1"># using min angle and incr data determine curr angle, </span>
+	            <span class="c1"># convert to degrees, convert to 360 scale</span>
+	            <span class="n">degrees</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">DEG_CONV</span><span class="p">(</span><span class="n">RAD2DEG</span><span class="p">(</span><span class="n">scan</span><span class="o">.</span><span class="n">angle_min</span> <span class="o">+</span> <span class="n">scan</span><span class="o">.</span><span class="n">angle_increment</span><span class="o">*</span><span class="n">i</span><span class="p">))))</span>
+	            <span class="n">rng</span> <span class="o">=</span> <span class="n">scan</span><span class="o">.</span><span class="n">ranges</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+	            
+	            <span class="c1"># ensure range values are valid; set to 0 if not</span>
+	            <span class="k">if</span> <span class="n">rng</span> <span class="o">&lt;</span> <span class="n">scan</span><span class="o">.</span><span class="n">range_min</span> <span class="ow">or</span> <span class="n">rng</span> <span class="o">&gt;</span> <span class="n">scan</span><span class="o">.</span><span class="n">range_max</span><span class="p">:</span>
+	                <span class="n">ranges</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+	            <span class="k">else</span><span class="p">:</span>
+	            	<span class="n">ranges</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rng</span><span class="p">)</span>
+	        
+	        <span class="c1"># python way to iterate two lists at once!</span>
+	        <span class="k">for</span> <span class="n">deg</span><span class="p">,</span> <span class="n">rng</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">degrees</span><span class="p">,</span> <span class="n">ranges</span><span class="p">):</span>
+	        	<span class="c1"># TODO: sum and count the ranges 30 degrees off the nose of the robot</span>
+                
+            <span class="c1"># TODO: ensure you don&#39;t divide by 0 and print average off the nose</span>
+	        	
+	<span class="k">def</span> <span class="nf">shutdownhook</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Shutting down lidar subscriber&quot;</span><span class="p">)</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">ctrl_c</span> <span class="o">=</span> <span class="kc">True</span>
+        
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;lidar_sub&#39;</span><span class="p">)</span>
+    <span class="n">LIDAR</span><span class="p">()</span>
+    <span class="n">rospy</span><span class="o">.</span><span class="n">spin</span><span class="p">()</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Save, exit, and make the node executable.</p></li>
+<li><p>Open a new terminal on the <strong>Master</strong> and run the <strong>lidar_sub.py</strong> node.</p></li>
+<li><p>Rotate the <strong>Robot</strong> and observe the distance off the nose.</p></li>
+</ol>
+</div>
+<div class="section" id="checkpoint">
+<h3>Checkpoint<a class="headerlink" href="#checkpoint" title="Permalink to this headline">¶</a></h3>
+<p>Once complete, get checked off by an instructor showing the output of your <strong>lidar_sub</strong> and <strong>rqt_graph</strong> node.</p>
+</div>
+<div class="section" id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
+<p>In this lesson you learned how to integrate the LIDAR and get the distance of objects off the nose of the robot using the pre-built <strong>rplidar</strong> ROS package. In the lab that corresponds to this lesson you will apply this knowledge to stop the robot a specified distance from an obstacle and turn.</p>
+</div>
+<div class="section" id="cleanup">
+<h3>Cleanup<a class="headerlink" href="#cleanup" title="Permalink to this headline">¶</a></h3>
+<p>In each terminal window, close the node by typing <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code>. Exit any SSH connections. Shutdown the notebook server by typing <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code> within the terminal you ran <code class="docutils literal notranslate"><span class="pre">jupyter-notebook</span></code> in. Select ‘y’.</p>
+<p><strong>Ensure roscore is terminated before moving on to the lab.</strong></p>
+</div>
+</div>
+<div class="section" id="lab-3">
+<h2>Lab 3<a class="headerlink" href="#lab-3" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p><strong>You must open this file as a Jupyter Notebook (link below) to run code</strong></p>
+<p><a class="reference external" href="http://localhost:8888/notebooks/Lab3_LIDAR.ipynb">Run this file as an executable Jupyter Notebook</a></p>
+<div class="section" id="id2">
+<h3>Purpose<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>This lab will integrate the Slamtec RPLIDAR A1 Range Scanner with the existing USAFABot controller to drive the robot forward and turn 90 degrees when there is an obstacle.</p>
+</div>
+<div class="section" id="master">
+<h3>Master<a class="headerlink" href="#master" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h4>Setup:<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<p>In the <code class="docutils literal notranslate"><span class="pre">/master_ws/src/ece495_master_spring2022-USERNAME/</span></code> folder, create a <strong>lab3</strong> package which depends on <strong>rospy</strong>, <strong>std_msgs</strong>, <strong>geometry_msgs</strong>, <strong>um7</strong>, <strong>rplidar_ros</strong>, and <strong>usafabot</strong>.</p>
+<p>Make and source your workspace.</p>
+</div>
+<div class="section" id="controller-py">
+<h4><a class="reference external" href="http://controller.py">controller.py</a><a class="headerlink" href="#controller-py" title="Permalink to this headline">¶</a></h4>
+<ol>
+<li><p>Copy the <a class="reference external" href="http://controller.py">controller.py</a> file from lab2 into the lab3 package.</p></li>
+<li><p>Open the <a class="reference external" href="http://controller.py">controller.py</a> file from lab3 using the <strong>Thonny</strong> editor.</p></li>
+<li><p>Import the laser message used in ICE8.</p></li>
+<li><p>Remove the import of the um7.srv library (we will no longer be initializing the IMU within the <a class="reference external" href="http://controller.py">controller.py</a> file, because it is initialized in the robotics.launch file).</p></li>
+<li><p>Copy the 2 lambda functions from ICE8 (RAD2DEG &amp; DEG_CONV).</p></li>
+<li><p>Add the following Class variables within the class above the <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> function:</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">DISTANCE</span> <span class="pre">=</span> <span class="pre">0.4</span> <span class="pre">#</span> <span class="pre">distance</span> <span class="pre">from</span> <span class="pre">the</span> <span class="pre">wall</span> <span class="pre">to</span> <span class="pre">stop</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">K_POS</span> <span class="pre">=</span> <span class="pre">100</span> <span class="pre">#</span> <span class="pre">proportional</span> <span class="pre">constant</span> <span class="pre">for</span> <span class="pre">slowly</span> <span class="pre">stopping</span> <span class="pre">as</span> <span class="pre">you</span> <span class="pre">get</span> <span class="pre">closer</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">wall</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MIN_LIN_X</span> <span class="pre">=</span> <span class="pre">0.05</span> <span class="pre">#</span> <span class="pre">limit</span> <span class="pre">m/s</span> <span class="pre">values</span> <span class="pre">sent</span> <span class="pre">to</span> <span class="pre">USAFABot</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MAX_LIN_X</span> <span class="pre">=</span> <span class="pre">0.2</span> <span class="pre">#</span> <span class="pre">limit</span> <span class="pre">m/s</span> <span class="pre">values</span> <span class="pre">sent</span> <span class="pre">to</span> <span class="pre">USAFABot</span></code></p></li>
+</ol>
+</li>
+<li><p>Add the following to the <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> function:</p>
+<ol class="simple">
+<li><p>Instance variable, <code class="docutils literal notranslate"><span class="pre">self.avg_dist</span></code>, initialized to 0 to store the average dist off the nose.</p></li>
+<li><p>Instance variable, <code class="docutils literal notranslate"><span class="pre">self.got_avg</span></code>, initialized to False to store when an average is calculated.</p></li>
+<li><p>A subscriber to the LIDAR topic of interest with a callback to the callback_lidar() function.</p></li>
+</ol>
+</li>
+<li><p>Remove the call to <code class="docutils literal notranslate"><span class="pre">self.init_imu()</span></code> from the <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> function. The IMU is initialized within the robotics.launch file.</p></li>
+<li><p>Remove the <code class="docutils literal notranslate"><span class="pre">init_imu()</span></code> function.</p></li>
+<li><p>Add the <code class="docutils literal notranslate"><span class="pre">callback_lidar()</span></code> function from ICE8, removing print statements and setting the instance variables, <code class="docutils literal notranslate"><span class="pre">self.avg_dist</span></code> and <code class="docutils literal notranslate"><span class="pre">self.got_avg</span></code>.</p></li>
+<li><p>Edit the <code class="docutils literal notranslate"><span class="pre">callback_controller()</span></code> to accomplish the following:</p>
+<ol class="simple">
+<li><p>Remove user input.</p></li>
+<li><p>When not turning and you have an average LIDAR reading, calculate the distance error (<code class="docutils literal notranslate"><span class="pre">actual</span> <span class="pre">dist</span></code> - <code class="docutils literal notranslate"><span class="pre">desired</span> <span class="pre">dist</span></code>) and use that to drive your robot straight at a proportional rate (very similar to how we calculated the turn rate in lab 2).</p></li>
+<li><p>Limit the linear speed of the robot to <code class="docutils literal notranslate"><span class="pre">MIN_LIN_X</span></code> and <code class="docutils literal notranslate"><span class="pre">MAX_LIN_X</span></code>.</p></li>
+<li><p>If within <code class="docutils literal notranslate"><span class="pre">DISTANCE</span></code> of a wall, then stop and start turning (left or right, you decide).</p></li>
+</ol>
+<blockquote>
+<div><p>💡️ <strong>Tip:</strong> You should be able to reuse a lot of code for this step!</p>
+</div></blockquote>
+<ol class="simple">
+<li><p>Save the linear x and angular z values to the <code class="docutils literal notranslate"><span class="pre">USAFABOT_Cmd</span></code> message and publish.</p></li>
+</ol>
+</li>
+<li><p>Save, exit, and make executable if necessary.</p></li>
+</ol>
+</div>
+<div class="section" id="launch-file">
+<h4>Launch File<a class="headerlink" href="#launch-file" title="Permalink to this headline">¶</a></h4>
+<p>Create a launch file, lab3.launch, that launches the <code class="docutils literal notranslate"><span class="pre">controller.py</span></code> file.</p>
+</div>
+</div>
+<div class="section" id="run-your-nodes">
+<h3>Run your nodes<a class="headerlink" href="#run-your-nodes" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Open secure shell into the <strong>Robot</strong> and run the <strong>robotics.launch</strong> file.</p></li>
+<li><p>On the master, open a terminal and run your <strong>lab3.launch</strong> file.</p></li>
+</ol>
+</div>
+<div class="section" id="report">
+<h3>Report<a class="headerlink" href="#report" title="Permalink to this headline">¶</a></h3>
+<p>Complete a short 2-3 page report that utilizes the format and answers the questions within the report template. The report template and an example report can be found within the Team under <code class="docutils literal notranslate"><span class="pre">Resources/Lab</span> <span class="pre">Template</span></code>.</p>
+<blockquote>
+<div><p>📝️ <strong>NOTE:</strong> We will be primarily grading sections 3.3 System level design and 3.4 Testing for this lab, but do include the entire lab as you will need other components for the final project report.</p>
+</div></blockquote>
+</div>
+<div class="section" id="turn-in-requirements">
+<h3>Turn-in Requirements<a class="headerlink" href="#turn-in-requirements" title="Permalink to this headline">¶</a></h3>
+<p><strong>[25 points]</strong> Demonstration of keyboard control of USAFABot (preferably in person, but can be recorded and posted to Teams under the Lab1 channel).</p>
+<p><strong>[50 points]</strong> Report via Gradescope.</p>
+<p><strong>[25 points]</strong> Code: push your code to your repository. Also, include a screen shot of the <strong><a class="reference external" href="http://controller.py">controller.py</a></strong> file at the end of your report.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Module7.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Launch Files</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Mr. Steven Beyer<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

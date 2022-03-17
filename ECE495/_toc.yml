@@ -16,24 +16,25 @@ parts:
   - caption: MODULE 01
     chapters:
     - file: Module1.md
-    - file: ICE1_Listener.md
-    - file: ICE1_ROS.md
-    - file: ICE1_Talker.md
   - caption: MODULE 02
     chapters:
-    - file: ICE2_Linux.md
+    - file: Module2.md
   - caption: MODULE 03
     chapters:
-    - file: Module3_Python3.md
-    - file: Module3_ROS.md
-    - file: Module3_RPSComputer.md
-    - file: ICE3_ROS.md
-    - file: ICE3_Client.md
-    - file: ICE3_Server.md
+    - file: Module3.md
   - caption: MODULE 04
     chapters:
-    - file: ICE4_DrivingTheRobot.md
+    - file: Module4.md
   - caption: MODULE 05
     chapters:
-    - file: ICE5_CustomMessages.md
-    - file: Lab1_CustomMessages.md
+    - file: Module5.md
+  - caption: MODULE 06
+    chapters:
+    - file: Module6.md
+  - caption: MODULE 07
+    chapters:
+    - file: Module7.md
+  - caption: MODULE 08
+    chapters:
+    - file: Module8.md
+    

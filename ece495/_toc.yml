@@ -1,0 +1,27 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: ROBOT SETUP
+    chapters:
+    - file: robot_setup
+  - caption: MODULE 00
+    chapters:
+    - file: Module0
+  - caption: MODULE 01
+    chapters:
+    - file: Module1
+  - caption: MODULE 02
+    chapters:
+    - file: Module2
+  - caption: MODULE 03
+    chapters:
+    - file: Module3
+  - caption: MODULE 04
+    chapters:
+    - file: Module4
+  - caption: MODULE 05
+    chapters:
+    - file: Module5

@@ -1,0 +1,719 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 6: Inertial Measurement Unit &#8212; ECE495</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/beyer_bot.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">ECE495</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome ECE495
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ROBOT SETUP
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="robot_setup.html">
+   Robot Setup
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 00
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module0.html">
+   Module 0: Intro &amp; GIT
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 01
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module1.html">
+   Module 1: Robotics Operating System (ROS)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 02
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module2.html">
+   Module 2: Linux for Robotics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 03
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module3.html">
+   Module 3: Python3 for Robotics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 04
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module4.html">
+   Module 4: Driving the Robot
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 05
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module5.html">
+   Module 5: Custom Messages
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 06
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module6.html">
+   Module 6: Inertial Measurement Unit
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 07
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module7.html">
+   Module 7: Launch Files
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 08
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module8.html">
+   Module 8: LIDAR
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/ICE6_IMU.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FICE6_IMU.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/ICE6_IMU.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-class-exercise-6">
+   In-Class Exercise 6
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-note-on-this-document">
+     A note on this document
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#purpose">
+     Purpose
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calibrate-the-um7-orientation-sensor">
+     Calibrate the UM7 Orientation Sensor
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#calibration-steps">
+       Calibration Steps:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setup">
+     Setup
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#test-the-imu">
+     Test the IMU
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#write-the-subscriber">
+     Write the Subscriber
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#checkpoint">
+     Checkpoint
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cleanup">
+   Cleanup
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Module 6: Inertial Measurement Unit</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-class-exercise-6">
+   In-Class Exercise 6
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-note-on-this-document">
+     A note on this document
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#purpose">
+     Purpose
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calibrate-the-um7-orientation-sensor">
+     Calibrate the UM7 Orientation Sensor
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#calibration-steps">
+       Calibration Steps:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setup">
+     Setup
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#test-the-imu">
+     Test the IMU
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#write-the-subscriber">
+     Write the Subscriber
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#checkpoint">
+     Checkpoint
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cleanup">
+   Cleanup
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="module-6-inertial-measurement-unit">
+<h1>Module 6: Inertial Measurement Unit<a class="headerlink" href="#module-6-inertial-measurement-unit" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="in-class-exercise-6">
+<h2>In-Class Exercise 6<a class="headerlink" href="#in-class-exercise-6" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<div class="section" id="a-note-on-this-document">
+<h3>A note on this document<a class="headerlink" href="#a-note-on-this-document" title="Permalink to this headline">¶</a></h3>
+<p>Now that you have a better understanding of the Linux operating system and Python programming language the Jupyter Notebooks will be used primarily to guide you through the In-Class Exercises and Laboratories. You will execute the majority of your commands and code within the Linux terminal.</p>
+</div>
+<div class="section" id="purpose">
+<h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h3>
+<p>In practice, an inertial measurement unit (IMU) device provides orientation, angular velocity, and linear acceleration. The <a class="reference external" href="https://www.pololu.com/product/2764">UM7 Orientation Sensor</a> from Redshift Labs is an Attitude and Heading Reference System (AHRS) that contains a three-axis accelerometer, rate gyro, and magnetometer. Unlike a typical inertial measurement unit (IMU), which only provides raw sensor readings, the UM7 features an onboard microcontroller that combines sensor data using an EKF to generate orientation estimates 500 times a second.</p>
+<img src="Figures/IMU.jpg" width="600" height="395.89">
+<p>The UM7 Orientation Sensor is connected to the <a class="reference external" href="https://www.pololu.com/product/3172">Pololu USB AVR Programmer v2.1</a>, a compact, low-cost in-system programmer (ISP). The programmer provides an interface for communicating with the UM7 Orientation Sensor.</p>
+<p>The IMU provides values that are part of the robot state and allow the robot to navigate more accurately. Combined with data from the tachometers these values provide the odometry of the robot to estimate change in position over time. We will primarily use the IMU to perform 90 and 180 degree turns.</p>
+<img src="Figures/bot.PNG" width="400" height="195.89"></div>
+<div class="section" id="calibrate-the-um7-orientation-sensor">
+<h3>Calibrate the UM7 Orientation Sensor<a class="headerlink" href="#calibrate-the-um7-orientation-sensor" title="Permalink to this headline">¶</a></h3>
+<p>As described above, there are a number of different sensors that work together to provide the attitude and heading estimates for the UM7 Orientation Sensor. These sensors are sensitive to magnetic fields which are unique to locale and device. As you will learn in future ECE classes, all electronic devices create small magnetic fields. Even electrons traveling over a wire create magnetic fields. The UM7 Orientation Sensor is strategically placed in the center of the robot for best attitude and heading performance, however, this location is also in the center of a number of magnetic fields. We can use <a class="reference external" href="https://redshiftlabs.com.au/support-services/serial-interface-software/">Redshift Lab’s Serial Interface Software</a> along with their <a class="reference external" href="https://redshiftlabs.com.au/support-services/um7-calibration-procedure/">calibration procedure</a> to calibrate the UM7 to provide a more accurate attitude and heading reading.</p>
+<div class="section" id="calibration-steps">
+<h4>Calibration Steps:<a class="headerlink" href="#calibration-steps" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>Plug the Pololu USB AVR Programmer v2.1 into your computer. You may want to move the USB cable so it is easier to rotate the robot when calibrating (when looking at the USB cables connected to the robot, the top left should be connected to the programmer).</p></li>
+<li><p>Launch Redshift Labs serial interface software by double clicking the icon on your desktop or finding it in your browser.</p></li>
+<li><p>Set COM Ports: You will need to configure which virtual COM port has been allocated to your USB serial converter PCB. Select <strong>“Serial Settings &gt; Port &gt; COMX”</strong> (where X is the allocated COM port number on your PC, in my case, it is the higher number). Select <strong>Connect</strong> and continue selecting ports until a value shows up under “Sensor Firmware Version”.</p></li>
+<li><p>Read Data: Select <strong>“Configuration &gt; Read”</strong>. A progress bar should load and once it is finished the configuration data should be displayed. Press the + button next to <strong>“Broadcast Rates – Raw Data”</strong> now select <strong>“All Raw Broadcast Rate”</strong>, verify that it is set to 20 Hz. If not, type 20 into the corresponding text box and press <strong>“Configuration &gt; FLASH”</strong>.</p></li>
+<li><p>Plot Data:</p>
+<ol class="simple">
+<li><p>From the tabs select <strong>“Data”</strong>.</p></li>
+<li><p>Click the + icon next to <strong>“Euler Angles”</strong>.</p></li>
+<li><p>Tick <strong>Roll</strong>, <strong>Pitch</strong>, and <strong>Yaw</strong> checkboxes.</p></li>
+<li><p>Press <strong>“Create Graph from Selected”</strong>.</p></li>
+<li><p>A real time graph should be displayed in a separate window of Roll, Pitch, and Yaw. We suggest using your mouse to expand the window a little.</p></li>
+</ol>
+</li>
+<li><p>Start Magnetometer Calibration: To begin magnetometer calibration select <strong>“Mag Calibration &gt; Start Data”</strong> you should notice that the <strong>“Collected Data Points:”</strong> begin counting up. While the software is taking samples, rotate your UM7-LT around in a spherical position capturing as many different samples of the surrounding magnetic field as possible. Keep well away from anything that will produce magnetic distortions in your sample set, i.e. ferrous metal or powerful magnets.</p></li>
+<li><p>Stop Collecting Data: When you see that the <strong>“Collected Data Points:”</strong> number turn green, that’s an indication that you have collected the minimum samples required to perform a calibration. I usually collect about 500 samples. Now select <strong>“Mag Calibration &gt; Stop Data”</strong>.</p></li>
+<li><p>Compute Biases: You are now ready to compute the biases for calibration, select <strong>“Mag Calibration &gt; Compute”</strong>. You should now see some computed data in the <strong>“Calibration Matrix”</strong>. Select <strong>“Mag Calibration &gt; Write to RAM”</strong>.</p></li>
+<li><p>Write Calibration Data: You will want your calibration data to persist, so now select <strong>“Configuration &gt; FLASH”</strong>. This will write the calibration data into your UM7-LT, the calibration matrix will be stored even if the power is turned off and back on.</p></li>
+<li><p>Zero Rate Gyros: This is needed in the later sets of firmware. It will initialize your new calibration correctly. Select <strong>“Commands &gt; Zero Rate Gyros”</strong>.</p></li>
+<li><p>Set Magnetic Reference Vector: Point your UM7-LT exactly North (North on the UM7 is left of front on the robot), now press <strong>“Commands &gt; Set Mag Reference Vector”</strong>.</p></li>
+<li><p>Reset EKF: You will now need to reset the EKF for the process to work correctly. You may notice that the graphs on your data plot are displaying incorrectly. Select <strong>“Commands &gt; Reset EKF”</strong>. Now look at the data plot of Roll, Pitch and Yaw. If you point the X orientation of the sensor North and hold the unit as level as possible, you should see the Roll, Pitch and Yaw converge to zero.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="setup">
+<h3>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="http://wiki.ros.org/um7">UM7 ROS package</a> is pre-installed on your <strong>Master</strong> and <strong>Robot</strong>. But as always, trust, but verify. Open a new terminal on your <strong>Master</strong> and run the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rospack find um7
+</pre></div>
+</div>
+<p>If installed, the command should return the absolute path to the package, similar to:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/home/pi/master_ws/src/um7
+</pre></div>
+</div>
+<p>If the command instead returns an error, then you need to install the package. This package has not been compiled for ROS Noetic, so you must download the source code into the workspace source folder. When you install a ROS package from source, you have to manually download any dependencies (using rosdep) and then compile it.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/master_ws/src
+git clone https://github.com/ros-drivers/um7.git
+<span class="nb">cd</span> ~/master_ws
+rosdep install --from-paths src --ignore-src -r -y
+catkin_make
+</pre></div>
+</div>
+<blockquote>
+<div><p>📝️ <strong>Note</strong>: It turns out the developers for the um7 ROS package did not adequately set up the dependencies. So you should have seen an error when running <strong>rosdep</strong> and <strong>catkin_make</strong> about a <strong>serial</strong> package not installed. To fix this dependency issue you need to install a ROS serial package to your source:</p>
+</div></blockquote>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/master_ws/src
+git clone https://github.com/wjwwood/serial.git
+<span class="nb">cd</span> ~/master_ws
+rosdep install --from-paths src --ignore-src -r -y
+catkin_make
+<span class="nb">source</span> ~/.bashrc
+</pre></div>
+</div>
+<p>Create an ssh connection to your <strong>Robot</strong> and repeat the above.</p>
+</div>
+<div class="section" id="test-the-imu">
+<h3>Test the IMU<a class="headerlink" href="#test-the-imu" title="Permalink to this headline">¶</a></h3>
+<p>Open a new terminal on the master and run roscore and setup for statistics:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>roscore
+rosparam <span class="nb">set</span> enable_statistics <span class="nb">true</span>
+</pre></div>
+</div>
+<p>Select the terminal with the secure shell connection to your <strong>Robot</strong> and display the serial ports connected to the <strong>Robot</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 -m serial.tools.list_ports -v
+</pre></div>
+</div>
+<blockquote>
+<div><p>💡️ <strong>Tip</strong>: Write this command down as you will use it often to determine which devices are connected to your ports! Every time you reboot the <strong>Robot</strong> the ports might change.</p>
+</div></blockquote>
+<p>Run the pre-built IMU publisher connecting to the Pololu USB AVR Programmer with the lowest port number (if that returns red text, try the next port number).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosrun um7 um7_driver _port:<span class="o">=</span>/dev/ttyACM1
+</pre></div>
+</div>
+<blockquote>
+<div><p>⌨️ <strong>Syntax</strong> <code class="docutils literal notranslate"><span class="pre">rosrun</span> <span class="pre">&lt;package&gt;</span> <span class="pre">&lt;node&gt;</span> <span class="pre">&lt;_ParameterName:=ParameterInput&gt;</span></code></p>
+</div></blockquote>
+<p>Open a new terminal on your <strong>Master</strong> and observe what topics are running.</p>
+<p>Echo the output of each of the topics and rotate the <strong>Robot</strong> to see the values change.</p>
+<p>Which topic appears to be most useful for our application? What type of messages does that topic publish? You will need both of these pieces of information for the next portion of the ICE.</p>
+<p>You can keep the node running for the next portion of the ICE.</p>
+</div>
+<div class="section" id="write-the-subscriber">
+<h3>Write the Subscriber<a class="headerlink" href="#write-the-subscriber" title="Permalink to this headline">¶</a></h3>
+<ol>
+<li><p>In a new terminal on the <strong>Master</strong>, create an <strong>ice6</strong> package which depends on the <em>geometry_msgs</em>, <em>rospy</em>, and <em>um7</em> packages, compile and source the ws:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/master_ws/src/ece495_master_spring2022-USERNAME/
+catkin_create_pkg ice6 std_msgs rospy um7
+<span class="nb">cd</span> ~/master_ws
+catkin_make
+<span class="nb">source</span> ~/.bashrc
+</pre></div>
+</div>
+</li>
+<li><p>Create an IMU node:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>roscd ice6/src
+touch imu_sub.py
+</pre></div>
+</div>
+</li>
+<li><p>Copy and complete the below code using the GUI editor tool, <strong>Thonny</strong>. Browse to the subscriber you just created and double-click. This will open the file in <strong>Thonny</strong> (if it is open in any other editor, stop, raise your hand, and get help from an instructor)</p></li>
+</ol>
+<blockquote>
+<div><p>💡️ <strong>Tip</strong>: Look for the <strong>“TODO”</strong> tag which indicates where you should insert your own code.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="kn">import</span> <span class="nn">rospy</span><span class="o">,</span> <span class="nn">math</span>
+<span class="kn">from</span> <span class="nn">um7.srv</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="c1"># TODO: import message type sent by imu node</span>
+
+
+<span class="k">class</span> <span class="nc">IMU</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Class to read orientation data from UM7-LT&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>        
+        <span class="c1"># reset the IMU</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">init_imu</span><span class="p">()</span>
+
+        <span class="c1"># TODO: subscribe to the imu topic that is published by the</span>
+        <span class="c1"># pre-built ROS imu node from the um7 package that provides</span>
+        <span class="c1"># roll, pitch, and yaw</span>
+
+
+        <span class="c1"># nicely handle shutdown (Ctrl+c)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ctrl_c</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">rospy</span><span class="o">.</span><span class="n">on_shutdown</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">shutdownhook</span><span class="p">)</span>
+
+    <span class="c1"># function to reset the gyro, filter, and magnetic reference</span>
+    <span class="k">def</span> <span class="nf">init_imu</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">rospy</span><span class="o">.</span><span class="n">wait_for_service</span><span class="p">(</span><span class="s1">&#39;imu/reset&#39;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">reset</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ServiceProxy</span><span class="p">(</span><span class="s1">&#39;imu/reset&#39;</span><span class="p">,</span> <span class="n">Reset</span><span class="p">)</span>
+            <span class="c1"># (gyros, EKF, mag_ref)</span>
+            <span class="n">reset</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;IMU reset successful!&quot;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ServiceException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;service call failed: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="o">%</span><span class="n">e</span><span class="p">)</span>
+
+    <span class="c1"># The IMU provides yaw from -180 to 180. This function</span>
+    <span class="c1"># converts the yaw (in degrees) to 0 to 360</span>
+    <span class="k">def</span> <span class="nf">convert_yaw</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">yaw</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">360</span> <span class="o">+</span> <span class="n">yaw</span> <span class="k">if</span> <span class="n">yaw</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">yaw</span>		
+
+    <span class="c1"># Print the current Yaw</span>
+    <span class="k">def</span> <span class="nf">callback_imu</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rpy</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">ctrl_c</span><span class="p">:</span>
+            <span class="c1"># TODO: get the z component (yaw) of the message</span>
+            <span class="n">yaw</span> <span class="o">=</span> 
+
+            <span class="c1"># convert yaw from radians to degrees and</span>
+            <span class="c1"># from -180 to 180 to 0 to 360</span>
+            <span class="n">yaw</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">convert_yaw</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">yaw</span><span class="p">))</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Current heading is </span><span class="si">%f</span><span class="s2"> degrees.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">yaw</span><span class="p">))</span>
+
+    <span class="c1"># clean shutdown</span>
+    <span class="k">def</span> <span class="nf">shutdownhook</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Shutting down the IMU subscriber&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ctrl_c</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;imu_sub&#39;</span><span class="p">)</span>
+    <span class="n">IMU</span><span class="p">()</span>
+    <span class="n">rospy</span><span class="o">.</span><span class="n">spin</span><span class="p">()</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Save, exit, and make the node executable.</p></li>
+<li><p>Open a new terminal on the <strong>Master</strong> and run the <strong>imu_sub.py</strong> node.</p></li>
+<li><p>Rotate the <strong>Robot</strong> and observe the output.</p></li>
+</ol>
+</div>
+<div class="section" id="checkpoint">
+<h3>Checkpoint<a class="headerlink" href="#checkpoint" title="Permalink to this headline">¶</a></h3>
+<p>Once complete, get checked off by an instructor showing the output of your <strong>imu_sub</strong> and <strong>rqt_graph</strong> node.</p>
+</div>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>In this lesson you learned how to calibrate the IMU and get orientation data using the pre-built <strong>um7</strong> ROS package. In the lab that corresponds to this lesson you will apply this knowledge to turn the robot in 90 and 180 degree turns.</p>
+</div>
+<div class="section" id="cleanup">
+<h2>Cleanup<a class="headerlink" href="#cleanup" title="Permalink to this headline">¶</a></h2>
+<p>In each terminal window, close the node by typing <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code>. Exit any SSH connections. Shutdown the notebook server by typing <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code> within the terminal you ran <code class="docutils literal notranslate"><span class="pre">jupyter-notebook</span></code> in. Select ‘y’.</p>
+<p><strong>Ensure roscore is terminated before moving on to the lab.</strong></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Mr. Steven Beyer<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

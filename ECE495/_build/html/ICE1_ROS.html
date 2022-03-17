@@ -51,8 +51,6 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Module 1: Robotics Operating System (ROS)" href="ICE1_Talker.html" />
-    <link rel="prev" title="Module 1: Robotics Operating System (ROS)" href="ICE1_Listener.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -125,24 +123,9 @@
   MODULE 01
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Module1.html">
-   Module 1: Robotics Operating System (ROS)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ICE1_Listener.html">
-   Module 1: Robotics Operating System (ROS)
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Module 1: Robotics Operating System (ROS)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ICE1_Talker.html">
    Module 1: Robotics Operating System (ROS)
   </a>
  </li>
@@ -154,7 +137,7 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="ICE2_Linux.html">
+  <a class="reference internal" href="Module2.html">
    Module 2: Linux for Robotics
   </a>
  </li>
@@ -166,32 +149,7 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="Module3_Python3.html">
-   Module 3: Python3 for Robotics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Module3_ROS.html">
-   Module 3: Python3 for Robotics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Module3_RPSComputer.html">
-   Module 3: Python3 for Robotics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ICE3_ROS.html">
-   Module 3: Python3 for Robotics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ICE3_Client.html">
-   Module 3: Python3 for Robotics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ICE3_Server.html">
+  <a class="reference internal" href="Module3.html">
    Module 3: Python3 for Robotics
   </a>
  </li>
@@ -203,7 +161,7 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="ICE4_DrivingTheRobot.html">
+  <a class="reference internal" href="Module4.html">
    Module 4: Driving the Robot
   </a>
  </li>
@@ -215,13 +173,44 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="ICE5_CustomMessages.html">
+  <a class="reference internal" href="Module5.html">
    Module 5: Custom Messages
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 06
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="Lab1_CustomMessages.html">
-   Module 5: Custom Messages
+  <a class="reference internal" href="Module6.html">
+   Module 6: Inertial Measurement Unit
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 07
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module7.html">
+   Module 7: Launch Files
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 08
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module8.html">
+   Module 8: LIDAR
   </a>
  </li>
 </ul>
@@ -265,9 +254,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/ICE1_ROS.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/ICE1_ROS.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -300,6 +289,23 @@
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/ICE1_ROS.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
 
         </div>
 
@@ -378,44 +384,122 @@
 <h1>Module 1: Robotics Operating System (ROS)<a class="headerlink" href="#module-1-robotics-operating-system-ros" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="in-class-exercise-1-ros">
 <h2>In-Class Exercise 1 - ROS<a class="headerlink" href="#in-class-exercise-1-ros" title="Permalink to this headline">¶</a></h2>
-<hr class="docutils" />
-<p><strong>You must open this file as a Jupyter Notebook (link below) to run code</strong></p>
-<p><a class="reference external" href="http://localhost:8888/notebooks/ICE1_ROS.ipynb">Run this file as an executable Jupyter Notebook</a></p>
 <p>Below you will see the ROS commands you will use throughout this course to investigate your ROS system and write your lab reports. The “!” character in the front allows us to run bash commands from Jupyter and would <strong>NOT</strong> be used in the command line.</p>
 <p>With the talker and listener nodes running execute the below commands.</p>
 <p>List all running nodes:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!rosnode list
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>rosnode list
 </pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ERROR: Unable to communicate with master!
+</pre></div>
+</div>
+</div>
 </div>
 <p>You should see the listener and talker nodes. The <em>/rosout</em> node is created when running <code class="docutils literal notranslate"><span class="pre">roscore</span></code> and facilitates communication in the network. You can ignore this node in your lab reports.</p>
 <p>Get more information about the <em>/listener</em> node:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!rosnode info /listener
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>rosnode info /listener
 </pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--------------------------------------------------------------------------------
+ERROR: Unable to communicate with master!
+</pre></div>
+</div>
+</div>
 </div>
 <p>You can see what topics the node is publishing and subscribing to. It publishes to the ROS log file (for debugging) and subscribes to the <strong>/chat</strong> topic.</p>
 <p>List the active topics:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!rostopic list
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>rostopic list
 </pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ERROR: Unable to communicate with master!
+</pre></div>
+</div>
+</div>
 </div>
 <p>The first topic is the one we created. The last two are created by <code class="docutils literal notranslate"><span class="pre">roscore</span></code> and can be ignored.</p>
 <p>Show information about the <strong>/chat</strong> topic such as what type of messages are sent over the topic and publishing and subscribing nodes.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!rostopic info /chat
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>rostopic info /chat
 </pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ERROR: Unable to communicate with master!
+</pre></div>
+</div>
+</div>
 </div>
 <p>As expected, the <em>talker</em> node is publishing to the <strong>/chat</strong> topic while the <em>listener</em> node subscribes.</p>
 <p>Display running nodes and communication between them:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!rqt_graph
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>rqt_graph
 </pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Traceback (most recent call last):
+  File &quot;/opt/ros/noetic/bin/rqt_graph&quot;, line 8, in &lt;module&gt;
+    sys.exit(main.main(sys.argv, standalone=&#39;rqt_graph.ros_graph.RosGraph&#39;))
+  File &quot;/opt/ros/noetic/lib/python3/dist-packages/rqt_gui/main.py&quot;, line 61, in main
+    return super(
+  File &quot;/opt/ros/noetic/lib/python3/dist-packages/qt_gui/main.py&quot;, line 407, in main
+    from python_qt_binding import QT_BINDING
+  File &quot;/opt/ros/noetic/lib/python3/dist-packages/python_qt_binding/__init__.py&quot;, line 55, in &lt;module&gt;
+    from .binding_helper import loadUi, QT_BINDING, QT_BINDING_MODULES, QT_BINDING_VERSION  # @UnusedImport
+  File &quot;/opt/ros/noetic/lib/python3/dist-packages/python_qt_binding/binding_helper.py&quot;, line 274, in &lt;module&gt;
+    _select_qt_binding(
+  File &quot;/opt/ros/noetic/lib/python3/dist-packages/python_qt_binding/binding_helper.py&quot;, line 108, in _select_qt_binding
+    QT_BINDING_VERSION = binding_loader(required_modules, optional_modules)
+  File &quot;/opt/ros/noetic/lib/python3/dist-packages/python_qt_binding/binding_helper.py&quot;, line 155, in _load_pyqt
+    _named_optional_import(&#39;PyQt5.%s&#39; % module_name)
+  File &quot;/opt/ros/noetic/lib/python3/dist-packages/python_qt_binding/binding_helper.py&quot;, line 142, in _named_optional_import
+    _named_import(name)
+  File &quot;/opt/ros/noetic/lib/python3/dist-packages/python_qt_binding/binding_helper.py&quot;, line 133, in _named_import
+    module = builtins.__import__(name)
+ValueError: PyCapsule_GetPointer called with incorrect name
+</pre></div>
+</div>
+</div>
 </div>
 <p>Close the rqt_graph.</p>
 <p>Display information about the message that is sent over the <strong>/chat</strong> topic.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!rostopic type /chat | rosmsg show
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>rostopic <span class="nb">type</span> /chat <span class="p">|</span> rosmsg show
 </pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ERROR: Unable to communicate with master!
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
+</pre></div>
+</div>
+</div>
 </div>
 <p>The output of the command is the same as the information we saw from the ROS documentation. Again, to access the message we have to use the <code class="docutils literal notranslate"><span class="pre">data</span></code> attribute.</p>
 <p>Display messages sent over the <strong>/chat</strong> topic:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!rostopic echo /chat
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>rostopic <span class="nb">echo</span> /chat
 </pre></div>
+</div>
+</div>
 </div>
 <p>In the ICE1_Talker notebook send a message to the listener. You should see that message show up both here and at the listener. This echo tool is useful to ensure your nodes are sending the messages as expected.</p>
 <div class="section" id="checkpoint">
@@ -453,21 +537,7 @@
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="ICE1_Listener.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Module 1: Robotics Operating System (ROS)</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="ICE1_Talker.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Module 1: Robotics Operating System (ROS)</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>

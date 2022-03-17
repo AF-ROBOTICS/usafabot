@@ -1,0 +1,1276 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Messages &#8212; ECE495</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Inertial Measurement Unit" href="Module6.html" />
+    <link rel="prev" title="Driving the Robot" href="Module4.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/beyer_bot.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">ECE495</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Getting Started
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ROBOT SETUP
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="robot_setup.html">
+   Robot Setup
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 00
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module0.html">
+   Intro &amp; GIT
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 01
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module1.html">
+   Robotics Operating System (ROS)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 02
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module2.html">
+   Linux for Robotics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 03
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module3.html">
+   Python3 for Robotics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 04
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module4.html">
+   Driving the Robot
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 05
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Custom Messages
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 06
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module6.html">
+   Inertial Measurement Unit
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 07
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module7.html">
+   Launch Files
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 08
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module8.html">
+   LIDAR
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Module5.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule5.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-class-exercise-5">
+   In-Class Exercise 5
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-note-on-this-document">
+     A note on this document
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#purpose">
+     Purpose
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ros-msgs">
+     ROS msgs
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#msg">
+       msg
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Custom messages
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fields">
+       Fields
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#header">
+       Header
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#format">
+       Format
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#importing-messages">
+       Importing messages
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#using-messages">
+       Using messages
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ice-5">
+     ICE 5
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#create-the-custom-message">
+       Create the custom message:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#write-the-publisher">
+       Write the Publisher
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#write-the-subscriber">
+       Write the Subscriber
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#requirements-to-use-custom-messages">
+       Requirements to use custom messages.
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#package-xml">
+         package.xml
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#cmakelists-txt">
+         CMakeLists.txt
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#compile-and-run-the-code">
+       Compile and run the code
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#checkpoint">
+     Checkpoint
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#summary">
+     Summary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cleanup">
+     Cleanup
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lab-1">
+   Lab 1
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Purpose
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#robot">
+     Robot
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#setup">
+       Setup:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#usafabot-serial-py">
+       usafabot_serial.py
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#master">
+     Master
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Setup:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#controller-py">
+       controller.py
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#run-your-nodes">
+     Run your nodes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#report">
+     Report
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#turn-in-requirements">
+     Turn-in Requirements
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Custom Messages</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-class-exercise-5">
+   In-Class Exercise 5
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-note-on-this-document">
+     A note on this document
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#purpose">
+     Purpose
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ros-msgs">
+     ROS msgs
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#msg">
+       msg
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Custom messages
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fields">
+       Fields
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#header">
+       Header
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#format">
+       Format
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#importing-messages">
+       Importing messages
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#using-messages">
+       Using messages
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ice-5">
+     ICE 5
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#create-the-custom-message">
+       Create the custom message:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#write-the-publisher">
+       Write the Publisher
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#write-the-subscriber">
+       Write the Subscriber
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#requirements-to-use-custom-messages">
+       Requirements to use custom messages.
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#package-xml">
+         package.xml
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#cmakelists-txt">
+         CMakeLists.txt
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#compile-and-run-the-code">
+       Compile and run the code
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#checkpoint">
+     Checkpoint
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#summary">
+     Summary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cleanup">
+     Cleanup
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lab-1">
+   Lab 1
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Purpose
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#robot">
+     Robot
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#setup">
+       Setup:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#usafabot-serial-py">
+       usafabot_serial.py
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#master">
+     Master
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Setup:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#controller-py">
+       controller.py
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#run-your-nodes">
+     Run your nodes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#report">
+     Report
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#turn-in-requirements">
+     Turn-in Requirements
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="custom-messages">
+<h1>Custom Messages<a class="headerlink" href="#custom-messages" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="in-class-exercise-5">
+<h2>In-Class Exercise 5<a class="headerlink" href="#in-class-exercise-5" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p><strong>You must open this file as a Jupyter Notebook (link below) to run code</strong></p>
+<p><a class="reference external" href="http://localhost:8888/notebooks/ICE5_CustomMessages.ipynb">Run this file as an executable Jupyter Notebook</a></p>
+<div class="section" id="a-note-on-this-document">
+<h3>A note on this document<a class="headerlink" href="#a-note-on-this-document" title="Permalink to this headline">¶</a></h3>
+<p>Now that you have a better understanding of the Linux operating system and Python programming language the Jupyter Notebooks will be used primarily to guide you through the In-Class Exercises and Laboratories. You will execute the majority of your commands and code within the Linux terminal.</p>
+</div>
+<div class="section" id="purpose">
+<h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h3>
+<p>This In-Class Exercise will provide you more insight into ROS messages and how information is passed between two nodes. A node can publish specific messages over a topic and other nodes are able to subscribe to that topic to receive the message. The format of these messages must be pre-defined and each node needs to know the format of the message. ROS provides a number of pre-built messages, but also allows for developers to create custom messages. In this lesson you will learn the method for and practice creating custom messages. In the corresponding lab you will develop a custom message to drive the robot. The custom message will eventually be used to enable a controller to drive the robot based on multiple data sources (e.g., IMU, LIDAR, keyboard).</p>
+</div>
+<div class="section" id="ros-msgs">
+<h3>ROS msgs<a class="headerlink" href="#ros-msgs" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="msg">
+<h4>msg<a class="headerlink" href="#msg" title="Permalink to this headline">¶</a></h4>
+<p>ROS utilizes a simplified message description language to describe data values that ROS nodes publish. There are a lot of built-in messages that are widely used by ROS packages (<a class="reference external" href="http://wiki.ros.org/common_msgs?distro=noetic">common_msgs</a>). THe <em>geometry_msgs</em> package is one example of a pre-built message which provides the <em>Twist</em> message type used to drive the robot in the previous ICE.</p>
+</div>
+<div class="section" id="id1">
+<h4>Custom messages<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>If a pre-built message type does not meet the needs of a system, custom messages can be created. A custom message is created using a <code class="docutils literal notranslate"><span class="pre">.msg</span></code> file, a simple text file that descries the fields of a ROS message. The <em>catkin_make</em> tool uses the message file to generate source code for messages. The <code class="docutils literal notranslate"><span class="pre">.msg</span></code> files are stored in the <strong>msg</strong> directory of a package. There are two parts to a <code class="docutils literal notranslate"><span class="pre">.msg</span></code> file: fields and constants. Fields are the data that is sent inside of the message. Constants define useful values that can be used to interpret those fields. We will primarily use fields.</p>
+</div>
+<div class="section" id="fields">
+<h4>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h4>
+<p>Each field consists of a type and a name, separated by a space per line. The field types you can use are:</p>
+<ul class="simple">
+<li><p>int8, int16, int64 (plus uint*)</p></li>
+<li><p>float32, float64</p></li>
+<li><p>string</p></li>
+<li><p>time, duration</p></li>
+<li><p>other msg files</p></li>
+<li><p>variable length array[] and fixed-length array[X].</p></li>
+</ul>
+</div>
+<div class="section" id="header">
+<h4>Header<a class="headerlink" href="#header" title="Permalink to this headline">¶</a></h4>
+<p>The header contains a timestamp and coordinate frame information that are commonly used in ROS. You will frequently see the first line in a <code class="docutils literal notranslate"><span class="pre">.msg</span></code> file have a header.</p>
+</div>
+<div class="section" id="format">
+<h4>Format<a class="headerlink" href="#format" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Header header
+fieldtype fieldname
+</pre></div>
+</div>
+<p>For example, if we created a custom message file titled <code class="docutils literal notranslate"><span class="pre">Person.msg</span></code> that describes a person it might look like this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Header header
+string firstname
+string lastname
+int32 age
+</pre></div>
+</div>
+</div>
+<div class="section" id="importing-messages">
+<h4>Importing messages<a class="headerlink" href="#importing-messages" title="Permalink to this headline">¶</a></h4>
+<p>To utilize a <em>msg</em> in a node it must first be imported into the script.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="kn">from</span> <span class="nn">geometry_msgs.msg</span> <span class="kn">import</span> <span class="n">Twist</span>
+    <span class="kn">from</span> <span class="nn">ice5.msg</span> <span class="kn">import</span> <span class="n">Person</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p><strong>Syntax:</strong> <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">&lt;package&gt;.msg</span> <span class="pre">import</span> <span class="pre">msg</span></code></p>
+</div></blockquote>
+</div>
+<div class="section" id="using-messages">
+<h4>Using messages<a class="headerlink" href="#using-messages" title="Permalink to this headline">¶</a></h4>
+<p>After importing the <em>msg</em> you can access the fields similar to any object. For example, if we created a class instance variable to store our Person message, <code class="docutils literal notranslate"><span class="pre">person</span> <span class="pre">=</span> <span class="pre">Person()</span></code>, you would then access the fields like using the field names of the <em>msg</em>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2"> is </span><span class="si">%d</span><span class="s2"> years old!&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">person</span><span class="o">.</span><span class="n">firstname</span><span class="p">,</span> <span class="n">person</span><span class="o">.</span><span class="n">lastname</span><span class="p">,</span> <span class="n">person</span><span class="o">.</span><span class="n">age</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>If you wanted to set the linear x and angular z speeds of a <em>Twist</em> message before publishing it to the USAFABOT you would again use the field names provided by the pre-built message. If you googled the Twist message (<a class="reference external" href="http://docs.ros.org/en/lunar/api/geometry_msgs/html/msg/Twist.html">Twist Message</a>, you would see the contents of the Twist message include two other messages, linear and angular, of type Vector3:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>geometry_msgs/Vector3 linear
+geometry_msgs/Vector3 angular
+</pre></div>
+</div>
+<p>Each of those two messages include the same fields and fieldnames:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>float64 x
+float64 y
+float64 z
+</pre></div>
+</div>
+<p>To set the linear x and angular z values, we have to access those fields using an objected oriented method. For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="kn">from</span> <span class="nn">gemoetry_msgs.msg</span> <span class="kn">import</span> <span class="n">Twist</span>
+    
+    <span class="c1"># create a publisher to send Twist messages over the cmd_vel topic</span>
+    <span class="n">pub</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s1">&#39;cmd_vel&#39;</span><span class="p">,</span> <span class="n">Twist</span><span class="p">,</span> <span class="n">queue_size</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+    
+    <span class="c1"># set the Twist message to drive the robot straight at 0.25 m/s</span>
+    <span class="n">bot_cmd</span> <span class="o">=</span> <span class="n">Twist</span><span class="p">()</span>
+    <span class="n">bot_cmd</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mf">0.25</span>  <span class="c1"># notice you have to access both the &quot;linear&quot; &amp; &quot;x&quot; fields of the Twist message</span>
+    <span class="n">bot_cmd</span><span class="o">.</span><span class="n">angular</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="mf">0.0</span>
+    
+    <span class="c1"># publish the Twist message</span>
+    <span class="n">pub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">bot_cmd</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="ice-5">
+<h3>ICE 5<a class="headerlink" href="#ice-5" title="Permalink to this headline">¶</a></h3>
+<p>In this exercise you will create a custom message that describes a person. This message will provide two strings, first and last name, and an integer age for a person. We will then create a node that publishes information about that person and a node that subscribes to that information.</p>
+<div class="section" id="create-the-custom-message">
+<h4>Create the custom message:<a class="headerlink" href="#create-the-custom-message" title="Permalink to this headline">¶</a></h4>
+<ol>
+<li><p>In a new terminal on the <strong>Master</strong>, create an <strong>ice5</strong> package which depends on the <em>std_msgs</em> package and <em>rospy</em> package, compile and source the ws:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pi@master: <span class="nb">cd</span> ~/master_ws/src/ece495_master_spring2022-USERNAME/
+pi@master: catkin_create_pkg ice5 std_msgs rospy
+pi@master: <span class="nb">cd</span> ~/master_ws
+pi@master: catkin_make
+pi@master: <span class="nb">source</span> ~/.bashrc
+</pre></div>
+</div>
+</li>
+<li><p>Change directory to the package folder and create a <em>msg</em> directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pi@master: roscd ice5
+pi@master: mkdir msg
+pi@master: <span class="nb">cd</span> msg
+</pre></div>
+</div>
+</li>
+<li><p>Create the <em>msg</em> file for the Person and add the fields previously discussed (header, firstname, lastname, and age):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pi@master: nano Person.msg
+</pre></div>
+</div>
+</li>
+<li><p>Save and exit: <code class="docutils literal notranslate"><span class="pre">ctrl+s</span></code>, <code class="docutils literal notranslate"><span class="pre">ctrl+x</span></code></p></li>
+</ol>
+</div>
+<div class="section" id="write-the-publisher">
+<h4>Write the Publisher<a class="headerlink" href="#write-the-publisher" title="Permalink to this headline">¶</a></h4>
+<ol>
+<li><p>Create the file for the publisher:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pi@master: roscd ice5/src
+pi@master: touch ice5_publisher.py
+</pre></div>
+</div>
+</li>
+<li><p>Copy the below code to the ice5_publisher.py file and fill in the required lines (look for the TODO tag). You can edit via the terminal using nano, but it is often easier to use a GUI editor. Browse to the publisher in the file browser and double-click. This will open the file in thonny (if it is open in any other editor, stop, raise your hand, and get help from an instructor)</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="kn">import</span> <span class="nn">rospy</span>
+<span class="kn">from</span> <span class="nn">ice5.msg</span> <span class="kn">import</span> <span class="n">Person</span> <span class="c1"># import the message: from PKG.msg import MSG</span>
+
+<span class="k">class</span> <span class="nc">Talker</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Class that publishes basic information about person&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first</span> <span class="o">=</span> <span class="s2">&quot;Cadet&quot;</span><span class="p">,</span> <span class="n">last</span> <span class="o">=</span> <span class="s2">&quot;Snuffy&quot;</span><span class="p">,</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">21</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">msg</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>         <span class="c1"># creates a Person message</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">msg</span><span class="o">.</span><span class="n">firstname</span> <span class="o">=</span> <span class="n">first</span>  <span class="c1"># assign the firstname field</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">msg</span><span class="o">.</span><span class="n">lastname</span> <span class="o">=</span> <span class="n">last</span>    <span class="c1"># assign the lastname field</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">msg</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>          <span class="c1"># assign the age field</span>
+        
+        <span class="c1"># TODO: create the publisher that publishes Person messages over the person topic</span>
+        <span class="c1"># Since we don&#39;t care about losing messages we can set the queue size to 1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pub</span> <span class="o">=</span>
+        
+        <span class="c1"># TODO: create a timer that will call the callback_publish() function every .1 seconds (10 Hz)</span>
+        <span class="n">rospy</span><span class="o">.</span><span class="n">Timer</span><span class="p">()</span>
+        
+        <span class="c1"># nicely handle shutdown (ctrl+c)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ctrl_c</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">rospy</span><span class="o">.</span><span class="n">on_shutdown</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">shutdownhook</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">callback_publish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">ctrl_c</span><span class="p">:</span>
+            <span class="c1"># TODO: publish the msg</span>
+            
+            
+    <span class="k">def</span> <span class="nf">shutdownhook</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    	<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Shutting down publisher.&quot;</span><span class="p">)</span>
+    	<span class="bp">self</span><span class="o">.</span><span class="n">ctrl_c</span> <span class="o">=</span> <span class="kc">True</span>
+    	
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;talker&#39;</span><span class="p">)</span>
+    
+    <span class="c1"># create an instance of the Talker class changing the class variables</span>
+    <span class="n">Talker</span><span class="p">(</span><span class="s2">&quot;Steven&quot;</span><span class="p">,</span> <span class="s2">&quot;Beyer&quot;</span><span class="p">,</span> <span class="mi">33</span><span class="p">)</span>
+    <span class="n">rospy</span><span class="o">.</span><span class="n">spin</span><span class="p">()</span>	<span class="c1"># run forever until ctrl+c    </span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Save and exit.</p></li>
+<li><p>Make the node executable.</p></li>
+</ol>
+</div>
+<div class="section" id="write-the-subscriber">
+<h4>Write the Subscriber<a class="headerlink" href="#write-the-subscriber" title="Permalink to this headline">¶</a></h4>
+<ol>
+<li><p>Create the file for the subscriber:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pi@master: touch ice5_subscriber.py
+</pre></div>
+</div>
+</li>
+<li><p>Copy the below code to the ice5_subscriber.py file and fill in the required lines (look for the TODO tag).</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="kn">import</span> <span class="nn">rospy</span>
+<span class="kn">from</span> <span class="nn">ice5.msg</span> <span class="kn">import</span> <span class="n">Person</span> <span class="c1"># import the message: from PKG.msg import MSG</span>
+
+<span class="k">class</span> <span class="nc">Listener</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Listener class that prints information about person&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    	<span class="c1"># TODO: create the subscriber that receives Person messages over the person topic</span>
+    	<span class="c1"># and calls the callback_person() function.</span>
+        
+        
+        <span class="c1"># nicely handle shutdown (Ctrl+c)</span>
+        <span class="n">rospy</span><span class="o">.</span><span class="n">on_shutdown</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">shutdownhook</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">callback_person</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">person</span><span class="p">):</span>
+    	<span class="c1"># TODO: print the information about the person</span>
+        
+        
+    <span class="k">def</span> <span class="nf">shutdownhook</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    	<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Shutting down subscriber.&quot;</span><span class="p">)</span>
+        
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;listener&#39;</span><span class="p">)</span>
+    <span class="c1"># create an instance of the class</span>
+    <span class="n">Listener</span><span class="p">()</span>
+    <span class="c1"># keeps python from exiting until this node is stopped</span>
+    <span class="n">rospy</span><span class="o">.</span><span class="n">spin</span><span class="p">()</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Save and exit.</p></li>
+<li><p>Make the node executable.</p></li>
+</ol>
+</div>
+<div class="section" id="requirements-to-use-custom-messages">
+<h4>Requirements to use custom messages.<a class="headerlink" href="#requirements-to-use-custom-messages" title="Permalink to this headline">¶</a></h4>
+<p>There are a number of settings that have to be set within the <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> and <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> files that tell catkin to compile the messages.</p>
+<div class="section" id="package-xml">
+<h5>package.xml<a class="headerlink" href="#package-xml" title="Permalink to this headline">¶</a></h5>
+<ol>
+<li><p>Edit <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> (<code class="docutils literal notranslate"><span class="pre">rosed</span> <span class="pre">ice5</span> <span class="pre">package.xml</span></code>) and uncomment these two lines (remove arrows on both sides of the line):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">build_depend</span><span class="o">&gt;</span><span class="n">message_generation</span><span class="o">&lt;/</span><span class="n">build_depend</span><span class="o">&gt;</span>
+<span class="n">exec_depend</span><span class="o">&gt;</span><span class="n">message_runtime</span><span class="o">&lt;/</span><span class="n">exec_depend</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Save and exit.</p></li>
+</ol>
+</div>
+<div class="section" id="cmakelists-txt">
+<h5>CMakeLists.txt<a class="headerlink" href="#cmakelists-txt" title="Permalink to this headline">¶</a></h5>
+<ol>
+<li><p>Edit <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> (<code class="docutils literal notranslate"><span class="pre">rosed</span> <span class="pre">ice5</span> <span class="pre">CMakeLists.txt</span></code>) and make the following changes:</p>
+<ol>
+<li><p>Add the <code class="docutils literal notranslate"><span class="pre">message_generation</span></code> dependency to the <code class="docutils literal notranslate"><span class="pre">find_package</span></code> call so that you can generate messages:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Do not just add this to your CMakeLists.txt, modify the existing text to </span>
+<span class="c1"># add message_generation before the closing parenthesis</span>
+<span class="n">find_package</span><span class="p">(</span><span class="n">catkin</span> <span class="n">REQUIRED</span> <span class="n">COMPONENTS</span>
+    <span class="n">rospy</span>
+    <span class="n">std_msgs</span>
+    <span class="n">message_generation</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Find the following block of code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">## Generate messages in the &#39;msg&#39; folder</span>
+<span class="c1"># add_message_files(</span>
+<span class="c1">#    FILES</span>
+<span class="c1">#    Message1.msg</span>
+<span class="c1">#    Message2.msg</span>
+<span class="c1">#)</span>
+</pre></div>
+</div>
+<p>and uncomment by removing the <code class="docutils literal notranslate"><span class="pre">#</span></code> symbols and then replace the <code class="docutils literal notranslate"><span class="pre">Message*.msg</span></code> files with your <code class="docutils literal notranslate"><span class="pre">.msg</span></code> file, such that it looks like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">add_message_files</span><span class="p">(</span>
+    <span class="n">FILES</span>
+    <span class="n">Person</span><span class="o">.</span><span class="n">msg</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Find the following block of code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># generate_messages(</span>
+<span class="c1">#    DEPENDENCIES</span>
+<span class="c1">#    std_msgs</span>
+<span class="c1">#)</span>
+</pre></div>
+</div>
+<p>and uncomment so it looks like:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">generate_messages</span><span class="p">(</span>
+    <span class="n">DEPENDENCIES</span>
+    <span class="n">std_msgs</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Uncomment and add the export message runtime dependency to the <code class="docutils literal notranslate"><span class="pre">CATKIN_DEPENDS</span></code> line in the <code class="docutils literal notranslate"><span class="pre">catkin_package()</span></code> function near the bottom without changing anything else:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">catkin_package</span><span class="p">(</span>
+    <span class="o">...</span>
+    <span class="n">CATKIN_DEPENDS</span> <span class="n">rospy</span> <span class="n">std_msgs</span> <span class="n">message_runtime</span>
+    <span class="o">...</span>
+<span class="p">)</span>
+
+</pre></div>
+</div>
+</li>
+<li><p>Save and exit.</p></li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="compile-and-run-the-code">
+<h4>Compile and run the code<a class="headerlink" href="#compile-and-run-the-code" title="Permalink to this headline">¶</a></h4>
+<ol>
+<li><p>Make and source your package:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pi@master: <span class="nb">cd</span> ~/master_ws
+pi@master: catkin_make
+pi@master: <span class="nb">source</span> ~/.bashrc
+</pre></div>
+</div>
+</li>
+<li><p>Run roscore!</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">rospy</span></code> tool can measure certain statistics for every topic connection. We can visualize this in <code class="docutils literal notranslate"><span class="pre">rqt_graph</span></code>, but we have to enable it after <code class="docutils literal notranslate"><span class="pre">roscore</span></code>, but before any nodes. In a new terminal run the following to enable statistics:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pi@master: rosparam <span class="nb">set</span> enable_statistics <span class="nb">true</span>
+</pre></div>
+</div>
+</li>
+<li><p>Run the publisher:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pi@master: rosrun ice5 ice5_publisher.py
+</pre></div>
+</div>
+</li>
+<li><p>In a new terminal, run the subscriber:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pi@master: rosrun ice5 ice5_subscriber.py
+</pre></div>
+</div>
+</li>
+<li><p>In a new terminal observe the nodes running:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pi@master: rosnode list
+</pre></div>
+</div>
+</li>
+<li><p>Observe information about each node:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pi@master: rosnode info /talker
+</pre></div>
+</div>
+</li>
+<li><p>Observe how information is being passed:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pi@master: rosrun rqt_graph rqt_graph
+</pre></div>
+</div>
+<blockquote>
+<div><p>📝️ <strong>Note</strong>: You may have to hit refresh a few times to get the statistics previously mentioned.</p>
+</div></blockquote>
+</li>
+<li><p>Observe all active topics:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pi@master: rostopic list
+</pre></div>
+</div>
+</li>
+<li><p>Observe the information about the message sent over the topics (repeat for each topic, remember we do not care about topics we did not create (e.g., rosout, rosout_agg, statistics)).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pi@master: rostopic info person
+</pre></div>
+</div>
+</li>
+<li><p>Observe the fields of the message sent over each topic:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pi@master: rostopic <span class="nb">type</span> person <span class="p">|</span> rosmsg show
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="checkpoint">
+<h3>Checkpoint<a class="headerlink" href="#checkpoint" title="Permalink to this headline">¶</a></h3>
+<p>Once complete, get checked off by an instructor showing the output of each of the above.</p>
+</div>
+<div class="section" id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
+<p>In this lesson you learned about ROS pre-built and custom messages! You created your own message which described a Person. You then developed a publisher to send information about the Person to a subscriber.</p>
+</div>
+<div class="section" id="cleanup">
+<h3>Cleanup<a class="headerlink" href="#cleanup" title="Permalink to this headline">¶</a></h3>
+<p>In each terminal window, close the node by typing <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code>. Exit any SSH connections. Shutdown the notebook server by typing <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code> within the terminal you ran <code class="docutils literal notranslate"><span class="pre">jupyter-notebook</span></code> in. Select ‘y’.</p>
+<p><strong>Ensure roscore is terminated before moving on to the lab.</strong></p>
+</div>
+</div>
+<div class="section" id="lab-1">
+<h2>Lab 1<a class="headerlink" href="#lab-1" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p><strong>You must open this file as a Jupyter Notebook (link below) to run code</strong></p>
+<p><a class="reference external" href="http://localhost:8888/notebooks/Lab1_CustomMessages.ipynb">Run this file as an executable Jupyter Notebook</a></p>
+<div class="section" id="id2">
+<h3>Purpose<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>This lab will provide practice in creating custom messages. You will take the <strong>cmd_vel</strong> topic and <em>Twist</em> message from the <strong>teleop_twist_keyboard</strong> node and use a <strong>controller</strong> node to send <em>USAFABOT_Cmd</em> messages to the <strong>usafabot_serial</strong> node. As we introduce new subsystems to the robot, the <strong>controller</strong> node will determine priority between these sensors/systems and then drive the robot using the <strong>usafabot_cmd</strong> topic accordingly.</p>
+</div>
+<div class="section" id="robot">
+<h3>Robot<a class="headerlink" href="#robot" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="setup">
+<h4>Setup:<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h4>
+<ol>
+<li><p>In a new terminal on the <strong>Master</strong>, create a secure shell connection to your <strong>Robot</strong>.</p></li>
+<li><p>Create a custom message within the <strong>usafabot</strong> package’s <strong>msg</strong> folder that is called <em>USAFABOT_Cmd.msg</em> and has two fields and a header:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Header</span> <span class="n">header</span>
+<span class="n">float64</span> <span class="n">lin_x</span>
+<span class="n">float64</span> <span class="n">ang_z</span>
+</pre></div>
+</div>
+</li>
+<li><p>Edit <strong>package.xml</strong> per the ICE instructions (don’t remove anything from the file, just add what is needed to run your custom message).</p></li>
+<li><p>Edit <strong>CMakeLists.txt</strong> per the ICE instructions (don’t remove anything from the file, just add what is needed to run your custom message).</p></li>
+<li><p>Make and source your workspace.</p></li>
+</ol>
+<p><strong>Note</strong>: This message is now part of the <strong>usafabot</strong> package and if you ran <code class="docutils literal notranslate"><span class="pre">rosmsg</span> <span class="pre">show</span> <span class="pre">USAFABOT_Cmd</span></code> it would return <em>usafabot/USAFABOT_Cmd</em>.</p>
+</div>
+<div class="section" id="usafabot-serial-py">
+<h4>usafabot_serial.py<a class="headerlink" href="#usafabot-serial-py" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>Edit <strong>usafabot_serial.py</strong> within the <strong>usafabot</strong> package (<code class="docutils literal notranslate"><span class="pre">rosed</span> <span class="pre">usafabot</span> <span class="pre">usafabot_serial.py</span></code>) to:</p>
+<ul class="simple">
+<li><p>Import the new message instead of <em>Twist</em></p></li>
+<li><p>Subscribe to the <strong>usafabot_cmd</strong> topic instead of <strong>cmd_vel</strong> and use the new message instead of <em>Twist</em></p></li>
+<li><p>Edit the <code class="docutils literal notranslate"><span class="pre">callback_write()</span></code> function to use the new message fields.</p></li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<div><p>💡️ <strong>HINT</strong>: Look for the tag “TODO” within the python file.</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="master">
+<h3>Master<a class="headerlink" href="#master" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h4>Setup:<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<p>To use the same custom message on two different machines the custom message must be created and part of the same package on both machines. On the <strong>Robot</strong>, the <em>USAFABOT_Cmd</em> message is part of the <strong>usafabot</strong> package. Therefore, the message must be part of the <strong>usafabot</strong> package on the <strong>Master</strong>. When communicating, ROS uses the <strong>whole</strong> name of the msg, <em>usafabot/USAFABOT_Cmd</em>, so these must be the same on each system. There should already be a <strong>usafabot</strong> package on your master.</p>
+<ol>
+<li><p>In a terminal on the <strong>Master</strong>, browse to the <strong>usafabot</strong> package.</p></li>
+<li><p>Create a custom message within the <strong>usafabot</strong> package’s <strong>msg</strong> folder that is called <em>USAFABOT_Cmd.msg</em> and has two fields and a header:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Header</span> <span class="n">header</span>
+<span class="n">float64</span> <span class="n">lin_x</span>
+<span class="n">float64</span> <span class="n">ang_z</span>
+</pre></div>
+</div>
+</li>
+<li><p>Edit <strong>package.xml</strong> per the ICE instructions (don’t remove anything from the file, just add what is needed to run your custom message).</p></li>
+<li><p>Edit <strong>CMakeLists.txt</strong> per the ICE instructions (don’t remove anything from the file, just add what is needed to run your custom message).</p></li>
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">/master_ws/src/ece495_master_spring2022-USERNAME/</span></code> folder, create a <strong>lab1</strong> package which depends on <strong>std_msgs</strong>, <strong>rospy</strong>, <strong>geometry_msgs</strong>, and <strong>usafabot</strong>.</p></li>
+<li><p>Make and source your workspace.</p></li>
+</ol>
+</div>
+<div class="section" id="controller-py">
+<h4><a class="reference external" href="http://controller.py">controller.py</a><a class="headerlink" href="#controller-py" title="Permalink to this headline">¶</a></h4>
+<ol>
+<li><p>Create a <strong><a class="reference external" href="http://controller.py">controller.py</a></strong> node within the src folder of <strong>lab1</strong>.</p></li>
+<li><p>Edit the file and import <strong>rospy</strong>, <strong>Twist</strong>, and the new message, <strong>USAFABOT_Cmd</strong>.</p></li>
+<li><p>Create a Controller class that will have four functions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Controller</span><span class="p">:</span>
+        <span class="c1"># class initialization</span>
+        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="c1"># TODO: complete __init__() function</span>
+            
+        <span class="c1"># callback called when a new message is received over </span>
+        <span class="c1"># the cmd_vel topic</span>
+        <span class="k">def</span> <span class="nf">callback_keyboard</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">kb</span><span class="p">):</span>
+            <span class="c1"># TODO: complete callback_keyboard() function</span>
+
+        <span class="c1"># callback that will run at 100 Hz</span>
+        <span class="c1"># will be used to control the robot</span>
+        <span class="k">def</span> <span class="nf">callback_controller</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+            <span class="c1"># TODO: complete callback_controller() function</span>
+            
+        <span class="c1"># function to ensure all values are zeroed out when shut down</span>
+        <span class="k">def</span> <span class="nf">shutdownhook</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="c1"># TODO: complete shutdownhook() function</span>
+</pre></div>
+</div>
+</li>
+<li><p>Add the following to the <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> function:</p>
+<ul class="simple">
+<li><p>Instance variable, <code class="docutils literal notranslate"><span class="pre">self.cmd</span></code>, to store the <code class="docutils literal notranslate"><span class="pre">USAFABOT_CMD()</span></code> message.</p></li>
+<li><p>Instance variable, <code class="docutils literal notranslate"><span class="pre">self.kb</span></code>, to store the <code class="docutils literal notranslate"><span class="pre">Twist()</span></code> message sent from <strong>teleop_twist_keyboard</strong>.</p></li>
+<li><p>A subscriber to the <strong>cmd_vel</strong> topic with a callback to the `callback_keyboard() function.</p></li>
+<li><p>A publisher to the <strong>usafabot_cmd</strong> topic.</p></li>
+<li><p>A timer that runs at 100 Hz with a callback to the <code class="docutils literal notranslate"><span class="pre">callback_controller()</span></code> function.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">ctrl_c</span></code> boolean instance variable.</p></li>
+<li><p>The shutdown method: <code class="docutils literal notranslate"><span class="pre">rospy.on_shutdown(self.shutdownhook)</span></code>.
+<br></p></li>
+</ul>
+</li>
+<li><p>Write the <code class="docutils literal notranslate"><span class="pre">callback_keyboard()</span></code> function that will copy the message received (kb) to the keyboard instance variable. Remember, <code class="docutils literal notranslate"><span class="pre">callback_keyboard()</span></code> is called every time a new <em>Twist</em> message is sent over the <strong>cmd_vel</strong> topic. The <em>Twist</em> message is passed to the function as the second input (kb).</p></li>
+<li><p>Write the <code class="docutils literal notranslate"><span class="pre">callback_controller()</span></code> function that when <code class="docutils literal notranslate"><span class="pre">ctrl_c</span></code> is not pressed it sets the <code class="docutils literal notranslate"><span class="pre">lin_x</span></code> and <code class="docutils literal notranslate"><span class="pre">ang_z</span></code> characteristics of the <em>USAFABOT_Cmd</em> message to the <code class="docutils literal notranslate"><span class="pre">linear.x</span></code> and <code class="docutils literal notranslate"><span class="pre">angular.z</span></code> characteristics of the <em>Twist</em> message and publishes the message. For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">cmd</span><span class="o">.</span><span class="n">lin_x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kb</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">x</span>
+</pre></div>
+</div>
+<p>where the left side of the expression is our custom <em>USAFABOT_Cmd</em> message and the right side is the <em>Twist</em> message sent over the <strong>cmd_vel</strong> topic (you can see the format of the <em>Twist</em> message in the ROS documentation: <a class="reference external" href="http://docs.ros.org/en/lunar/api/geometry_msgs/html/msg/Twist.html">Twist Message</a>.</p>
+</li>
+<li><p>Write the shutdownhook() function to print “Controller exiting. Halting robot.”, set <code class="docutils literal notranslate"><span class="pre">self.ctrl_c</span></code> to <em>True</em>, and publish a message over the <strong>usafabot_cmd</strong> topic with a linear x and angular z of 0 so the robot will stop.</p></li>
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">__main__()</span></code> function that initializes the controller node (node names are lower case), creates an instance of the Controller class, and then spins (runs forever).</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="run-your-nodes">
+<h3>Run your nodes<a class="headerlink" href="#run-your-nodes" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>On the <strong>Master</strong> open a terminal and run <strong>roscore</strong>.</p></li>
+<li><p>Open another terminal and enable statistics for <strong>rqt_graph</strong>.</p></li>
+<li><p>Run the controller node.</p></li>
+<li><p>Run the <strong>teleop_twist_keyboard</strong> node.</p></li>
+<li><p>Using the terminal with the secure shell into the <strong>Robot</strong> and run the <strong>usafabot_serial.py</strong> node.</p></li>
+<li><p>Use the keyboard to drive the robot (operation should be exactly as before and the robot should respond accordingly).</p></li>
+</ol>
+</div>
+<div class="section" id="report">
+<h3>Report<a class="headerlink" href="#report" title="Permalink to this headline">¶</a></h3>
+<p>Complete a short 2-3 page report that utilizes the format and answers the questions within the report template. The report template and an example report can be found within the Team under <code class="docutils literal notranslate"><span class="pre">Resources/Lab</span> <span class="pre">Template</span></code>.</p>
+</div>
+<div class="section" id="turn-in-requirements">
+<h3>Turn-in Requirements<a class="headerlink" href="#turn-in-requirements" title="Permalink to this headline">¶</a></h3>
+<p><strong>[25 points]</strong> Demonstration of keyboard control of USAFABOT (preferably in person, but can be recorded and posted to Teams under the Lab1 channel).</p>
+<p><strong>[50 points]</strong> Report via Gradescope.</p>
+<p><strong>[25 points]</strong> Code: push your code to your repository. Also, include a screen shot of the <strong><a class="reference external" href="http://controller.py">controller.py</a></strong> and <strong>usafabot_serial.py</strong> files and submit at the end of your report.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Module4.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Driving the Robot</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Module6.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Inertial Measurement Unit</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Mr. Steven Beyer<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

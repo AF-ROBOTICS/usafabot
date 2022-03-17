@@ -15,7 +15,7 @@
 		<param name="tf_prefix" value="usafabot0"/>
     </node>
 	
-	 <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot0 -x 0 -y 2.2 -z 0 -Y 1.5708 -param robot_description" />
+	<node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model usafabot0 -x 0 -y 2.2 -z 0 -Y 1.5708 -param robot_description" />
 	<node
 	name="controller"
 	pkg="capstone21-22"

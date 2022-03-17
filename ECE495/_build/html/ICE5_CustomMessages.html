@@ -51,8 +51,6 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Module 5: Custom Messages" href="Lab1_CustomMessages.html" />
-    <link rel="prev" title="Module 4: Driving the Robot" href="ICE4_DrivingTheRobot.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -131,21 +129,6 @@
    Module 1: Robotics Operating System (ROS)
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ICE1_Listener.html">
-   Module 1: Robotics Operating System (ROS)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ICE1_ROS.html">
-   Module 1: Robotics Operating System (ROS)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ICE1_Talker.html">
-   Module 1: Robotics Operating System (ROS)
-  </a>
- </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -154,7 +137,7 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="ICE2_Linux.html">
+  <a class="reference internal" href="Module2.html">
    Module 2: Linux for Robotics
   </a>
  </li>
@@ -166,32 +149,7 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="Module3_Python3.html">
-   Module 3: Python3 for Robotics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Module3_ROS.html">
-   Module 3: Python3 for Robotics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Module3_RPSComputer.html">
-   Module 3: Python3 for Robotics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ICE3_ROS.html">
-   Module 3: Python3 for Robotics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ICE3_Client.html">
-   Module 3: Python3 for Robotics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ICE3_Server.html">
+  <a class="reference internal" href="Module3.html">
    Module 3: Python3 for Robotics
   </a>
  </li>
@@ -203,7 +161,7 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="ICE4_DrivingTheRobot.html">
+  <a class="reference internal" href="Module4.html">
    Module 4: Driving the Robot
   </a>
  </li>
@@ -213,15 +171,46 @@
   MODULE 05
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module5.html">
    Module 5: Custom Messages
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 06
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="Lab1_CustomMessages.html">
-   Module 5: Custom Messages
+  <a class="reference internal" href="Module6.html">
+   Module 6: Inertial Measurement Unit
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 07
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module7.html">
+   Module 7: Launch Files
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 08
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module8.html">
+   Module 8: LIDAR
   </a>
  </li>
 </ul>
@@ -265,9 +254,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/ICE5_CustomMessages.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/ICE5_CustomMessages.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -300,6 +289,23 @@
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/ICE5_CustomMessages.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
 
         </div>
 
@@ -581,8 +587,6 @@
 <div class="section" id="in-class-exercise-5">
 <h2>In-Class Exercise 5<a class="headerlink" href="#in-class-exercise-5" title="Permalink to this headline">¶</a></h2>
 <hr class="docutils" />
-<p><strong>You must open this file as a Jupyter Notebook (link below) to run code</strong></p>
-<p><a class="reference external" href="http://localhost:8888/notebooks/ICE5_CustomMessages.ipynb">Run this file as an executable Jupyter Notebook</a></p>
 <div class="section" id="a-note-on-this-document">
 <h3>A note on this document<a class="headerlink" href="#a-note-on-this-document" title="Permalink to this headline">¶</a></h3>
 <p>Now that you have a better understanding of the Linux operating system and Python programming language the Jupyter Notebooks will be used primarily to guide you through the In-Class Exercises and Laboratories. You will execute the majority of your commands and code within the Linux terminal.</p>
@@ -645,7 +649,7 @@ int32 age
 <div class="section" id="using-messages">
 <h4>Using messages<a class="headerlink" href="#using-messages" title="Permalink to this headline">¶</a></h4>
 <p>After importing the <em>msg</em> you can access the fields similar to any object. For example, if we created a class instance variable to store our Person message, <code class="docutils literal notranslate"><span class="pre">person</span> <span class="pre">=</span> <span class="pre">Person()</span></code>, you would then access the fields like using the field names of the <em>msg</em>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2"> is </span><span class="si">%d</span><span class="s2"> years old!&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">person</span><span class="o">.</span><span class="n">firstname</span><span class="p">,</span> <span class="n">person</span><span class="o">.</span><span class="n">lastname</span><span class="p">,</span> <span class="n">person</span><span class="o">.</span><span class="n">age</span><span class="p">))</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2"> is </span><span class="si">%d</span><span class="s2"> years old!&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">person</span><span class="o">.</span><span class="n">firstname</span><span class="p">,</span> <span class="n">person</span><span class="o">.</span><span class="n">lastname</span><span class="p">,</span> <span class="n">person</span><span class="o">.</span><span class="n">age</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>If you wanted to set the linear x and angular z speeds of a <em>Twist</em> message before publishing it to the USAFABOT you would again use the field names provided by the pre-built message. If you googled the Twist message (<a class="reference external" href="http://docs.ros.org/en/lunar/api/geometry_msgs/html/msg/Twist.html">Twist Message</a>, you would see the contents of the Twist message include two other messages, linear and angular, of type Vector3:</p>
@@ -737,7 +741,7 @@ pi@master: touch ice5_publisher.py
         <span class="n">rospy</span><span class="o">.</span><span class="n">Timer</span><span class="p">()</span>
         
         <span class="c1"># nicely handle shutdown (ctrl+c)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">ctrl_c</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ctrl_c</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="n">rospy</span><span class="o">.</span><span class="n">on_shutdown</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">shutdownhook</span><span class="p">)</span>
         
     <span class="k">def</span> <span class="nf">callback_publish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
@@ -746,8 +750,8 @@ pi@master: touch ice5_publisher.py
             
             
     <span class="k">def</span> <span class="nf">shutdownhook</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    	<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Shutting down publisher.&quot;</span><span class="p">)</span>
-    	<span class="bp">self</span><span class="o">.</span><span class="n">ctrl_c</span> <span class="o">=</span> <span class="bp">True</span>
+    	<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Shutting down publisher.&quot;</span><span class="p">)</span>
+    	<span class="bp">self</span><span class="o">.</span><span class="n">ctrl_c</span> <span class="o">=</span> <span class="kc">True</span>
     	
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;talker&#39;</span><span class="p">)</span>
@@ -791,7 +795,7 @@ pi@master: touch ice5_publisher.py
         
         
     <span class="k">def</span> <span class="nf">shutdownhook</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    	<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Shutting down subscriber.&quot;</span><span class="p">)</span>
+    	<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Shutting down subscriber.&quot;</span><span class="p">)</span>
         
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;listener&#39;</span><span class="p">)</span>
@@ -987,21 +991,7 @@ pi@master: <span class="nb">source</span> ~/.bashrc
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="ICE4_DrivingTheRobot.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Module 4: Driving the Robot</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="Lab1_CustomMessages.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Module 5: Custom Messages</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>

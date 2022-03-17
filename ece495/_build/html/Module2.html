@@ -1,0 +1,748 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 2: Linux for Robotics &#8212; ECE495</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Module 3: Python3 for Robotics" href="Module3.html" />
+    <link rel="prev" title="Module 1: Robotics Operating System (ROS)" href="Module1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/beyer_bot.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">ECE495</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome ECE495
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ROBOT SETUP
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="robot_setup.html">
+   Robot Setup
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 00
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module0.html">
+   Module 0: Intro &amp; GIT
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 01
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module1.html">
+   Module 1: Robotics Operating System (ROS)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 02
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Module 2: Linux for Robotics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 03
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module3.html">
+   Module 3: Python3 for Robotics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 04
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module4.html">
+   Module 4: Driving the Robot
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 05
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module5.html">
+   Module 5: Custom Messages
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Module2.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule2.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-class-exercise-2-linux">
+   In-Class Exercise 2 - Linux
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-note-on-this-document">
+     A note on this document
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#purpose">
+     Purpose
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linux-commands">
+     Linux Commands
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#working-with-a-remote-machine">
+     Working with a remote machine
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ros">
+     ROS
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#checkpoint">
+     Checkpoint
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#summary">
+     Summary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cleanup">
+     Cleanup
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Module 2: Linux for Robotics</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-class-exercise-2-linux">
+   In-Class Exercise 2 - Linux
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-note-on-this-document">
+     A note on this document
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#purpose">
+     Purpose
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linux-commands">
+     Linux Commands
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#working-with-a-remote-machine">
+     Working with a remote machine
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ros">
+     ROS
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#checkpoint">
+     Checkpoint
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#summary">
+     Summary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cleanup">
+     Cleanup
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="module-2-linux-for-robotics">
+<h1>Module 2: Linux for Robotics<a class="headerlink" href="#module-2-linux-for-robotics" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="in-class-exercise-2-linux">
+<h2>In-Class Exercise 2 - Linux<a class="headerlink" href="#in-class-exercise-2-linux" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p><strong>You must open this file as a Jupyter Notebook (link below) to run code</strong></p>
+<p><a class="reference external" href="http://localhost:8888/notebooks/ICE2_Linux.ipynb">Run this file as an executable Jupyter Notebook</a></p>
+<div class="section" id="a-note-on-this-document">
+<h3>A note on this document<a class="headerlink" href="#a-note-on-this-document" title="Permalink to this headline">¶</a></h3>
+<p>This document is known as a Jupyter notebook; it is used in academia and industry to allow text and executable code to coexist in a very easy to read format. Blocks can contain text or code, and for blocks containing code, press <code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">Enter</span></code> to run the code. Earlier blocks of code need to be run for the later blocks of code to work.</p>
+</div>
+<div class="section" id="purpose">
+<h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h3>
+<p>This Jupyter Notebook accompanies the introduction to Linux notetaker used in class. We will apply the knowledge you learned by interacting with the Ubuntu Operating System (OS) on the Master.</p>
+</div>
+<div class="section" id="linux-commands">
+<h3>Linux Commands<a class="headerlink" href="#linux-commands" title="Permalink to this headline">¶</a></h3>
+<p>During class we went over a number of basic Linux commands. Open a terminal on the Master and let’s practice using those commands (use the shortcut <code class="docutils literal notranslate"><span class="pre">ctrl+alt+t</span></code> to open a new terminal window or select an open terminal and hit <code class="docutils literal notranslate"><span class="pre">ctrl+shift+t</span></code> to open a new terminal tab).</p>
+<p>When observing the terminal (or Shell) you will note the syntax <code class="docutils literal notranslate"><span class="pre">username&#64;hostname:</span></code>(i.e., on the master: <code class="docutils literal notranslate"><span class="pre">dfec&#64;masterX:</span></code>, on the robot: <code class="docutils literal notranslate"><span class="pre">pi&#64;robotX</span></code>), the current working directory (i.e., <code class="docutils literal notranslate"><span class="pre">~</span></code>, which represents the home folder of the user), and lastly the ‘$’ character and a blinking cursor. This line is the prompt and the blinking cursor indicates the terminal is active and ready for commands.</p>
+<p>Run the commands to move to the home folder and make a new directory:</p>
+<p><code class="docutils literal notranslate"><span class="pre">cd</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">my_folder</span></code></p>
+<p><strong>Pro tip:</strong> In Linux, if you highlight a command you can paste it into the terminal by clicking the scroll wheel.</p>
+<p>Change directories into your new folder:</p>
+<p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">my_folder</span></code></p>
+<p>Create a new bash script we can use to drive the USAFABot:</p>
+<p><code class="docutils literal notranslate"><span class="pre">touch</span> <span class="pre">move_usafabot.sh</span></code></p>
+<p>A bash script is a regular text file that allows you to run any command you would run within the terminal. We will use it to run a few ROS command line tools to move our USAFABot.</p>
+<p>We can use the Nano text editor to edit a file within the terminal. There are a number of text editors within the terminal and WWIII might be fought over which is best; some other options include Vim and Emacs. Nano is one of the more simple editors for quick edits. Feel free to use whichever works best for you, but all guidance within this course will be based on Nano.</p>
+<p>Edit the new bash script:</p>
+<p><code class="docutils literal notranslate"><span class="pre">nano</span> <span class="pre">move_usafabot.sh</span></code></p>
+<p>Copy the following into the script:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="nv">ARG1</span><span class="o">=</span><span class="nv">$1</span>
+
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$ARG1</span> <span class="o">==</span> <span class="s1">&#39;forward&#39;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    rostopic pub /cmd_vel geometry_msgs/Twist <span class="s2">&quot;linear:</span>
+<span class="s2">    x: 0.15</span>
+<span class="s2">    y: 0.0</span>
+<span class="s2">    z: 0.0</span>
+<span class="s2">angular:</span>
+<span class="s2">    x: 0.0jupyter notebook --generate-config</span>
+<span class="s2">    y: 0.0</span>
+<span class="s2">    z: 0.0&quot;</span>
+        
+<span class="k">elif</span> <span class="o">[</span> <span class="nv">$ARG1</span> <span class="o">==</span> <span class="s1">&#39;rotate&#39;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    rostopic pub /cmd_vel geometry_msgs/Twist <span class="s2">&quot;linear:</span>
+<span class="s2">    x: 0.0</span>
+<span class="s2">    y: 0.0</span>
+<span class="s2">    z: 0.0</span>
+<span class="s2">angular:</span>
+<span class="s2">    x: 0.0</span>
+<span class="s2">    y: 0.0</span>
+<span class="s2">    z: 0.5&quot;</span>
+        
+<span class="k">elif</span> <span class="o">[</span> <span class="nv">$ARG1</span> <span class="o">==</span> <span class="s1">&#39;stop&#39;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    rostopic pub /cmd_vel geometry_msgs/Twist <span class="s2">&quot;linear:</span>
+<span class="s2">    x: 0.0</span>
+<span class="s2">    y: 0.0</span>
+<span class="s2">    z: 0.0</span>
+<span class="s2">angular:</span>
+<span class="s2">    x: 0.0</span>
+<span class="s2">    y: 0.0</span>
+<span class="s2">    z: 0.0&quot;</span>
+<span class="k">else</span>
+<span class="nb">echo</span> <span class="s2">&quot;Please enter one of the following:</span>
+<span class="s2">    forward</span>
+<span class="s2">    rotate</span>
+<span class="s2">    stop&quot;</span>
+<span class="k">fi</span>
+</pre></div>
+</div>
+<p>Typing <code class="docutils literal notranslate"><span class="pre">ctrl+s</span></code> saves the file and then typing <code class="docutils literal notranslate"><span class="pre">ctrl+x</span></code> exits Nano.</p>
+<p>Again, a bash script just runs commands exactly as you would within a terminal. The above code takes an argument and publishes a <em>Twist</em> message over the <strong>/cmd_vel</strong> topic to drive the robot accordingly.</p>
+<p>Before running this script, let’s get our ROS environment setup:</p>
+<ol>
+<li><p>Open a new terminal and type <code class="docutils literal notranslate"><span class="pre">roscore</span></code>.</p></li>
+<li><p>Open a new terminal tab and run our USAFABot simulation:</p>
+<p><code class="docutils literal notranslate"><span class="pre">roslaunch</span> <span class="pre">usafabot_gazebo</span> <span class="pre">usafabot_gazebo.launch</span> <span class="pre">world:=empty.world</span></code></p>
+</li>
+</ol>
+<p>Now, in a new terminal, run the script you created:</p>
+<p><code class="docutils literal notranslate"><span class="pre">./move_usafabot.sh</span></code></p>
+<p>Did you get an error? That is because the permissions have not been properly set and you do not have execute permissions. You can observe the permissions of a file by typing <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-la</span></code>.</p>
+<p>For the <code class="docutils literal notranslate"><span class="pre">move_usafabot.sh</span></code> file you should see <code class="docutils literal notranslate"><span class="pre">-rw-rw-r--</span></code>. The first position indicates file type (‘d’ for directory, ‘-‘ for regular file), the next three positions indicate read (r), write (w), and execute (x) permissions for the file owner (u), the next three indicate permisions for the group owner of the file (g), and the last three characters indicate permissions for all other users (o).</p>
+<p>You can change the permissions of a file or directory using the command <code class="docutils literal notranslate"><span class="pre">chmod</span></code>:</p>
+<blockquote>
+<div><p><strong>Syntax:</strong> <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">&lt;groups</span> <span class="pre">to</span> <span class="pre">assign</span> <span class="pre">the</span> <span class="pre">permissions&gt;&lt;permissions</span> <span class="pre">to</span> <span class="pre">assign/remove&gt;</span> <span class="pre">&lt;file/folder&gt;</span></code></p>
+</div></blockquote>
+<p>For example, if we wanted to give the Owner execute permissions, you can enter the command:</p>
+<p><code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">u+x</span> <span class="pre">move_usafabot.sh</span></code></p>
+<p>Typically we will give all users executable permissions (<code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">+x</span> <span class="pre">move_usafabot.sh</span></code>). This isn’t the most secure thing to do, but in our controlled environment, it isn’t an issue. If you type <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-la</span></code> now you should see the ‘x’ permission added for each permission group (<code class="docutils literal notranslate"><span class="pre">-rwxrwxr-x</span></code>).</p>
+<p>Try running your script again:</p>
+<p><code class="docutils literal notranslate"><span class="pre">./move_usafabot.sh</span> <span class="pre">rotate</span></code></p>
+<p><strong>Note:</strong> You can remove permissions by utilizing the ‘-‘ character instead of ‘+’.</p>
+<p>Now create a new bash script, <code class="docutils literal notranslate"><span class="pre">bash_script.sh</span></code>, to accomplish the following:</p>
+<ol class="simple">
+<li><p>Moves to the folder <code class="docutils literal notranslate"><span class="pre">~/master_ws/src/usafabot/usafabot_curriculum/</span></code></p></li>
+<li><p>Creates a directory called <code class="docutils literal notranslate"><span class="pre">my_scripts</span></code></p></li>
+<li><p>Moves into that directory</p></li>
+<li><p>Creates a file called <strong>move_usafabot_square.py</strong></p></li>
+<li><p>Lists all files showing the permissions</p></li>
+<li><p>Modifies the permissions of the <strong>move_usafabot_square.py</strong> file so all groups have executable permissions</p></li>
+<li><p>Lists all files again showing the updated permissions</p></li>
+</ol>
+<p>Now run the script. If successful you should see the file listed without and then with execute permissions.</p>
+<p>We are done with this script so let’s remove it. The <code class="docutils literal notranslate"><span class="pre">rm</span></code> command can remove folders or files. If you want to learn more about a command there are two helpful tools: <strong>Help</strong>: <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">--help</span></code>; <strong>Manual</strong>: <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">rm</span></code>.</p>
+<p>Type the following to remove our bash script:</p>
+<p><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">bash_script.sh</span></code>.</p>
+<p><strong>Note:</strong> To delete a whole folder add the <code class="docutils literal notranslate"><span class="pre">-r</span></code> tag to remove directories and thier contents recursively (e.g., <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-r</span> <span class="pre">my_folder</span></code>, but don’t remove your folder just yet).</p>
+<p>We can copy (<code class="docutils literal notranslate"><span class="pre">cp</span></code>, just like ctrl+c in a GUI) and move (<code class="docutils literal notranslate"><span class="pre">mv</span></code>, just like ctrl+x in a GUI) files and folders as well. Let’s copy the <code class="docutils literal notranslate"><span class="pre">move_usafabot.sh</span></code> to the <code class="docutils literal notranslate"><span class="pre">my_scripts</span></code> folder you created earlier:</p>
+<p><code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">move_usafabot.sh</span> <span class="pre">~/master_ws/src/usafabot/usafabot_curriculum/my_scripts</span></code></p>
+<blockquote>
+<div><p><strong>Syntax:</strong> <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">&lt;source&gt;</span> <span class="pre">&lt;destination&gt;</span></code></p>
+</div></blockquote>
+<p><strong>Note:</strong> for the above to work, you must already be in the same folder as the <code class="docutils literal notranslate"><span class="pre">move_usafabot.sh</span></code> file. Otherwise you have to use the absolute file path, such as <code class="docutils literal notranslate"><span class="pre">~/my_folder/move_usafabot.sh</span></code>.</p>
+<p>You can now delete your <code class="docutils literal notranslate"><span class="pre">my_folder</span></code> folder.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-r</span> <span class="pre">my_folder</span></code></p>
+<p>Change directories to your <code class="docutils literal notranslate"><span class="pre">my_scripts</span></code> folder. We can use a ROS tool, <code class="docutils literal notranslate"><span class="pre">roscd</span></code>, to change directories to ROS packages without using the absolute file path:</p>
+<p><code class="docutils literal notranslate"><span class="pre">roscd</span> <span class="pre">usafabot_curriculum/my_scripts</span></code></p>
+<blockquote>
+<div><p><strong>Syntax:</strong> <code class="docutils literal notranslate"><span class="pre">roscd</span> <span class="pre">&lt;package/folder&gt;</span></code></p>
+</div></blockquote>
+<p>Edit the <strong>move_usafabot_square.py</strong> file and paste the following contents:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="kn">import</span> <span class="nn">rospy</span><span class="o">,</span> <span class="nn">time</span><span class="o">,</span> <span class="nn">math</span>
+<span class="kn">from</span> <span class="nn">geometry_msgs.msg</span> <span class="kn">import</span> <span class="n">Twist</span>
+
+<span class="k">class</span> <span class="nc">MoveUSAFABot</span><span class="p">():</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pub</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s1">&#39;cmd_vel&#39;</span><span class="p">,</span> <span class="n">Twist</span><span class="p">,</span> <span class="n">queue_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cmd</span> <span class="o">=</span> <span class="n">Twist</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ctrl_c</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">rospy</span><span class="o">.</span><span class="n">on_shutdown</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">shutdownhook</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rate</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Rate</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>    <span class="c1"># 10 Hz</span>
+        
+    <span class="k">def</span> <span class="nf">publish_cmd_vel_once</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        In case publishing fails on first attempt</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">ctrl_c</span><span class="p">:</span>
+            <span class="n">connections</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pub</span><span class="o">.</span><span class="n">get_num_connections</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">connections</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">pub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cmd</span><span class="p">)</span>
+                <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&quot;Cmd Published&quot;</span><span class="p">)</span>
+                <span class="k">break</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">rate</span><span class="o">.</span><span class="n">sleep</span><span class="p">()</span>
+                
+    <span class="k">def</span> <span class="nf">shutdownhook</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&quot;Shutting down. Stopping USAFABot!&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stop_usafabot</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ctrl_c</span> <span class="o">=</span> <span class="kc">True</span>
+        
+    <span class="k">def</span> <span class="nf">stop_usafabot</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cmd</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cmd</span><span class="o">.</span><span class="n">angular</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">publish_cmd_vel_once</span><span class="p">()</span>
+        
+    <span class="k">def</span> <span class="nf">move_time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">moving_time</span> <span class="o">=</span> <span class="mf">10.0</span><span class="p">,</span> <span class="n">lin_spd</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">ang_spd</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cmd</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">lin_spd</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cmd</span><span class="o">.</span><span class="n">angular</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">ang_spd</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">publish_cmd_vel_once</span><span class="p">()</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">moving_time</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">move_square</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        
+        <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">ctrl_c</span><span class="p">:</span>
+            <span class="c1"># Move Forward</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">move_time</span><span class="p">(</span><span class="n">moving_time</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n">lin_spd</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">ang_spd</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="c1"># Turn</span>
+            <span class="n">ang_spd</span> <span class="o">=</span> <span class="mf">0.5</span>    <span class="c1"># rad/sec</span>
+            <span class="n">moving_time</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span><span class="o">/</span><span class="n">ang_spd</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">move_time</span><span class="p">(</span><span class="n">moving_time</span> <span class="o">=</span> <span class="n">moving_time</span><span class="p">,</span> <span class="n">lin_spd</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">ang_spd</span> <span class="o">=</span> <span class="n">ang_spd</span><span class="p">)</span>
+            
+        
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;move_usafabot&#39;</span><span class="p">)</span>
+    <span class="n">moveusafabot_object</span> <span class="o">=</span> <span class="n">MoveUSAFABot</span><span class="p">()</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">moveusafabot_object</span><span class="o">.</span><span class="n">move_square</span><span class="p">()</span>
+    <span class="k">except</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ROSInterruptException</span><span class="p">:</span>
+        <span class="k">pass</span>
+</pre></div>
+</div>
+<p>There is a lot going on in this script, but hopefully after the previous lesson some of it makes sense. To summarize, the script creates a node, <code class="docutils literal notranslate"><span class="pre">move_usafabot</span></code>, that publishes <strong>Twist</strong> messages to the <strong>/cmd_vel</strong> topic to drive the robot in a square: drive forward, turn 90 degrees, drive forward, repeat. This script will run until killed using <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code>.</p>
+<p>The script is already executable, so you can run it using ROS!</p>
+<p><code class="docutils literal notranslate"><span class="pre">rosrun</span> <span class="pre">usafabot_curriculum</span> <span class="pre">move_usafabot_square.py</span></code></p>
+<p><strong>Note:</strong> It won’t be a perfect square as the robot doesn’t turn perfectly, but it will be close!</p>
+<p>The robot is now driving in a square until the script is killed. If you select the terminal and hit <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code>, it will kill the script.</p>
+<p>Run the script again and this time hit <code class="docutils literal notranslate"><span class="pre">ctrl+z</span></code>. You can see that the robot is still running, but the commands are not updating. This is because <code class="docutils literal notranslate"><span class="pre">ctrl+z</span></code> suspends the current process, but does not kill it. We can observe all running processes on Linux by typing <code class="docutils literal notranslate"><span class="pre">ps</span> <span class="pre">-faux</span></code>. As you can see, there are a lot! The <code class="docutils literal notranslate"><span class="pre">grep</span></code> command allows us to filter these processes. Try the following:</p>
+<p><code class="docutils literal notranslate"><span class="pre">ps</span> <span class="pre">-faux</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">move_usafabot_square.py</span></code></p>
+<p>The first entry should be our process and the leftmost number is the process ID (PID). We can kill any process using this number and the <code class="docutils literal notranslate"><span class="pre">kill</span></code> command:</p>
+<p><code class="docutils literal notranslate"><span class="pre">kill</span> <span class="pre">PID</span></code> replacing PID with the number listed.</p>
+<p>If you hit enter again, you should see that the process was killed. Unfortunately, the USAFABot will just continue to execute the last command sent, so you need to kill the simulation as well. Just select that terminal and hit <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">grep</span></code> tool is very powerful and can be used with any Linux command. For example, if you wanted to see all usafabot packages available to us, we could type the following:</p>
+<p><code class="docutils literal notranslate"><span class="pre">rospack</span> <span class="pre">list</span></code></p>
+<p>There are a lot, so this isn’t very helpful, but we can filter this command!</p>
+<p><code class="docutils literal notranslate"><span class="pre">rospack</span> <span class="pre">list</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">usafabot</span></code></p>
+<p>The vertical line, ‘|’, pipes the results of the first command into the second command, so we can filter all packages looking only for usafabot packages.</p>
+</div>
+<div class="section" id="working-with-a-remote-machine">
+<h3>Working with a remote machine<a class="headerlink" href="#working-with-a-remote-machine" title="Permalink to this headline">¶</a></h3>
+<p>Later in this course you will drive your USAFABot around unplugged from a monitor and keyboard, but you will still need access to the Raspberry Pi on the robot to run ROS nodes. One of the easiest ways to remotely access a Linux machine is through a secure shell. To create a secure shell, you need the uesrname and hostname of the computer you want to remote into. For the Raspberry Pis, all usernames are <code class="docutils literal notranslate"><span class="pre">pi</span></code> and the hostname is your robot number (e.g., <code class="docutils literal notranslate"><span class="pre">robot0</span></code>).</p>
+<ol>
+<li><p>Open a terminal on your master</p></li>
+<li><p>Check connectivity to the robot:</p>
+<p><code class="docutils literal notranslate"><span class="pre">ping</span> <span class="pre">robotX</span></code>
+<br></p>
+</li>
+<li><p>Create a secure shell to the robot:</p>
+<p><code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">pi&#64;robotX</span></code></p>
+</li>
+</ol>
+<blockquote>
+<div><p><strong>Syntax:</strong> <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;username&gt;&#64;&lt;hostname/IP</span> <span class="pre">address&gt;</span></code></p>
+</div></blockquote>
+<ol>
+<li><p>Enter the robot’s password</p>
+<p>You should see that the terminal lists the <code class="docutils literal notranslate"><span class="pre">pi</span></code> username and your robot’s hostname, <code class="docutils literal notranslate"><span class="pre">robotX</span></code>. Any command you run in this shell will execute on the robot.
+<br></p>
+</li>
+<li><p>Create a new directory on the robot we can use to store scripts. This folder should be called ‘my_scripts’ and should be in your ‘usafabot_curriculum’ package.</p></li>
+<li><p>Change directories to your new folder.</p></li>
+<li><p>Print the working directory. You should get ‘/home/pi/robot_ws/src/usafabot/usafabot_curriculum/my_scripts’</p></li>
+<li><p>You can type <code class="docutils literal notranslate"><span class="pre">exit</span></code> to close an SSH connection (but don’t close the connection yet!).</p></li>
+</ol>
+<p><strong>Note:</strong> At times, there may be network issues and name resolution will fail. What this means is if you try to ping the robot from the master or vice versa using the hostname (e.g., <code class="docutils literal notranslate"><span class="pre">ping</span> <span class="pre">master0</span></code>) it will not work. However, it will work if you use the IP address (e.g., <code class="docutils literal notranslate"><span class="pre">ping</span> <span class="pre">192.168.2.120</span></code>). To do this, you need the IP address of the machine you want to access. This IP address will change periodically. The easiest way to determine the current IP Address is, with the machine plugged into a monitor and keyboard, type <code class="docutils literal notranslate"><span class="pre">ip</span> <span class="pre">addr</span></code> in a terminal. This will list all of the network interfaces on the machine (such as <em>eth0</em> for ethernet and <em>wlan0</em> for wireless). You are looking for the <code class="docutils literal notranslate"><span class="pre">inet</span></code> field under <code class="docutils literal notranslate"><span class="pre">wlan0</span></code> (may be called <code class="docutils literal notranslate"><span class="pre">wlo1</span></code>). Now you can unplug the roobt from the monitor, ping the IP address to check connectivity, and then SSH into the robot.</p>
+<p>The other remote tool you may want to take advantage of is SCP, which securely copies a file to a remote machine.</p>
+<blockquote>
+<div><p><strong>Syntax:</strong> <code class="docutils literal notranslate"><span class="pre">scp</span> <span class="pre">&lt;src</span> <span class="pre">location&gt;</span> <span class="pre">&lt;username&gt;&#64;&lt;hostname&gt;:&lt;dest</span> <span class="pre">location&gt;</span></code></p>
+</div></blockquote>
+<p>For example, copy the <code class="docutils literal notranslate"><span class="pre">move_usafabot_square.py</span></code> file to your robot by typing the following in a new terminal on the master:</p>
+<p><code class="docutils literal notranslate"><span class="pre">roscd</span> <span class="pre">usafabot_curriculum/my_scripts</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">scp</span> <span class="pre">move_usafabot_square.py</span> <span class="pre">pi&#64;robot0:/home/pi/robot_ws/src/usafabot/usafabot_curriculum/my_scripts/</span></code></p>
+<p><strong>Note:</strong> The destination uses the absolute path you printed earlier.</p>
+<p>In your secure shell list the contents of your ‘my_scripts’ folder. You should see the <code class="docutils literal notranslate"><span class="pre">move_usafabot_square.py</span></code> file. Check that it is executable. If it is not, make it executable.</p>
+<p>Now let’s move our USAFABot using the script on the robot:</p>
+<ol class="simple">
+<li><p>Run roscore on the master.</p></li>
+<li><p>Run the simulated robot on the master.</p></li>
+<li><p>SSH into your robot Raspberry Pi.</p></li>
+<li><p>Run the move_usafabot_square.py using the <code class="docutils literal notranslate"><span class="pre">rosrun</span></code> command on the robot.</p></li>
+</ol>
+<p>You are now controlling your simulation (which is running on the master) remotely from the robot. In future lessons you will have nodes running on your robot to drive the robot and will control the robot remotely from the master.</p>
+</div>
+<div class="section" id="ros">
+<h3>ROS<a class="headerlink" href="#ros" title="Permalink to this headline">¶</a></h3>
+<p>Below you will run ROS commands. The “!” character in the front allows us to run bash commands from Jupter and would <strong>NOT</strong> be used in the command line.</p>
+<p>Accomplish the following on the master by adding the commands necessary below:</p>
+<p>List all running nodes:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!
+</pre></div>
+</div>
+<p>List the active topics:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!
+</pre></div>
+</div>
+<p>Display running nodes and communication between them:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!
+</pre></div>
+</div>
+<p>Exit the rqt_graph.</p>
+<p>Show information about a the <strong>/cmd_vel</strong> topic such as what type of messages are sent over the topic and publishing and subscribing nodes.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!
+</pre></div>
+</div>
+<p>Display information about the message that is sent over the <strong>/cmd_vel</strong> topic.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!
+</pre></div>
+</div>
+<p>Display messages sent over the <strong>/cmd_vel</strong> topic:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!
+</pre></div>
+</div>
+</div>
+<div class="section" id="checkpoint">
+<h3>Checkpoint<a class="headerlink" href="#checkpoint" title="Permalink to this headline">¶</a></h3>
+<p>Once complete, get checked off by an instructor showing the output of each of the above.</p>
+<p><strong>Note:</strong> You will use all of the above ROS commands for each lab to write your lab reports. You could create a bash script to run these commands automatically ;)</p>
+</div>
+<div class="section" id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
+<p>You have seen a lot of different Linux/ROS commands during this lesson but it only scratches the surface. There are tons of online resources available if you want to learn more. I recommend working through a few of these tutorials: <a class="reference external" href="http://www.ee.surrey.ac.uk/Teaching/Unix/">http://www.ee.surrey.ac.uk/Teaching/Unix/</a>. They are fairly quick and willl give you more insight into the tools we discussed.</p>
+</div>
+<div class="section" id="cleanup">
+<h3>Cleanup<a class="headerlink" href="#cleanup" title="Permalink to this headline">¶</a></h3>
+<p>In each terminal window, close the node by typing <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code>. Exit any SSH connections. In each of the notebooks reset the Jupter kernel and clear output. Now it is safe to exit out of this window. Shutdown the notebook server by typing <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code> within the terminal you ran <code class="docutils literal notranslate"><span class="pre">jupyter-notebook</span></code> in. Select ‘y’.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Module1.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Module 1: Robotics Operating System (ROS)</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Module3.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Module 3: Python3 for Robotics</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Mr. Steven Beyer<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

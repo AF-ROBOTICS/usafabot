@@ -51,8 +51,6 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Module 2: Linux for Robotics" href="ICE2_Linux.html" />
-    <link rel="prev" title="Module 1: Robotics Operating System (ROS)" href="ICE1_ROS.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -125,24 +123,9 @@
   MODULE 01
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Module1.html">
-   Module 1: Robotics Operating System (ROS)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ICE1_Listener.html">
-   Module 1: Robotics Operating System (ROS)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ICE1_ROS.html">
-   Module 1: Robotics Operating System (ROS)
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
    Module 1: Robotics Operating System (ROS)
   </a>
  </li>
@@ -154,7 +137,7 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="ICE2_Linux.html">
+  <a class="reference internal" href="Module2.html">
    Module 2: Linux for Robotics
   </a>
  </li>
@@ -166,32 +149,7 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="Module3_Python3.html">
-   Module 3: Python3 for Robotics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Module3_ROS.html">
-   Module 3: Python3 for Robotics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Module3_RPSComputer.html">
-   Module 3: Python3 for Robotics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ICE3_ROS.html">
-   Module 3: Python3 for Robotics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ICE3_Client.html">
-   Module 3: Python3 for Robotics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ICE3_Server.html">
+  <a class="reference internal" href="Module3.html">
    Module 3: Python3 for Robotics
   </a>
  </li>
@@ -203,7 +161,7 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="ICE4_DrivingTheRobot.html">
+  <a class="reference internal" href="Module4.html">
    Module 4: Driving the Robot
   </a>
  </li>
@@ -215,13 +173,44 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="ICE5_CustomMessages.html">
+  <a class="reference internal" href="Module5.html">
    Module 5: Custom Messages
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 06
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="Lab1_CustomMessages.html">
-   Module 5: Custom Messages
+  <a class="reference internal" href="Module6.html">
+   Module 6: Inertial Measurement Unit
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 07
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module7.html">
+   Module 7: Launch Files
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 08
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module8.html">
+   Module 8: LIDAR
   </a>
  </li>
 </ul>
@@ -265,9 +254,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/ICE1_Talker.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/ICE1_Talker.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -300,6 +289,23 @@
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/ICE1_Talker.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
 
         </div>
 
@@ -467,8 +473,6 @@
 <div class="section" id="in-class-exercise-1-talker">
 <h2>In-Class Exercise 1 - Talker<a class="headerlink" href="#in-class-exercise-1-talker" title="Permalink to this headline">¶</a></h2>
 <hr class="docutils" />
-<p><strong>You must open this file as a Jupyter Notebook (link below) to run code</strong></p>
-<p><a class="reference external" href="http://localhost:8888/notebooks/ICE1_Talker.ipynb">Run this file as an executable Jupyter Notebook</a></p>
 <div class="section" id="a-note-on-this-document">
 <h3>A note on this document<a class="headerlink" href="#a-note-on-this-document" title="Permalink to this headline">¶</a></h3>
 <p>This document is known as a Jupyter Notebook; it is used in academia and industry to allow text and executable code to coexist in a very easy to read format. Blocks can contain text or code, and for blocks containing code, press <code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">Enter</span></code> to run the code. Earlier blocks of code need to be run for the later blocks of code to work.</p>
@@ -489,10 +493,14 @@
 <div class="section" id="import-modules">
 <h4>Import modules<a class="headerlink" href="#import-modules" title="Permalink to this headline">¶</a></h4>
 <p><strong>Important</strong>: Importing classes may take some time. You will know the code block is still executing as the bracket on the left of the cell will change to a <code class="docutils literal notranslate"><span class="pre">*</span></code> character. Do not move to the next step until the <code class="docutils literal notranslate"><span class="pre">*</span></code> is gone.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import required modules</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import required modules</span>
 <span class="kn">import</span> <span class="nn">rospy</span>
 <span class="kn">from</span> <span class="nn">std_msgs.msg</span> <span class="kn">import</span> <span class="n">String</span>
 </pre></div>
+</div>
+</div>
 </div>
 <p>Here, we have two modules, rospy and a message. The rospy module provides all ROS implementation to create nodes and publish messages on topics. The next line imports the String message from the std_msgs package which we will use to send our chat messages. The Standard ROS Messages include a number of common message types. You can find more information about these messages on the <a class="reference external" href="http://wiki.ros.org/std_msgs">ROS wiki</a>.</p>
 </div>
@@ -500,7 +508,9 @@
 <h4>Talker Function<a class="headerlink" href="#talker-function" title="Permalink to this headline">¶</a></h4>
 <p>One method to communicate in ROS is using a publisher/subscriber model. One node publishes messages over a topic and any other nodes can subscribe to this topic to receive the messages.</p>
 <p>This function will create the publisher (“talker”) used to send chat messages to the subscriber (“listener”). It will read user input and publish the message.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">talker</span><span class="p">():</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">talker</span><span class="p">():</span>
     <span class="n">chat_pub</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s1">&#39;chat&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">queue_size</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
     <span class="n">rate</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Rate</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># 10 Hz</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">rospy</span><span class="o">.</span><span class="n">is_shutdown</span><span class="p">():</span>
@@ -510,6 +520,8 @@
         <span class="n">rate</span><span class="o">.</span><span class="n">sleep</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+</div>
 <p>Line 2 creates the publisher. The publisher will publish <em>String</em> messages over the <strong>/chat</strong> topic. The <code class="docutils literal notranslate"><span class="pre">queue_size</span></code> parameter determines how many messages the ROS network will hold before dropping old messages. If the publisher publishes faster than the network can handle, then messages will start getting dropped.</p>
 <p>Line 3 determines the rate at which the following loop should run. With an input of 10, the loop should run 10 times per second (10 Hz). Line 4 creates a loop that runs until <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code> is pressed in the terminal. Line 5 gets user input while line 6 logs the message into a log file (and prints it to the screen). Line 7 publishes the chat message using the previously created publisher. Lastly, line 8 sleeps so the loop runs at the desired rate.</p>
 <p><strong>Note:</strong> Waiting for user input will cause the loop to not run at 10 Hz as line 5 will block until the user hits enter.</p>
@@ -517,13 +529,17 @@
 <div class="section" id="main">
 <h4>Main<a class="headerlink" href="#main" title="Permalink to this headline">¶</a></h4>
 <p>The main function calls our talker function.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;talker&#39;</span><span class="p">)</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">talker</span><span class="p">()</span>
     <span class="k">except</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ROSInterruptException</span><span class="p">:</span>
         <span class="k">pass</span>
 </pre></div>
+</div>
+</div>
 </div>
 <p>Line 2 of the above code initializes our talker node. The rest creates a try-except statement that calls our talker function. All the try/except really does is ensures we exit cleanly when ctrl+c is pressed in a terminal.</p>
 <p>In an actual Python script we will replace</p>
@@ -538,8 +554,17 @@
 </div>
 <div class="section" id="run-the-talker">
 <h4>Run the talker<a class="headerlink" href="#run-the-talker" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">main</span><span class="p">()</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">main</span><span class="p">()</span>
 </pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unable to register with master node [http://robotics3:11311]: master may not be running yet. Will keep trying.
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="create-the-listener">
@@ -578,21 +603,7 @@
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="ICE1_ROS.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Module 1: Robotics Operating System (ROS)</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="ICE2_Linux.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Module 2: Linux for Robotics</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>

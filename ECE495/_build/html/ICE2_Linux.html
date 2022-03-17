@@ -51,8 +51,6 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Module 3: Python3 for Robotics" href="Module3_Python3.html" />
-    <link rel="prev" title="Module 1: Robotics Operating System (ROS)" href="ICE1_Talker.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -131,30 +129,15 @@
    Module 1: Robotics Operating System (ROS)
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ICE1_Listener.html">
-   Module 1: Robotics Operating System (ROS)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ICE1_ROS.html">
-   Module 1: Robotics Operating System (ROS)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ICE1_Talker.html">
-   Module 1: Robotics Operating System (ROS)
-  </a>
- </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE 02
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module2.html">
    Module 2: Linux for Robotics
   </a>
  </li>
@@ -166,32 +149,7 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="Module3_Python3.html">
-   Module 3: Python3 for Robotics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Module3_ROS.html">
-   Module 3: Python3 for Robotics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Module3_RPSComputer.html">
-   Module 3: Python3 for Robotics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ICE3_ROS.html">
-   Module 3: Python3 for Robotics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ICE3_Client.html">
-   Module 3: Python3 for Robotics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ICE3_Server.html">
+  <a class="reference internal" href="Module3.html">
    Module 3: Python3 for Robotics
   </a>
  </li>
@@ -203,7 +161,7 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="ICE4_DrivingTheRobot.html">
+  <a class="reference internal" href="Module4.html">
    Module 4: Driving the Robot
   </a>
  </li>
@@ -215,13 +173,44 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="ICE5_CustomMessages.html">
+  <a class="reference internal" href="Module5.html">
    Module 5: Custom Messages
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 06
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="Lab1_CustomMessages.html">
-   Module 5: Custom Messages
+  <a class="reference internal" href="Module6.html">
+   Module 6: Inertial Measurement Unit
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 07
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module7.html">
+   Module 7: Launch Files
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 08
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module8.html">
+   Module 8: LIDAR
   </a>
  </li>
 </ul>
@@ -265,9 +254,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/ICE2_Linux.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/ICE2_Linux.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -300,6 +289,23 @@
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/ICE2_Linux.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
 
         </div>
 
@@ -439,8 +445,6 @@
 <div class="section" id="in-class-exercise-2-linux">
 <h2>In-Class Exercise 2 - Linux<a class="headerlink" href="#in-class-exercise-2-linux" title="Permalink to this headline">¶</a></h2>
 <hr class="docutils" />
-<p><strong>You must open this file as a Jupyter Notebook (link below) to run code</strong></p>
-<p><a class="reference external" href="http://localhost:8888/notebooks/ICE2_Linux.ipynb">Run this file as an executable Jupyter Notebook</a></p>
 <div class="section" id="a-note-on-this-document">
 <h3>A note on this document<a class="headerlink" href="#a-note-on-this-document" title="Permalink to this headline">¶</a></h3>
 <p>This document is known as a Jupyter notebook; it is used in academia and industry to allow text and executable code to coexist in a very easy to read format. Blocks can contain text or code, and for blocks containing code, press <code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">Enter</span></code> to run the code. Earlier blocks of code need to be run for the later blocks of code to work.</p>
@@ -568,7 +572,7 @@
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">pub</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s1">&#39;cmd_vel&#39;</span><span class="p">,</span> <span class="n">Twist</span><span class="p">,</span> <span class="n">queue_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cmd</span> <span class="o">=</span> <span class="n">Twist</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">ctrl_c</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ctrl_c</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="n">rospy</span><span class="o">.</span><span class="n">on_shutdown</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">shutdownhook</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">rate</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Rate</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>    <span class="c1"># 10 Hz</span>
         
@@ -588,7 +592,7 @@
     <span class="k">def</span> <span class="nf">shutdownhook</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&quot;Shutting down. Stopping USAFABot!&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">stop_usafabot</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">ctrl_c</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ctrl_c</span> <span class="o">=</span> <span class="kc">True</span>
         
     <span class="k">def</span> <span class="nf">stop_usafabot</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cmd</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mf">0.0</span>
@@ -689,29 +693,53 @@
 <p>Below you will run ROS commands. The “!” character in the front allows us to run bash commands from Jupter and would <strong>NOT</strong> be used in the command line.</p>
 <p>Accomplish the following on the master by adding the commands necessary below:</p>
 <p>List all running nodes:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>!
 </pre></div>
+</div>
+</div>
 </div>
 <p>List the active topics:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>!
 </pre></div>
 </div>
+</div>
+</div>
 <p>Display running nodes and communication between them:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>!
 </pre></div>
+</div>
+</div>
 </div>
 <p>Exit the rqt_graph.</p>
 <p>Show information about a the <strong>/cmd_vel</strong> topic such as what type of messages are sent over the topic and publishing and subscribing nodes.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>!
 </pre></div>
+</div>
+</div>
 </div>
 <p>Display information about the message that is sent over the <strong>/cmd_vel</strong> topic.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>!
 </pre></div>
 </div>
+</div>
+</div>
 <p>Display messages sent over the <strong>/cmd_vel</strong> topic:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>!
 </pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="checkpoint">
@@ -754,21 +782,7 @@
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="ICE1_Talker.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Module 1: Robotics Operating System (ROS)</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="Module3_Python3.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Module 3: Python3 for Robotics</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>

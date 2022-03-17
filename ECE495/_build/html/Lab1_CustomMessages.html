@@ -51,7 +51,6 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Module 5: Custom Messages" href="ICE5_CustomMessages.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -130,21 +129,6 @@
    Module 1: Robotics Operating System (ROS)
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ICE1_Listener.html">
-   Module 1: Robotics Operating System (ROS)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ICE1_ROS.html">
-   Module 1: Robotics Operating System (ROS)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ICE1_Talker.html">
-   Module 1: Robotics Operating System (ROS)
-  </a>
- </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -153,7 +137,7 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="ICE2_Linux.html">
+  <a class="reference internal" href="Module2.html">
    Module 2: Linux for Robotics
   </a>
  </li>
@@ -165,32 +149,7 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="Module3_Python3.html">
-   Module 3: Python3 for Robotics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Module3_ROS.html">
-   Module 3: Python3 for Robotics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Module3_RPSComputer.html">
-   Module 3: Python3 for Robotics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ICE3_ROS.html">
-   Module 3: Python3 for Robotics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ICE3_Client.html">
-   Module 3: Python3 for Robotics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ICE3_Server.html">
+  <a class="reference internal" href="Module3.html">
    Module 3: Python3 for Robotics
   </a>
  </li>
@@ -202,7 +161,7 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="ICE4_DrivingTheRobot.html">
+  <a class="reference internal" href="Module4.html">
    Module 4: Driving the Robot
   </a>
  </li>
@@ -212,15 +171,46 @@
   MODULE 05
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="ICE5_CustomMessages.html">
+  <a class="reference internal" href="Module5.html">
    Module 5: Custom Messages
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Module 5: Custom Messages
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 06
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module6.html">
+   Module 6: Inertial Measurement Unit
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 07
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module7.html">
+   Module 7: Launch Files
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 08
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module8.html">
+   Module 8: LIDAR
   </a>
  </li>
 </ul>
@@ -264,9 +254,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/Lab1_CustomMessages.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/Lab1_CustomMessages.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -299,6 +289,23 @@
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Lab1_CustomMessages.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
 
         </div>
 
@@ -466,8 +473,6 @@
 <div class="section" id="lab-1">
 <h2>Lab 1<a class="headerlink" href="#lab-1" title="Permalink to this headline">¶</a></h2>
 <hr class="docutils" />
-<p><strong>You must open this file as a Jupyter Notebook (link below) to run code</strong></p>
-<p><a class="reference external" href="http://localhost:8888/notebooks/Lab1_CustomMessages.ipynb">Run this file as an executable Jupyter Notebook</a></p>
 <div class="section" id="purpose">
 <h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h3>
 <p>This lab will provide practice in creating custom messages. You will take the <strong>cmd_vel</strong> topic and <em>Twist</em> message from the <strong>teleop_twist_keyboard</strong> node and use a <strong>controller</strong> node to send <em>USAFABOT_Cmd</em> messages to the <strong>usafabot_serial</strong> node. As we introduce new subsystems to the robot, the <strong>controller</strong> node will determine priority between these sensors/systems and then drive the robot using the <strong>usafabot_cmd</strong> topic accordingly.</p>
@@ -626,14 +631,7 @@
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="ICE5_CustomMessages.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Module 5: Custom Messages</p>
-        </div>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>

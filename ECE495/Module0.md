@@ -1,4 +1,4 @@
-# Module 0: Intro & GIT
+# Intro & GIT
 
 ### Lesson Objectives
 

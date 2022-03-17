@@ -33,16 +33,28 @@ Below is a list of recommended hardware and links. Other off-the-shelf component
 There are multiple ways to download and install Ubuntu 20 to a MicroSD card, but the Raspberry Pi Imager is one of the easiest. Instructions for installing the imager on your operating system can be found on the [Raspberry Pi OS software page](https://www.raspberrypi.com/software/). 
 
 Once installed, start the imager and select the "CHOOSE OS" button.
+
+
 <img src="figs/installer1.png" width="600" height="395.89">
 
+
 Scroll down the menu and select "Other general purpose OS".
+
+
 <img src="figs/installer2.png" width="600" height="395.89">
 
+
 Next, select "Ubuntu".
+
+
 <img src="figs/installer3.png" width="600" height="395.89">
 
+
 Lastly, scroll and select the latest 64-bit version of "Ubuntu Server 20.04 LTS".
+
+
 <img src="figs/installer4.png" width="600" height="395.89">
+
 
 Now that you have the correct image selected, you need to choose the correct storage device that corresponds to the MicroSD card. Select "CHOOSE STORAGE".
 > ⚠️ **WARNING:** This process will overwrite the drive, so ensure you select the correct device! You can select "CHOOSE STORAGE" before inserting the MicroSD card, then insert it, and the card will be the new drive that pops up.
@@ -118,7 +130,9 @@ Until a desktop GUI is installed we have to work with the command line to set up
 
 First, determine the name of your Wi-Fi network adapter by typing `ip link` (for the Raspberry Pi version of Ubuntu Server 20.04 LTS it is typically `wlan0`).
 
-<img src="figs/wifi1.png" width="600" height="395.89">
+
+<img src="figs/wifi1.png" width="1160" height="320">
+
 
 Open the `/etc/netplan/50-cloud-init.yaml` file in your favorite browser:
 
@@ -127,7 +141,10 @@ sudo nano /etc/netplan/50-cloud-init.yaml
 ```
 
 Edit the file so it looks like the below (use spaces and not tabs) replacing **wlan0** with your wireless network interface and using your SSID and password:
+
+
 <img src="figs/wifi2.png" width="600" height="395.89">
+
 
 Save and exit.
 
@@ -163,7 +180,10 @@ sudo systemctl start ssh
 The Raspberry Pi 4 B used in our course has 8 GB of RAM. Swap Space might not be necessary, but with a larger SD card it is beneficial.
 
 You can check that there is no active swap using the free utility:
+
+
 <img src="figs/swap1.png" width="600" height="395.89">
+
 
 The **fallocate** program can be used to create a swap:
 
@@ -172,7 +192,10 @@ sudo fallocate -l 2G /swapfile
 ```
 
 If it was created correctly, you should see the below:
+
+
 <img src="figs/swap2.png" width="600" height="395.89">
+
 
 Make the file only accessible to root by typing:
 
@@ -181,12 +204,18 @@ sudo chmod 600 /swapfile
 ```
 
 Verify the permissions by typing the following:
+
+
 <img src="figs/swap3.png" width="600" height="395.89">
+
 
 Now only root user has read and write flags enabled.
 
 You can set the file as swap space by typing the following:
+
+
 <img src="figs/swap4.png" width="600" height="395.89">
+
 
 Then turn on the swap file:
 
@@ -195,7 +224,10 @@ sudo swapon /swapfile
 ```
 
 To verify that this worked you can type the following:
+
+
 <img src="figs/swap5.png" width="600" height="395.89">
+
 
 This swap will only last until reboot, so to make it permanent at it to the `fstab` file:
 ```bash
@@ -207,7 +239,9 @@ Now it is time to reboot by typing `sudo reboot`!
 #### Verify changes
 After reboot and you log in your new hostname should be listed at the terminal (e.g., `pi@robot0`). Additionally, you should be connected to Wi-Fi and have an IP Address. You can confirm by typing the following and observing the IP address in the output:
 
+
 <img src="figs/wifi3.png" width="600" height="395.89">
+
 
 You can now use this IP address to create a remote secure shell into the USAFABot using either the IP address or hostname if your network provides Dynamic DNS. From another machine connected to your network type one of the following:
 
@@ -221,7 +255,9 @@ ssh username@HOSTNAME
 
 Lastly, ensure your swap space is still active by typing the following and observing the output:
 
+
 <img src="figs/swap6.png" width="600" height="395.89">
+
 
 #### Update and Upgrade
 Since we turned off automatic updates, you should periodically update and upgrade. You can use this single command to accomplish both while accepting all upgrades:
@@ -240,7 +276,9 @@ sudo apt -y install ubuntu-desktop
 #### Ubuntu Desktop Network Settings
 If you do install the Ubuntu Desktop and want to use the GUI to setup the Wi-Fi network then you need to remove the settings included in the `/etc/netplan/50-cloud-init.yaml` file. It should look like the original file when complete:
 
+
 <img src="figs/wifi4.png" width="600" height="395.89">
+
 
 You can now use the GUI interface in the top right of the screen to set up a Wi-Fi connection.
 
@@ -277,15 +315,21 @@ Open a web browser and sign in to your GitHub account.
 
 In the upper-right corner of any page, click your profile photo, then click **Settings**:
 
+
 <img src="figs/ssh1.png" width="200" height="300">
+
 
 In the user settings sidebar, click **SSH and GPG keys**:
 
+
 <img src="figs/ssh2.png" width="200" height="300">
+
 
 Click **New SSH key**:
 
+
 <img src="figs/ssh3.png" width="600" height="400">
+
 
 In the "Title" field, add a descriptive label for the new key, such as "robot0".
 
