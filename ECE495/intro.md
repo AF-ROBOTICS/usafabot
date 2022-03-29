@@ -13,23 +13,25 @@ In a new terminal, create a new folder on your desktop:
 cd Desktop
 ```
 
+Now download the files from GitHub with the command:
+
 ```bash
-mkdir ECE495
+git clone --depth 1  https://github.com/AF-ROBOTICS/usafabot ECE495
 ```
 
-Navigate to the new file you just created. We will be using this to hold all the 495 files you'll need for class.
+The above command made a new directory on your desktop. Navigate to the new folder you just created. We will be using this to hold all the 495 files you'll need for class.
 
 ```bash
 cd ECE495
 ```
 
-Now download the files from GitHub with the command:
+Next, we will clean up the folder so it has the correct paths with the command below.
 
 ```bash
-git clone https://github.com/AF-ROBOTICS/usafabot/tree/master/ECE495
+git filter-branch --prune-empty --subdirectory-filter ECE495 HEAD
 ```
 
-Once the download completes, change your directory to 'ECE495' (for example, using the command `cd ECE495`).
+You now have all the files you will need for class. Do not change the folder's name on your desktop or the files you will need for class will not work correctly. We will now download jupyter notebook.
 
 
 ## 4. Opening Jupyter Notebook
