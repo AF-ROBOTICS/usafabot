@@ -34,18 +34,18 @@ git filter-branch --prune-empty --subdirectory-filter ECE495 HEAD
 You now have all the files you will need for class. Do not change the folder's name on your desktop or the files you will need for class will not work correctly.
 
 
-## 4. Opening the Class Website
+## 2. Opening the Class Website
 
 Once you've completed all of the steps above, you should be able to open the class website with the below command in a **new terminal**:
 
 ```bash
-firefox ~/Desktop/ECE495/_build/html/intro.html
+firefox ~/Desktop/ECE495/_build/html/welcome.html
 ```
 
 We will now download jupyter notebook.
 
 
-## 5. Opening Jupyter Notebook
+## 3. Opening Jupyter Notebook
 
 To install Jupyter Notebook, open a **new terminal** and use the command:
 

@@ -5,8 +5,11 @@
 #- file: notebooks
 
 format: jb-book
-root: intro
+root: welcome.md
 parts:
+  - caption: GETTING STARTED
+    chapters:
+    - file: getting_started.md
   - caption: ROBOT SETUP
     chapters:
     - file: robot_setup.md

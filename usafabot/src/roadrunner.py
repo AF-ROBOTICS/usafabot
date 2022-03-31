@@ -6,9 +6,14 @@ from cflib import crazyflie, crtp
 from cflib.crazyflie.log import LogConfig
 from geometry_msgs.msg import Pose, Vector3, TransformStamped, Twist
 from nav_msgs.msg import Odometry
+from tf.transformations import euler_from_quaternion, quaternion_from_euler
+import math
 
 import tf2_ros
 import tf2_msgs.msg
+
+orientation_list = []
+robot_offset = 0.10
 
 # Only output errors from the logging framework
 logging.basicConfig(level=logging.ERROR)
@@ -121,7 +126,12 @@ class Roadrunner:
     # Callback function that reads position from Bitcraze Roadrunner
     # Frequency: 100 Hz
     def curr_position(self, timestamp, data, logconf):
-        self.rr_pose.position = Vector3(data['kalman.stateX'], data['kalman.stateY'], data['kalman.stateZ'])
+        orientation_list = [self.rr_pose.orientation.x, self.rr_pose.orientation.y, self.rr_pose.orientation.z, self.rr_pose.orientation.w]
+        (roll, pitch, yaw) = euler_from_quaternion(orientation_list)
+        bx = data['kalman.stateX'] - math.cos(yaw)*robot_offset
+        by = data['kalman.stateY'] - math.sin(yaw)*robot_offset
+        self.rr_pose.position = Vector3(bx, by, data['kalman.stateZ'])
+
 
     # Callback function that reads orientation from Bitcraze Roadrunner
     # Frequency: 100 Hz
@@ -130,7 +140,7 @@ class Roadrunner:
         self.rr_pose.orientation.y = data['kalman.q2']
         self.rr_pose.orientation.z = data['kalman.q3']
         self.rr_pose.orientation.w = data['kalman.q0']
-
+        
     def curr_velocity(self, timestamp, data, logconf):
         self.rr_vel.linear = Vector3(data['kalman.statePX'], data['kalman.statePY'], data['kalman.statePZ'])
         self.rr_vel.angular = Vector3(0,0,data['gyro.z'])
