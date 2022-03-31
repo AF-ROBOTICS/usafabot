@@ -13,7 +13,7 @@ In this lesson we will enable the robot to avoid obstacles. Many sensors provide
 ### LIDAR
 [Slamtec's RPLIDAR A1](https://www.slamtec.com/en/Lidar/A1) is a 360 deg Laser Range Scanner. It is based on laser triangulation ranging principle and uses high-speed vision acquisition and processing hardware developed by Slamtec. It measures distance data in more than 8000 times per second. It has a detection range of 12 meters and an angular resolution of 1 degree. The distance resolution is 0.2 cm. It has a minimum detection rate of .15 meters.
 
-<img src="figs/rplidar.png" width="864" height="878">
+![logo](figs/rplidar.png)
 
 #### Videos:
 [Airborne LiDAR](https://www.youtube.com/watch?v=EYbhNSUnIdU)
@@ -79,15 +79,15 @@ This should open a window that we can use to visualize ROS components of our sys
 
 Select the drop down under "Global Options" → "Fixed Frame" and ensure "map" is selected.
 
-<img src="figs/map.png" width="296" height="152">
+![logo](figs/map.png)
 
 Below the "Displays" panel select "Add".
 
-<img src="figs/add.PNG" width="483" height="945">
+![logo](figs/add.PNG)
 
 Select "RobotModel" and click "OK".
 
-<img src="figs/robotmodel.png" width="520" height="715">
+![logo](figs/robotmodel.png)
 
 You should now see a model of the USAFABot in the center of your **rviz** map.
 
@@ -95,13 +95,13 @@ Below the "Displays" panel select "Add".
 
 Select "LaserScan" and click "OK".
 
-<img src="figs/laserscan.png" width="520" height="715">
+![logo](figs/laserscan.png)
 
 You should now see a "LaserScan" drop down under the "Displays" panel. Expand it.
 
 Click the empty space to the right of "Topic" and select the "/scan" topic.
 
-<img src="figs/scan.png" width="329" height="570">
+![logo](figs/scan.png)
 
 You should now see red dots fill the **rviz** map where obstacles exist. You can increase the size of these using the "Size (m)" setting within the "LaserScan" panel.
 

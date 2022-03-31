@@ -74,15 +74,15 @@
        
        (h) In the upper-right corner of any page, click your profile photo, then click **Settings**
        
-       <img src="figs/module0_1.png" width="412" height="922">
+       ![logo](figs/module0_1.png)
        
        (i) In the user settings sidebar, click **SSH and GPG keys**.
        
-       <img src="figs/module0_2.png" width="536" height="405">
+       ![logo](figs/module0_2.png)
        
        (j) Click **New SSH key**
        
-       <img src="figs/module0_3.png" width="767" height="172">
+       ![logo](figs/module0_3.png)
        
        (k) In the "Title" field, add a descriptive label for the new key, such as "MasterX".
        
@@ -104,7 +104,7 @@
 
    1. On the **master**, open the master GitHub repository and copy your repo address using the SSH mode:
    
-   <img src="figs/module0_4.png" width="568" height="467">
+   ![logo](figs/module0_4.png)
    
    2. Open a terminal and browse to your workspace source folder:
    

@@ -220,7 +220,7 @@ roslaunch usafabot robotics.launch
 
 In a separate terminal, bring up **rqt_graph**. Your output should look similar to this:
 
-<img src="figs/rqt_graph.png" width="921.4375" height="146.09">
+![logo](figs/rqt_graph.png)
 
 ### Checkpoint
 Once complete, get checked off by an instructor showing the output of your **rqt_graph** node.

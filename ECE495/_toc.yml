@@ -40,4 +40,7 @@ parts:
   - caption: MODULE 08
     chapters:
     - file: Module8.md
+  - caption: MODULE 09
+    chapters:
+    - file: Module9.md
     
