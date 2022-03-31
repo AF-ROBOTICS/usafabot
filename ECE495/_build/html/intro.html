@@ -52,6 +52,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Robot Setup" href="robot_setup.html" />
+    <link rel="prev" title="Shortcuts" href="shortcuts.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -89,8 +90,20 @@
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 current">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="shortcuts.html">
+   Shortcuts
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  GETTING STARTED
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Getting Started
   </a>
  </li>
@@ -307,13 +320,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#opening-jupyter-notebook">
-   4. Opening Jupyter Notebook
+  <a class="reference internal nav-link" href="#opening-the-class-website">
+   4. Opening the Class Website
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#opening-the-class-website">
-   5. Opening the Class Website
+  <a class="reference internal nav-link" href="#opening-jupyter-notebook">
+   5. Opening Jupyter Notebook
   </a>
  </li>
 </ul>
@@ -342,13 +355,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#opening-jupyter-notebook">
-   4. Opening Jupyter Notebook
+  <a class="reference internal nav-link" href="#opening-the-class-website">
+   4. Opening the Class Website
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#opening-the-class-website">
-   5. Opening the Class Website
+  <a class="reference internal nav-link" href="#opening-jupyter-notebook">
+   5. Opening Jupyter Notebook
   </a>
  </li>
 </ul>
@@ -370,22 +383,31 @@
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> Desktop
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir ECE495
+<p>Now download the files from GitHub with the command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone --depth <span class="m">1</span>  https://github.com/AF-ROBOTICS/usafabot ECE495
 </pre></div>
 </div>
-<p>Navigate to the new file you just created. We will be using this to hold all the 495 files you’ll need for class.</p>
+<p>The above command made a new directory on your desktop. Navigate to the new folder you just created. We will be using this to hold all the 495 files you’ll need for class.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ECE495
 </pre></div>
 </div>
-<p>Now dowlnoad the files from GitHub with the command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>https://github.com/AF-ROBOTICS/usafabot/tree/master/ECE495
+<p>Next, we will clean up the folder so it has the correct paths with the command below.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git filter-branch --prune-empty --subdirectory-filter ECE495 HEAD
 </pre></div>
 </div>
-<p>Once the download completes, change your directory to ‘ECE495’ (for example, using the command <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">ECE495</span></code>).</p>
+<p>You now have all the files you will need for class. Do not change the folder’s name on your desktop or the files you will need for class will not work correctly.</p>
+</div>
+<div class="section" id="opening-the-class-website">
+<h2>4. Opening the Class Website<a class="headerlink" href="#opening-the-class-website" title="Permalink to this headline">¶</a></h2>
+<p>Once you’ve completed all of the steps above, you should be able to open the class website with the below command in a <strong>new terminal</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>firefox ~/Desktop/ECE495/_build/html/intro.html
+</pre></div>
+</div>
+<p>We will now download jupyter notebook.</p>
 </div>
 <div class="section" id="opening-jupyter-notebook">
-<h2>4. Opening Jupyter Notebook<a class="headerlink" href="#opening-jupyter-notebook" title="Permalink to this headline">¶</a></h2>
-<p>To install Jupyter Notebook, open a new terminal and use the command:</p>
+<h2>5. Opening Jupyter Notebook<a class="headerlink" href="#opening-jupyter-notebook" title="Permalink to this headline">¶</a></h2>
+<p>To install Jupyter Notebook, open a <strong>new terminal</strong> and use the command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip3 install jupyter
 </pre></div>
 </div>
@@ -398,30 +420,6 @@
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter notebook
 </pre></div>
 </div>
-</div>
-<div class="section" id="opening-the-class-website">
-<h2>5. Opening the Class Website<a class="headerlink" href="#opening-the-class-website" title="Permalink to this headline">¶</a></h2>
-<p>Once you’ve completed all of the steps above, you should be able to open the [class website](file:///home/dfec/Desktop/ECE495/_build/html/intro.html) powered by Jupyter Notebook.</p>
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -449,7 +447,14 @@
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="shortcuts.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Shortcuts</p>
+        </div>
+    </a>
     <a class='right-next' id="next-link" href="robot_setup.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
