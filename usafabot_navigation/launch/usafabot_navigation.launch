@@ -3,19 +3,9 @@
   <!-- Arguments -->
   <!--<arg name="map_file" default="$(find turtlebot3_navigation)/maps/map.yaml"/> -->
   
-  <node
-	pkg="rviz" type="rviz" name="rviz" 
-	args="-d $(find usafabot_navigation)/rviz/nav_rviz.rviz"
-  />
-
-
   <!-- usafabot -->
-  <include file="$(find usafabot_gazebo)/launch/usafabot_gazebo.launch">
-  	<arg name="rviz" value="0"/>
-  	<arg name="world" value="maze_cv.world"/>
-  </include>
+  <include file="$(find usafabot)/launch/bringup.launch"/>
  
-
   <!-- Map server -->
     <!--<node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/> -->
 
@@ -27,5 +17,8 @@
   
   
   <include file="$(find usafabot_navigation)/launch/gmapping.launch"/>
+  
+    
+  </node pkg="usafabot_navigation" type="usafabot_broadcaster" name="usafabot_broadcaster" />
 
 </launch>
