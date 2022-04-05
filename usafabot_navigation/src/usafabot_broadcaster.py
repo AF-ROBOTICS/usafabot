@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import rospy
 import math
 from math import sin, cos, pi
@@ -11,10 +11,7 @@ import tf2_ros
 import tf2_msgs.msg
 from geometry_msgs.msg import Point, Pose, Quaternion, Twist, Vector3, TransformStamped, Vector3Stamped
 from nav_msgs.msg import Odometry
-from ground_robot.msg import WheelVelocity
-from ground_robot.msg import Yaw
-
-import turtlesim.msg
+from usafabot.msg import WheelVelocity
 
 class broadcaster:
     def __init__(self):
@@ -37,7 +34,7 @@ class broadcaster:
         self.last_time = rospy.Time.now()
         
         rospy.Subscriber('wheel_speeds', WheelVelocity, self.callback_wheel_vel)
-        rospy.Subscriber('imu/rpy', Vector3Stamped, self.callback_imu)
+        #rospy.Subscriber('imu/rpy', Vector3Stamped, self.callback_imu)
         
         rospy.Timer(rospy.Duration(.01), self.callback_odom)
         
@@ -71,8 +68,8 @@ class broadcaster:
         delta_y = (v_x*sin(self.th) + v_y*cos(self.th)) * dt
         
         # TODO: try putting back in and using 
-        # delta_th = v_th * dt
-        # self.th += delta_th
+        delta_th = v_th * dt
+        self.th += delta_th
         
         self.x += delta_x
         self.y += delta_y

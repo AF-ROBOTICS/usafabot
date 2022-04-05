@@ -14,7 +14,7 @@
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
 
   <!-- Node to send commands to robot and gets wheel speeds from robot -->
-  <node name="serial" pkg="usafabot" type="usafabot_serial.py" />
+  <node name="serial" pkg="usafabot" type="usafabot_robotics.py" />
 
   <!-- start the um7 IMU node setting correct port -->
   <node name="um7_IMU" pkg="um7" type="um7_driver">
@@ -25,8 +25,6 @@
   <node pkg="rosservice" type="rosservice" name="reset" args="call --wait /imu/reset true true true"/>
 	
   <!-- call the rplidar launch file -->
-  <!--
   <include file="$(find usafabot)/launch/include/rplidar.launch" />
-  -->
   
 </launch>
