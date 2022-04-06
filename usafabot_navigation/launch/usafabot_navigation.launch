@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
   <!-- Arguments -->
-  <!--<arg name="map_file" default="$(find turtlebot3_navigation)/maps/map.yaml"/> -->
+  <arg name="map_file" default="$(find turtlebot3_navigation)/maps/map.yaml"/>
   
   <!-- usafabot -->
   <include file="$(find usafabot)/launch/bringup.launch"/>
  
   <!-- Map server -->
-    <!--<node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/> -->
+  <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
 
   <!-- AMCL -->
   <include file="$(find usafabot_navigation)/launch/amcl.launch"/>
@@ -15,8 +15,8 @@
   <!-- move_base -->
   <include file="$(find usafabot_navigation)/launch/move_base.launch"/>
   
-  
-  <include file="$(find usafabot_navigation)/launch/gmapping.launch"/>
+  <!--
+  <include file="$(find usafabot_navigation)/launch/gmapping.launch"/>-->
       
   <node pkg="usafabot_navigation" type="usafabot_broadcaster.py" name="usafabot_broadcaster" />
 
