@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Module 3: Python3 for Robotics &#8212; ECE495</title>
+    <title>Module 3: Python3 for Robotics &#8212; My Jupyter Book</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -72,14 +72,9 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
       
       
-      <img src="_static/beyer_bot.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">ECE495</h1>
+      <h1 class="site-logo" id="site-title">My Jupyter Book</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -108,12 +103,12 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  ROBOT SETUP
+  ROBOT and MASTER SETUP
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="robot_setup.html">
+  <a class="reference internal" href="RobotSetup.html">
    Robot Setup
   </a>
  </li>
@@ -126,7 +121,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Module0.html">
-   Intro &amp; GIT
+   Module 0 - Intro and GIT
   </a>
  </li>
 </ul>
@@ -138,7 +133,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Module1.html">
-   Robotics Operating System (ROS)
+   Module 1: Robotics Operating System (ROS)
   </a>
  </li>
 </ul>
@@ -150,7 +145,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Module2.html">
-   Linux for Robotics
+   Module 2: Linux for Robotics
   </a>
  </li>
 </ul>
@@ -226,6 +221,30 @@
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 09
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module9.html">
+   Computer Vision
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module10.html">
+   Final Project
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -277,22 +296,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FICE3_Client.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -307,7 +310,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/ICE3_Client.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/ICE3_Client.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -343,13 +346,11 @@
     <a class="reference internal nav-link" href="#purpose">
      Purpose
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#initialize-ros">
-       Initialize ROS:
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initialize-ros">
+     Initialize ROS:
+    </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#implementing-the-chat-client">
@@ -372,8 +373,8 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#run-the-client">
-       Run the client
+      <a class="reference internal nav-link" href="#run-the-program">
+       Run the program
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
@@ -424,13 +425,11 @@
     <a class="reference internal nav-link" href="#purpose">
      Purpose
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#initialize-ros">
-       Initialize ROS:
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initialize-ros">
+     Initialize ROS:
+    </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#implementing-the-chat-client">
@@ -453,8 +452,8 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#run-the-client">
-       Run the client
+      <a class="reference internal nav-link" href="#run-the-program">
+       Run the program
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
@@ -492,19 +491,23 @@
 <div class="section" id="purpose">
 <h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h3>
 <p>This Jupyter Notebook will allow you to practice some of the techniques you have learned over the last few modules. You will develop an advanced chat client and server (similar to ICE1) enabling a client to send a message and a server to respond accordingly.</p>
+</div>
 <div class="section" id="initialize-ros">
-<h4>Initialize ROS:<a class="headerlink" href="#initialize-ros" title="Permalink to this headline">¶</a></h4>
+<h3>Initialize ROS:<a class="headerlink" href="#initialize-ros" title="Permalink to this headline">¶</a></h3>
 <p>The first step when utilizing  ROS is to initialize <em>roscore</em>. There are two methods to accomplish this: first, by explicitly running <em>roscore</em> and second, by running a launch file (which will initialize <em>roscore</em> if it is not already running). During the first portion of this course we will explicitly run <em>roscore</em> and then take advantage of launch files later in the course.</p>
 <p>Copy the following code and run it in a new terminal (use the shortcut <code class="docutils literal notranslate"><span class="pre">ctrl+alt+t</span></code> to open a new terminal window or select an open terminal and hit <code class="docutils literal notranslate"><span class="pre">ctrl+shift+t</span></code> to open a new terminal tab):</p>
 <p><code class="docutils literal notranslate"><span class="pre">roscore</span></code></p>
 </div>
-</div>
 <div class="section" id="implementing-the-chat-client">
 <h3>Implementing the chat client<a class="headerlink" href="#implementing-the-chat-client" title="Permalink to this headline">¶</a></h3>
-<p><strong>NOTE</strong>: This Jupyter Notebook will require you to enter Python3 code within code sections. You can type any Python3 code and expand the block if necessary. After typing the code, execute the code block before moving forward.</p>
+<blockquote>
+<div><p>📝️ <strong>Note:</strong> This Jupyter Notebook will require you to enter Python3 code within code sections. You can type any Python3 code and expand the block if necessary. After typing the code, execute the code block before moving forward.</p>
+</div></blockquote>
 <div class="section" id="import-modules">
 <h4>Import modules<a class="headerlink" href="#import-modules" title="Permalink to this headline">¶</a></h4>
-<p><strong>Important</strong>: Importing classes may take some time. You will know the code block is still executing as the bracket on the left of the cell will change to a <code class="docutils literal notranslate"><span class="pre">*</span></code> character. Do not move to the next step until the <code class="docutils literal notranslate"><span class="pre">*</span></code> is gone.</p>
+<blockquote>
+<div><p>⚠️ <strong>Important:</strong> Importing classes may take some time. You will know the code block is still executing as the bracket on the left of the cell will change to a <code class="docutils literal notranslate"><span class="pre">*</span></code> character. Do not move to the next step until the <code class="docutils literal notranslate"><span class="pre">*</span></code> is gone.</p>
+</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import required modules for ROS and the String message from std_msgs</span>
@@ -610,8 +613,8 @@
 </div>
 </div>
 </div>
-<div class="section" id="run-the-client">
-<h4>Run the client<a class="headerlink" href="#run-the-client" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="run-the-program">
+<h4>Run the program<a class="headerlink" href="#run-the-program" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">main</span><span class="p">()</span>
@@ -664,7 +667,7 @@
     <footer class="footer">
   <p>
     
-      By Mr. Steven Beyer<br/>
+      By The Jupyter Book community<br/>
     
         &copy; Copyright 2021.<br/>
   </p>

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Launch Files &#8212; ECE495</title>
+    <title>Launch Files &#8212; My Jupyter Book</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -74,14 +74,9 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
       
       
-      <img src="_static/beyer_bot.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">ECE495</h1>
+      <h1 class="site-logo" id="site-title">My Jupyter Book</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -110,12 +105,12 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  ROBOT SETUP
+  ROBOT and MASTER SETUP
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="robot_setup.html">
+  <a class="reference internal" href="RobotSetup.html">
    Robot Setup
   </a>
  </li>
@@ -128,7 +123,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Module0.html">
-   Intro &amp; GIT
+   Intro and GIT
   </a>
  </li>
 </ul>
@@ -228,6 +223,30 @@
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 09
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module9.html">
+   Computer Vision
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module10.html">
+   Final Project
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -279,22 +298,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule7.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -315,56 +318,49 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-class-exercise-7">
-   In-Class Exercise 7
+  <a class="reference internal nav-link" href="#purpose">
+   Purpose
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#purpose">
-     Purpose
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#roslaunch">
-     roslaunch
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#current-state">
-     Current State
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#roslaunch-on-the-robot">
-     roslaunch on the Robot
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#roslaunch-on-the-master">
-     roslaunch on the Master
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#running-launch-files">
-     Running Launch Files
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#checkpoint">
-     Checkpoint
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#summary">
-     Summary
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cleanup">
-     Cleanup
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#roslaunch">
+   roslaunch
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#current-state">
+   Current State
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#roslaunch-on-the-robot">
+   roslaunch on the Robot
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#roslaunch-on-the-master">
+   roslaunch on the Master
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#running-launch-files">
+   Running Launch Files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#checkpoint">
+   Checkpoint
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cleanup">
+   Cleanup
+  </a>
  </li>
 </ul>
 
@@ -387,56 +383,49 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-class-exercise-7">
-   In-Class Exercise 7
+  <a class="reference internal nav-link" href="#purpose">
+   Purpose
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#purpose">
-     Purpose
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#roslaunch">
-     roslaunch
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#current-state">
-     Current State
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#roslaunch-on-the-robot">
-     roslaunch on the Robot
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#roslaunch-on-the-master">
-     roslaunch on the Master
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#running-launch-files">
-     Running Launch Files
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#checkpoint">
-     Checkpoint
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#summary">
-     Summary
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cleanup">
-     Cleanup
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#roslaunch">
+   roslaunch
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#current-state">
+   Current State
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#roslaunch-on-the-robot">
+   roslaunch on the Robot
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#roslaunch-on-the-master">
+   roslaunch on the Master
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#running-launch-files">
+   Running Launch Files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#checkpoint">
+   Checkpoint
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cleanup">
+   Cleanup
+  </a>
  </li>
 </ul>
 
@@ -449,13 +438,11 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="launch-files">
 <h1>Launch Files<a class="headerlink" href="#launch-files" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="in-class-exercise-7">
-<h2>In-Class Exercise 7<a class="headerlink" href="#in-class-exercise-7" title="Permalink to this headline">¶</a></h2>
 <hr class="docutils" />
 <p><strong>You must open this file as a Jupyter Notebook (link below) to run code</strong></p>
-<p><a class="reference external" href="http://localhost:8888/notebooks/ICE7_LaunchFile.ipynb">Run this file as an executable Jupyter Notebook</a></p>
+<p><a class="reference external" href="http://localhost:8888/notebooks/Module7_LaunchFile.ipynb">Run this file as an executable Jupyter Notebook</a></p>
 <div class="section" id="purpose">
-<h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h3>
+<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
 <p>Large applications in robotics typically involve several interconnected ROS nodes, each of which have many parameters. Your current setup is a good example: as you experienced in the IMU lab, you had to open 4 different terminals to run all of the nodes necessary for our system to that point:</p>
 <p><strong>Robot:</strong></p>
 <ul class="simple">
@@ -470,7 +457,7 @@
 <p>This problem is only going to get more complex as we add additional functionality to our robot. As it stands right now, every node requires a separate terminal window and the associated command to run it. Using the <em>roslaunch</em> tool, we can eliminate that administrivia of running each node separately. We will create/edit two launch files to bring up the nodes on the master and robot.</p>
 </div>
 <div class="section" id="roslaunch">
-<h3><a class="reference external" href="http://wiki.ros.org/roslaunch">roslaunch</a><a class="headerlink" href="#roslaunch" title="Permalink to this headline">¶</a></h3>
+<h2><a class="reference external" href="http://wiki.ros.org/roslaunch">roslaunch</a><a class="headerlink" href="#roslaunch" title="Permalink to this headline">¶</a></h2>
 <p>The <em>roslaunch</em> tool is used to launch multiple ROS nodes locally and remotely via SSH. While it is possible to launch nodes remotely, it becomes challenging when there are parameter or other launch files on a remote system, so we will create a separate launch file for the master and the robot. We can run nodes that we have created, nodes from pre-built packages, and other launch files. The roslaunch tool takes in one or more XML configuration files (with the .launch extension) that specify the parameters to set and nodes to launch.</p>
 <p>A launch file is an XML document which specifies:</p>
 <ul class="simple">
@@ -483,7 +470,7 @@
 <p>By convention, we will give our launch files the <em>.launch</em> extension and store them in a <em>launch</em> folder within our package. This isn’t required, but it is the common convention.</p>
 </div>
 <div class="section" id="current-state">
-<h3>Current State<a class="headerlink" href="#current-state" title="Permalink to this headline">¶</a></h3>
+<h2>Current State<a class="headerlink" href="#current-state" title="Permalink to this headline">¶</a></h2>
 <p>In this section we will first use the conventional technique to bring up all of the nodes required for <strong>Lab 2</strong> using the currently understood techniques.</p>
 <p>Open a new terminal on your <strong>Master</strong> and start <em>roscore</em>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>roscore
@@ -519,7 +506,7 @@
 <p>Kill all nodes and roscore.</p>
 </div>
 <div class="section" id="roslaunch-on-the-robot">
-<h3>roslaunch on the Robot<a class="headerlink" href="#roslaunch-on-the-robot" title="Permalink to this headline">¶</a></h3>
+<h2>roslaunch on the Robot<a class="headerlink" href="#roslaunch-on-the-robot" title="Permalink to this headline">¶</a></h2>
 <p>Navigate to one of the terminals with a secure shell connection to the robot.</p>
 <p>Open the <em>robotics.launch</em> file:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosed usafabot robotics.launch
@@ -582,7 +569,7 @@
 <p>Close the editor: <code class="docutils literal notranslate"><span class="pre">ctrl+x</span></code></p>
 </div>
 <div class="section" id="roslaunch-on-the-master">
-<h3>roslaunch on the Master<a class="headerlink" href="#roslaunch-on-the-master" title="Permalink to this headline">¶</a></h3>
+<h2>roslaunch on the Master<a class="headerlink" href="#roslaunch-on-the-master" title="Permalink to this headline">¶</a></h2>
 <p>Navigate to your <strong>lab2</strong> package on the <strong>Master</strong> and create a launch directory:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roscd</span> <span class="n">lab2</span>
 <span class="n">mkdir</span> <span class="n">launch</span>
@@ -612,7 +599,7 @@
 <p>Save and close the launch file.</p>
 </div>
 <div class="section" id="running-launch-files">
-<h3>Running Launch Files<a class="headerlink" href="#running-launch-files" title="Permalink to this headline">¶</a></h3>
+<h2>Running Launch Files<a class="headerlink" href="#running-launch-files" title="Permalink to this headline">¶</a></h2>
 <p>Browse to a terminal on the <strong>Master</strong> and make and source your workspace:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/master_ws
 catkin_make
@@ -629,21 +616,20 @@ catkin_make
 </pre></div>
 </div>
 <p>In a separate terminal, bring up <strong>rqt_graph</strong>. Your output should look similar to this:</p>
-<img src="figs/rqt_graph.png" width="921.4375" height="146.09">
+<p><img alt="IMU" src="_images/rqt_graph.png" /></p>
 </div>
 <div class="section" id="checkpoint">
-<h3>Checkpoint<a class="headerlink" href="#checkpoint" title="Permalink to this headline">¶</a></h3>
+<h2>Checkpoint<a class="headerlink" href="#checkpoint" title="Permalink to this headline">¶</a></h2>
 <p>Once complete, get checked off by an instructor showing the output of your <strong>rqt_graph</strong> node.</p>
 </div>
 <div class="section" id="summary">
-<h3>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <p>There is clearly a lot more we can do with launch files, but this will get you started. You now know how to run nodes, other launch files, and provide parameters to a node using a launch file. I encourage you to visit the ROS tutorials online if you need to do more complex functions with the launch files.</p>
 </div>
 <div class="section" id="cleanup">
-<h3>Cleanup<a class="headerlink" href="#cleanup" title="Permalink to this headline">¶</a></h3>
+<h2>Cleanup<a class="headerlink" href="#cleanup" title="Permalink to this headline">¶</a></h2>
 <p>In each terminal window, close the nodes by typing <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code>. Exit any SSH connections. Shutdown the notebook server by typing <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code> within the terminal you ran <code class="docutils literal notranslate"><span class="pre">jupyter-notebook</span></code> in. Select ‘y’.</p>
 <p><strong>Ensure roscore is terminated before moving on to the next lesson.</strong></p>
-</div>
 </div>
 </div>
 
@@ -693,7 +679,7 @@ catkin_make
     <footer class="footer">
   <p>
     
-      By Mr. Steven Beyer<br/>
+      By The Jupyter Book community<br/>
     
         &copy; Copyright 2021.<br/>
   </p>

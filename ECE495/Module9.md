@@ -1,5 +1,4 @@
 # Computer Vision
-## In-Class Exercise 8
 ---
 
 
@@ -9,20 +8,20 @@
 
 
 
-### Part 1: Image Basics
+## Part 1: Image Basics
 When we talk about the sizes of images, we generally talk about them in terms of the number of pixels the image possesses in the x(horizontal) or y(vertical) direction.  If the image is a color image, we also need to concern ourselves with the depth of the image as well.  Normally, each individual pixel is represented by the “color” or the “intensity” of light that appears in a given place in our image.
 
 If we think of an image as a grid, each square in the grid contains a single pixel.
 
 Most pixels are represented in two ways: grayscale and color. In a grayscale image, each pixel has a value between 0 and 255, where zero is corresponds to “black” and 255 being “white”. The values in between 0 and 255 are varying shades of gray, where values closer to 0 are darker and values closer 255 are lighter:
 
-![logo](figs/Grayscale.JPG)
+![logo](Figures/Grayscale.JPG)
 
 The grayscale gradient image in the figure above demonstrates darker pixels on the left-hand side and progressively lighter pixels on the right-hand side.
 
 Color pixels, however, are normally represented in the RGB color space (this is where the term color-depth comes from)— one value for the Red component, one for Green, and one for Blue, leading to a total of 3 values per pixel:
 
-![logo](figs/RGB.JPG)
+![logo](Figures/RGB.JPG)
 
 Other color spaces exist, and ordering of the colors may differ as well, but let’s start with the common RGB system.  If we say the image is a 24-bit image, each of the three Red, Green, and Blue colors are represented by an integer in the range 0 to 255 (8-bits), which indicates how “much” of the color there is. Given that the pixel value only needs to be in the range [0, 255] we normally use an 8-bit unsigned integer to represent each color intensity.  We then combine these values into a RGB tuple in the form (red, green, blue) . This tuple represents our color.  For example:
 
@@ -33,7 +32,7 @@ Other color spaces exist, and ordering of the colors may differ as well, but let
 
 Take a look at the following image to make this concept more clear:
 
-![logo](figs/RGB_Tuple.JPG)
+![logo](Figures/RGB_Tuple.JPG)
 
 For your reference, here are some common colors represented as RGB tuples:
 
@@ -51,7 +50,7 @@ For your reference, here are some common colors represented as RGB tuples:
 - Teal:  (0, 128, 128)
 - Yellow:  (255, 255, 0)
 
-### Part 2: Coding with OpenCV-Python
+## Part 2: Coding with OpenCV-Python
 It is time to build our first bit of code working with OpenCV.  Just like ROS, OpenCV is well supported by both Python and C++.  For simplicity, we will use Python throughout this course.  However, continue to recognize that if speed and efficiency become important, switching to a more robust language like C++ may become necessary.  To make use of OpenCV with Python, we need to import cv2.  The code below will simply load in the RGB figure above and print out the pixel values in each of the 4-quadrants.
 
 First we need to import the OpenCV Python library, `cv2`:
@@ -154,16 +153,16 @@ Modify the code to convert to grayscale and print the same pixel values.
 
 ```
 
-#### Summary
+### Summary
 These examples barely scratch the surface of what is possible with OpenCV. In the upcoming lessons we will learn a few more ways to manipulate images, but if you want to learn more you can either explore the [OpenCV-Python Source Documentation](https://docs.opencv.org/3.4/index.html) or the [OpenCV-Python Tutorial](https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html).
 
-#### Assignment
+### Assignment
 Scan the article on the [Histogram of Oriented Gradients (HOG)](https://arxiv.org/pdf/1406.2419.pdf) feature descriptor and be prepared to discuss.  I don't need you to understand the math, but you should be able to understand the advantages of the technique.
 
-#### Cleanup
+### Cleanup
 In the Jupyter Notebook at the top menu bar select "Kernel" and "Restart & Clear Output". Shutdown the notebook server by typing `ctrl+c` within the terminal you ran `jupyter-notebook` in. Select 'y'.
 
-### Part 3: Gradients
+## Part 3: Gradients
 
 The objective of this portion of the lesson is for you to start the process of learning how to create custom object detectors in an image.  There are many techniques, but the one technique I am interested in applying first is what is known as Histogram of Oriented Gradients.  Before we can dig into the technique, we should first understand a bit about image gradients and contours.
 
@@ -189,11 +188,11 @@ $Y = 0.299 R + 0.587 G + 0.114 B$
 
 Let's see if that matches our expectations in the figure below:
 
-![logo](figs/RGB_Gray.png)
+![logo](Figures/RGB_Gray.png)
 
 The below figure is an image of edges being detected simply by looking for the contours in an image:
 
-![logo](figs/EdgeDet.png)
+![logo](Figures/EdgeDet.png)
 
 As you can see, all of the edges (or changes in contrast are clearly identified), but how did we do it?  Lets look at the math below, and then we will look at how simple the code is by taking advantage of OpenCV.
 
@@ -201,7 +200,7 @@ Formally, an image gradient is defined as a directional change in image intensit
 
 Lets look at a blown up version of a basic pixel map.  Our goal here is to establish the basic framework for how we will eventually compute the gradient:
 
-![logo](figs/PixelCont.png)
+![logo](Figures/PixelCont.png)
 
 In the image above we essentially wish to examine the \(3 \times 3\) neighborhood surrounding the central pixel. Our x values run from left to right, and our y values from top to bottom. In order to compute any changes in direction we will need the north, south, east, and west pixels, which are marked on the above figure.
 
@@ -224,13 +223,13 @@ $G_{x} = I(x + 1, y) - I(x - 1, y)$
 
 Awesome — so now we have $G_{x}$ and $G_{y}$, which represent the change in image intensity for the central pixel in both the x and y direction.  Lets look at a relatively intuitive example at first without all the math.
 
-![logo](figs/GradientEx.png)
+![logo](Figures/GradientEx.png)
 
 On the left we have a $3 \times 3$ region of an image where the top half of the image is white and the bottom half of the image is black. The gradient orientation is thus equal to $\theta=-90^{\circ}$
 
 And on the right we have another $3 \times 3$ neighborhood of an image, where the upper triangular region is white and the lower triangular region is black. Here we can see the change in direction is equal to $\theta=-45^{\circ}$.  While these two examples are both relatively easy to understand, lets use our knowledge of the Pythagorean theorem to actually compute the magnitude and orientation of the gradient with actual values now.
 
-![logo](figs/GradTrig.png)
+![logo](Figures/GradTrig.png)
 
 Inspecting the triangle in the above figure you can see that the gradient magnitude G is the hypotenuse of the triangle. Therefore, all we need to do is apply the Pythagorean theorem and we will end up with the gradient magnitude:
 
@@ -242,7 +241,7 @@ $\theta = tan^{-1}(\frac{G_{y}}{G_{x}}) \times (\frac{180}{\pi})$
 
 We converted to degrees by multiplying by the ratio of $180/\pi$.  Lets now add pixel intensity values and put this to the test.
 
-![logo](figs/GradEx2.png)
+![logo](Figures/GradEx2.png)
 
 In the above image we have an image where the upper-third is white and the bottom two-thirds is black. Using the equations for $G_{x}$ and $G_{y}$, we arrive at:
 
@@ -262,7 +261,7 @@ $\theta = $
 
 Now you try with the following example:
 
-![logo](figs/GradEx3.png)
+![logo](Figures/GradEx3.png)
 
 $G_{x} = $
 
@@ -320,29 +319,29 @@ cv2.waitKey(0)
 cv2.destroyAllWindows() # close the image window
 ```
 
-#### Summary
+### Summary
 Gradients are one important tool used in object detection. Next lesson we will learn how to apply gradients using the Histogram of Oriented Gradients to train an object detector.
 
-#### Assignment
+### Assignment
 Watch the following video on [Histogram of Oriented Gradients](https://youtube.com/watch?v=4ESLTAd3IOM).
 
-#### Cleanup
+### Cleanup
 In the Jupyter Notebook at the top menu bar select "Kernel" and "Restart & Clear Output". Shutdown the notebook server by typing `ctrl+c` within the terminal you ran `jupyter-notebook` in. Select 'y'.
 
-### Part 4: Histogram of Oriented Gradients (HOG) Features
+## Part 4: Histogram of Oriented Gradients (HOG) Features
 
 The objective of this portion of the lesson is to demonstrate the functionality of the HOG with SVM (Support Vector Machine) algorithm for object detection.  By this point, we should all be well aware of what a histogram is.  The application of the histogram for the HOG feature extraction is to further simplify the tested image to enable our computer to rapidly and accurately identify the presence of an object within the image.  
 Instead of using each individual gradient direction of each individual pixel of an image, we group the pixels into small cells. For each cell, we compute all the gradient directions and group them into a number of orientation bins. We sum up the gradient magnitude in each sample. So stronger gradients contribute more weight to their bins, and effects of small random orientations due to noise is reduced. Doing this for all cells gives us a representation of the structure of the image. The HOG features keep the representation of an object distinct but also allow for some variations in shape.  For example, lets consider an object detector for a car, see the below figure.
 
-![logo](figs/HOG_Features.JPG)
+![logo](Figures/HOG_Features.JPG)
 
 Comparing each individual pixel of this training image with another test image would not only be time consuming, but it would also be highly subject to noise.  As previously mentioned, the HOG feature will consider a block of pixels.  The size of this block is variable and will naturally impact both accuracy and speed of execution for the algorithm.  Once the block size is determined, the gradient for each pixel within the block is computed.  Once the gradients are computed for a block, the entire cell can then be represented by this histogram.  Not only does this reduce the amount of data to compare with a test image, but it also reduces the impacts of noise in the image and measurements.  
 
-![logo](figs/HOG_Histogram.JPG)
+![logo](Figures/HOG_Histogram.JPG)
 
 Now that we have an understanding of the HOG features, lets use tools embedded within OpenCV and Dlib to build our first detector for a stop sign.  But first we need to download a pre-created repository of test and training data.  Remember, we won't use our training data to test the effectiveness of the algorithm.  Of course the algorithm will work effectively on the training data.  Our hope is that we can create a large enough sampling of test data that we can have a highly effective detector that is robust against new images.
 
-#### Building a detector using HOG features
+### Building a detector using HOG features
 Download the example demo into the `my_scripts` folder you created earlier in the semester. It should be located under `~/master_ws/src/usafabot/usafabot_curriculum/`.
 
 ```bash
@@ -357,11 +356,11 @@ Browse to the [imglab tool](https://imglab.in/) and select **"UMM, MAYBE NEXT TI
 
 In the bottom left of the site, select the load button and browse to the training folder:
 
-![logo](figs/load.png)
+![logo](Figures/load.png)
 
 Select the first stop sign and the **"Rectangle"** tool. 
 
-![logo](figs/rectangle.png)
+![logo](Figures/rectangle.png)
 
 Highlight the border of the stop sign: drag-and-draw a bounding rectangle, ensuring to **only** select the stop sign and to select all examples of the object in the image.
 
@@ -373,7 +372,7 @@ If you press `alt+left/right arrow` you can navigate through images in the slide
 
 Once all stop signs are complete hit `ctrl+e` to save the annotations (bounding box information) as a **"Dlib XML"** file within the `training` folder using a descriptive name such as `sl_annotations.xml`.
 
-![logo](figs/xml.png)
+![logo](Figures/xml.png)
 
 We now need to create the code to build the detector based on our annotated training data.
 
@@ -426,7 +425,7 @@ python3 trainDetector.py --xml training/sl_annotations.xml --detector training/s
 
 You may get a few errors pop up during execution based on your choice for bounding boxes.  Make sure you address those errors before continuing.  If everything executed correctly, you should ultimately see a picture of the HOG feature you designed.  
 
-#### Testing a detector
+### Testing a detector
 Now it is time to build our code to test the detector.  The following code will make use of the imutils library as well.
 
 You may get a few errors pop up during execution based on your choice for bounding boxes.  Make sure you address those errors before continuing.  If everything executed correctly, you should ultimately see a picture of the HOG feature you designed.  
@@ -481,16 +480,16 @@ python3 testDetector.py --detector training/sl_detector.svm --testing test
 
 OK, so how did you do? What surprises did you have? What might you consider to improve the detector?
 
-#### Summary
+### Summary
 You have now trained and tested your first detector! In the future you will train a new detector using the camera on your robot and a real stop sign. This will be used in your final project to detect and react to stop signs in the wild!
 
-#### Assignment
+### Assignment
 Research Dlib's simple object detector, and see how you might want to tune the options to improve the performance.
 
-#### Cleanup
+### Cleanup
 In the Jupyter Notebook at the top menu bar select "Kernel" and "Restart & Clear Output". Shutdown the notebook server by typing `ctrl+c` within the terminal you ran `jupyter-notebook` in. Select 'y'.
 
-### Part 5: ROS and Image Capture
+## Part 5: ROS and Image Capture
 ROS provides a number of tools to interact with a commercial-off-the-shelf camera such as the USB camera connected to your robot. The primary tool we will use is the [usb_cam](http://wiki.ros.org/usb_cam) package which is already installed on your robot.
 
 Let's create a **lab4** package on the **Robot** we can use to start developing a launch file to run our computer vision tools.
@@ -508,7 +507,7 @@ touch lab4.launch
 
 Make and source your workspace.
 
-#### Launch File - USB Cam
+### Launch File - USB Cam
 
 Edit the `lab4.launch` file to call the **usb_cam_node** which will automatically connect to the camera and publish the video over a topic.
 
@@ -545,7 +544,7 @@ rosrun rqt_image_view rqt_image_view
 ```
 Ensure the `/usb_cam/image_raw` topic is selected.
 
-#### Calibrate USB Camera
+### Calibrate USB Camera
 
 A camera must first be calibrated to utilize computer vision based tasks. Otherwise, there is no reference for how large objects are in regards to the camera frame. The [ROS Calibration Tool](http://wiki.ros.org/camera_calibration) creates a calibration file that is then used by other ROS packages to enable size and distance calculations. The **camera_calibration** package utilizes OpenCV camera calibration to allow easy calibration of monocular or stereo cameras using a checkerboard calibration target. The complete guide can be found on the [Camera Calibration Tutorial](http://wiki.ros.org/camera_calibration/Tutorials/MonocularCalibration).
 
@@ -594,22 +593,22 @@ nano /home/pi/.ros/camera_info/head_camera.yaml
 
 Rerun the `lab4.launch` file on the robot. You should see the camera feed reopen and see no errors in the command line (you may need to unplug and plug your camera back in).
 
-#### Checkpoint
+### Checkpoint
 Show an instructor the working camera feed and that the **usb_cam** node was able to open the camera calibration file.
 
-#### Summary
+### Summary
 You now are able to connect to a USB camera using ROS, display the image provided by the node, and have a calibration file that ROS can use to identify the size of objects in the frame.
 
-#### Cleanup
+### Cleanup
 Kill all rosnodes and roscore!
 
-### Part 6: Fiducial Markers
+## Part 6: Fiducial Markers
 
 In this lesson we will learn how fiducial markers are used in image processing. Specifically, we will utilize ROS tools to identify different [April Tags](https://april.eecs.umich.edu/papers/details.php?name=olson2011tags) and use the 3D position and orientation to determine the robot's distance from an object.
 
 A fiducial marker is an artificial feature used in creating controllable experiments, ground truthing, and in simplifying the development of systems where perception is not the central objective. A few examples of fiducial markers include ArUco Markers, AprilTags, and QR codes. Each of these different tags hold information such as an ID or, in the case of QR codes, websites, messages, and etc. We will primarily be focusing on AprilTags as there is a very robust ROS package already built. This library identifies AprilTags and will provide information about the tags size, distance, and orientation.
 
-#### AprilTag ROS
+### AprilTag ROS
 Browse to the AprilTag_ROS package on the robot and edit the config file:
 
 ```bash
@@ -629,7 +628,7 @@ standalone_tags:
   ]
 ```
 
-#### Launch File - Apriltag_Ros
+### Launch File - Apriltag_Ros
 
 Edit the `lab4.launch` file on the **Robot**, calling the `continuous_detection.launch` file provided by the **apriltag_ros** package. We need to set the arguments to the values provided by the `usb_cam` node:
 
@@ -649,28 +648,30 @@ In a terminal on the master open the **rqt_image_view** node (`rosrun rqt_image_
 
 In another terminal on the master echo the topic `tag_detections`. What information do you see? Will the apriltag_ros node identify only one tag at a time? Which value do you think we would use to determine distance from the tag? What kind of message is this? What package does this message come from?
 
-#### Checkpoint
+### Checkpoint
 Show an instructor that the **apriltag_ros** can identify tags and provides position data.
 
-#### Summary
+### Summary
 You now have the ability to identify AprilTags and because you have a calibrated camera, you can detect the size, orientation, and distance of a tag.
 
-#### Cleanup
+### Cleanup
 Kill all rosnodes and roscore!
 
 
-## Lab 4: Computer Vision
+# Lab 4: Computer Vision
 ---
+
 
 **You must open this file as a Jupyter Notebook (link below) to run code**
 
 [Run this file as an executable Jupyter Notebook](http://localhost:8888/notebooks/Lab4_ComputerVision.ipynb)
 
 
-### Purpose
+
+## Purpose
 This lab will integrate a USB Camera with the Robot. You will use a Python script to take pictures of the stop sign and build a stop sign detector then test it using a live video feed. You will then use the detector and known size of the stop sign to estimate how far the stop sign is from the camera. Lastly, you will create a node to identify and determine how far an April Tag is from the robot.
 
-### Setup packages
+## Setup packages
 Open a terminal on the **Master** and create a lab4 package:
 
 ```bash
@@ -682,7 +683,7 @@ Make and source your workspace.
 
 If you have not already done so, repeat on the **Robot**
 
-### Create a ROS node to save images
+## Create a ROS node to save images
 Browse to your lab4 source folder on the **Master** and create a node called **image_capture.py**.
 
 ```python
@@ -750,7 +751,7 @@ if __name__ == '__main__':
 
 Save, exit, and make executable.
 
-### Train your stop detector
+## Train your stop detector
 
 Create a new folder in your **lab4** package called **training_images**.
 
@@ -764,7 +765,7 @@ Store images of the stop sign by pressing `enter` when prompted. You decide how 
 
 Utilize the steps from Module 9: [Building a detector using HOG features](ICE9_ComputerVision.ipynb#Building-a-detector-using-HOG-features) to label your images and train your object detector using the new images, saving the `stop_detector.svm` file within the **training_images** folder.
 
-### Test your stop detector
+## Test your stop detector
 Create a node in the **lab4** package on the **Master** called `stop_detector.py` and copy the below into it:
 
 ```python
@@ -813,7 +814,7 @@ Edit the `stop_detector.py` node so it utilizes the `camera_callback()` function
 
 After getting the `cv_image` within the `camera_callback()`, apply the detector in a similar method as Module 9: [Testing a detector](ICE9_ComputerVision.ipynb#Testing-a-detector) creating boxes around all detected stop signs. Using a `waitKey(1)` will allow for the image to refresh automatically without user input and display the video.
 
-### Checkpoint 1
+## Checkpoint 1
 Demonstrate the stop detector on the **Master** detecting a stop sign from the **Robot's** camera.
 
 ```bash
@@ -822,7 +823,7 @@ rosrun lab4 stop_detector.py _detector:=/home/dfec/master_ws/src/ece495_master_s
 
 >📝️ **Note:** You must have the `lab4.launch` file running on the **Robot**.
 
-### Move detector to robot
+## Move detector to robot
 Copy the detector and node to the robot:
 
 ```bash
@@ -836,7 +837,7 @@ Remove the lines that display the video and instead print "Stop detected" if `bo
 
 Do you note a difference in processing speed?
 
-### Launch file
+## Launch file
 Edit the `lab4.launch` file on the **Robot** so it will run the stop detector node with the `detector` param set to the location of the detector. For example:
 
 ```xml
@@ -845,12 +846,12 @@ Edit the `lab4.launch` file on the **Robot** so it will run the stop detector no
 </node>
 ```
 
-### Checkpoint 2
+## Checkpoint 2
 Demonstrate the stop detector on the **Robot** detecting a stop sign.
 
-### Determine distance from stop sign
+## Determine distance from stop sign
 
-#### Edit `stop_detector.py`
+### Edit `stop_detector.py`
 
 You will edit your stop sign detector on the **Robot** to calculate an estimated distance between the camera and the stop sign using triangle similarity. 
 
@@ -872,10 +873,10 @@ Publish the distance of each object seen in the image.
 
 Remove any print statements after troubleshooting!
 
-### Checkpoint 3
+## Checkpoint 3
 Demonstrate the **stop_detector** node publishing distance from the stop sign.
 
-### Printing April Tag information
+## Printing April Tag information
 
 Create a node on the master in lab4 called `apriltag_dist.py`. Import the appropriate AprilTag message. Subscribe to the `tag_detections` topic. Print the identified AprilTag ID and distance. If the camera sees multiple tags, it should print the information for each tag.
 
@@ -889,16 +890,16 @@ Use print statements to determine the characteristics of the message (you can al
 
 Add the `apriltag_dist` node to the **lab4** launch file on the **Robot**.
 
-### Checkpoint 4
+## Checkpoint 4
 
 Demonstrate the `apriltag_dist` node printing the ID and distance of each April Tag.
 
-### Report
+## Report
 Complete a short 2-3 page report that utilizes the format and answers the questions within the report template. The report template and an example report can be found within the Team under `Resources/Lab Template`.
 
 > 📝️ **Note:** We will be primarily grading sections 3.1, 3.2, and 3.3 for this lab, but do include the entire lab as you will need other components for the final project report.
 
-### Turn-in Requirements
+## Turn-in Requirements
 **[25 points]** All checkpoints marked off.
 
 **[50 points]** Report via Gradescope.

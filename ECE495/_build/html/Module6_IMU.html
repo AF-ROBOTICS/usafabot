@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Module 6: Inertial Measurement Unit &#8212; ECE495</title>
+    <title>Module 6: Inertial Measurement Unit &#8212; My Jupyter Book</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,6 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Launch Files" href="Module7.html" />
-    <link rel="prev" title="Custom Messages" href="Module5.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -74,14 +72,9 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
       
       
-      <img src="_static/beyer_bot.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">ECE495</h1>
+      <h1 class="site-logo" id="site-title">My Jupyter Book</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -110,12 +103,12 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  ROBOT SETUP
+  ROBOT and MASTER SETUP
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="robot_setup.html">
+  <a class="reference internal" href="RobotSetup.html">
    Robot Setup
   </a>
  </li>
@@ -128,7 +121,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Module0.html">
-   Intro &amp; GIT
+   Module 0 - Intro and GIT
   </a>
  </li>
 </ul>
@@ -140,7 +133,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Module1.html">
-   Robotics Operating System (ROS)
+   Module 1: Robotics Operating System (ROS)
   </a>
  </li>
 </ul>
@@ -152,7 +145,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Module2.html">
-   Linux for Robotics
+   Module 2: Linux for Robotics
   </a>
  </li>
 </ul>
@@ -197,10 +190,10 @@
   MODULE 06
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Module 6: Inertial Measurement Unit
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module6.html">
+   Inertial Measurement Unit
   </a>
  </li>
 </ul>
@@ -237,6 +230,18 @@
  <li class="toctree-l1">
   <a class="reference internal" href="Module9.html">
    Computer Vision
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module10.html">
+   Final Project
   </a>
  </li>
 </ul>
@@ -280,9 +285,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/Module6_IMU.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/Module6_IMU.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -290,22 +295,6 @@
 </div>
 
             <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule6_IMU.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
 
             <!-- Full screen (wrap in <a> to have style consistency -->
 
@@ -315,6 +304,23 @@
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Module6_IMU.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
 
         </div>
 
@@ -462,8 +468,6 @@
   <div class="tex2jax_ignore mathjax_ignore section" id="module-6-inertial-measurement-unit">
 <h1>Module 6: Inertial Measurement Unit<a class="headerlink" href="#module-6-inertial-measurement-unit" title="Permalink to this headline">¶</a></h1>
 <hr class="docutils" />
-<p><strong>You must open this file as a Jupyter Notebook (link below) to run code</strong></p>
-<p><a class="reference external" href="http://localhost:8888/notebooks/ICE6_IMU.ipynb">Run this file as an executable Jupyter Notebook</a></p>
 <div class="section" id="a-note-on-this-document">
 <h2>A note on this document<a class="headerlink" href="#a-note-on-this-document" title="Permalink to this headline">¶</a></h2>
 <p>Now that you have a better understanding of the Linux operating system and Python programming language the Jupyter Notebooks will be used primarily to guide you through the In-Class Exercises and Laboratories. You will execute the majority of your commands and code within the Linux terminal.</p>
@@ -471,11 +475,10 @@
 <div class="section" id="purpose">
 <h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
 <p>In practice, an inertial measurement unit (IMU) device provides orientation, angular velocity, and linear acceleration. The <a class="reference external" href="https://www.pololu.com/product/2764">UM7 Orientation Sensor</a> from Redshift Labs is an Attitude and Heading Reference System (AHRS) that contains a three-axis accelerometer, rate gyro, and magnetometer. Unlike a typical inertial measurement unit (IMU), which only provides raw sensor readings, the UM7 features an onboard microcontroller that combines sensor data using an EKF to generate orientation estimates 500 times a second.</p>
-<p><img alt="logo" src="_images/IMU.jpg" /></p>
+<p><img alt="IMU" src="Figures/IMU.jpg" /></p>
 <p>The UM7 Orientation Sensor is connected to the <a class="reference external" href="https://www.pololu.com/product/3172">Pololu USB AVR Programmer v2.1</a>, a compact, low-cost in-system programmer (ISP). The programmer provides an interface for communicating with the UM7 Orientation Sensor.</p>
 <p>The IMU provides values that are part of the robot state and allow the robot to navigate more accurately. Combined with data from the tachometers these values provide the odometry of the robot to estimate change in position over time. We will primarily use the IMU to perform 90 and 180 degree turns.</p>
-<img src="figs/bot.PNG" width="400" height="195.89">
-</div>
+<img src="Figures/bot.PNG" width="400" height="195.89"></div>
 <div class="section" id="calibrate-the-um7-orientation-sensor">
 <h2>Calibrate the UM7 Orientation Sensor<a class="headerlink" href="#calibrate-the-um7-orientation-sensor" title="Permalink to this headline">¶</a></h2>
 <p>As described above, there are a number of different sensors that work together to provide the attitude and heading estimates for the UM7 Orientation Sensor. These sensors are sensitive to magnetic fields which are unique to locale and device. As you will learn in future ECE classes, all electronic devices create small magnetic fields. Even electrons traveling over a wire create magnetic fields. The UM7 Orientation Sensor is strategically placed in the center of the robot for best attitude and heading performance, however, this location is also in the center of a number of magnetic fields. We can use <a class="reference external" href="https://redshiftlabs.com.au/support-services/serial-interface-software/">Redshift Lab’s Serial Interface Software</a> along with their <a class="reference external" href="https://redshiftlabs.com.au/support-services/um7-calibration-procedure/">calibration procedure</a> to calibrate the UM7 to provide a more accurate attitude and heading reading.</p>
@@ -689,21 +692,7 @@ touch imu_sub.py
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="Module5.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Custom Messages</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="Module7.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Launch Files</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>
@@ -711,7 +700,7 @@ touch imu_sub.py
     <footer class="footer">
   <p>
     
-      By Mr. Steven Beyer<br/>
+      By The Jupyter Book community<br/>
     
         &copy; Copyright 2021.<br/>
   </p>

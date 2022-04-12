@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Intro &amp; GIT &#8212; ECE495</title>
+    <title>Intro and GIT &#8212; My Jupyter Book</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -52,7 +52,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Robotics Operating System (ROS)" href="Module1.html" />
-    <link rel="prev" title="Robot Setup" href="robot_setup.html" />
+    <link rel="prev" title="Robot Setup" href="RobotSetup.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -74,14 +74,9 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
       
       
-      <img src="_static/beyer_bot.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">ECE495</h1>
+      <h1 class="site-logo" id="site-title">My Jupyter Book</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -110,12 +105,12 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  ROBOT SETUP
+  ROBOT and MASTER SETUP
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="robot_setup.html">
+  <a class="reference internal" href="RobotSetup.html">
    Robot Setup
   </a>
  </li>
@@ -128,7 +123,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Intro &amp; GIT
+   Intro and GIT
   </a>
  </li>
 </ul>
@@ -228,6 +223,30 @@
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 09
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module9.html">
+   Computer Vision
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module10.html">
+   Final Project
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -279,22 +298,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule0.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -315,55 +318,54 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lesson-objectives">
-   Lesson Objectives
+  <a class="reference internal nav-link" href="#syllabus">
+   Syllabus
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#agenda">
-   Agenda
+  <a class="reference internal nav-link" href="#create-git-repositories-for-the-master-and-robot-systems">
+   Create GIT Repositories for the
+   <strong>
+    Master
+   </strong>
+   and
+   <strong>
+    Robot
+   </strong>
+   systems.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#setting-up-git-repositories">
-   1. Setting up GIT repositories.
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-a-repo-within-the-github-classroom">
-     1.1 Create a repo within the GitHub Classroom:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#enable-ssh-connection-to-your-github-account">
-     1.2 Enable SSH connection to your GitHub account:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#clone-repository-to-your-master">
-     1.3 Clone repository to your master:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#clone-repository-to-your-robot">
-     1.4 Clone repository to your robot:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#repository-management">
-     1.5 Repository Management:
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#assignments">
-   2. Assignments.
+  <a class="reference internal nav-link" href="#enable-ssh-connections-to-your-github-account">
+   Enable SSH connections to your GitHub account
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#next-time">
-   3. Next Time.
+  <a class="reference internal nav-link" href="#clone-master-repository">
+   Clone
+   <strong>
+    Master
+   </strong>
+   repository
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#clone-robot-repository">
+   Clone
+   <strong>
+    Robot
+   </strong>
+   repository
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#repository-management">
+   Repository management
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#checkpoint">
+   Checkpoint
   </a>
  </li>
 </ul>
@@ -376,7 +378,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Intro & GIT</h1>
+                <h1>Intro and GIT</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -387,55 +389,54 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lesson-objectives">
-   Lesson Objectives
+  <a class="reference internal nav-link" href="#syllabus">
+   Syllabus
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#agenda">
-   Agenda
+  <a class="reference internal nav-link" href="#create-git-repositories-for-the-master-and-robot-systems">
+   Create GIT Repositories for the
+   <strong>
+    Master
+   </strong>
+   and
+   <strong>
+    Robot
+   </strong>
+   systems.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#setting-up-git-repositories">
-   1. Setting up GIT repositories.
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-a-repo-within-the-github-classroom">
-     1.1 Create a repo within the GitHub Classroom:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#enable-ssh-connection-to-your-github-account">
-     1.2 Enable SSH connection to your GitHub account:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#clone-repository-to-your-master">
-     1.3 Clone repository to your master:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#clone-repository-to-your-robot">
-     1.4 Clone repository to your robot:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#repository-management">
-     1.5 Repository Management:
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#assignments">
-   2. Assignments.
+  <a class="reference internal nav-link" href="#enable-ssh-connections-to-your-github-account">
+   Enable SSH connections to your GitHub account
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#next-time">
-   3. Next Time.
+  <a class="reference internal nav-link" href="#clone-master-repository">
+   Clone
+   <strong>
+    Master
+   </strong>
+   repository
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#clone-robot-repository">
+   Clone
+   <strong>
+    Robot
+   </strong>
+   repository
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#repository-management">
+   Repository management
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#checkpoint">
+   Checkpoint
   </a>
  </li>
 </ul>
@@ -447,282 +448,264 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="intro-git">
-<h1>Intro &amp; GIT<a class="headerlink" href="#intro-git" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="lesson-objectives">
-<h2>Lesson Objectives<a class="headerlink" href="#lesson-objectives" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>Learn fundamental concepts of ROS.</p></li>
-<li><p>Setup GIT repositories on both the master and the robot.</p></li>
-</ol>
+  <div class="tex2jax_ignore mathjax_ignore section" id="intro-and-git">
+<h1>Intro and GIT<a class="headerlink" href="#intro-and-git" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<p><strong>You must open this file as a Jupyter Notebook (link below) to run code</strong></p>
+<p><a class="reference external" href="http://localhost:8888/notebooks/Module0_Intro_GIT.ipynb">Run this file as an executable Jupyter Notebook</a></p>
+<div class="section" id="syllabus">
+<h2>Syllabus<a class="headerlink" href="#syllabus" title="Permalink to this headline">¶</a></h2>
+<p>You can find the syllabus in the repository within the <span class="xref myst">curriculum folder</span>. The syllabus may be updated throughout the semester to adapt to changes in the schedule.</p>
 </div>
-<div class="section" id="agenda">
-<h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="create-git-repositories-for-the-master-and-robot-systems">
+<h2>Create GIT Repositories for the <strong>Master</strong> and <strong>Robot</strong> systems.<a class="headerlink" href="#create-git-repositories-for-the-master-and-robot-systems" title="Permalink to this headline">¶</a></h2>
+<p>We will utilize two git repositories to submit code written throughout this course.</p>
 <ol class="simple">
-<li><p>Syllabus review.</p></li>
-<li><p>ROS overview.</p></li>
-<li><p>Setting up GIT repositories.</p></li>
+<li><p>Browse to <span class="xref myst">github.com</span> and create a GitHub account if you do not already have one. It is useful if your username is something that identifies you (e.g., bneff1013).</p></li>
+<li><p><em><strong>One student per group:</strong></em></p>
+<ol class="simple">
+<li><p>Browse to <a class="reference external" href="https://classroom.github.com/a/woMT5_c1">https://classroom.github.com/a/woMT5_c1</a>.</p></li>
+<li><p>Select “Accept this assignment”</p></li>
+<li><p>You may need to hit refresh, but eventually it will provide you a link to the repository.</p></li>
+<li><p>Browse to your repository.</p></li>
+<li><p>Note the url for your repository (save this link, it is the best way to check if your repo is updated).</p></li>
+<li><p>Go to Settings -&gt; Manage access -&gt; and “Invite teams or people”.</p></li>
+<li><p>Provide access to your team member using their GitHub user name.</p></li>
+<li><p>Browse to <a class="reference external" href="https://classroom.github.com/a/58EyOwaM">https://classroom.github.com/a/58EyOwaM</a> and repeat steps B-G.</p></li>
 </ol>
-</div>
-<div class="section" id="setting-up-git-repositories">
-<h2>1. Setting up GIT repositories.<a class="headerlink" href="#setting-up-git-repositories" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="create-a-repo-within-the-github-classroom">
-<h3>1.1 Create a repo within the GitHub Classroom:<a class="headerlink" href="#create-a-repo-within-the-github-classroom" title="Permalink to this headline">¶</a></h3>
-<ol>
-<li><p>Browse to <a class="reference external" href="https://www.github.com">github.com</a>  and create a GitHub account if you do not already have one. It is useful if your username is something that identifies you (e.g. bneff1013).</p></li>
-<li><p><strong>One student per group</strong> do the following on your personal computer:</p>
-<p>(a) Browse to <a class="reference external" href="https://classroom.github.com/a/woMT5_c1">https://classroom.github.com/a/woMT5_c1</a>.</p>
-<p>(b) Select “Accept this assignment”</p>
-<p>(c) You may need to hit refresh, but eventually it will provide you a link to the repository.</p>
-<p>(d) Browse to your repository.</p>
-<p>(e) Note the url for your repository (save this link, it is the best way to check if your repo is updated).</p>
-<p>(f) Go to Settings -&gt; Manage access -&gt; and “Invite teams or people”.</p>
-<p>(g) Provide access to your team member using their GitHub user name.</p>
-<p>(h) Browse to <a class="reference external" href="https://classroom.github.com/a/58EyOwaM">https://classroom.github.com/a/58EyOwaM</a> and repeat steps b-g.</p>
 </li>
 </ol>
 </div>
-<div class="section" id="enable-ssh-connection-to-your-github-account">
-<h3>1.2 Enable SSH connection to your GitHub account:<a class="headerlink" href="#enable-ssh-connection-to-your-github-account" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="enable-ssh-connections-to-your-github-account">
+<h2>Enable SSH connections to your GitHub account<a class="headerlink" href="#enable-ssh-connections-to-your-github-account" title="Permalink to this headline">¶</a></h2>
 <ol>
-<li><p>Open a terminal on your master (ctrl+alt+t).</p></li>
-<li><p>The same student as step 1.1.2 do the following:</p>
-<p>(a) Generate a new SSH key by running the below code in the terminal, substituting your GitHub email address:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>    ssh−keygen −t ed25519 −C <span class="s2">&quot;your_email@example.com&quot;</span>
+<li><p>Open a terminal on your <strong>Master</strong> (<code class="docutils literal notranslate"><span class="pre">ctrl+alt+t</span></code>)</p></li>
+<li><p>The same student as above do the following:</p>
+<ol class="simple">
+<li><p>Generate a new SSH key, substituting your GitHub email address:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen -t ed25519 -C <span class="s2">&quot;your_email@example.com&quot;</span>
 </pre></div>
 </div>
-<p>(b) When you’re prompted to “Enter a file in which to save the key,” click enter.</p>
-<p>(c) At the prompt, type a secure passphrase.</p>
-<p>(d) Start the ssh-agent in the background and add your SSH private key to the ssh-agent:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>    <span class="nb">eval</span> <span class="s2">&quot;</span><span class="k">$(</span>ssh−agent −s<span class="k">)</span><span class="s2">&quot;</span>
+<ol class="simple">
+<li><p>When prompted to “Enter a file in which to save the key,” click enter.</p></li>
+<li><p>At the prompt, type a secure passphrase.</p></li>
+<li><p>Start the ssh-agent and add your SSH private key to the ssh-agent:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">eval</span> <span class="s2">&quot;</span><span class="k">$(</span>ssh-agent -s<span class="k">)</span><span class="s2">&quot;</span>
+ssh-add ~/.ssh/id_ed25519
 </pre></div>
 </div>
-<p>then</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>    ssh−add ∼/.ssh/id_ed25519
+<ol class="simple">
+<li><p>Open the public key:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano ~/.ssh/id_ed25519.pub
 </pre></div>
 </div>
-<p>(e) Open the public key:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>    nano ∼/.ssh/id_ed25519.pub
+<ol class="simple">
+<li><p>Select the contents of the file (maximize the window and ensure it has your GIT email at the end), right click, and select copy.</p></li>
+<li><p>Open a web browser and sign in to your GitHub account.</p></li>
+<li><p>In the upper-right corner of any page, click your profile photo, then click <strong>Settings</strong>:
+<img alt="logo" src="Figures/userbar-account-settings.PNG" /></p></li>
+<li><p>In the user settings sidebar, click <strong>SSH and GPG keys</strong>:
+<img alt="logo" src="Figures/settings-sidebar-ssh-keys.PNG" /></p></li>
+<li><p>Click <strong>New SSH key</strong>:
+<img alt="logo" src="_images/ssh-add-ssh-key.png" /></p></li>
+<li><p>In the “Title” field, add a descriptive label for the new key, such as “MasterX”.</p></li>
+<li><p>Paste your key into the “Key” field (contents of the .pub file).</p></li>
+<li><p>Click <strong>Add SSH key</strong>.</p></li>
+<li><p>If prompted, confirm your GitHub password.</p></li>
+<li><p>Create a SSH connetion to your <strong>Robot</strong> (password is dfec3141):</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh pi@robotX
 </pre></div>
 </div>
-<p>(f) Select the contents of the file (maximize the window and ensure it has your GIT email at the end), right click, and select copy.</p>
-<p>(g) Open a web browser and sign in to your GitHub account.</p>
-<p>(h) In the upper-right corner of any page, click your profile photo, then click <strong>Settings</strong></p>
- <img src="figs/module0_1.png" width="412" height="922">
-<p>(i) In the user settings sidebar, click <strong>SSH and GPG keys</strong>.</p>
- <img src="figs/module0_2.png" width="536" height="405">
-<p>(j) Click <strong>New SSH key</strong></p>
- <img src="figs/module0_3.png" width="767" height="172">
-<p>(k) In the “Title” field, add a descriptive label for the new key, such as “MasterX”.</p>
-<p>(l) Paste your key into the “Key” field (contents of the .pub file).</p>
-<p>(m) Click <strong>Add SSH key</strong>.</p>
-<p>(n) If prompted, confirm your GitHub password.</p>
-<p>(o) Create a SSH connection to your Robot (password is dfec3141):</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>    ssh pi@robotX
-</pre></div>
-</div>
-<p>(p) Repeat steps a-f on your robot and j-n on your master.</p>
+<ol class="simple">
+<li><p>Repeat steps A-F on your <strong>Robot</strong> and J-N on your <strong>Master</strong>.</p></li>
+</ol>
 </li>
 </ol>
 </div>
-<div class="section" id="clone-repository-to-your-master">
-<h3>1.3 Clone repository to your master:<a class="headerlink" href="#clone-repository-to-your-master" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="clone-master-repository">
+<h2>Clone <strong>Master</strong> repository<a class="headerlink" href="#clone-master-repository" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
-<li><p>On the <strong>master</strong>, open the master GitHub repository and copy your repo address using the SSH mode:</p></li>
-</ol>
-   <img src="figs/module0_4.png" width="568" height="467">
-<ol class="simple">
+<li><p>On the <strong>Master</strong>, open the <strong>master</strong> GitHub repository and copy your repo address using the SSH mode:
+<img alt="logo" src="Figures/clone.png" /></p></li>
 <li><p>Open a terminal and browse to your workspace source folder:</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>        <span class="nb">cd</span> ∼/master_ws/src/
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/master_ws/src/
 </pre></div>
 </div>
 <ol class="simple">
-<li><p>Clone your repo using the username and password used when you generated the SSH key, replacing <strong>USERNAME</strong> with your GitHub username:</p></li>
+<li><p>Clone your repo using the username and password used when you generated the SSH key (pasting the copied address above after clone). For example:</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>        git clone git@github.com:ECE495/ece495_master_spring2022−
-USERNAME.git
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone git@github.com:ECE495/ece495_master_spring2022-USERNAME.git
 </pre></div>
 </div>
 <ol class="simple">
-<li><p>Update your git email address and the last name for you and your team mate.</p></li>
+<li><p>Update your git email address and the last naem for you and your team mate:</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>        git config −−global user.email <span class="s2">&quot;you@example.com&quot;</span>
-</pre></div>
-</div>
-<p>and</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>        git config −−global user.name <span class="s2">&quot;Lastname1 Lastname2&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="s2">&quot;you@example.com&quot;</span>
+<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="s2">&quot;Lastname1 Lastname2&quot;</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="clone-repository-to-your-robot">
-<h3>1.4 Clone repository to your robot:<a class="headerlink" href="#clone-repository-to-your-robot" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="clone-robot-repository">
+<h2>Clone <strong>Robot</strong> repository<a class="headerlink" href="#clone-robot-repository" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
+<li><p>On the <strong>Master</strong>, open the <strong>robot</strong> GitHub repository and copy your repo address using the SSH mode (same as above).</p></li>
 <li><p>Create a secure shell connection to your robot:</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>        ssh pi@robotX
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh pi@robotX
 </pre></div>
 </div>
 <ol class="simple">
-<li><p>Ensure you are in the ROS robot workspace src directory.</p></li>
+<li><p>Browse to your workspace source folder:</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>        <span class="nb">cd</span> robot_ws/src
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/robot_ws/src/
 </pre></div>
 </div>
 <ol class="simple">
-<li><p>Clone the robot repository:</p></li>
+<li><p>Clone your repo using the username and password used when you generated the SSH key (pasting the copied address above after clone). For example:</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>        git clone git@github.com:ECE495/ece495_robot_spring2022−
-USERNAME.git
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone git@github.com:ECE495/ece495_robot_spring2022-USERNAME.git
 </pre></div>
 </div>
 <ol class="simple">
-<li><p>Update your git email address and the last name for you and your team mate.</p></li>
+<li><p>Update yoru git email address and the last name for you and your team mate.</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>        git config −−global user.email <span class="s2">&quot;you@example.com&quot;</span>
-</pre></div>
-</div>
-<p>and</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>        git config −−global user.name <span class="s2">&quot;Lastname1 Lastname2&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="s2">&quot;you@example.com&quot;</span>
+<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="s2">&quot;Lastname1 Lastname2&quot;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="repository-management">
-<h3>1.5 Repository Management:<a class="headerlink" href="#repository-management" title="Permalink to this headline">¶</a></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><strong>IMPORTANT</strong></p>
-<p>It is vital that you <strong>ALWAYS</strong> pull when you start working on your code on one system and ALWAYS push when you are done working on your code on that system.</p>
-<p><strong>MEMORIZE THESE STEPS</strong></p>
-</div>
+<h2>Repository management<a class="headerlink" href="#repository-management" title="Permalink to this headline">¶</a></h2>
+<p>It is important that you always pull when you start working on your code on one system and push when you are done working on code on that system.</p>
 <ol class="simple">
-<li><p>Pull your repo on the master (from ece495_master_spring2022-USERNAME folder):</p></li>
+<li><p>Within a terminal on your <strong>Master</strong>, pull your repo from the <code class="docutils literal notranslate"><span class="pre">ece495_master_spring2022-USERNAME</span></code> folder:</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>        git pull
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/master_ws/src/ece495_master_spring2022-USERNAME
+git pull
 </pre></div>
 </div>
 <ol>
-<li><p>Complete work on the master. For example, accomplish the following:</p>
-<p>(a) Create a file in your repo (from the ece495_master_spring2022-USERNAME folder)</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>    touch README.md
+<li><p>Complete work on the <strong>Master</strong>. For example, accomplish the following:</p>
+<ol class="simple">
+<li><p>Create a file in your repo (from the <code class="docutils literal notranslate"><span class="pre">ece495_master_spring2022-USERNAME</span></code> folder):</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch README.md
+nano README.md
 </pre></div>
 </div>
-<p>and</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>    nano README.md
+<ol class="simple">
+<li><p>Copy the following to the file completing with your own information:</p></li>
+</ol>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># ECE495 Fundamentals of Robotics</span>
+<span class="gu">## Master System</span>
+This repository stores all code for the master system
+
+<span class="gu">### Team Member 1</span>
+Name:
+Go by name:
+Hometown:
+Desired AFSC:
+Clubs/IC Sports:
+<span class="gu">### Team member 2</span>
+Name:
+Go by name:
+Hometown:
+Desired AFSC:
+Clubs/IC Sports:
 </pre></div>
 </div>
-<p>(b) Copy the following to the file completing with your own information:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>    <span class="c1"># ECE495 Fundamentals of Robotics</span>
-    <span class="c1">## Master System</span>
-    This repository stores all code <span class="k">for</span> the master computer
-    
-    <span class="c1">### Team Member 1</span>
-    Name:
-    Go by name:
-    Hometown:
-    Desired AFSC:
-    Clubs/IC Sports:
-    <span class="c1">### Team member 2</span>
-    Name:
-    Go by name:
-    Hometown:
-    Desired AFSC:
-    Clubs/IC Sports:
-</pre></div>
-</div>
-<p>(b) Hit ‘ctrl+s’ then ‘ctrl+x’ to save and exit the editor.</p>
+<ol class="simple">
+<li><p>Hit <code class="docutils literal notranslate"><span class="pre">ctrl+s</span></code> then <code class="docutils literal notranslate"><span class="pre">ctrl+x</span></code> to save and exit the editor.</p></li>
+</ol>
 </li>
 <li><p>Add the files that will be uploaded to your repository:</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>        git add −A
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git add -A
 </pre></div>
 </div>
 <ol class="simple">
 <li><p>Commit your changes to the repository with a message:</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>        git commit −m <span class="s2">&quot;Completed README on the master!&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git commit -m <span class="s2">&quot;Completed README on the master!&quot;</span>
 </pre></div>
 </div>
 <ol class="simple">
 <li><p>Push your changes to the repository:</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>        git push
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git push
 </pre></div>
 </div>
 <ol class="simple">
-<li><p>Pull your repo on the robot</p></li>
+<li><p>Create an SSH connection to your <strong>Robot</strong> and pull your repo from the <code class="docutils literal notranslate"><span class="pre">ece495_robot_spring2022-USERNAME</span></code> folder:</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>        git pull
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh pi@robotX
+<span class="nb">cd</span> ~/robot_ws/src/ece495_robot_spring2022-USERNAME
+git pull
 </pre></div>
 </div>
 <ol>
-<li><p>Complete work on the robot. For example, accomplish the following:</p>
-<p>(a) Create a file in your repo (from the ece495_robot_spring2022-USERNAME folder)</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>    touch README.md
+<li><p>Complete work on the <strong>Robot</strong>. For example, accomplish the following:</p>
+<ol class="simple">
+<li><p>Create a file in your repo (from the <code class="docutils literal notranslate"><span class="pre">ece495_robot_spring2022-USERNAME</span></code> folder):</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch README.md
+nano README.md
 </pre></div>
 </div>
-<p>and</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>    nano README.md
+<ol class="simple">
+<li><p>Copy the following to the file copmleting with your own information:</p></li>
+</ol>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># ECE495 Fundamentals of Robotics</span>
+<span class="gu">## Master System</span>
+This repository stores all code for the robot system
+
+<span class="gu">### Team Member 1</span>
+Name:
+Go by name:
+Hometown:
+Desired AFSC:
+Clubs/IC Sports:
+<span class="gu">### Team member 2</span>
+Name:
+Go by name:
+Hometown:
+Desired AFSC:
+Clubs/IC Sports:
 </pre></div>
 </div>
-<p>(b)</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>    <span class="c1"># ECE495 Fundamentals of Robotics</span>
-    <span class="c1">## Master System</span>
-    This repository stores all code <span class="k">for</span> the master computer
-    
-    <span class="c1">### Team Member 1</span>
-    Name:
-    Go by name:
-    Hometown:
-    Desired AFSC:
-    Clubs/IC Sports:
-    <span class="c1">### Team member 2</span>
-    Name:
-    Go by name:
-    Hometown:
-    Desired AFSC:
-    Clubs/IC Sports:
-</pre></div>
-</div>
-<p>(c) Hit ‘ctrl+s’ then ‘ctrl+x’ to save and exit the editor.</p>
+<ol class="simple">
+<li><p>Hit <code class="docutils literal notranslate"><span class="pre">ctrl+s</span></code> then <code class="docutils literal notranslate"><span class="pre">ctrl+x</span></code> to save and exit the editor.</p></li>
+</ol>
 </li>
 <li><p>Add the files that will be uploaded to your repository:</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>        git add −A
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git add -A
 </pre></div>
 </div>
 <ol class="simple">
 <li><p>Commit your changes to the repository with a message:</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>        git commit −m <span class="s2">&quot;Completed README on the robot!&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git commit -m <span class="s2">&quot;Completed README on the robot!&quot;</span>
 </pre></div>
 </div>
 <ol class="simple">
 <li><p>Push your changes to the repository:</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>        git push
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git push
 </pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><strong>BOTTOM LINE</strong>: Ensure you pull changes, make edits, and push your changes <strong>EVERY TIME</strong> you work on the master or robot!</p>
 </div>
 <blockquote>
-<div><p>⚠️ <strong>Checkpoint: Show the instructor both repositories with READMEs on the GitHub website.</strong></p>
+<div><p>⚠️ <strong>IMPORTANT:</strong> Ensure you pull changes, do work, and push your changes <strong>Every Time</strong> you work on the master or robot!</p>
 </div></blockquote>
 </div>
-</div>
-<div class="section" id="assignments">
-<h2>2. Assignments.<a class="headerlink" href="#assignments" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>If you got your repo set up on both the master and the robot, then you are good to go!</p></li>
-</ul>
-</div>
-<div class="section" id="next-time">
-<h2>3. Next Time.<a class="headerlink" href="#next-time" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Module 1 - ROS</p></li>
-</ul>
+<div class="section" id="checkpoint">
+<h2>Checkpoint<a class="headerlink" href="#checkpoint" title="Permalink to this headline">¶</a></h2>
+<p>Show the instructor both repositories with <a class="reference external" href="http://README.md">README.md</a> files on the GitHub website.</p>
 </div>
 </div>
 
@@ -751,7 +734,7 @@ USERNAME.git
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="robot_setup.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="RobotSetup.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
@@ -772,7 +755,7 @@ USERNAME.git
     <footer class="footer">
   <p>
     
-      By Mr. Steven Beyer<br/>
+      By The Jupyter Book community<br/>
     
         &copy; Copyright 2021.<br/>
   </p>

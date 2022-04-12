@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Module 1: Robotics Operating System (ROS) &#8212; ECE495</title>
+    <title>Module 1: Robotics Operating System (ROS) &#8212; My Jupyter Book</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -72,14 +72,9 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
       
       
-      <img src="_static/beyer_bot.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">ECE495</h1>
+      <h1 class="site-logo" id="site-title">My Jupyter Book</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -108,12 +103,12 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  ROBOT SETUP
+  ROBOT and MASTER SETUP
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="robot_setup.html">
+  <a class="reference internal" href="RobotSetup.html">
    Robot Setup
   </a>
  </li>
@@ -126,7 +121,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Module0.html">
-   Intro &amp; GIT
+   Module 0 - Intro and GIT
   </a>
  </li>
 </ul>
@@ -138,7 +133,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Module1.html">
-   Robotics Operating System (ROS)
+   Module 1: Robotics Operating System (ROS)
   </a>
  </li>
 </ul>
@@ -150,7 +145,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Module2.html">
-   Linux for Robotics
+   Module 2: Linux for Robotics
   </a>
  </li>
 </ul>
@@ -226,6 +221,30 @@
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 09
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module9.html">
+   Computer Vision
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module10.html">
+   Final Project
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -277,22 +296,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FICE1_Talker.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -307,7 +310,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/ICE1_Talker.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/ICE1_Talker.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -343,13 +346,11 @@
     <a class="reference internal nav-link" href="#purpose">
      Purpose
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#initialize-ros">
-       Initialize ROS:
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initialize-ros">
+     Initialize ROS:
+    </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#implementing-the-chat-publisher">
@@ -424,13 +425,11 @@
     <a class="reference internal nav-link" href="#purpose">
      Purpose
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#initialize-ros">
-       Initialize ROS:
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initialize-ros">
+     Initialize ROS:
+    </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#implementing-the-chat-publisher">
@@ -492,19 +491,23 @@
 <div class="section" id="purpose">
 <h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h3>
 <p>This Jupyter Notebook will delve a little deeper into ROS implementation. You will create a basic one way chat server that allows a user to send messages to another (both users will be on the same computer at this point in time).</p>
+</div>
 <div class="section" id="initialize-ros">
-<h4>Initialize ROS:<a class="headerlink" href="#initialize-ros" title="Permalink to this headline">¶</a></h4>
+<h3>Initialize ROS:<a class="headerlink" href="#initialize-ros" title="Permalink to this headline">¶</a></h3>
 <p>The first step when utilizing  ROS is to initialize <em>roscore</em>. There are two methods to accomplish this: first, by explicitly running <em>roscore</em> and second, by running a launch file (which will initialize <em>roscore</em> if it is not already running). During the first portion of this course we will explicitly run <em>roscore</em> and then take advantage of launch files later in the course.</p>
 <p>Copy the following code and run it in a new terminal (use the shortcut <code class="docutils literal notranslate"><span class="pre">ctrl+alt+t</span></code> to open a new terminal window or select an open terminal and hit <code class="docutils literal notranslate"><span class="pre">ctrl+shift+t</span></code> to open a new terminal tab):</p>
 <p><code class="docutils literal notranslate"><span class="pre">roscore</span></code></p>
 </div>
-</div>
 <div class="section" id="implementing-the-chat-publisher">
 <h3>Implementing the chat publisher<a class="headerlink" href="#implementing-the-chat-publisher" title="Permalink to this headline">¶</a></h3>
-<p><strong>NOTE</strong>: The following is Python code that will be implemented within the Jupyter Notebook. Again, the Notebook is just a way to allow for code and text to coexist to help guide you through the ICE. You could take all of the code in this Notebook and put it within a Python file and it would work the same as it does here. The focus of this ICE is the ROS implementation. It is assumed you have a working knowledge of Python at this time so this Notebook will not go into a lot of background regarding the Python code. Module 3 will provide a Python refresher.</p>
+<blockquote>
+<div><p>📝️ <strong>Note:</strong> The following is Python code that will be implemented within the Jupyter Notebook. Again, the Notebook is just a way to allow for code and text to coexist to help guide you through the ICE. You could take all of the code in this Notebook and put it within a Python file and it would work the same as it does here. The focus of this ICE is the ROS implementation. It is assumed you have a working knowledge of Python at this time so this Notebook will not go into a lot of background regarding the Python code. Module 3 will provide a Python refresher.</p>
+</div></blockquote>
 <div class="section" id="import-modules">
 <h4>Import modules<a class="headerlink" href="#import-modules" title="Permalink to this headline">¶</a></h4>
-<p><strong>Important</strong>: Importing classes may take some time. You will know the code block is still executing as the bracket on the left of the cell will change to a <code class="docutils literal notranslate"><span class="pre">*</span></code> character. Do not move to the next step until the <code class="docutils literal notranslate"><span class="pre">*</span></code> is gone.</p>
+<blockquote>
+<div><p>⚠️ <strong>Important:</strong> Importing classes may take some time. You will know the code block is still executing as the bracket on the left of the cell will change to a <code class="docutils literal notranslate"><span class="pre">*</span></code> character. Do not move to the next step until the <code class="docutils literal notranslate"><span class="pre">*</span></code> is gone.</p>
+</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import required modules</span>
@@ -536,7 +539,9 @@
 </div>
 <p>Line 2 creates the publisher. The publisher will publish <em>String</em> messages over the <strong>/chat</strong> topic. The <code class="docutils literal notranslate"><span class="pre">queue_size</span></code> parameter determines how many messages the ROS network will hold before dropping old messages. If the publisher publishes faster than the network can handle, then messages will start getting dropped.</p>
 <p>Line 3 determines the rate at which the following loop should run. With an input of 10, the loop should run 10 times per second (10 Hz). Line 4 creates a loop that runs until <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code> is pressed in the terminal. Line 5 gets user input while line 6 logs the message into a log file (and prints it to the screen). Line 7 publishes the chat message using the previously created publisher. Lastly, line 8 sleeps so the loop runs at the desired rate.</p>
-<p><strong>Note:</strong> Waiting for user input will cause the loop to not run at 10 Hz as line 5 will block until the user hits enter.</p>
+<blockquote>
+<div><p>📝️ <strong>Note:</strong> Waiting for user input will cause the loop to not run at 10 Hz as line 5 will block until the user hits enter.</p>
+</div></blockquote>
 </div>
 <div class="section" id="main">
 <h4>Main<a class="headerlink" href="#main" title="Permalink to this headline">¶</a></h4>
@@ -623,7 +628,7 @@
     <footer class="footer">
   <p>
     
-      By Mr. Steven Beyer<br/>
+      By The Jupyter Book community<br/>
     
         &copy; Copyright 2021.<br/>
   </p>

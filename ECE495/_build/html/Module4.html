@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Driving the Robot &#8212; ECE495</title>
+    <title>Driving the Robot &#8212; My Jupyter Book</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -74,14 +74,9 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
       
       
-      <img src="_static/beyer_bot.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">ECE495</h1>
+      <h1 class="site-logo" id="site-title">My Jupyter Book</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -110,12 +105,12 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  ROBOT SETUP
+  ROBOT and MASTER SETUP
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="robot_setup.html">
+  <a class="reference internal" href="RobotSetup.html">
    Robot Setup
   </a>
  </li>
@@ -128,7 +123,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Module0.html">
-   Intro &amp; GIT
+   Module 0 - Intro and GIT
   </a>
  </li>
 </ul>
@@ -140,7 +135,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Module1.html">
-   Robotics Operating System (ROS)
+   Module 1: Robotics Operating System (ROS)
   </a>
  </li>
 </ul>
@@ -152,7 +147,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Module2.html">
-   Linux for Robotics
+   Module 2: Linux for Robotics
   </a>
  </li>
 </ul>
@@ -228,6 +223,30 @@
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 09
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module9.html">
+   Computer Vision
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module10.html">
+   Final Project
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -279,22 +298,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule4.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -315,51 +318,44 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-class-exercise-4">
-   In-Class Exercise 4
+  <a class="reference internal nav-link" href="#a-note-on-this-document">
+   A note on this document
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-note-on-this-document">
-     A note on this document
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#purpose">
-     Purpose
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#code-used-to-drive-the-robot">
-     Code used to drive the robot
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Driving the robot
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ros">
-     ROS
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#checkpoint">
-     Checkpoint
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#summary">
-     Summary
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cleanup">
-     Cleanup
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#purpose">
+   Purpose
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code-used-to-drive-the-robot">
+   Code used to drive the robot
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Driving the robot
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ros">
+   ROS
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#checkpoint">
+   Checkpoint
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cleanup">
+   Cleanup
+  </a>
  </li>
 </ul>
 
@@ -382,51 +378,44 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-class-exercise-4">
-   In-Class Exercise 4
+  <a class="reference internal nav-link" href="#a-note-on-this-document">
+   A note on this document
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-note-on-this-document">
-     A note on this document
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#purpose">
-     Purpose
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#code-used-to-drive-the-robot">
-     Code used to drive the robot
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Driving the robot
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ros">
-     ROS
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#checkpoint">
-     Checkpoint
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#summary">
-     Summary
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cleanup">
-     Cleanup
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#purpose">
+   Purpose
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code-used-to-drive-the-robot">
+   Code used to drive the robot
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Driving the robot
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ros">
+   ROS
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#checkpoint">
+   Checkpoint
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cleanup">
+   Cleanup
+  </a>
  </li>
 </ul>
 
@@ -439,42 +428,37 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="driving-the-robot">
 <h1>Driving the Robot<a class="headerlink" href="#driving-the-robot" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="in-class-exercise-4">
-<h2>In-Class Exercise 4<a class="headerlink" href="#in-class-exercise-4" title="Permalink to this headline">¶</a></h2>
 <hr class="docutils" />
 <p><strong>You must open this file as a Jupyter Notebook (link below) to run code</strong></p>
-<p><a class="reference external" href="http://localhost:8888/notebooks/ICE4_DrivingTheRobot.ipynb">Run this file as an executable Jupyter Notebook</a></p>
+<p><a class="reference external" href="http://localhost:8888/notebooks/Module4_DrivingTheRobot.ipynb">Run this file as an executable Jupyter Notebook</a></p>
 <div class="section" id="a-note-on-this-document">
-<h3>A note on this document<a class="headerlink" href="#a-note-on-this-document" title="Permalink to this headline">¶</a></h3>
+<h2>A note on this document<a class="headerlink" href="#a-note-on-this-document" title="Permalink to this headline">¶</a></h2>
 <p>Now that you have a better understanding of the Linux operating system and Python programming language the Jupyter Notebooks will be used primarily to guide you through the In-Class Exercises and Laboratories. You will execute the majority of your commands and code within the Linux terminal.</p>
 </div>
 <div class="section" id="purpose">
-<h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h3>
+<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
 <p>This In-Class Exercise will introduce you to utilizing pre-built ROS packages to accomplish a task. It will also provide you experience interacting with someone else’s source code (.py files) to learn how that component works. You will use ROS to run two nodes, <strong>usafabot_serial</strong> and <strong>teleop_twist_keyboard</strong>, to drive the USAFABOT with a keyboard. You will continue to practice using ROS tools to observe how these components communicate.</p>
 </div>
 <div class="section" id="code-used-to-drive-the-robot">
-<h3>Code used to drive the robot<a class="headerlink" href="#code-used-to-drive-the-robot" title="Permalink to this headline">¶</a></h3>
+<h2>Code used to drive the robot<a class="headerlink" href="#code-used-to-drive-the-robot" title="Permalink to this headline">¶</a></h2>
 <ol>
-<li><p>On the Master, open a terminal and run <strong>roscore</strong>.jupyter notebook –generate-config</p></li>
+<li><p>On the Master, open a terminal and run <strong>roscore</strong>.</p></li>
 <li><p>Open a new terminal on the Master and create a secure shell into the Robot using the SSH command you learned during Module 2. This will allow you to run commands as if you were on the Robot.</p></li>
 <li><p>Using the secure shell, open the source code for the <strong>usafabot_serial</strong> node using the nano command line editor tool through the rosed command:</p>
 <p><code class="docutils literal notranslate"><span class="pre">pi&#64;robot:~$</span> <span class="pre">rosed</span> <span class="pre">usafabot</span> <span class="pre">usafabot_serial.py</span></code></p>
-</li>
-</ol>
 <blockquote>
-<div><p><strong>Syntax:</strong> <code class="docutils literal notranslate"><span class="pre">rosed</span> <span class="pre">&lt;package&gt;</span> <span class="pre">&lt;filename&gt;</span></code></p>
+<div><p>⌨️ <strong>Syntax:</strong>  <code class="docutils literal notranslate"><span class="pre">rosed</span> <span class="pre">&lt;package&gt;</span> <span class="pre">&lt;filename&gt;</span></code></p>
 </div></blockquote>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>**Note**: You may remember when we set up our *.bashrc* file we set the system variable **EDITOR** to `nano -w`. This enables the `rosed` command to utilize the nano editor.
-There is a lot going on in this file. We will go over the important aspects in class, but you should understand that it creates a node called **usafabot_serial** which subscribes to the **/cmd_vel** topic and receives *Twist* messages (we only use the linear x and angular z characteristics). These values are then sent to the MSP_432 microcontroller over a serial connection (USB) to drive the robot accordingly. Simultaneously, the node receives wheel speeds from the robot and publishes the values over the **/wheel_speeds** topic.
-</pre></div>
-</div>
-<br>
-<ol>
+<blockquote>
+<div><p>📝️ <strong>Note:</strong> You may remember when we set up our <em>.bashrc</em> file we set the system variable <strong>EDITOR</strong> to <code class="docutils literal notranslate"><span class="pre">nano</span> <span class="pre">-w</span></code>. This enables the <code class="docutils literal notranslate"><span class="pre">rosed</span></code> command to utilize the nano editor.
+There is a lot going on in this file. We will go over the important aspects in class, but you should understand that it creates a node called <strong>usafabot_serial</strong> which subscribes to the <strong>/cmd_vel</strong> topic and receives <em>Twist</em> messages (we only use the linear x and angular z characteristics). These values are then sent to the MSP_432 microcontroller over a serial connection (USB) to drive the robot accordingly. Simultaneously, the node receives wheel speeds from the robot and publishes the values over the <strong>/wheel_speeds</strong> topic.
+<br></p>
+</div></blockquote>
+</li>
 <li><p>Close the editor by hitting <code class="docutils literal notranslate"><span class="pre">ctrl+x</span></code>.</p></li>
 <li><p>It is always a good idea to check that the robot is communicating with the master. To do this, we can list the active topics the Robot sees. Run the following within your secure shell:</p>
-<p><code class="docutils literal notranslate"><span class="pre">pi&#64;robot:~$</span> <span class="pre">rostopic</span> <span class="pre">list</span></code>
-<br>
-If all is well, then there should be two topics provided by <strong>roscore</strong>: <strong>/rosout</strong> and <strong>/rosout_agg</strong>. We will typically ignore these topics.</p>
+<p><code class="docutils literal notranslate"><span class="pre">pi&#64;robot:~$</span> <span class="pre">rostopic</span> <span class="pre">list</span></code></p>
+<p>If all is well, then there should be two topics provided by <strong>roscore</strong>: <strong>/rosout</strong> and <strong>/rosout_agg</strong>. We will typically ignore these topics.</p>
 </li>
 <li><p>Run the <strong>usafabot_serial</strong> node using the rosrun command:</p>
 <p><code class="docutils literal notranslate"><span class="pre">pi&#64;robot:~$</span> <span class="pre">rosrun</span> <span class="pre">usafabot</span> <span class="pre">usafabot_serial.py</span></code></p>
@@ -483,7 +467,7 @@ If all is well, then there should be two topics provided by <strong>roscore</str
 </ol>
 </div>
 <div class="section" id="id1">
-<h3>Driving the robot<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h2>Driving the robot<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <ol>
 <li><p>Open a new terminal on the Master and observe the nodes currently running:</p>
 <p><code class="docutils literal notranslate"><span class="pre">dfec&#64;master:~$</span> <span class="pre">rosrun</span> <span class="pre">rqt_graph</span> <span class="pre">rqt_graph</span></code></p>
@@ -496,10 +480,14 @@ If all is well, then there should be two topics provided by <strong>roscore</str
 <p>If installed, the command should return the absolute path to the package, similar to <code class="docutils literal notranslate"><span class="pre">/opt/ros/noetic/share/teleop_twist_keyboard</span></code></p>
 <p>If the command instead returns an error, then you need to install the package using apt:</p>
 <p><code class="docutils literal notranslate"><span class="pre">dfec&#64;master:~$</span> <span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">ros-noetic-teleop-twist-keyboard</span></code></p>
-<p><strong>Hint</strong>: All packages built for Noetic can be downloaded in the above manner (ros-noetic-desired-pkg with underscores in the package name replaced by dashes). Some packages were only built for previous ROS distribution and will have to be built from source (we will demonstrate this at a future time).</p>
+<blockquote>
+<div><p>💡️ <strong>Tip:</strong> All packages built for Noetic can be downloaded in the above manner (ros-noetic-desired-pkg with underscores in the package name replaced by dashes). Some packages were only built for previous ROS distribution and will have to be built from source (we will demonstrate this at a future time).</p>
+</div></blockquote>
 </li>
 <li><p>Run the <strong>teleop_twist_keyboard</strong> node on the Master:</p>
-<p><strong>PRO-TIP</strong>: Don’t forget your tab completion! You can start typing a package name or node and then hit tab for it to complete the command for you!</p>
+<blockquote>
+<div><p>💡️ <strong>Tip:</strong> Don’t forget your tab completion! You can start typing a package name or node and then hit tab for it to complete the command for you!</p>
+</div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">dfec&#64;master:~$</span> <span class="pre">rosrun</span> <span class="pre">teleop_twist_keyboard</span> <span class="pre">teleop_twist_keyboard.py</span></code></p>
 </li>
 <li><p>Before we get too excited and drive the robot off a cliff, observe how the nodes are communicating using the <strong>rqt_graph</strong> tool in a new terminal (if you still have the previous rqt_graph running, you can hit the refresh button in the top left corner).</p></li>
@@ -508,7 +496,7 @@ If all is well, then there should be two topics provided by <strong>roscore</str
 </ol>
 </div>
 <div class="section" id="ros">
-<h3>ROS<a class="headerlink" href="#ros" title="Permalink to this headline">¶</a></h3>
+<h2>ROS<a class="headerlink" href="#ros" title="Permalink to this headline">¶</a></h2>
 <p>In labs throughout this course we will request information about the topics, nodes, and messages within your system. Accomplish the following in a new terminal on your Master (you can ignore all nodes/topics that result from <strong>roscore</strong>).</p>
 <ol class="simple">
 <li><p>List all running nodes.</p></li>
@@ -521,17 +509,16 @@ If all is well, then there should be two topics provided by <strong>roscore</str
 </ol>
 </div>
 <div class="section" id="checkpoint">
-<h3>Checkpoint<a class="headerlink" href="#checkpoint" title="Permalink to this headline">¶</a></h3>
+<h2>Checkpoint<a class="headerlink" href="#checkpoint" title="Permalink to this headline">¶</a></h2>
 <p>Once complete, get checked off by an instructor showing the output of each of the above.</p>
 </div>
 <div class="section" id="summary">
-<h3>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <p>In this exercise you examined and used pre-built packages and source code to drive the USAFABOT and understand how the system worked. You then were able to analyze the topics, nodes, and messages within the ROS system to better understand the flow of information and control. The <strong>pro-tips</strong> presented throughout this exercise will make you a better user of Linux and ROS.</p>
 </div>
 <div class="section" id="cleanup">
-<h3>Cleanup<a class="headerlink" href="#cleanup" title="Permalink to this headline">¶</a></h3>
+<h2>Cleanup<a class="headerlink" href="#cleanup" title="Permalink to this headline">¶</a></h2>
 <p>In each terminal window, close the node by typing <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code>. Exit any SSH connections. In each of the notebooks reset the Jupter kernel and clear output. Now it is safe to exit out of this window. Shutdown the notebook server by typing <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code> within the terminal you ran <code class="docutils literal notranslate"><span class="pre">jupyter-notebook</span></code> in. Select ‘y’.</p>
-</div>
 </div>
 </div>
 
@@ -581,7 +568,7 @@ If all is well, then there should be two topics provided by <strong>roscore</str
     <footer class="footer">
   <p>
     
-      By Mr. Steven Beyer<br/>
+      By The Jupyter Book community<br/>
     
         &copy; Copyright 2021.<br/>
   </p>

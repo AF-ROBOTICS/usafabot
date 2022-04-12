@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Robotics Operating System (ROS) &#8212; ECE495</title>
+    <title>Robotics Operating System (ROS) &#8212; My Jupyter Book</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -52,7 +52,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Linux for Robotics" href="Module2.html" />
-    <link rel="prev" title="Intro &amp; GIT" href="Module0.html" />
+    <link rel="prev" title="Intro and GIT" href="Module0.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -74,14 +74,9 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
       
       
-      <img src="_static/beyer_bot.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">ECE495</h1>
+      <h1 class="site-logo" id="site-title">My Jupyter Book</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -110,12 +105,12 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  ROBOT SETUP
+  ROBOT and MASTER SETUP
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="robot_setup.html">
+  <a class="reference internal" href="RobotSetup.html">
    Robot Setup
   </a>
  </li>
@@ -128,7 +123,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Module0.html">
-   Intro &amp; GIT
+   Intro and GIT
   </a>
  </li>
 </ul>
@@ -228,6 +223,30 @@
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 09
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module9.html">
+   Computer Vision
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module10.html">
+   Final Project
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -279,22 +298,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule1.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -314,162 +317,174 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction-to-ros-and-the-usafabot">
-   Introduction to ROS and the USAFABot
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Robotics Operating System (ROS)
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-note-on-this-document">
-     A note on this document
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#module-robotics-operating-system-ros">
+     Module: Robotics Operating System (ROS)
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#purpose">
-     Purpose
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#setting-up-the-terminal-for-ros">
-     Setting up the terminal for ROS
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#running-the-usafabot">
-     Running the USAFABot
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#common-ros-commands">
-     Common ROS commands
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cleanup">
-     Cleanup
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#a-note-on-this-document">
+       A note on this document
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#purpose">
+       Purpose
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#setting-up-the-terminal-for-ros">
+       Setting up the terminal for ROS
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#running-the-usafabot">
+       Running the USAFABot
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#common-ros-commands">
+       Common ROS commands
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cleanup">
+       Cleanup
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-class-exercise-1-talker">
-   In-Class Exercise 1 - Talker
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-class-exercise-1">
+   In-Class Exercise 1
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     A note on this document
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     Purpose
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#in-class-exercise-1-talker">
+     In-Class Exercise 1 - Talker
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       A note on this document
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Purpose
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#initialize-ros">
        Initialize ROS:
       </a>
      </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#implementing-the-chat-publisher">
+       Implementing the chat publisher
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#import-modules">
+         Import modules
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#talker-function">
+         Talker Function
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#main">
+         Main
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#run-the-talker">
+         Run the talker
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#create-the-listener">
+         Create the listener
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ros-commands">
+       ROS commands
+      </a>
+     </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#implementing-the-chat-publisher">
-     Implementing the chat publisher
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#in-class-exercise-1-listener">
+     In-Class Exercise 1 - Listener
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#import-modules">
-       Import modules
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       A note on this document
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#talker-function">
-       Talker Function
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#implementing-the-chat-subscriber">
+       Implementing the chat subscriber
       </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#main">
-       Main
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#run-the-talker">
-       Run the talker
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#create-the-listener">
-       Create the listener
-      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id4">
+         Import modules
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#listener-function">
+         Listener Function
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#callback-function">
+         Callback function
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id5">
+         Main
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#run-the-listener">
+         Run the listener
+        </a>
+       </li>
+      </ul>
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ros-commands">
-     ROS commands
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-class-exercise-1-listener">
-   In-Class Exercise 1 - Listener
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     A note on this document
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#implementing-the-chat-subscriber">
-     Implementing the chat subscriber
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#in-class-exercise-1-ros">
+     In-Class Exercise 1 - ROS
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id4">
-       Import modules
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#checkpoint">
+       Checkpoint
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#listener-function">
-       Listener Function
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#callback-function">
-       Callback function
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id5">
-       Main
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#run-the-listener">
-       Run the listener
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id6">
+       Cleanup
       </a>
      </li>
     </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-class-exercise-1-ros">
-   In-Class Exercise 1 - ROS
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#checkpoint">
-     Checkpoint
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id6">
-     Cleanup
-    </a>
    </li>
   </ul>
  </li>
@@ -493,162 +508,174 @@
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction-to-ros-and-the-usafabot">
-   Introduction to ROS and the USAFABot
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Robotics Operating System (ROS)
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-note-on-this-document">
-     A note on this document
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#module-robotics-operating-system-ros">
+     Module: Robotics Operating System (ROS)
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#purpose">
-     Purpose
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#setting-up-the-terminal-for-ros">
-     Setting up the terminal for ROS
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#running-the-usafabot">
-     Running the USAFABot
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#common-ros-commands">
-     Common ROS commands
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cleanup">
-     Cleanup
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#a-note-on-this-document">
+       A note on this document
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#purpose">
+       Purpose
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#setting-up-the-terminal-for-ros">
+       Setting up the terminal for ROS
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#running-the-usafabot">
+       Running the USAFABot
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#common-ros-commands">
+       Common ROS commands
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cleanup">
+       Cleanup
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-class-exercise-1-talker">
-   In-Class Exercise 1 - Talker
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-class-exercise-1">
+   In-Class Exercise 1
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     A note on this document
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     Purpose
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#in-class-exercise-1-talker">
+     In-Class Exercise 1 - Talker
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       A note on this document
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Purpose
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#initialize-ros">
        Initialize ROS:
       </a>
      </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#implementing-the-chat-publisher">
+       Implementing the chat publisher
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#import-modules">
+         Import modules
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#talker-function">
+         Talker Function
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#main">
+         Main
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#run-the-talker">
+         Run the talker
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#create-the-listener">
+         Create the listener
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ros-commands">
+       ROS commands
+      </a>
+     </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#implementing-the-chat-publisher">
-     Implementing the chat publisher
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#in-class-exercise-1-listener">
+     In-Class Exercise 1 - Listener
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#import-modules">
-       Import modules
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       A note on this document
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#talker-function">
-       Talker Function
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#implementing-the-chat-subscriber">
+       Implementing the chat subscriber
       </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#main">
-       Main
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#run-the-talker">
-       Run the talker
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#create-the-listener">
-       Create the listener
-      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id4">
+         Import modules
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#listener-function">
+         Listener Function
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#callback-function">
+         Callback function
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id5">
+         Main
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#run-the-listener">
+         Run the listener
+        </a>
+       </li>
+      </ul>
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ros-commands">
-     ROS commands
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-class-exercise-1-listener">
-   In-Class Exercise 1 - Listener
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     A note on this document
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#implementing-the-chat-subscriber">
-     Implementing the chat subscriber
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#in-class-exercise-1-ros">
+     In-Class Exercise 1 - ROS
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id4">
-       Import modules
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#checkpoint">
+       Checkpoint
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#listener-function">
-       Listener Function
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#callback-function">
-       Callback function
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id5">
-       Main
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#run-the-listener">
-       Run the listener
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id6">
+       Cleanup
       </a>
      </li>
     </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-class-exercise-1-ros">
-   In-Class Exercise 1 - ROS
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#checkpoint">
-     Checkpoint
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id6">
-     Cleanup
-    </a>
    </li>
   </ul>
  </li>
@@ -663,9 +690,9 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="robotics-operating-system-ros">
 <h1>Robotics Operating System (ROS)<a class="headerlink" href="#robotics-operating-system-ros" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction-to-ros-and-the-usafabot">
-<h2>Introduction to ROS and the USAFABot<a class="headerlink" href="#introduction-to-ros-and-the-usafabot" title="Permalink to this headline">¶</a></h2>
 <hr class="docutils" />
+<div class="section" id="module-robotics-operating-system-ros">
+<h2>Module: Robotics Operating System (ROS)<a class="headerlink" href="#module-robotics-operating-system-ros" title="Permalink to this headline">¶</a></h2>
 <p><strong>You must open this file as a Jupyter Notebook (link below) to run code</strong></p>
 <p><a class="reference external" href="http://localhost:8888/notebooks/Module1_ROS.ipynb">Run this file as an executable Jupyter Notebook</a></p>
 <div class="section" id="a-note-on-this-document">
@@ -751,7 +778,7 @@
 </li>
 </ol>
 <blockquote>
-<div><p><strong>Syntax:</strong> <code class="docutils literal notranslate"><span class="pre">roslaunch</span> <span class="pre">&lt;package&gt;</span> <span class="pre">&lt;launchfile&gt;</span></code></p>
+<div><p>⌨️ <strong>Syntax:</strong> <code class="docutils literal notranslate"><span class="pre">roslaunch</span> <span class="pre">&lt;package&gt;</span> <span class="pre">&lt;launchfile&gt;</span></code></p>
 </div></blockquote>
 <p>The launch file will run the nodes necessary to simulate our robot and opens two windows: Gazebo and rviz. Gazebo is a simulation tool that provides physics for our robot and enables the testing of algorithms prior to real-world implementation. You should see a USAFABot sitting at (0, 0) facing the positive x direction surrounded by a maze. Using the mouse, left-click and holding will pan, holding the scroll wheel will change the orientation of the camera, and scrolling will zoom in and out.</p>
 <p>The second window is rviz, a tool that visualizes topics interacting in our system. You should see a number of red dots outlining the location of the wall in our simulation. These are objects detected by our LIDAR which is communicating over a scan topic. Using the mouse, left-click will change the orientation of the camera, holding the scroll wheel will pan, and scrolling will zoom in and out (would be nice if they were the same).</p>
@@ -776,7 +803,7 @@
 <p>Open a new terminal tab (select the terminal and press ctrl+shift+t) and run the following (<strong>Pro tip</strong>: in a Linux terminal if you type the first couple letters of a command and then hit tab it will autocomplete the command for you):</p>
 <p><code class="docutils literal notranslate"><span class="pre">rosrun</span> <span class="pre">teleop_twist_keyboard</span> <span class="pre">teleop_twist_keyboard.py</span></code></p>
 <blockquote>
-<div><p><strong>Syntax:</strong> <code class="docutils literal notranslate"><span class="pre">rosrun</span> <span class="pre">&lt;package&gt;</span> <span class="pre">&lt;executable&gt;</span></code></p>
+<div><p>⌨️ <strong>Syntax:</strong> <code class="docutils literal notranslate"><span class="pre">rosrun</span> <span class="pre">&lt;package&gt;</span> <span class="pre">&lt;executable&gt;</span></code></p>
 </div></blockquote>
 <p>To drive the robot use the ‘x’ key to decrease linear x speed to about .25 m/s and use the ‘c’ key to decrease angular z speed to about .5 rad/s. Now follow the directions to utilize the keyboard to drive the robot! You should see the robot move in the simulation.</p>
 <p>Let’s take a look at our rqt_graph to see if anything has changed.</p>
@@ -813,7 +840,9 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!rostopic echo /cmd_vel
 </pre></div>
 </div>
-<p>Note that when moving forward and backward (‘i’ and ‘,’ keys) only a linear x value is sent, when turning left or right (‘j’ and ‘l’ keys) only an angular z value is sent, and when arcing (‘u’, ‘o’, ‘m’, and ‘.’ keys) both a linear x and angular z value are sent.</p>
+<blockquote>
+<div><p>📝️ <strong>Note:</strong> When moving forward and backward (‘i’ and ‘,’ keys) only a linear x value is sent, when turning left or right (‘j’ and ‘l’ keys) only an angular z value is sent, and when arcing (‘u’, ‘o’, ‘m’, and ‘.’ keys) both a linear x and angular z value are sent.</p>
+</div></blockquote>
 <p>To learn more about the messages sent over the <strong>/cmd_vel</strong> topic we can use the <code class="docutils literal notranslate"><span class="pre">type</span></code> command and the <code class="docutils literal notranslate"><span class="pre">rosmsg</span></code> tool.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!rostopic type /cmd_vel
 </pre></div>
@@ -828,9 +857,12 @@
 </div>
 <div class="section" id="cleanup">
 <h3>Cleanup<a class="headerlink" href="#cleanup" title="Permalink to this headline">¶</a></h3>
-<p>Before moving on to the in-class exercise, close all running nodes. In the Jupyter NB at the top menu bar select “Kernel” and “Restart &amp; Clear Output”. In each terminal window, close the node by typing <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code>. Ensure roscore is terminated before moving on to the ICE.</p>
+<p>Before moving on to the in-class exercise, close all running nodes. In the Jupyter Notebook at the top menu bar select “Kernel” and “Restart &amp; Clear Output”. In each terminal window, close the node by typing <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code>. Ensure roscore is terminated before moving on to the ICE.</p>
 </div>
 </div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="in-class-exercise-1">
+<h1>In-Class Exercise 1<a class="headerlink" href="#in-class-exercise-1" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="in-class-exercise-1-talker">
 <h2>In-Class Exercise 1 - Talker<a class="headerlink" href="#in-class-exercise-1-talker" title="Permalink to this headline">¶</a></h2>
 <hr class="docutils" />
@@ -843,19 +875,23 @@
 <div class="section" id="id2">
 <h3>Purpose<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>This Jupyter Notebook will delve a little deeper into ROS implementation. You will create a basic one way chat server that allows a user to send messages to another (both users will be on the same computer at this point in time).</p>
+</div>
 <div class="section" id="initialize-ros">
-<h4>Initialize ROS:<a class="headerlink" href="#initialize-ros" title="Permalink to this headline">¶</a></h4>
+<h3>Initialize ROS:<a class="headerlink" href="#initialize-ros" title="Permalink to this headline">¶</a></h3>
 <p>The first step when utilizing  ROS is to initialize <em>roscore</em>. There are two methods to accomplish this: first, by explicitly running <em>roscore</em> and second, by running a launch file (which will initialize <em>roscore</em> if it is not already running). During the first portion of this course we will explicitly run <em>roscore</em> and then take advantage of launch files later in the course.</p>
 <p>Copy the following code and run it in a new terminal (use the shortcut <code class="docutils literal notranslate"><span class="pre">ctrl+alt+t</span></code> to open a new terminal window or select an open terminal and hit <code class="docutils literal notranslate"><span class="pre">ctrl+shift+t</span></code> to open a new terminal tab):</p>
 <p><code class="docutils literal notranslate"><span class="pre">roscore</span></code></p>
 </div>
-</div>
 <div class="section" id="implementing-the-chat-publisher">
 <h3>Implementing the chat publisher<a class="headerlink" href="#implementing-the-chat-publisher" title="Permalink to this headline">¶</a></h3>
-<p><strong>NOTE</strong>: The following is Python code that will be implemented within the Jupyter Notebook. Again, the Notebook is just a way to allow for code and text to coexist to help guide you through the ICE. You could take all of the code in this Notebook and put it within a Python file and it would work the same as it does here. The focus of this ICE is the ROS implementation. It is assumed you have a working knowledge of Python at this time so this Notebook will not go into a lot of background regarding the Python code. Module 3 will provide a Python refresher.</p>
+<blockquote>
+<div><p>📝️ <strong>Note:</strong> The following is Python code that will be implemented within the Jupyter Notebook. Again, the Notebook is just a way to allow for code and text to coexist to help guide you through the ICE. You could take all of the code in this Notebook and put it within a Python file and it would work the same as it does here. The focus of this ICE is the ROS implementation. It is assumed you have a working knowledge of Python at this time so this Notebook will not go into a lot of background regarding the Python code. Module 3 will provide a Python refresher.</p>
+</div></blockquote>
 <div class="section" id="import-modules">
 <h4>Import modules<a class="headerlink" href="#import-modules" title="Permalink to this headline">¶</a></h4>
-<p><strong>Important</strong>: Importing classes may take some time. You will know the code block is still executing as the bracket on the left of the cell will change to a <code class="docutils literal notranslate"><span class="pre">*</span></code> character. Do not move to the next step until the <code class="docutils literal notranslate"><span class="pre">*</span></code> is gone.</p>
+<blockquote>
+<div><p>⚠️ <strong>Important:</strong> Importing classes may take some time. You will know the code block is still executing as the bracket on the left of the cell will change to a <code class="docutils literal notranslate"><span class="pre">*</span></code> character. Do not move to the next step until the <code class="docutils literal notranslate"><span class="pre">*</span></code> is gone.</p>
+</div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import required modules</span>
 <span class="kn">import</span> <span class="nn">rospy</span>
 <span class="kn">from</span> <span class="nn">std_msgs.msg</span> <span class="kn">import</span> <span class="n">String</span>
@@ -877,9 +913,11 @@
         <span class="n">rate</span><span class="o">.</span><span class="n">sleep</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Line 2 creates the publisher. The publisher will publish <em>String</em> messages over the <strong>/chat</strong> topic. The <code class="docutils literal notranslate"><span class="pre">queue_size</span></code> parameter determines how many messages tjupyter notebook –generate-confighe ROS network will hold before dropping old messages. If the publisher publishes faster than the network can handle, then messages will start getting dropped.</p>
+<p>Line 2 creates the publisher. The publisher will publish <em>String</em> messages over the <strong>/chat</strong> topic. The <code class="docutils literal notranslate"><span class="pre">queue_size</span></code> parameter determines how many messages the ROS network will hold before dropping old messages. If the publisher publishes faster than the network can handle, then messages will start getting dropped.</p>
 <p>Line 3 determines the rate at which the following loop should run. With an input of 10, the loop should run 10 times per second (10 Hz). Line 4 creates a loop that runs until <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code> is pressed in the terminal. Line 5 gets user input while line 6 logs the message into a log file (and prints it to the screen). Line 7 publishes the chat message using the previously created publisher. Lastly, line 8 sleeps so the loop runs at the desired rate.</p>
-<p><strong>Note:</strong> Waiting for user input will cause the loop to not run at 10 Hz as line 5 will block until the user hits enter.</p>
+<blockquote>
+<div><p>📝️ <strong>Note:</strong> Waiting for user input will cause the loop to not run at 10 Hz as line 5 will block until the user hits enter.</p>
+</div></blockquote>
 </div>
 <div class="section" id="main">
 <h4>Main<a class="headerlink" href="#main" title="Permalink to this headline">¶</a></h4>
@@ -889,7 +927,7 @@
     <span class="k">try</span><span class="p">:</span>
         <span class="n">talker</span><span class="p">()</span>
     <span class="k">except</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ROSInterruptException</span><span class="p">:</span>
-        <span class="n">passjupyter</span> <span class="n">notebook</span> <span class="o">--</span><span class="n">generate</span><span class="o">-</span><span class="n">config</span>
+        <span class="k">pass</span>
 </pre></div>
 </div>
 <p>Line 2 of the above code initializes our talker node. The rest creates a try-except statement that calls our talker function. All the try/except really does is ensures we exit cleanly when ctrl+c is pressed in a terminal.</p>
@@ -911,7 +949,7 @@
 </div>
 <div class="section" id="create-the-listener">
 <h4>Create the listener<a class="headerlink" href="#create-the-listener" title="Permalink to this headline">¶</a></h4>
-<p>At this point the talker is waiting for user input. Don’t start typing yet, though! We need to implement and run our listener. Open the <a class="reference external" href="http://localhost:8888/notebooks/ICE1_Listener.ipynb">ICE1_Listener</a> notebook and follow the instructions.</p>
+<p>At this point the talker is waiting for user input. Don’t start typing yet, though! We need to implement and run our listener. Open the <span class="xref myst">ICE1_Listener</span> notebook and follow the instructions.</p>
 </div>
 </div>
 <div class="section" id="ros-commands">
@@ -923,7 +961,7 @@
 <h2>In-Class Exercise 1 - Listener<a class="headerlink" href="#in-class-exercise-1-listener" title="Permalink to this headline">¶</a></h2>
 <hr class="docutils" />
 <p><strong>You must open this file as a Jupyter Notebook (link below) to run code</strong></p>
-<p><a class="reference external" href="http://localhost:8888/notebooks/ICE1_Listener.ipynb">Run this file as an executable Jupyter Notebook</a></p>
+<p><span class="xref myst">Run this file as an executable Jupyter Notebook</span></p>
 <div class="section" id="id3">
 <h3>A note on this document<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>This document is known as a Jupyter Notebook; it is used in academia and industry to allow text and executable code to coexist in a very easy to read format. Blocks can contain text or code, and for blocks containing code, press <code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">Enter</span></code> to run the code. Earlier blocks of code need to be run for the later blocks of code to work.</p>
@@ -1070,7 +1108,7 @@
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Intro &amp; GIT</p>
+            <p class="prev-next-title">Intro and GIT</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Module2.html" title="next page">
@@ -1087,7 +1125,7 @@
     <footer class="footer">
   <p>
     
-      By Mr. Steven Beyer<br/>
+      By The Jupyter Book community<br/>
     
         &copy; Copyright 2021.<br/>
   </p>

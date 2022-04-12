@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Module 1: Robotics Operating System (ROS) &#8212; ECE495</title>
+    <title>Module 1: Robotics Operating System (ROS) &#8212; My Jupyter Book</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -72,14 +72,9 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
       
       
-      <img src="_static/beyer_bot.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">ECE495</h1>
+      <h1 class="site-logo" id="site-title">My Jupyter Book</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -108,12 +103,12 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  ROBOT SETUP
+  ROBOT and MASTER SETUP
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="robot_setup.html">
+  <a class="reference internal" href="RobotSetup.html">
    Robot Setup
   </a>
  </li>
@@ -126,7 +121,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Module0.html">
-   Intro &amp; GIT
+   Module 0 - Intro and GIT
   </a>
  </li>
 </ul>
@@ -138,7 +133,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Module1.html">
-   Robotics Operating System (ROS)
+   Module 1: Robotics Operating System (ROS)
   </a>
  </li>
 </ul>
@@ -150,7 +145,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Module2.html">
-   Linux for Robotics
+   Module 2: Linux for Robotics
   </a>
  </li>
 </ul>
@@ -226,6 +221,30 @@
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 09
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module9.html">
+   Computer Vision
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module10.html">
+   Final Project
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -277,22 +296,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule1_ROS.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -307,7 +310,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Module1_ROS.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Module1_ROS.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -330,36 +333,29 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction-to-ros-and-the-usafabot">
-   Introduction to ROS and the USAFABot
+  <a class="reference internal nav-link" href="#a-note-on-this-document">
+   A note on this document
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-note-on-this-document">
-     A note on this document
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#purpose">
-     Purpose
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#setting-up-the-terminal-for-ros">
-     Setting up the terminal for ROS
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#running-the-usafabot">
-     Running the USAFABot
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#common-ros-commands">
-     Common ROS commands
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#purpose">
+   Purpose
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-up-the-terminal-for-ros">
+   Setting up the terminal for ROS
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#running-the-usafabot">
+   Running the USAFABot
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#common-ros-commands">
+   Common ROS commands
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#cleanup">
@@ -387,36 +383,29 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction-to-ros-and-the-usafabot">
-   Introduction to ROS and the USAFABot
+  <a class="reference internal nav-link" href="#a-note-on-this-document">
+   A note on this document
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-note-on-this-document">
-     A note on this document
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#purpose">
-     Purpose
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#setting-up-the-terminal-for-ros">
-     Setting up the terminal for ROS
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#running-the-usafabot">
-     Running the USAFABot
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#common-ros-commands">
-     Common ROS commands
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#purpose">
+   Purpose
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-up-the-terminal-for-ros">
+   Setting up the terminal for ROS
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#running-the-usafabot">
+   Running the USAFABot
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#common-ros-commands">
+   Common ROS commands
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#cleanup">
@@ -434,19 +423,17 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="module-1-robotics-operating-system-ros">
 <h1>Module 1: Robotics Operating System (ROS)<a class="headerlink" href="#module-1-robotics-operating-system-ros" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction-to-ros-and-the-usafabot">
-<h2>Introduction to ROS and the USAFABot<a class="headerlink" href="#introduction-to-ros-and-the-usafabot" title="Permalink to this headline">¶</a></h2>
 <hr class="docutils" />
 <div class="section" id="a-note-on-this-document">
-<h3>A note on this document<a class="headerlink" href="#a-note-on-this-document" title="Permalink to this headline">¶</a></h3>
+<h2>A note on this document<a class="headerlink" href="#a-note-on-this-document" title="Permalink to this headline">¶</a></h2>
 <p>This document is known as a Jupyter Notebook; it is used in academia and industry to allow text and executable code to coexist in a very easy to read format. Blocks can contain text or code, and for blocks containing code, press <code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">Enter</span></code> to run the code. Earlier blocks of code need to be run for the later blocks of code to work.</p>
 </div>
 <div class="section" id="purpose">
-<h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h3>
+<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
 <p>This Jupyter Notebook accompanies the introduction to ROS notetaker used in class. We will apply the knowledge you learned by interacting with a simulated USAFABot.</p>
 </div>
 <div class="section" id="setting-up-the-terminal-for-ros">
-<h3>Setting up the terminal for ROS<a class="headerlink" href="#setting-up-the-terminal-for-ros" title="Permalink to this headline">¶</a></h3>
+<h2>Setting up the terminal for ROS<a class="headerlink" href="#setting-up-the-terminal-for-ros" title="Permalink to this headline">¶</a></h2>
 <ol>
 <li><p>Open a new Linux terminal by pressing:</p>
 <p><code class="docutils literal notranslate"><span class="pre">ctrl+alt+t</span></code>
@@ -508,7 +495,7 @@
 </ol>
 </div>
 <div class="section" id="running-the-usafabot">
-<h3>Running the USAFABot<a class="headerlink" href="#running-the-usafabot" title="Permalink to this headline">¶</a></h3>
+<h2>Running the USAFABot<a class="headerlink" href="#running-the-usafabot" title="Permalink to this headline">¶</a></h2>
 <p>The best way to learn about ROS is through implementation, however, let’s start off by playing around with a virtual USAFABot! The USAFABot is a tool we will utilize throughout this course to apply and integrate robotics systems. Ultimately you will create a complex embedded robotics system to perform a specific dedicated task, such as navigating the halls of DFEC. But let’s see if we can get the robot to drive around first.</p>
 <ol>
 <li><p>In a terminal (<strong>Pro tip:</strong> ctrl+alt+t opens a new terminal window, while ctrl+shift+t opens a new terminal tab in an existing window) and initialize the ROS network:</p>
@@ -520,7 +507,7 @@
 </li>
 </ol>
 <blockquote>
-<div><p><strong>Syntax:</strong> <code class="docutils literal notranslate"><span class="pre">roslaunch</span> <span class="pre">&lt;package&gt;</span> <span class="pre">&lt;launchfile&gt;</span></code></p>
+<div><p>⌨️ <strong>Syntax:</strong> <code class="docutils literal notranslate"><span class="pre">roslaunch</span> <span class="pre">&lt;package&gt;</span> <span class="pre">&lt;launchfile&gt;</span></code></p>
 </div></blockquote>
 <p>The launch file will run the nodes necessary to simulate our robot and opens two windows: Gazebo and rviz. Gazebo is a simulation tool that provides physics for our robot and enables the testing of algorithms prior to real-world implementation. You should see a USAFABot sitting at (0, 0) facing the positive x direction surrounded by a maze. Using the mouse, left-click and holding will pan, holding the scroll wheel will change the orientation of the camera, and scrolling will zoom in and out.</p>
 <p>The second window is rviz, a tool that visualizes topics interacting in our system. You should see a number of red dots outlining the location of the wall in our simulation. These are objects detected by our LIDAR which is communicating over a scan topic. Using the mouse, left-click will change the orientation of the camera, holding the scroll wheel will pan, and scrolling will zoom in and out (would be nice if they were the same).</p>
@@ -591,7 +578,7 @@ ValueError: PyCapsule_GetPointer called with incorrect name
 <p>Open a new terminal tab (select the terminal and press ctrl+shift+t) and run the following (<strong>Pro tip</strong>: in a Linux terminal if you type the first couple letters of a command and then hit tab it will autocomplete the command for you):</p>
 <p><code class="docutils literal notranslate"><span class="pre">rosrun</span> <span class="pre">teleop_twist_keyboard</span> <span class="pre">teleop_twist_keyboard.py</span></code></p>
 <blockquote>
-<div><p><strong>Syntax:</strong> <code class="docutils literal notranslate"><span class="pre">rosrun</span> <span class="pre">&lt;package&gt;</span> <span class="pre">&lt;executable&gt;</span></code></p>
+<div><p>⌨️ <strong>Syntax:</strong> <code class="docutils literal notranslate"><span class="pre">rosrun</span> <span class="pre">&lt;package&gt;</span> <span class="pre">&lt;executable&gt;</span></code></p>
 </div></blockquote>
 <p>To drive the robot use the ‘x’ key to decrease linear x speed to about .25 m/s and use the ‘c’ key to decrease angular z speed to about .5 rad/s. Now follow the directions to utilize the keyboard to drive the robot! You should see the robot move in the simulation.</p>
 <p>Let’s take a look at our rqt_graph to see if anything has changed.</p>
@@ -629,7 +616,7 @@ ValueError: PyCapsule_GetPointer called with incorrect name
 <p>You should now see the teleop_twist_keyboard node which sends messages over <strong>/cmd_vel</strong> topic to Gazebo. <strong>Close the rqt_graph window</strong>. Let’s run through a number of commands that will provide you more information about your ROS network. You will use these throughout the course to determine what is going on in your ROS network.</p>
 </div>
 <div class="section" id="common-ros-commands">
-<h3>Common ROS commands<a class="headerlink" href="#common-ros-commands" title="Permalink to this headline">¶</a></h3>
+<h2>Common ROS commands<a class="headerlink" href="#common-ros-commands" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">rosnode</span></code> command allows us to interact with nodes. Typing any ROS command followd by <code class="docutils literal notranslate"><span class="pre">--help</span></code> will provide information about that command:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -734,7 +721,9 @@ Type rostopic &lt;command&gt; -h for more detailed usage, e.g. &#39;rostopic ech
 </div>
 </div>
 </div>
-<p>Note that when moving forward and backward (‘i’ and ‘,’ keys) only a linear x value is sent, when turning left or right (‘j’ and ‘l’ keys) only an angular z value is sent, and when arcing (‘u’, ‘o’, ‘m’, and ‘.’ keys) both a linear x and angular z value are sent.</p>
+<blockquote>
+<div><p>📝️ <strong>Note:</strong> When moving forward and backward (‘i’ and ‘,’ keys) only a linear x value is sent, when turning left or right (‘j’ and ‘l’ keys) only an angular z value is sent, and when arcing (‘u’, ‘o’, ‘m’, and ‘.’ keys) both a linear x and angular z value are sent.</p>
+</div></blockquote>
 <p>To learn more about the messages sent over the <strong>/cmd_vel</strong> topic we can use the <code class="docutils literal notranslate"><span class="pre">type</span></code> command and the <code class="docutils literal notranslate"><span class="pre">rosmsg</span></code> tool.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -784,10 +773,9 @@ geometry_msgs/Vector3 angular
 </div>
 </div>
 </div>
-</div>
 <div class="section" id="cleanup">
 <h2>Cleanup<a class="headerlink" href="#cleanup" title="Permalink to this headline">¶</a></h2>
-<p>Before moving on to the in-class exercise, close all running nodes. In the Jupyter NB at the top menu bar select “Kernel” and “Restart &amp; Clear Output”. In each terminal window, close the node by typing <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code>. Ensure roscore is terminated before moving on to the ICE.</p>
+<p>Before moving on to the in-class exercise, close all running nodes. In the Jupyter Notebook at the top menu bar select “Kernel” and “Restart &amp; Clear Output”. In each terminal window, close the node by typing <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code>. Ensure roscore is terminated before moving on to the ICE.</p>
 </div>
 </div>
 
@@ -823,7 +811,7 @@ geometry_msgs/Vector3 angular
     <footer class="footer">
   <p>
     
-      By Mr. Steven Beyer<br/>
+      By The Jupyter Book community<br/>
     
         &copy; Copyright 2021.<br/>
   </p>

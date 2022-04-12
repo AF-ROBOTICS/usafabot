@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Module 5: Custom Messages &#8212; ECE495</title>
+    <title>Lab 1: Custom Messages &#8212; My Jupyter Book</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -72,14 +72,9 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
       
       
-      <img src="_static/beyer_bot.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">ECE495</h1>
+      <h1 class="site-logo" id="site-title">My Jupyter Book</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -108,12 +103,12 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  ROBOT SETUP
+  ROBOT and MASTER SETUP
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="robot_setup.html">
+  <a class="reference internal" href="RobotSetup.html">
    Robot Setup
   </a>
  </li>
@@ -126,7 +121,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Module0.html">
-   Intro &amp; GIT
+   Module 0 - Intro and GIT
   </a>
  </li>
 </ul>
@@ -138,7 +133,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Module1.html">
-   Robotics Operating System (ROS)
+   Module 1: Robotics Operating System (ROS)
   </a>
  </li>
 </ul>
@@ -150,7 +145,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Module2.html">
-   Linux for Robotics
+   Module 2: Linux for Robotics
   </a>
  </li>
 </ul>
@@ -226,6 +221,30 @@
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 09
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module9.html">
+   Computer Vision
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module10.html">
+   Final Project
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -277,22 +296,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FLab1_CustomMessages.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -307,7 +310,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Lab1_CustomMessages.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Lab1_CustomMessages.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -330,65 +333,58 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lab-1">
-   Lab 1
+  <a class="reference internal nav-link" href="#purpose">
+   Purpose
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#robot">
+   Robot
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#purpose">
-     Purpose
+    <a class="reference internal nav-link" href="#setup">
+     Setup:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#robot">
-     Robot
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#setup">
-       Setup:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#usafabot-serial-py">
-       usafabot_serial.py
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#master">
-     Master
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       Setup:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#controller-py">
-       controller.py
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#run-your-nodes">
-     Run your nodes
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#report">
-     Report
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#turn-in-requirements">
-     Turn-in Requirements
+    <a class="reference internal nav-link" href="#usafabot-serial-py">
+     usafabot_serial.py
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#master">
+   Master
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Setup:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#controller-py">
+     controller.py
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#run-your-nodes">
+   Run your nodes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#report">
+   Report
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#turn-in-requirements">
+   Turn-in Requirements
+  </a>
  </li>
 </ul>
 
@@ -400,7 +396,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Module 5: Custom Messages</h1>
+                <h1>Lab 1: Custom Messages</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -411,65 +407,58 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lab-1">
-   Lab 1
+  <a class="reference internal nav-link" href="#purpose">
+   Purpose
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#robot">
+   Robot
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#purpose">
-     Purpose
+    <a class="reference internal nav-link" href="#setup">
+     Setup:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#robot">
-     Robot
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#setup">
-       Setup:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#usafabot-serial-py">
-       usafabot_serial.py
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#master">
-     Master
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       Setup:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#controller-py">
-       controller.py
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#run-your-nodes">
-     Run your nodes
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#report">
-     Report
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#turn-in-requirements">
-     Turn-in Requirements
+    <a class="reference internal nav-link" href="#usafabot-serial-py">
+     usafabot_serial.py
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#master">
+   Master
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Setup:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#controller-py">
+     controller.py
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#run-your-nodes">
+   Run your nodes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#report">
+   Report
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#turn-in-requirements">
+   Turn-in Requirements
+  </a>
  </li>
 </ul>
 
@@ -480,19 +469,20 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="module-5-custom-messages">
-<h1>Module 5: Custom Messages<a class="headerlink" href="#module-5-custom-messages" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="lab-1">
-<h2>Lab 1<a class="headerlink" href="#lab-1" title="Permalink to this headline">¶</a></h2>
+  <div class="tex2jax_ignore mathjax_ignore section" id="lab-1-custom-messages">
+<h1>Lab 1: Custom Messages<a class="headerlink" href="#lab-1-custom-messages" title="Permalink to this headline">¶</a></h1>
 <hr class="docutils" />
 <div class="section" id="purpose">
-<h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h3>
+<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
 <p>This lab will provide practice in creating custom messages. You will take the <strong>cmd_vel</strong> topic and <em>Twist</em> message from the <strong>teleop_twist_keyboard</strong> node and use a <strong>controller</strong> node to send <em>USAFABOT_Cmd</em> messages to the <strong>usafabot_serial</strong> node. As we introduce new subsystems to the robot, the <strong>controller</strong> node will determine priority between these sensors/systems and then drive the robot using the <strong>usafabot_cmd</strong> topic accordingly.</p>
+<blockquote>
+<div><p>📝️ <strong>Note:</strong> The <strong>teleop_twist_keyboard</strong> node only sends a <em>Twist</em> message when a new key is pressed; we will have to provide logic within our controller to do the same for our <em>USAFABOT_Cmd</em> message, otherwise our controller will continuously try to send a value to the robot and fill the robot’s buffer fairly quickly. We can do this by comparing the previously sent <em>USAFABOT_Cmd</em> message with the current message and if they are <strong>not</strong> the same then publish the command. You will see this in the <strong><a class="reference external" href="http://controller.py">controller.py</a></strong> instructions.</p>
+</div></blockquote>
 </div>
 <div class="section" id="robot">
-<h3>Robot<a class="headerlink" href="#robot" title="Permalink to this headline">¶</a></h3>
+<h2>Robot<a class="headerlink" href="#robot" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="setup">
-<h4>Setup:<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h4>
+<h3>Setup:<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h3>
 <ol>
 <li><p>In a new terminal on the <strong>Master</strong>, create a secure shell connection to your <strong>Robot</strong>.</p></li>
 <li><p>Create a custom message within the <strong>usafabot</strong> package’s <strong>msg</strong> folder that is called <em>USAFABOT_Cmd.msg</em> and has two fields and a header:</p>
@@ -506,10 +496,12 @@
 <li><p>Edit <strong>CMakeLists.txt</strong> per the ICE instructions (don’t remove anything from the file, just add what is needed to run your custom message).</p></li>
 <li><p>Make and source your workspace.</p></li>
 </ol>
-<p><strong>Note</strong>: This message is now part of the <strong>usafabot</strong> package and if you ran <code class="docutils literal notranslate"><span class="pre">rosmsg</span> <span class="pre">show</span> <span class="pre">USAFABOT_Cmd</span></code> it would return <em>usafabot/USAFABOT_Cmd</em>.</p>
+<blockquote>
+<div><p>📝️ <strong>Note</strong>: This message is now part of the <strong>usafabot</strong> package and if you ran <code class="docutils literal notranslate"><span class="pre">rosmsg</span> <span class="pre">show</span> <span class="pre">USAFABOT_Cmd</span></code> it would return <em>usafabot/USAFABOT_Cmd</em>.</p>
+</div></blockquote>
 </div>
 <div class="section" id="usafabot-serial-py">
-<h4>usafabot_serial.py<a class="headerlink" href="#usafabot-serial-py" title="Permalink to this headline">¶</a></h4>
+<h3>usafabot_serial.py<a class="headerlink" href="#usafabot-serial-py" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>Edit <strong>usafabot_serial.py</strong> within the <strong>usafabot</strong> package (<code class="docutils literal notranslate"><span class="pre">rosed</span> <span class="pre">usafabot</span> <span class="pre">usafabot_serial.py</span></code>) to:</p>
 <ul class="simple">
@@ -520,14 +512,14 @@
 </li>
 </ol>
 <blockquote>
-<div><p>💡️ <strong>HINT</strong>: Look for the tag “TODO” within the python file.</p>
+<div><p>💡️ <strong>Tip:</strong> Look for the tag “TODO” within the python file.</p>
 </div></blockquote>
 </div>
 </div>
 <div class="section" id="master">
-<h3>Master<a class="headerlink" href="#master" title="Permalink to this headline">¶</a></h3>
+<h2>Master<a class="headerlink" href="#master" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id1">
-<h4>Setup:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<h3>Setup:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>To use the same custom message on two different machines the custom message must be created and part of the same package on both machines. On the <strong>Robot</strong>, the <em>USAFABOT_Cmd</em> message is part of the <strong>usafabot</strong> package. Therefore, the message must be part of the <strong>usafabot</strong> package on the <strong>Master</strong>. When communicating, ROS uses the <strong>whole</strong> name of the msg, <em>usafabot/USAFABOT_Cmd</em>, so these must be the same on each system. There should already be a <strong>usafabot</strong> package on your master.</p>
 <ol>
 <li><p>In a terminal on the <strong>Master</strong>, browse to the <strong>usafabot</strong> package.</p></li>
@@ -545,7 +537,7 @@
 </ol>
 </div>
 <div class="section" id="controller-py">
-<h4><a class="reference external" href="http://controller.py">controller.py</a><a class="headerlink" href="#controller-py" title="Permalink to this headline">¶</a></h4>
+<h3><a class="reference external" href="http://controller.py">controller.py</a><a class="headerlink" href="#controller-py" title="Permalink to this headline">¶</a></h3>
 <ol>
 <li><p>Create a <strong><a class="reference external" href="http://controller.py">controller.py</a></strong> node within the src folder of <strong>lab1</strong>.</p></li>
 <li><p>Edit the file and import <strong>rospy</strong>, <strong>Twist</strong>, and the new message, <strong>USAFABOT_Cmd</strong>.</p></li>
@@ -575,6 +567,8 @@
 <ul class="simple">
 <li><p>Instance variable, <code class="docutils literal notranslate"><span class="pre">self.cmd</span></code>, to store the <code class="docutils literal notranslate"><span class="pre">USAFABOT_CMD()</span></code> message.</p></li>
 <li><p>Instance variable, <code class="docutils literal notranslate"><span class="pre">self.kb</span></code>, to store the <code class="docutils literal notranslate"><span class="pre">Twist()</span></code> message sent from <strong>teleop_twist_keyboard</strong>.</p></li>
+<li><p>Instance variable, <code class="docutils literal notranslate"><span class="pre">self.prev_x</span></code>, to store the previous linear x value.</p></li>
+<li><p>Instance variable, <code class="docutils literal notranslate"><span class="pre">self.prev_z</span></code>, to store the previous angular z value.</p></li>
 <li><p>A subscriber to the <strong>cmd_vel</strong> topic with a callback to the `callback_keyboard() function.</p></li>
 <li><p>A publisher to the <strong>usafabot_cmd</strong> topic.</p></li>
 <li><p>A timer that runs at 100 Hz with a callback to the <code class="docutils literal notranslate"><span class="pre">callback_controller()</span></code> function.</p></li>
@@ -584,19 +578,30 @@
 </ul>
 </li>
 <li><p>Write the <code class="docutils literal notranslate"><span class="pre">callback_keyboard()</span></code> function that will copy the message received (kb) to the keyboard instance variable. Remember, <code class="docutils literal notranslate"><span class="pre">callback_keyboard()</span></code> is called every time a new <em>Twist</em> message is sent over the <strong>cmd_vel</strong> topic. The <em>Twist</em> message is passed to the function as the second input (kb).</p></li>
-<li><p>Write the <code class="docutils literal notranslate"><span class="pre">callback_controller()</span></code> function that when <code class="docutils literal notranslate"><span class="pre">ctrl_c</span></code> is not pressed it sets the <code class="docutils literal notranslate"><span class="pre">lin_x</span></code> and <code class="docutils literal notranslate"><span class="pre">ang_z</span></code> characteristics of the <em>USAFABOT_Cmd</em> message to the <code class="docutils literal notranslate"><span class="pre">linear.x</span></code> and <code class="docutils literal notranslate"><span class="pre">angular.z</span></code> characteristics of the <em>Twist</em> message and publishes the message. For example:</p>
+<li><p>Write the <code class="docutils literal notranslate"><span class="pre">callback_controller()</span></code> function that:</p>
+<ol class="simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">ctrl_c</span></code> is not pressed.</p></li>
+<li><p>Set the <code class="docutils literal notranslate"><span class="pre">lin_x</span></code> and <code class="docutils literal notranslate"><span class="pre">ang_z</span></code> characteristics of the <em>USAFABOT_Cmd</em> message to the <code class="docutils literal notranslate"><span class="pre">linear.x</span></code> and <code class="docutils literal notranslate"><span class="pre">angular.z</span></code> characteristics of the <em>Twist</em> message. For example:</p></li>
+</ol>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">cmd</span><span class="o">.</span><span class="n">lin_x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kb</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">x</span>
 </pre></div>
 </div>
-<p>where the left side of the expression is our custom <em>USAFABOT_Cmd</em> message and the right side is the <em>Twist</em> message sent over the <strong>cmd_vel</strong> topic (you can see the format of the <em>Twist</em> message in the ROS documentation: <a class="reference external" href="http://docs.ros.org/en/lunar/api/geometry_msgs/html/msg/Twist.html">Twist Message</a>.</p>
+<p>where the left side of the expression is our custom <em>USAFABOT_Cmd</em> message and the right side is the <em>Twist</em> message sent over the <strong>cmd_vel</strong> topic (you can find the format of the <em>Twist</em> message in the ROS documentation: <a class="reference external" href="http://docs.ros.org/en/lunar/api/geometry_msgs/html/msg/Twist.html">Twist Message</a>).</p>
+<ol class="simple">
+<li><p>Compare the previous linear x and angular z values with the current values and if they are <strong>NOT</strong> the same then publish the command.</p></li>
+<li><p>Reset previous values to current values.</p></li>
+</ol>
 </li>
-<li><p>Write the shutdownhook() function to print “Controller exiting. Halting robot.”, set <code class="docutils literal notranslate"><span class="pre">self.ctrl_c</span></code> to <em>True</em>, and publish a message over the <strong>usafabot_cmd</strong> topic with a linear x and angular z of 0 so the robot will stop.</p></li>
+<li><p>Write the <code class="docutils literal notranslate"><span class="pre">shutdownhook()</span></code> function to print “Controller exiting. Halting robot.”, set <code class="docutils literal notranslate"><span class="pre">self.ctrl_c</span></code> to <em>True</em>, and publish a message over the <strong>usafabot_cmd</strong> topic with a linear x and angular z of 0 so the robot will stop.</p></li>
 <li><p>Create a <code class="docutils literal notranslate"><span class="pre">__main__()</span></code> function that initializes the controller node (node names are lower case), creates an instance of the Controller class, and then spins (runs forever).</p></li>
 </ol>
+<blockquote>
+<div><p>📝️ <strong>Note:</strong> Remember that in a Python file the <code class="docutils literal notranslate"><span class="pre">main()</span></code> function is different than what we used in Jupyter Notebooks. Look at ICE5 for an example.</p>
+</div></blockquote>
 </div>
 </div>
 <div class="section" id="run-your-nodes">
-<h3>Run your nodes<a class="headerlink" href="#run-your-nodes" title="Permalink to this headline">¶</a></h3>
+<h2>Run your nodes<a class="headerlink" href="#run-your-nodes" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>On the <strong>Master</strong> open a terminal and run <strong>roscore</strong>.</p></li>
 <li><p>Open another terminal and enable statistics for <strong>rqt_graph</strong>.</p></li>
@@ -607,15 +612,14 @@
 </ol>
 </div>
 <div class="section" id="report">
-<h3>Report<a class="headerlink" href="#report" title="Permalink to this headline">¶</a></h3>
+<h2>Report<a class="headerlink" href="#report" title="Permalink to this headline">¶</a></h2>
 <p>Complete a short 2-3 page report that utilizes the format and answers the questions within the report template. The report template and an example report can be found within the Team under <code class="docutils literal notranslate"><span class="pre">Resources/Lab</span> <span class="pre">Template</span></code>.</p>
 </div>
 <div class="section" id="turn-in-requirements">
-<h3>Turn-in Requirements<a class="headerlink" href="#turn-in-requirements" title="Permalink to this headline">¶</a></h3>
-<p><strong>[25 points]</strong> Demonstration of keyboard control of USAFABOT (preferably in person, but can be recorded and posted to Teams under the Lab1 channel).</p>
+<h2>Turn-in Requirements<a class="headerlink" href="#turn-in-requirements" title="Permalink to this headline">¶</a></h2>
+<p><strong>[25 points]</strong> Demonstration of keyboard control of USAFABot (preferably in person, but can be recorded and posted to Teams under the Lab1 channel).</p>
 <p><strong>[50 points]</strong> Report via Gradescope.</p>
-<p><strong>[25 points]</strong> Code: push your code to your repository. Also, include a screen shot of the <strong><a class="reference external" href="http://controller.py">controller.py</a></strong> and <strong>usafabot_serial.py</strong> files and submit at the end of your report.</p>
-</div>
+<p><strong>[25 points]</strong> Code: push your code to your repository. Also, include a screen shot of the <strong><a class="reference external" href="http://controller.py">controller.py</a></strong> and <strong>usafabot_serial.py</strong> files at the end of your report.</p>
 </div>
 </div>
 
@@ -651,7 +655,7 @@
     <footer class="footer">
   <p>
     
-      By Mr. Steven Beyer<br/>
+      By The Jupyter Book community<br/>
     
         &copy; Copyright 2021.<br/>
   </p>

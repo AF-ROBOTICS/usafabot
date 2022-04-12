@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Python3 for Robotics &#8212; ECE495</title>
+    <title>Python3 for Robotics &#8212; My Jupyter Book</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -74,14 +74,9 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
       
       
-      <img src="_static/beyer_bot.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">ECE495</h1>
+      <h1 class="site-logo" id="site-title">My Jupyter Book</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -110,12 +105,12 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  ROBOT SETUP
+  ROBOT and MASTER SETUP
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="robot_setup.html">
+  <a class="reference internal" href="RobotSetup.html">
    Robot Setup
   </a>
  </li>
@@ -128,7 +123,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Module0.html">
-   Intro &amp; GIT
+   Intro and GIT
   </a>
  </li>
 </ul>
@@ -228,6 +223,30 @@
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 09
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module9.html">
+   Computer Vision
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module10.html">
+   Final Project
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -279,22 +298,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule3.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -314,260 +317,272 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#rock-paper-scissors-user">
-   Rock Paper Scissors User
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Python3 for Robotics
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-note-on-this-document">
-     A note on this document
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#purpose">
-     Purpose
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#import-modules-at-top-of-python-code">
-     Import modules at top of Python code
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#variables">
-     Variables
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#lists">
-     Lists
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#functions">
-     Functions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#user-input">
-     User input
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#validating-user-input-with-if-statements">
-     Validating user input with if statements
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#classes">
-     Classes
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python3">
+     Python3
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#create-the-player-class-and-init-method">
-       Create the player class and init method
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#a-note-on-this-document">
+       A note on this document
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#ros-callback-method-part-of-the-player-class-called-by-timer">
-       ROS callback method part of the Player class called by timer
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#purpose">
+       Purpose
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#ros-callback-method-part-of-player-class-called-by-topic">
-       ROS callback method part of Player class called by topic
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#import-modules-at-top-of-python-code">
+       Import modules at top of Python code
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#class-methods-part-of-player-class">
-       Class methods part of Player class
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#variables">
+       Variables
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#lists">
+       Lists
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#functions">
+       Functions
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#user-input">
+       User input
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#validating-user-input-with-if-statements">
+       Validating user input with if statements
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#classes">
+       Classes
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#create-the-player-class-and-init-method">
+         Create the player class and init method
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#ros-callback-method-part-of-the-player-class-called-by-timer">
+         ROS callback method part of the Player class called by timer
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#ros-callback-method-part-of-player-class-called-by-topic">
+         ROS callback method part of Player class called by topic
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#class-methods-part-of-player-class">
+         Class methods part of Player class
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#let-s-start-the-game">
+       Let’s start the game!
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#initialize-ros">
+         Initialize ROS:
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#import-modules">
+         Import modules:
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#build-the-class">
+         Build the class:
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#create-the-main">
+         Create the main
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#create-the-computer-player">
+         Create the computer player
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#run-the-program">
+         Run the program
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#ros-refresher">
+         ROS refresher
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rps-computer">
+     RPS Computer
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       A note on this document
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#computer-player">
+       Computer Player
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#let-s-start-the-game">
-     Let’s start the game!
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ros">
+     ROS
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#initialize-ros">
-       Initialize ROS:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#import-modules">
-       Import modules:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#build-the-class">
-       Build the class:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#create-the-main">
-       Create the main
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#create-the-computer-player">
-       Create the computer player
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#run-our-user-class">
-       Run our User class
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cleanup">
+       Cleanup
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ros-refresher">
-     ROS refresher
-    </a>
-   </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ros">
-   ROS
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-cass-exercise-3">
+   In-Cass Exercise 3
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cleanup">
-     Cleanup
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#rock-paper-scissors-computer">
-   Rock Paper Scissors Computer
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     A note on this document
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#computer-player">
-     Computer Player
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-class-exercise-3-client">
-   In-Class Exercise 3 - Client
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     A note on this document
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     Purpose
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#in-class-exercise-3-client">
+     In-Class Exercise 3 - Client
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       A note on this document
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Purpose
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id4">
        Initialize ROS:
       </a>
      </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#implementing-the-chat-client">
+       Implementing the chat client
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id5">
+         Import modules
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#client-class">
+         Client Class
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#main">
+         Main
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id6">
+         Run the program
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#create-the-server">
+         Create the server
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ros-commands">
+       ROS commands
+      </a>
+     </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#implementing-the-chat-client">
-     Implementing the chat client
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#in-class-exercise-3-server">
+     In-Class Exercise 3 - Server
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id5">
-       Import modules
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#implementing-the-chat-server">
+       Implementing the chat server
       </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#client-class">
-       Client Class
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#main">
-       Main
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#run-the-client">
-       Run the client
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#create-the-server">
-       Create the server
-      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id7">
+         Import modules
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#server-class">
+         Server Class
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id8">
+         Main
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id9">
+         Run the program
+        </a>
+       </li>
+      </ul>
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ros-commands">
-     ROS commands
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-class-exercise-3-server">
-   In-Class Exercise 3 - Server
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#implementing-the-chat-server">
-     Implementing the chat server
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#in-class-exercise-3-ros">
+     In-Class Exercise 3 - ROS
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id6">
-       Import modules
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#checkpoint">
+       Checkpoint
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#server-class">
-       Server Class
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id7">
-       Main
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#run-the-server">
-       Run the server
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id10">
+       Cleanup
       </a>
      </li>
     </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-class-exercise-3-ros">
-   In-Class Exercise 3 - ROS
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#checkpoint">
-     Checkpoint
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id8">
-     Cleanup
-    </a>
    </li>
   </ul>
  </li>
@@ -591,260 +606,272 @@
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#rock-paper-scissors-user">
-   Rock Paper Scissors User
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Python3 for Robotics
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-note-on-this-document">
-     A note on this document
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#purpose">
-     Purpose
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#import-modules-at-top-of-python-code">
-     Import modules at top of Python code
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#variables">
-     Variables
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#lists">
-     Lists
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#functions">
-     Functions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#user-input">
-     User input
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#validating-user-input-with-if-statements">
-     Validating user input with if statements
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#classes">
-     Classes
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python3">
+     Python3
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#create-the-player-class-and-init-method">
-       Create the player class and init method
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#a-note-on-this-document">
+       A note on this document
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#ros-callback-method-part-of-the-player-class-called-by-timer">
-       ROS callback method part of the Player class called by timer
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#purpose">
+       Purpose
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#ros-callback-method-part-of-player-class-called-by-topic">
-       ROS callback method part of Player class called by topic
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#import-modules-at-top-of-python-code">
+       Import modules at top of Python code
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#class-methods-part-of-player-class">
-       Class methods part of Player class
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#variables">
+       Variables
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#lists">
+       Lists
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#functions">
+       Functions
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#user-input">
+       User input
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#validating-user-input-with-if-statements">
+       Validating user input with if statements
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#classes">
+       Classes
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#create-the-player-class-and-init-method">
+         Create the player class and init method
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#ros-callback-method-part-of-the-player-class-called-by-timer">
+         ROS callback method part of the Player class called by timer
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#ros-callback-method-part-of-player-class-called-by-topic">
+         ROS callback method part of Player class called by topic
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#class-methods-part-of-player-class">
+         Class methods part of Player class
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#let-s-start-the-game">
+       Let’s start the game!
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#initialize-ros">
+         Initialize ROS:
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#import-modules">
+         Import modules:
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#build-the-class">
+         Build the class:
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#create-the-main">
+         Create the main
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#create-the-computer-player">
+         Create the computer player
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#run-the-program">
+         Run the program
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#ros-refresher">
+         ROS refresher
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rps-computer">
+     RPS Computer
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       A note on this document
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#computer-player">
+       Computer Player
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#let-s-start-the-game">
-     Let’s start the game!
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ros">
+     ROS
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#initialize-ros">
-       Initialize ROS:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#import-modules">
-       Import modules:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#build-the-class">
-       Build the class:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#create-the-main">
-       Create the main
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#create-the-computer-player">
-       Create the computer player
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#run-our-user-class">
-       Run our User class
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cleanup">
+       Cleanup
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ros-refresher">
-     ROS refresher
-    </a>
-   </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ros">
-   ROS
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-cass-exercise-3">
+   In-Cass Exercise 3
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cleanup">
-     Cleanup
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#rock-paper-scissors-computer">
-   Rock Paper Scissors Computer
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     A note on this document
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#computer-player">
-     Computer Player
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-class-exercise-3-client">
-   In-Class Exercise 3 - Client
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     A note on this document
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     Purpose
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#in-class-exercise-3-client">
+     In-Class Exercise 3 - Client
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       A note on this document
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Purpose
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id4">
        Initialize ROS:
       </a>
      </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#implementing-the-chat-client">
+       Implementing the chat client
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id5">
+         Import modules
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#client-class">
+         Client Class
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#main">
+         Main
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id6">
+         Run the program
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#create-the-server">
+         Create the server
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ros-commands">
+       ROS commands
+      </a>
+     </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#implementing-the-chat-client">
-     Implementing the chat client
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#in-class-exercise-3-server">
+     In-Class Exercise 3 - Server
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id5">
-       Import modules
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#implementing-the-chat-server">
+       Implementing the chat server
       </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#client-class">
-       Client Class
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#main">
-       Main
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#run-the-client">
-       Run the client
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#create-the-server">
-       Create the server
-      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id7">
+         Import modules
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#server-class">
+         Server Class
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id8">
+         Main
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id9">
+         Run the program
+        </a>
+       </li>
+      </ul>
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ros-commands">
-     ROS commands
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-class-exercise-3-server">
-   In-Class Exercise 3 - Server
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#implementing-the-chat-server">
-     Implementing the chat server
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#in-class-exercise-3-ros">
+     In-Class Exercise 3 - ROS
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id6">
-       Import modules
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#checkpoint">
+       Checkpoint
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#server-class">
-       Server Class
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id7">
-       Main
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#run-the-server">
-       Run the server
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id10">
+       Cleanup
       </a>
      </li>
     </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-class-exercise-3-ros">
-   In-Class Exercise 3 - ROS
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#checkpoint">
-     Checkpoint
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id8">
-     Cleanup
-    </a>
    </li>
   </ul>
  </li>
@@ -859,9 +886,11 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="python3-for-robotics">
 <h1>Python3 for Robotics<a class="headerlink" href="#python3-for-robotics" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="rock-paper-scissors-user">
-<h2>Rock Paper Scissors User<a class="headerlink" href="#rock-paper-scissors-user" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="python3">
+<h2>Python3<a class="headerlink" href="#python3" title="Permalink to this headline">¶</a></h2>
 <hr class="docutils" />
+<p><strong>You must open this file as a Jupyter Notebook (link below) to run code</strong></p>
+<p><a class="reference external" href="http://localhost:8888/notebooks/Module3_Python3.ipynb">Run this file as an executable Jupyter Notebook</a></p>
 <div class="section" id="a-note-on-this-document">
 <h3>A note on this document<a class="headerlink" href="#a-note-on-this-document" title="Permalink to this headline">¶</a></h3>
 <p>This document is known as a Jupyter notebook; it is used in academia and industry to allow text and executable code to coexist in a very easy to read format. Blocks can contain text or code, and for blocks containing code, press <code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">Enter</span></code> to run the code. Earlier blocks of code need to be run for the later blocks of code to work.</p>
@@ -875,7 +904,9 @@
 <p>With Python code, the convention is to import all required modules at the top of the python script. Modules are packages of additional functionality built by others. Typically, a module is comprised of compiled code that serves a specific function.</p>
 <p>By importing all modules at the beginning of the script, we ensure that all modules have been loaded by the time we need them later in the script. Also, it ensures anyone reading our code can very quickly see all the modules (dependencies) needed to run the code.</p>
 <p>Our imports are in the following code block.</p>
-<p><strong>Important</strong>: Importing classes may take some time. You will know the code block is still executing as the bracket on the left of the cell will change to a <code class="docutils literal notranslate"><span class="pre">*</span></code> character. Do not move to the next step until the <code class="docutils literal notranslate"><span class="pre">*</span></code> is gone.</p>
+<blockquote>
+<div><p>⚠️ <strong>Important:</strong> Importing classes may take some time. You will know the code block is still executing as the bracket on the left of the cell will change to a <code class="docutils literal notranslate"><span class="pre">*</span></code> character. Do not move to the next step until the <code class="docutils literal notranslate"><span class="pre">*</span></code> is gone.</p>
+</div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import required modules</span>
 <span class="kn">import</span> <span class="nn">random</span>
 </pre></div>
@@ -1250,58 +1281,25 @@ The variable num_choices contains: 03
 </div>
 <div class="section" id="create-the-computer-player">
 <h4>Create the computer player<a class="headerlink" href="#create-the-computer-player" title="Permalink to this headline">¶</a></h4>
-<p>We must build and run the computer player before we can continue. Open the <a class="reference internal" href="Module3_RPSComputer.html"><span class="doc std std-doc">Module3_RPSComputer</span></a> notebook and follow the instructions.</p>
+<p>We must build and run the computer player before we can continue. Open the <a class="reference external" href="http://localhost:8888/notebooks/Module3_RPSComputer.ipynb">Module3_RPSComputer</a> notebook and follow the instructions.</p>
 </div>
-<div class="section" id="run-our-user-class">
-<h4>Run our User class<a class="headerlink" href="#run-our-user-class" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="run-the-program">
+<h4>Run the program<a class="headerlink" href="#run-the-program" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
-</div>
 <div class="section" id="ros-refresher">
-<h3>ROS refresher<a class="headerlink" href="#ros-refresher" title="Permalink to this headline">¶</a></h3>
-<p>Open the <a class="reference internal" href="Module3_ROS.html"><span class="doc std std-doc">Module3_ROS</span></a> notebook and follow the instructions.</p>
+<h4>ROS refresher<a class="headerlink" href="#ros-refresher" title="Permalink to this headline">¶</a></h4>
+<p>Open the <a class="reference external" href="http://localhost:8888/notebooks/Module3_ROS.ipynb">Module3_ROS</a> notebook and follow the instructions.</p>
 </div>
 </div>
-<div class="section" id="ros">
-<h2>ROS<a class="headerlink" href="#ros" title="Permalink to this headline">¶</a></h2>
-<p>Below you will see some ROS commands. The “!” character in the front allows us to run bash commands from Jupyter and would <strong>NOT</strong> be used in the command line.</p>
-<p>With the user and computer nodes running execute the below commands.</p>
-<p>List the active topics:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!rostopic list
-</pre></div>
 </div>
-<p>Display running nodes and communication between them:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!rqt_graph
-</pre></div>
-</div>
-<p>Exit the rqt_graph and then list all running nodes:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!rosnode list
-</pre></div>
-</div>
-<p>Show information about a the <strong>/computer_choice</strong> topic such as what type of messages are sent over the topic and publishing and subscribing nodes:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!rostopic info /computer_choice
-</pre></div>
-</div>
-<p>Display information about the message that is sent over the <strong>/computer</strong> topic:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!rostopic type /computer_choice | rosmsg show
-</pre></div>
-</div>
-<p>Display messages sent over the <strong>/user_choice</strong> topic:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!rostopic echo /user_choice
-</pre></div>
-</div>
-<p>In the Module3_Python3 notebook, reset the Jupter kernel and clear output: At the top menu bar select “Kernel” and “Restart &amp; Clear Output” (you do not need to restart the computer player). Make sure to rerun the code blocks to import modules, build the class, and create the main. When you select ‘Rock’, ‘Paper’, or ‘Scissors’ you should see the message echoed above.</p>
-<div class="section" id="cleanup">
-<h3>Cleanup<a class="headerlink" href="#cleanup" title="Permalink to this headline">¶</a></h3>
-<p>In each of the notebooks reset the Jupter kernel and clear output. Close each notebook. Shutdown the notebook server by typing <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code> within the terminal you ran <code class="docutils literal notranslate"><span class="pre">Jupter-notebook</span></code> in. Select ‘y’. Kill all processes in your terminals (ctrl+c) and ensure roscore is terminated before moving on to the ICE.</p>
-<p>You should now have a better understanding of how to utilize ROS and Python. To learn more about the Python style guide and standards, visit <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/#class-names">PEP 8 – Style Guid for Python Code</a>.</p>
-</div>
-</div>
-<div class="section" id="rock-paper-scissors-computer">
-<h2>Rock Paper Scissors Computer<a class="headerlink" href="#rock-paper-scissors-computer" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="rps-computer">
+<h2>RPS Computer<a class="headerlink" href="#rps-computer" title="Permalink to this headline">¶</a></h2>
 <hr class="docutils" />
+<p><strong>You must open this file as a Jupyter Notebook (link below) to run code</strong></p>
+<p><a class="reference external" href="http://localhost:8888/notebooks/Module3_RPSComputer.ipynb">Run this file as an executable Jupyter Notebook</a></p>
 <div class="section" id="id1">
 <h3>A note on this document<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>This document is known as a Jupyter Notebook; it is used in academia and industry to allow text and executable code to coexist in a very easy to read format. Blocks can contain text or code, and for blocks containing code, press <code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">Enter</span></code> to run the code. Earlier blocks of code need to be run for the later blocks of code to work.</p>
@@ -1346,6 +1344,47 @@ The variable num_choices contains: 03
 <p>Now return to the ICE3_RPSUser Notebook and fill in the requested inputs.</p>
 </div>
 </div>
+<div class="section" id="ros">
+<h2>ROS<a class="headerlink" href="#ros" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p><strong>You must open this file as a Jupyter Notebook (link below) to run code</strong></p>
+<p><a class="reference external" href="http://localhost:8888/notebooks/Module3_ROS.ipynb">Run this file as an executable Jupyter Notebook</a></p>
+<p>Below you will see some ROS commands. The “!” character in the front allows us to run bash commands from Jupyter and would <strong>NOT</strong> be used in the command line.</p>
+<p>With the user and computer nodes running execute the below commands.</p>
+<p>List the active topics:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!rostopic list
+</pre></div>
+</div>
+<p>Display running nodes and communication between them:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!rqt_graph
+</pre></div>
+</div>
+<p>Exit the rqt_graph and then list all running nodes:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!rosnode list
+</pre></div>
+</div>
+<p>Show information about a the <strong>/computer_choice</strong> topic such as what type of messages are sent over the topic and publishing and subscribing nodes:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!rostopic info /computer_choice
+</pre></div>
+</div>
+<p>Display information about the message that is sent over the <strong>/computer</strong> topic:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!rostopic type /computer_choice | rosmsg show
+</pre></div>
+</div>
+<p>Display messages sent over the <strong>/user_choice</strong> topic:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!rostopic echo /user_choice
+</pre></div>
+</div>
+<p>In the Module3_Python3 notebook, reset the Jupter kernel and clear output: At the top menu bar select “Kernel” and “Restart &amp; Clear Output” (you do not need to restart the computer player). Make sure to rerun the code blocks to import modules, build the class, and create the main. When you select ‘Rock’, ‘Paper’, or ‘Scissors’ you should see the message echoed above.</p>
+<div class="section" id="cleanup">
+<h3>Cleanup<a class="headerlink" href="#cleanup" title="Permalink to this headline">¶</a></h3>
+<p>In each of the notebooks reset the Jupter kernel and clear output. Close each notebook. Shutdown the notebook server by typing <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code> within the terminal you ran <code class="docutils literal notranslate"><span class="pre">Jupter-notebook</span></code> in. Select ‘y’. Kill all processes in your terminals (ctrl+c) and ensure roscore is terminated before moving on to the ICE.</p>
+<p>You should now have a better understanding of how to utilize ROS and Python. To learn more about the Python style guide and standards, visit <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/#class-names">PEP 8 – Style Guid for Python Code</a>.</p>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="in-cass-exercise-3">
+<h1>In-Cass Exercise 3<a class="headerlink" href="#in-cass-exercise-3" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="in-class-exercise-3-client">
 <h2>In-Class Exercise 3 - Client<a class="headerlink" href="#in-class-exercise-3-client" title="Permalink to this headline">¶</a></h2>
 <hr class="docutils" />
@@ -1358,19 +1397,23 @@ The variable num_choices contains: 03
 <div class="section" id="id3">
 <h3>Purpose<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>This Jupyter Notebook will allow you to practice some of the techniques you have learned over the last few modules. You will develop an advanced chat client and server (similar to ICE1) enabling a client to send a message and a server to respond accordingly.</p>
+</div>
 <div class="section" id="id4">
-<h4>Initialize ROS:<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<h3>Initialize ROS:<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <p>The first step when utilizing  ROS is to initialize <em>roscore</em>. There are two methods to accomplish this: first, by explicitly running <em>roscore</em> and second, by running a launch file (which will initialize <em>roscore</em> if it is not already running). During the first portion of this course we will explicitly run <em>roscore</em> and then take advantage of launch files later in the course.</p>
 <p>Copy the following code and run it in a new terminal (use the shortcut <code class="docutils literal notranslate"><span class="pre">ctrl+alt+t</span></code> to open a new terminal window or select an open terminal and hit <code class="docutils literal notranslate"><span class="pre">ctrl+shift+t</span></code> to open a new terminal tab):</p>
 <p><code class="docutils literal notranslate"><span class="pre">roscore</span></code></p>
 </div>
-</div>
 <div class="section" id="implementing-the-chat-client">
 <h3>Implementing the chat client<a class="headerlink" href="#implementing-the-chat-client" title="Permalink to this headline">¶</a></h3>
-<p><strong>NOTE</strong>: This Jupyter Notebook will require you to enter Python3 code within code sections. You can type any Python3 code and expand the block if necessary. After typing the code, execute the code block before moving forward.</p>
+<blockquote>
+<div><p>📝️ <strong>Note:</strong> This Jupyter Notebook will require you to enter Python3 code within code sections. You can type any Python3 code and expand the block if necessary. After typing the code, execute the code block before moving forward.</p>
+</div></blockquote>
 <div class="section" id="id5">
 <h4>Import modules<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
-<p><strong>Important</strong>: Importing classes may take some time. You will know the code block is still executing as the bracket on the left of the cell will change to a <code class="docutils literal notranslate"><span class="pre">*</span></code> character. Do not move to the next step until the <code class="docutils literal notranslate"><span class="pre">*</span></code> is gone.</p>
+<blockquote>
+<div><p>⚠️ <strong>Important:</strong> Importing classes may take some time. You will know the code block is still executing as the bracket on the left of the cell will change to a <code class="docutils literal notranslate"><span class="pre">*</span></code> character. Do not move to the next step until the <code class="docutils literal notranslate"><span class="pre">*</span></code> is gone.</p>
+</div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import required modules for ROS and the String message from std_msgs</span>
 
 
@@ -1458,20 +1501,20 @@ The variable num_choices contains: 03
 </pre></div>
 </div>
 </div>
-<div class="section" id="run-the-client">
-<h4>Run the client<a class="headerlink" href="#run-the-client" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id6">
+<h4>Run the program<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="create-the-server">
 <h4>Create the server<a class="headerlink" href="#create-the-server" title="Permalink to this headline">¶</a></h4>
-<p>At this point the client is waiting for user input. Don’t start typing yet, though! We need to implement and run our server. Open the <a class="reference internal" href="ICE3_Server.html"><span class="doc std std-doc">ICE3_Server</span></a>. notebook and follow the instructions.</p>
+<p>At this point the client is waiting for user input. Don’t start typing yet, though! We need to implement and run our server. Open the <a class="reference external" href="http://localhost:8888/notebooks/ICE3_Server.ipynb">ICE3_Server</a>. notebook and follow the instructions.</p>
 </div>
 </div>
 <div class="section" id="ros-commands">
 <h3>ROS commands<a class="headerlink" href="#ros-commands" title="Permalink to this headline">¶</a></h3>
-<p>Open the <a class="reference internal" href="ICE3_ROS.html"><span class="doc std std-doc">ICE3_ROS</span></a> notebook and follow the instructions.</p>
+<p>Open the <a class="reference external" href="http://localhost:8888/notebooks/ICE3_ROS.ipynb">ICE3_ROS</a> notebook and follow the instructions.</p>
 </div>
 </div>
 <div class="section" id="in-class-exercise-3-server">
@@ -1482,9 +1525,11 @@ The variable num_choices contains: 03
 <div class="section" id="implementing-the-chat-server">
 <h3>Implementing the chat server<a class="headerlink" href="#implementing-the-chat-server" title="Permalink to this headline">¶</a></h3>
 <p><strong>NOTE</strong>: This Jupyter Notebook will require you to enter Python3 code within code sections. You can type any Python3 code and expand the block if necessary. After typing the code, execute the code block before moving forward.</p>
-<div class="section" id="id6">
-<h4>Import modules<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
-<p><strong>Important</strong>: Importing classes may take some time. You will know the code block is still executing as the bracket on the left of the cell will change to a <code class="docutils literal notranslate"><span class="pre">*</span></code> character. Do not move to the next step until the <code class="docutils literal notranslate"><span class="pre">*</span></code> is gone.</p>
+<div class="section" id="id7">
+<h4>Import modules<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>⚠️ <strong>Important:</strong> Importing classes may take some time. You will know the code block is still executing as the bracket on the left of the cell will change to a <code class="docutils literal notranslate"><span class="pre">*</span></code> character. Do not move to the next step until the <code class="docutils literal notranslate"><span class="pre">*</span></code> is gone.</p>
+</div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import required modules for ROS and the String message from std_msgs</span>
 
 
@@ -1535,8 +1580,8 @@ The variable num_choices contains: 03
 </pre></div>
 </div>
 </div>
-<div class="section" id="id7">
-<h4>Main<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id8">
+<h4>Main<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
 <p>The main function calls initializes our node, creates an instance of the server class, then runs forever.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="c1"># initialize node</span>
@@ -1548,8 +1593,8 @@ The variable num_choices contains: 03
 </pre></div>
 </div>
 </div>
-<div class="section" id="run-the-server">
-<h4>Run the server<a class="headerlink" href="#run-the-server" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id9">
+<h4>Run the program<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1594,8 +1639,8 @@ The variable num_choices contains: 03
 <h3>Checkpoint<a class="headerlink" href="#checkpoint" title="Permalink to this headline">¶</a></h3>
 <p>Once complete, get checked off by an instructor showing the output of each of the above.</p>
 </div>
-<div class="section" id="id8">
-<h3>Cleanup<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id10">
+<h3>Cleanup<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 <p>In each of the notebooks reset the Jupter kernel and clear output. Close each notebook. Shutdown the notebook server by typing <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code> within the terminal you ran <code class="docutils literal notranslate"><span class="pre">jupyter-notebook</span></code> in. Select ‘y’.</p>
 </div>
 </div>
@@ -1647,7 +1692,7 @@ The variable num_choices contains: 03
     <footer class="footer">
   <p>
     
-      By Mr. Steven Beyer<br/>
+      By The Jupyter Book community<br/>
     
         &copy; Copyright 2021.<br/>
   </p>

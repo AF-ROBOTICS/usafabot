@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Computer Vision &#8212; ECE495</title>
+    <title>Computer Vision &#8212; My Jupyter Book</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,6 +53,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Final Project" href="Module10.html" />
     <link rel="prev" title="LIDAR" href="Module8.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -75,14 +76,9 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
       
       
-      <img src="_static/beyer_bot.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">ECE495</h1>
+      <h1 class="site-logo" id="site-title">My Jupyter Book</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -111,12 +107,12 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  ROBOT SETUP
+  ROBOT and MASTER SETUP
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="robot_setup.html">
+  <a class="reference internal" href="RobotSetup.html">
    Robot Setup
   </a>
  </li>
@@ -129,7 +125,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Module0.html">
-   Intro &amp; GIT
+   Intro and GIT
   </a>
  </li>
 </ul>
@@ -241,6 +237,18 @@
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module10.html">
+   Final Project
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -292,22 +300,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FModule9.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -327,150 +319,150 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-class-exercise-8">
-   In-Class Exercise 8
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Computer Vision
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#part-1-image-basics">
      Part 1: Image Basics
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#part-2-coding-with-opencv-python">
      Part 2: Coding with OpenCV-Python
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#summary">
        Summary
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#assignment">
        Assignment
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#cleanup">
        Cleanup
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#part-3-gradients">
      Part 3: Gradients
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id1">
        Summary
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id2">
        Assignment
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id3">
        Cleanup
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#part-4-histogram-of-oriented-gradients-hog-features">
      Part 4: Histogram of Oriented Gradients (HOG) Features
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#building-a-detector-using-hog-features">
        Building a detector using HOG features
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#testing-a-detector">
        Testing a detector
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id4">
        Summary
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id5">
        Assignment
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id6">
        Cleanup
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#part-5-ros-and-image-capture">
      Part 5: ROS and Image Capture
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#launch-file-usb-cam">
        Launch File - USB Cam
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#calibrate-usb-camera">
        Calibrate USB Camera
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#checkpoint">
        Checkpoint
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id7">
        Summary
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id8">
        Cleanup
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#part-6-fiducial-markers">
      Part 6: Fiducial Markers
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#apriltag-ros">
        AprilTag ROS
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#launch-file-apriltag-ros">
        Launch File - Apriltag_Ros
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id9">
        Checkpoint
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id10">
        Summary
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id11">
        Cleanup
       </a>
@@ -479,62 +471,62 @@
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#lab-4-computer-vision">
    Lab 4: Computer Vision
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#purpose">
      Purpose
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#setup-packages">
      Setup packages
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-a-ros-node-to-save-images">
      Create a ROS node to save images
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#train-your-stop-detector">
      Train your stop detector
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#test-your-stop-detector">
      Test your stop detector
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#checkpoint-1">
      Checkpoint 1
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#move-detector-to-robot">
      Move detector to robot
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#launch-file">
      Launch file
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#checkpoint-2">
      Checkpoint 2
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#determine-distance-from-stop-sign">
      Determine distance from stop sign
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#edit-stop-detector-py">
        Edit
        <code class="docutils literal notranslate">
@@ -546,27 +538,27 @@
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#checkpoint-3">
      Checkpoint 3
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#printing-april-tag-information">
      Printing April Tag information
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#checkpoint-4">
      Checkpoint 4
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#report">
      Report
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#turn-in-requirements">
      Turn-in Requirements
     </a>
@@ -593,150 +585,150 @@
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-class-exercise-8">
-   In-Class Exercise 8
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Computer Vision
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#part-1-image-basics">
      Part 1: Image Basics
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#part-2-coding-with-opencv-python">
      Part 2: Coding with OpenCV-Python
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#summary">
        Summary
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#assignment">
        Assignment
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#cleanup">
        Cleanup
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#part-3-gradients">
      Part 3: Gradients
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id1">
        Summary
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id2">
        Assignment
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id3">
        Cleanup
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#part-4-histogram-of-oriented-gradients-hog-features">
      Part 4: Histogram of Oriented Gradients (HOG) Features
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#building-a-detector-using-hog-features">
        Building a detector using HOG features
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#testing-a-detector">
        Testing a detector
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id4">
        Summary
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id5">
        Assignment
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id6">
        Cleanup
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#part-5-ros-and-image-capture">
      Part 5: ROS and Image Capture
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#launch-file-usb-cam">
        Launch File - USB Cam
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#calibrate-usb-camera">
        Calibrate USB Camera
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#checkpoint">
        Checkpoint
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id7">
        Summary
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id8">
        Cleanup
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#part-6-fiducial-markers">
      Part 6: Fiducial Markers
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#apriltag-ros">
        AprilTag ROS
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#launch-file-apriltag-ros">
        Launch File - Apriltag_Ros
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id9">
        Checkpoint
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id10">
        Summary
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id11">
        Cleanup
       </a>
@@ -745,62 +737,62 @@
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#lab-4-computer-vision">
    Lab 4: Computer Vision
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#purpose">
      Purpose
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#setup-packages">
      Setup packages
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-a-ros-node-to-save-images">
      Create a ROS node to save images
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#train-your-stop-detector">
      Train your stop detector
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#test-your-stop-detector">
      Test your stop detector
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#checkpoint-1">
      Checkpoint 1
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#move-detector-to-robot">
      Move detector to robot
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#launch-file">
      Launch file
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#checkpoint-2">
      Checkpoint 2
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#determine-distance-from-stop-sign">
      Determine distance from stop sign
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#edit-stop-detector-py">
        Edit
        <code class="docutils literal notranslate">
@@ -812,27 +804,27 @@
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#checkpoint-3">
      Checkpoint 3
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#printing-april-tag-information">
      Printing April Tag information
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#checkpoint-4">
      Checkpoint 4
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#report">
      Report
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#turn-in-requirements">
      Turn-in Requirements
     </a>
@@ -850,20 +842,18 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="computer-vision">
 <h1>Computer Vision<a class="headerlink" href="#computer-vision" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="in-class-exercise-8">
-<h2>In-Class Exercise 8<a class="headerlink" href="#in-class-exercise-8" title="Permalink to this headline">¶</a></h2>
 <hr class="docutils" />
 <p><strong>You must open this file as a Jupyter Notebook (link below) to run code</strong></p>
 <p><a class="reference external" href="http://localhost:8888/notebooks/Module9_ComputerVision.ipynb">Run this file as an executable Jupyter Notebook</a></p>
 <div class="section" id="part-1-image-basics">
-<h3>Part 1: Image Basics<a class="headerlink" href="#part-1-image-basics" title="Permalink to this headline">¶</a></h3>
+<h2>Part 1: Image Basics<a class="headerlink" href="#part-1-image-basics" title="Permalink to this headline">¶</a></h2>
 <p>When we talk about the sizes of images, we generally talk about them in terms of the number of pixels the image possesses in the x(horizontal) or y(vertical) direction.  If the image is a color image, we also need to concern ourselves with the depth of the image as well.  Normally, each individual pixel is represented by the “color” or the “intensity” of light that appears in a given place in our image.</p>
 <p>If we think of an image as a grid, each square in the grid contains a single pixel.</p>
 <p>Most pixels are represented in two ways: grayscale and color. In a grayscale image, each pixel has a value between 0 and 255, where zero is corresponds to “black” and 255 being “white”. The values in between 0 and 255 are varying shades of gray, where values closer to 0 are darker and values closer 255 are lighter:</p>
-<img src="figs/Grayscale.JPG" width="400" height="195.89">
+<p><img alt="logo" src="_images/Grayscale.JPG" /></p>
 <p>The grayscale gradient image in the figure above demonstrates darker pixels on the left-hand side and progressively lighter pixels on the right-hand side.</p>
 <p>Color pixels, however, are normally represented in the RGB color space (this is where the term color-depth comes from)— one value for the Red component, one for Green, and one for Blue, leading to a total of 3 values per pixel:</p>
-<img src="figs/RGB.JPG" width="300" height="195.89">
+<p><img alt="logo" src="_images/RGB.JPG" /></p>
 <p>Other color spaces exist, and ordering of the colors may differ as well, but let’s start with the common RGB system.  If we say the image is a 24-bit image, each of the three Red, Green, and Blue colors are represented by an integer in the range 0 to 255 (8-bits), which indicates how “much” of the color there is. Given that the pixel value only needs to be in the range [0, 255] we normally use an 8-bit unsigned integer to represent each color intensity.  We then combine these values into a RGB tuple in the form (red, green, blue) . This tuple represents our color.  For example:</p>
 <ul class="simple">
 <li><p>To construct a white color, we would fill each of the red, green, and blue buckets completely up, like this: (255, 255, 255) — since white is the presence of all color.</p></li>
@@ -872,9 +862,7 @@
 <li><p>etc</p></li>
 </ul>
 <p>Take a look at the following image to make this concept more clear:</p>
-<figure>
-<img src="figs/RGB_Tuple.JPG" width="400" height="195.89" alt="RGB" >
-</figure>
+<p><img alt="logo" src="_images/RGB_Tuple.JPG" /></p>
 <p>For your reference, here are some common colors represented as RGB tuples:</p>
 <ul class="simple">
 <li><p>Black:  (0, 0, 0)</p></li>
@@ -893,7 +881,7 @@
 </ul>
 </div>
 <div class="section" id="part-2-coding-with-opencv-python">
-<h3>Part 2: Coding with OpenCV-Python<a class="headerlink" href="#part-2-coding-with-opencv-python" title="Permalink to this headline">¶</a></h3>
+<h2>Part 2: Coding with OpenCV-Python<a class="headerlink" href="#part-2-coding-with-opencv-python" title="Permalink to this headline">¶</a></h2>
 <p>It is time to build our first bit of code working with OpenCV.  Just like ROS, OpenCV is well supported by both Python and C++.  For simplicity, we will use Python throughout this course.  However, continue to recognize that if speed and efficiency become important, switching to a more robust language like C++ may become necessary.  To make use of OpenCV with Python, we need to import cv2.  The code below will simply load in the RGB figure above and print out the pixel values in each of the 4-quadrants.</p>
 <p>First we need to import the OpenCV Python library, <code class="docutils literal notranslate"><span class="pre">cv2</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cv2</span>
@@ -973,20 +961,20 @@
 </pre></div>
 </div>
 <div class="section" id="summary">
-<h4>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h4>
+<h3>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
 <p>These examples barely scratch the surface of what is possible with OpenCV. In the upcoming lessons we will learn a few more ways to manipulate images, but if you want to learn more you can either explore the <a class="reference external" href="https://docs.opencv.org/3.4/index.html">OpenCV-Python Source Documentation</a> or the <a class="reference external" href="https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html">OpenCV-Python Tutorial</a>.</p>
 </div>
 <div class="section" id="assignment">
-<h4>Assignment<a class="headerlink" href="#assignment" title="Permalink to this headline">¶</a></h4>
+<h3>Assignment<a class="headerlink" href="#assignment" title="Permalink to this headline">¶</a></h3>
 <p>Scan the article on the <a class="reference external" href="https://arxiv.org/pdf/1406.2419.pdf">Histogram of Oriented Gradients (HOG)</a> feature descriptor and be prepared to discuss.  I don’t need you to understand the math, but you should be able to understand the advantages of the technique.</p>
 </div>
 <div class="section" id="cleanup">
-<h4>Cleanup<a class="headerlink" href="#cleanup" title="Permalink to this headline">¶</a></h4>
+<h3>Cleanup<a class="headerlink" href="#cleanup" title="Permalink to this headline">¶</a></h3>
 <p>In the Jupyter Notebook at the top menu bar select “Kernel” and “Restart &amp; Clear Output”. Shutdown the notebook server by typing <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code> within the terminal you ran <code class="docutils literal notranslate"><span class="pre">jupyter-notebook</span></code> in. Select ‘y’.</p>
 </div>
 </div>
 <div class="section" id="part-3-gradients">
-<h3>Part 3: Gradients<a class="headerlink" href="#part-3-gradients" title="Permalink to this headline">¶</a></h3>
+<h2>Part 3: Gradients<a class="headerlink" href="#part-3-gradients" title="Permalink to this headline">¶</a></h2>
 <p>The objective of this portion of the lesson is for you to start the process of learning how to create custom object detectors in an image.  There are many techniques, but the one technique I am interested in applying first is what is known as Histogram of Oriented Gradients.  Before we can dig into the technique, we should first understand a bit about image gradients and contours.</p>
 <p>By the end of today’s lesson you will be able to:</p>
 <ul class="simple">
@@ -1006,13 +994,13 @@
 <p>As we mentioned in the previous portion of the lab, we will often work with grayscale images, because of the massive reduction in images.  OpenCV will convert to grayscale using the following conversion formula:</p>
 <p><span class="math notranslate nohighlight">\(Y = 0.299 R + 0.587 G + 0.114 B\)</span></p>
 <p>Let’s see if that matches our expectations in the figure below:</p>
-<img src="figs/RGB_Gray.png" width="400" height="195.89">
+<p><img alt="logo" src="_images/RGB_Gray.png" /></p>
 <p>The below figure is an image of edges being detected simply by looking for the contours in an image:</p>
-<img src="figs/EdgeDet.png" width="400" height="195.89">
+<p><img alt="logo" src="_images/EdgeDet.png" /></p>
 <p>As you can see, all of the edges (or changes in contrast are clearly identified), but how did we do it?  Lets look at the math below, and then we will look at how simple the code is by taking advantage of OpenCV.</p>
 <p>Formally, an image gradient is defined as a directional change in image intensity.  Or put more simply, at each pixel of the input (grayscale) image, a gradient measures the change in pixel intensity in a given direction. By estimating the direction or orientation along with the magnitude (i.e. how strong the change in direction is), we are able to detect regions of an image that look like edges.</p>
 <p>Lets look at a blown up version of a basic pixel map.  Our goal here is to establish the basic framework for how we will eventually compute the gradient:</p>
-<img src="figs/PixelCont.png" width="300" height="195.89">
+<p><img alt="logo" src="_images/PixelCont.png" /></p>
 <p>In the image above we essentially wish to examine the (3 \times 3) neighborhood surrounding the central pixel. Our x values run from left to right, and our y values from top to bottom. In order to compute any changes in direction we will need the north, south, east, and west pixels, which are marked on the above figure.</p>
 <p>If we denote our input image as <em>I</em>, then we define the north, south, east, and west pixels using the following notation:</p>
 <ul class="simple">
@@ -1027,16 +1015,16 @@
 <p>Similarly, we can compute the horizontal change or the x-change by taking the difference between the east and west pixels:</p>
 <p><span class="math notranslate nohighlight">\(G_{x} = I(x + 1, y) - I(x - 1, y)\)</span></p>
 <p>Awesome — so now we have <span class="math notranslate nohighlight">\(G_{x}\)</span> and <span class="math notranslate nohighlight">\(G_{y}\)</span>, which represent the change in image intensity for the central pixel in both the x and y direction.  Lets look at a relatively intuitive example at first without all the math.</p>
-<img src="figs/GradientEx.png" width="600" height="195.89">
+<p><img alt="logo" src="_images/GradientEx.png" /></p>
 <p>On the left we have a <span class="math notranslate nohighlight">\(3 \times 3\)</span> region of an image where the top half of the image is white and the bottom half of the image is black. The gradient orientation is thus equal to <span class="math notranslate nohighlight">\(\theta=-90^{\circ}\)</span></p>
 <p>And on the right we have another <span class="math notranslate nohighlight">\(3 \times 3\)</span> neighborhood of an image, where the upper triangular region is white and the lower triangular region is black. Here we can see the change in direction is equal to <span class="math notranslate nohighlight">\(\theta=-45^{\circ}\)</span>.  While these two examples are both relatively easy to understand, lets use our knowledge of the Pythagorean theorem to actually compute the magnitude and orientation of the gradient with actual values now.</p>
-<img src="figs/GradTrig.png" width="300" height="195.89">
+<p><img alt="logo" src="_images/GradTrig.png" /></p>
 <p>Inspecting the triangle in the above figure you can see that the gradient magnitude G is the hypotenuse of the triangle. Therefore, all we need to do is apply the Pythagorean theorem and we will end up with the gradient magnitude:</p>
 <p><span class="math notranslate nohighlight">\(G = \sqrt{G_{x}^{2} + G_{y}^{2}}\)</span></p>
 <p>The gradient orientation can then be given as the ratio of <span class="math notranslate nohighlight">\(G_{y}\)</span> to <span class="math notranslate nohighlight">\(G_{x}\)</span>. We can use the <span class="math notranslate nohighlight">\(tan^{-1}\)</span> to compute the gradient orientation,</p>
 <p><span class="math notranslate nohighlight">\(\theta = tan^{-1}(\frac{G_{y}}{G_{x}}) \times (\frac{180}{\pi})\)</span></p>
 <p>We converted to degrees by multiplying by the ratio of <span class="math notranslate nohighlight">\(180/\pi\)</span>.  Lets now add pixel intensity values and put this to the test.</p>
-<img src="figs/GradEx2.png" width="600" height="195.89">
+<p><img alt="logo" src="_images/GradEx2.png" /></p>
 <p>In the above image we have an image where the upper-third is white and the bottom two-thirds is black. Using the equations for <span class="math notranslate nohighlight">\(G_{x}\)</span> and <span class="math notranslate nohighlight">\(G_{y}\)</span>, we arrive at:</p>
 <p><span class="math notranslate nohighlight">\(G_{x} = \)</span></p>
 <p>and</p>
@@ -1046,7 +1034,7 @@
 <p>As for our gradient orientation:</p>
 <p><span class="math notranslate nohighlight">\(\theta = \)</span></p>
 <p>Now you try with the following example:</p>
-<img src="figs/GradEx3.png" width="600" height="195.89">
+<p><img alt="logo" src="_images/GradEx3.png" /></p>
 <p><span class="math notranslate nohighlight">\(G_{x} = \)</span></p>
 <p>and</p>
 <p><span class="math notranslate nohighlight">\(G_{y} = \)</span></p>
@@ -1090,28 +1078,28 @@
 </pre></div>
 </div>
 <div class="section" id="id1">
-<h4>Summary<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<h3>Summary<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>Gradients are one important tool used in object detection. Next lesson we will learn how to apply gradients using the Histogram of Oriented Gradients to train an object detector.</p>
 </div>
 <div class="section" id="id2">
-<h4>Assignment<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<h3>Assignment<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>Watch the following video on <a class="reference external" href="https://youtube.com/watch?v=4ESLTAd3IOM">Histogram of Oriented Gradients</a>.</p>
 </div>
 <div class="section" id="id3">
-<h4>Cleanup<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<h3>Cleanup<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>In the Jupyter Notebook at the top menu bar select “Kernel” and “Restart &amp; Clear Output”. Shutdown the notebook server by typing <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code> within the terminal you ran <code class="docutils literal notranslate"><span class="pre">jupyter-notebook</span></code> in. Select ‘y’.</p>
 </div>
 </div>
 <div class="section" id="part-4-histogram-of-oriented-gradients-hog-features">
-<h3>Part 4: Histogram of Oriented Gradients (HOG) Features<a class="headerlink" href="#part-4-histogram-of-oriented-gradients-hog-features" title="Permalink to this headline">¶</a></h3>
+<h2>Part 4: Histogram of Oriented Gradients (HOG) Features<a class="headerlink" href="#part-4-histogram-of-oriented-gradients-hog-features" title="Permalink to this headline">¶</a></h2>
 <p>The objective of this portion of the lesson is to demonstrate the functionality of the HOG with SVM (Support Vector Machine) algorithm for object detection.  By this point, we should all be well aware of what a histogram is.  The application of the histogram for the HOG feature extraction is to further simplify the tested image to enable our computer to rapidly and accurately identify the presence of an object within the image.<br />
 Instead of using each individual gradient direction of each individual pixel of an image, we group the pixels into small cells. For each cell, we compute all the gradient directions and group them into a number of orientation bins. We sum up the gradient magnitude in each sample. So stronger gradients contribute more weight to their bins, and effects of small random orientations due to noise is reduced. Doing this for all cells gives us a representation of the structure of the image. The HOG features keep the representation of an object distinct but also allow for some variations in shape.  For example, lets consider an object detector for a car, see the below figure.</p>
-<img src="figs/HOG_Features.JPG" width="600" height="195.89">
+<p><img alt="logo" src="_images/HOG_Features.JPG" /></p>
 <p>Comparing each individual pixel of this training image with another test image would not only be time consuming, but it would also be highly subject to noise.  As previously mentioned, the HOG feature will consider a block of pixels.  The size of this block is variable and will naturally impact both accuracy and speed of execution for the algorithm.  Once the block size is determined, the gradient for each pixel within the block is computed.  Once the gradients are computed for a block, the entire cell can then be represented by this histogram.  Not only does this reduce the amount of data to compare with a test image, but it also reduces the impacts of noise in the image and measurements.</p>
-<img src="figs/HOG_Histogram.JPG" width="600" height="195.89">
+<p><img alt="logo" src="_images/HOG_Histogram.JPG" /></p>
 <p>Now that we have an understanding of the HOG features, lets use tools embedded within OpenCV and Dlib to build our first detector for a stop sign.  But first we need to download a pre-created repository of test and training data.  Remember, we won’t use our training data to test the effectiveness of the algorithm.  Of course the algorithm will work effectively on the training data.  Our hope is that we can create a large enough sampling of test data that we can have a highly effective detector that is robust against new images.</p>
 <div class="section" id="building-a-detector-using-hog-features">
-<h4>Building a detector using HOG features<a class="headerlink" href="#building-a-detector-using-hog-features" title="Permalink to this headline">¶</a></h4>
+<h3>Building a detector using HOG features<a class="headerlink" href="#building-a-detector-using-hog-features" title="Permalink to this headline">¶</a></h3>
 <p>Download the example demo into the <code class="docutils literal notranslate"><span class="pre">my_scripts</span></code> folder you created earlier in the semester. It should be located under <code class="docutils literal notranslate"><span class="pre">~/master_ws/src/usafabot/usafabot_curriculum/</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/master_ws/src/usafabot/usafabot_curriculum/my_scripts
 git clone git@github.com:ECE495/HOG_Demo.git
@@ -1121,9 +1109,9 @@ git clone git@github.com:ECE495/HOG_Demo.git
 <p>Take a look at what is contained within the repo.  Essentially you have both a training data folder and a test folder.  We will now use a tool called <strong>imglab</strong> to annotate the images for building our detector.</p>
 <p>Browse to the <a class="reference external" href="https://imglab.in/">imglab tool</a> and select <strong>“UMM, MAYBE NEXT TIME!”</strong>.</p>
 <p>In the bottom left of the site, select the load button and browse to the training folder:</p>
-<img src="figs/load.png" width="200" height="195.89">
+<p><img alt="logo" src="_images/load.png" /></p>
 <p>Select the first stop sign and the <strong>“Rectangle”</strong> tool.</p>
-<img src="figs/rectangle.png" width="100" height="195.89">
+<p><img alt="logo" src="_images/rectangle.png" /></p>
 <p>Highlight the border of the stop sign: drag-and-draw a bounding rectangle, ensuring to <strong>only</strong> select the stop sign and to select all examples of the object in the image.</p>
 <blockquote>
 <div><p>📝️ <strong>NOTE:</strong> It is important to label all examples of objects in an image; otherwise, Dlib will implicitly assume that regions not labeled are regions that should not be detected (i.e., hard-negative mining applied during extraction time).</p>
@@ -1131,7 +1119,7 @@ git clone git@github.com:ECE495/HOG_Demo.git
 <p>You can select a bounding box and hit the delete key to remove it.</p>
 <p>If you press <code class="docutils literal notranslate"><span class="pre">alt+left/right</span> <span class="pre">arrow</span></code> you can navigate through images in the slider and repeat highlighting the objects.</p>
 <p>Once all stop signs are complete hit <code class="docutils literal notranslate"><span class="pre">ctrl+e</span></code> to save the annotations (bounding box information) as a <strong>“Dlib XML”</strong> file within the <code class="docutils literal notranslate"><span class="pre">training</span></code> folder using a descriptive name such as <code class="docutils literal notranslate"><span class="pre">sl_annotations.xml</span></code>.</p>
-<img src="figs/xml.png" width="300" height="195.89">
+<p><img alt="logo" src="_images/xml.png" /></p>
 <p>We now need to create the code to build the detector based on our annotated training data.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/master_ws/src/usafabot/usafabot_curriculum/my_scripts/HOG_Demo
 touch trainDetector.py
@@ -1178,7 +1166,7 @@ python3 trainDetector.py --xml training/sl_annotations.xml --detector training/s
 <p>You may get a few errors pop up during execution based on your choice for bounding boxes.  Make sure you address those errors before continuing.  If everything executed correctly, you should ultimately see a picture of the HOG feature you designed.</p>
 </div>
 <div class="section" id="testing-a-detector">
-<h4>Testing a detector<a class="headerlink" href="#testing-a-detector" title="Permalink to this headline">¶</a></h4>
+<h3>Testing a detector<a class="headerlink" href="#testing-a-detector" title="Permalink to this headline">¶</a></h3>
 <p>Now it is time to build our code to test the detector.  The following code will make use of the imutils library as well.</p>
 <p>You may get a few errors pop up during execution based on your choice for bounding boxes.  Make sure you address those errors before continuing.  If everything executed correctly, you should ultimately see a picture of the HOG feature you designed.</p>
 <p>Now it is time to build our code to test the detector.</p>
@@ -1226,20 +1214,20 @@ python3 testDetector.py --detector training/sl_detector.svm --testing <span clas
 <p>OK, so how did you do? What surprises did you have? What might you consider to improve the detector?</p>
 </div>
 <div class="section" id="id4">
-<h4>Summary<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<h3>Summary<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <p>You have now trained and tested your first detector! In the future you will train a new detector using the camera on your robot and a real stop sign. This will be used in your final project to detect and react to stop signs in the wild!</p>
 </div>
 <div class="section" id="id5">
-<h4>Assignment<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<h3>Assignment<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <p>Research Dlib’s simple object detector, and see how you might want to tune the options to improve the performance.</p>
 </div>
 <div class="section" id="id6">
-<h4>Cleanup<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<h3>Cleanup<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <p>In the Jupyter Notebook at the top menu bar select “Kernel” and “Restart &amp; Clear Output”. Shutdown the notebook server by typing <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code> within the terminal you ran <code class="docutils literal notranslate"><span class="pre">jupyter-notebook</span></code> in. Select ‘y’.</p>
 </div>
 </div>
 <div class="section" id="part-5-ros-and-image-capture">
-<h3>Part 5: ROS and Image Capture<a class="headerlink" href="#part-5-ros-and-image-capture" title="Permalink to this headline">¶</a></h3>
+<h2>Part 5: ROS and Image Capture<a class="headerlink" href="#part-5-ros-and-image-capture" title="Permalink to this headline">¶</a></h2>
 <p>ROS provides a number of tools to interact with a commercial-off-the-shelf camera such as the USB camera connected to your robot. The primary tool we will use is the <a class="reference external" href="http://wiki.ros.org/usb_cam">usb_cam</a> package which is already installed on your robot.</p>
 <p>Let’s create a <strong>lab4</strong> package on the <strong>Robot</strong> we can use to start developing a launch file to run our computer vision tools.</p>
 <p>Open an SSH connection to the <strong>Robot</strong> and create a <strong>lab4</strong> package, <code class="docutils literal notranslate"><span class="pre">launch</span></code> folder, and <code class="docutils literal notranslate"><span class="pre">lab4.launch</span></code> file:</p>
@@ -1253,7 +1241,7 @@ touch lab4.launch
 </div>
 <p>Make and source your workspace.</p>
 <div class="section" id="launch-file-usb-cam">
-<h4>Launch File - USB Cam<a class="headerlink" href="#launch-file-usb-cam" title="Permalink to this headline">¶</a></h4>
+<h3>Launch File - USB Cam<a class="headerlink" href="#launch-file-usb-cam" title="Permalink to this headline">¶</a></h3>
 <p>Edit the <code class="docutils literal notranslate"><span class="pre">lab4.launch</span></code> file to call the <strong>usb_cam_node</strong> which will automatically connect to the camera and publish the video over a topic.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;launch&gt;</span>
     <span class="cm">&lt;!-- usb camera --&gt;</span>
@@ -1282,7 +1270,7 @@ rosrun rqt_image_view rqt_image_view
 <p>Ensure the <code class="docutils literal notranslate"><span class="pre">/usb_cam/image_raw</span></code> topic is selected.</p>
 </div>
 <div class="section" id="calibrate-usb-camera">
-<h4>Calibrate USB Camera<a class="headerlink" href="#calibrate-usb-camera" title="Permalink to this headline">¶</a></h4>
+<h3>Calibrate USB Camera<a class="headerlink" href="#calibrate-usb-camera" title="Permalink to this headline">¶</a></h3>
 <p>A camera must first be calibrated to utilize computer vision based tasks. Otherwise, there is no reference for how large objects are in regards to the camera frame. The <a class="reference external" href="http://wiki.ros.org/camera_calibration">ROS Calibration Tool</a> creates a calibration file that is then used by other ROS packages to enable size and distance calculations. The <strong>camera_calibration</strong> package utilizes OpenCV camera calibration to allow easy calibration of monocular or stereo cameras using a checkerboard calibration target. The complete guide can be found on the <a class="reference external" href="http://wiki.ros.org/camera_calibration/Tutorials/MonocularCalibration">Camera Calibration Tutorial</a>.</p>
 <p>Create an SSH connection to the <strong>Robot</strong> and connect to the camera using the <strong>usb_cam</strong> node:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>roslaunch lab4 lab4.launch
@@ -1321,24 +1309,24 @@ scp ost.yaml pi@robotX:/home/pi/.ros/camera_info/head_camera.yaml
 <p>Rerun the <code class="docutils literal notranslate"><span class="pre">lab4.launch</span></code> file on the robot. You should see the camera feed reopen and see no errors in the command line (you may need to unplug and plug your camera back in).</p>
 </div>
 <div class="section" id="checkpoint">
-<h4>Checkpoint<a class="headerlink" href="#checkpoint" title="Permalink to this headline">¶</a></h4>
+<h3>Checkpoint<a class="headerlink" href="#checkpoint" title="Permalink to this headline">¶</a></h3>
 <p>Show an instructor the working camera feed and that the <strong>usb_cam</strong> node was able to open the camera calibration file.</p>
 </div>
 <div class="section" id="id7">
-<h4>Summary<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<h3>Summary<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <p>You now are able to connect to a USB camera using ROS, display the image provided by the node, and have a calibration file that ROS can use to identify the size of objects in the frame.</p>
 </div>
 <div class="section" id="id8">
-<h4>Cleanup<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<h3>Cleanup<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <p>Kill all rosnodes and roscore!</p>
 </div>
 </div>
 <div class="section" id="part-6-fiducial-markers">
-<h3>Part 6: Fiducial Markers<a class="headerlink" href="#part-6-fiducial-markers" title="Permalink to this headline">¶</a></h3>
+<h2>Part 6: Fiducial Markers<a class="headerlink" href="#part-6-fiducial-markers" title="Permalink to this headline">¶</a></h2>
 <p>In this lesson we will learn how fiducial markers are used in image processing. Specifically, we will utilize ROS tools to identify different <a class="reference external" href="https://april.eecs.umich.edu/papers/details.php?name=olson2011tags">April Tags</a> and use the 3D position and orientation to determine the robot’s distance from an object.</p>
 <p>A fiducial marker is an artificial feature used in creating controllable experiments, ground truthing, and in simplifying the development of systems where perception is not the central objective. A few examples of fiducial markers include ArUco Markers, AprilTags, and QR codes. Each of these different tags hold information such as an ID or, in the case of QR codes, websites, messages, and etc. We will primarily be focusing on AprilTags as there is a very robust ROS package already built. This library identifies AprilTags and will provide information about the tags size, distance, and orientation.</p>
 <div class="section" id="apriltag-ros">
-<h4>AprilTag ROS<a class="headerlink" href="#apriltag-ros" title="Permalink to this headline">¶</a></h4>
+<h3>AprilTag ROS<a class="headerlink" href="#apriltag-ros" title="Permalink to this headline">¶</a></h3>
 <p>Browse to the AprilTag_ROS package on the robot and edit the config file:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh pi@robotX
 roscd apriltag_ros/config
@@ -1356,7 +1344,7 @@ sudo nano tags.yaml
 </div>
 </div>
 <div class="section" id="launch-file-apriltag-ros">
-<h4>Launch File - Apriltag_Ros<a class="headerlink" href="#launch-file-apriltag-ros" title="Permalink to this headline">¶</a></h4>
+<h3>Launch File - Apriltag_Ros<a class="headerlink" href="#launch-file-apriltag-ros" title="Permalink to this headline">¶</a></h3>
 <p>Edit the <code class="docutils literal notranslate"><span class="pre">lab4.launch</span></code> file on the <strong>Robot</strong>, calling the <code class="docutils literal notranslate"><span class="pre">continuous_detection.launch</span></code> file provided by the <strong>apriltag_ros</strong> package. We need to set the arguments to the values provided by the <code class="docutils literal notranslate"><span class="pre">usb_cam</span></code> node:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;include</span> <span class="na">file=</span><span class="s">&quot;$(find apriltag_ros)/launch/continuous_detection.launch&quot;</span><span class="nt">&gt;</span>
 	<span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;camera_name&quot;</span> <span class="na">value=</span><span class="s">&quot;usb_cam&quot;</span><span class="nt">/&gt;</span>
@@ -1371,30 +1359,30 @@ sudo nano tags.yaml
 <p>In another terminal on the master echo the topic <code class="docutils literal notranslate"><span class="pre">tag_detections</span></code>. What information do you see? Will the apriltag_ros node identify only one tag at a time? Which value do you think we would use to determine distance from the tag? What kind of message is this? What package does this message come from?</p>
 </div>
 <div class="section" id="id9">
-<h4>Checkpoint<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<h3>Checkpoint<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
 <p>Show an instructor that the <strong>apriltag_ros</strong> can identify tags and provides position data.</p>
 </div>
 <div class="section" id="id10">
-<h4>Summary<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<h3>Summary<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 <p>You now have the ability to identify AprilTags and because you have a calibrated camera, you can detect the size, orientation, and distance of a tag.</p>
 </div>
 <div class="section" id="id11">
-<h4>Cleanup<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<h3>Cleanup<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
 <p>Kill all rosnodes and roscore!</p>
 </div>
 </div>
 </div>
-<div class="section" id="lab-4-computer-vision">
-<h2>Lab 4: Computer Vision<a class="headerlink" href="#lab-4-computer-vision" title="Permalink to this headline">¶</a></h2>
+<div class="tex2jax_ignore mathjax_ignore section" id="lab-4-computer-vision">
+<h1>Lab 4: Computer Vision<a class="headerlink" href="#lab-4-computer-vision" title="Permalink to this headline">¶</a></h1>
 <hr class="docutils" />
 <p><strong>You must open this file as a Jupyter Notebook (link below) to run code</strong></p>
 <p><a class="reference external" href="http://localhost:8888/notebooks/Lab4_ComputerVision.ipynb">Run this file as an executable Jupyter Notebook</a></p>
 <div class="section" id="purpose">
-<h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h3>
+<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
 <p>This lab will integrate a USB Camera with the Robot. You will use a Python script to take pictures of the stop sign and build a stop sign detector then test it using a live video feed. You will then use the detector and known size of the stop sign to estimate how far the stop sign is from the camera. Lastly, you will create a node to identify and determine how far an April Tag is from the robot.</p>
 </div>
 <div class="section" id="setup-packages">
-<h3>Setup packages<a class="headerlink" href="#setup-packages" title="Permalink to this headline">¶</a></h3>
+<h2>Setup packages<a class="headerlink" href="#setup-packages" title="Permalink to this headline">¶</a></h2>
 <p>Open a terminal on the <strong>Master</strong> and create a lab4 package:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/master_ws/src/ece495_master_spring2022-USERNAME/
 catkin_create_pkg lab4 rospy sensor_msgs std_msgs cv_bridge apriltag_ros
@@ -1404,7 +1392,7 @@ catkin_create_pkg lab4 rospy sensor_msgs std_msgs cv_bridge apriltag_ros
 <p>If you have not already done so, repeat on the <strong>Robot</strong></p>
 </div>
 <div class="section" id="create-a-ros-node-to-save-images">
-<h3>Create a ROS node to save images<a class="headerlink" href="#create-a-ros-node-to-save-images" title="Permalink to this headline">¶</a></h3>
+<h2>Create a ROS node to save images<a class="headerlink" href="#create-a-ros-node-to-save-images" title="Permalink to this headline">¶</a></h2>
 <p>Browse to your lab4 source folder on the <strong>Master</strong> and create a node called <strong>image_capture.py</strong>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
 <span class="kn">import</span> <span class="nn">rospy</span><span class="o">,</span> <span class="nn">cv2</span><span class="o">,</span> <span class="nn">argparse</span>
@@ -1471,7 +1459,7 @@ catkin_create_pkg lab4 rospy sensor_msgs std_msgs cv_bridge apriltag_ros
 <p>Save, exit, and make executable.</p>
 </div>
 <div class="section" id="train-your-stop-detector">
-<h3>Train your stop detector<a class="headerlink" href="#train-your-stop-detector" title="Permalink to this headline">¶</a></h3>
+<h2>Train your stop detector<a class="headerlink" href="#train-your-stop-detector" title="Permalink to this headline">¶</a></h2>
 <p>Create a new folder in your <strong>lab4</strong> package called <strong>training_images</strong>.</p>
 <p>Run the <code class="docutils literal notranslate"><span class="pre">image_capture.py</span></code> node on the <strong>Master</strong> using the following command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosrun lab4 image_capture.py -o /home/dfec/master_ws/src/ece495_master_spring2021-NAME/lab4/training_images/
@@ -1481,7 +1469,7 @@ catkin_create_pkg lab4 rospy sensor_msgs std_msgs cv_bridge apriltag_ros
 <p>Utilize the steps from Module 9: <a class="reference external" href="ICE9_ComputerVision.ipynb#Building-a-detector-using-HOG-features">Building a detector using HOG features</a> to label your images and train your object detector using the new images, saving the <code class="docutils literal notranslate"><span class="pre">stop_detector.svm</span></code> file within the <strong>training_images</strong> folder.</p>
 </div>
 <div class="section" id="test-your-stop-detector">
-<h3>Test your stop detector<a class="headerlink" href="#test-your-stop-detector" title="Permalink to this headline">¶</a></h3>
+<h2>Test your stop detector<a class="headerlink" href="#test-your-stop-detector" title="Permalink to this headline">¶</a></h2>
 <p>Create a node in the <strong>lab4</strong> package on the <strong>Master</strong> called <code class="docutils literal notranslate"><span class="pre">stop_detector.py</span></code> and copy the below into it:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
 <span class="kn">import</span> <span class="nn">rospy</span><span class="o">,</span> <span class="nn">cv2</span><span class="o">,</span> <span class="nn">dlib</span>
@@ -1528,7 +1516,7 @@ catkin_create_pkg lab4 rospy sensor_msgs std_msgs cv_bridge apriltag_ros
 <p>After getting the <code class="docutils literal notranslate"><span class="pre">cv_image</span></code> within the <code class="docutils literal notranslate"><span class="pre">camera_callback()</span></code>, apply the detector in a similar method as Module 9: <a class="reference external" href="ICE9_ComputerVision.ipynb#Testing-a-detector">Testing a detector</a> creating boxes around all detected stop signs. Using a <code class="docutils literal notranslate"><span class="pre">waitKey(1)</span></code> will allow for the image to refresh automatically without user input and display the video.</p>
 </div>
 <div class="section" id="checkpoint-1">
-<h3>Checkpoint 1<a class="headerlink" href="#checkpoint-1" title="Permalink to this headline">¶</a></h3>
+<h2>Checkpoint 1<a class="headerlink" href="#checkpoint-1" title="Permalink to this headline">¶</a></h2>
 <p>Demonstrate the stop detector on the <strong>Master</strong> detecting a stop sign from the <strong>Robot’s</strong> camera.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosrun lab4 stop_detector.py _detector:<span class="o">=</span>/home/dfec/master_ws/src/ece495_master_spring2021-NAME/lab4/training_images/stop_detector.svm
 </pre></div>
@@ -1538,7 +1526,7 @@ catkin_create_pkg lab4 rospy sensor_msgs std_msgs cv_bridge apriltag_ros
 </div></blockquote>
 </div>
 <div class="section" id="move-detector-to-robot">
-<h3>Move detector to robot<a class="headerlink" href="#move-detector-to-robot" title="Permalink to this headline">¶</a></h3>
+<h2>Move detector to robot<a class="headerlink" href="#move-detector-to-robot" title="Permalink to this headline">¶</a></h2>
 <p>Copy the detector and node to the robot:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>roscd lab4/training_images
 scp stop_detector.svm pi@robotX:/home/pi/robot_ws/src/ece495_robot_spring2021-NAME/lab4/training_images/stop_detector.svm
@@ -1550,7 +1538,7 @@ scp stop_detector.py pi@robotX:/home/pi/robot_ws/src/ece495_robot_spring2021-NAM
 <p>Do you note a difference in processing speed?</p>
 </div>
 <div class="section" id="launch-file">
-<h3>Launch file<a class="headerlink" href="#launch-file" title="Permalink to this headline">¶</a></h3>
+<h2>Launch file<a class="headerlink" href="#launch-file" title="Permalink to this headline">¶</a></h2>
 <p>Edit the <code class="docutils literal notranslate"><span class="pre">lab4.launch</span></code> file on the <strong>Robot</strong> so it will run the stop detector node with the <code class="docutils literal notranslate"><span class="pre">detector</span></code> param set to the location of the detector. For example:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;node</span> <span class="na">name=</span><span class="s">&quot;stop_detector&quot;</span> <span class="na">pkg=</span><span class="s">&quot;lab4&quot;</span> <span class="na">type=</span><span class="s">&quot;stop_detector.py&quot;</span> <span class="na">output=</span><span class="s">&quot;screen&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;detector&quot;</span> <span class="na">value=</span><span class="s">&quot;/home/pi/robot_ws/src/ece495_robot_spring2021-Name/robot/lab4/training_images/sl_detector.svm&quot;</span><span class="nt">/&gt;</span>
@@ -1559,13 +1547,13 @@ scp stop_detector.py pi@robotX:/home/pi/robot_ws/src/ece495_robot_spring2021-NAM
 </div>
 </div>
 <div class="section" id="checkpoint-2">
-<h3>Checkpoint 2<a class="headerlink" href="#checkpoint-2" title="Permalink to this headline">¶</a></h3>
+<h2>Checkpoint 2<a class="headerlink" href="#checkpoint-2" title="Permalink to this headline">¶</a></h2>
 <p>Demonstrate the stop detector on the <strong>Robot</strong> detecting a stop sign.</p>
 </div>
 <div class="section" id="determine-distance-from-stop-sign">
-<h3>Determine distance from stop sign<a class="headerlink" href="#determine-distance-from-stop-sign" title="Permalink to this headline">¶</a></h3>
+<h2>Determine distance from stop sign<a class="headerlink" href="#determine-distance-from-stop-sign" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="edit-stop-detector-py">
-<h4>Edit <code class="docutils literal notranslate"><span class="pre">stop_detector.py</span></code><a class="headerlink" href="#edit-stop-detector-py" title="Permalink to this headline">¶</a></h4>
+<h3>Edit <code class="docutils literal notranslate"><span class="pre">stop_detector.py</span></code><a class="headerlink" href="#edit-stop-detector-py" title="Permalink to this headline">¶</a></h3>
 <p>You will edit your stop sign detector on the <strong>Robot</strong> to calculate an estimated distance between the camera and the stop sign using triangle similarity.</p>
 <p>Given a stop sign with a known width, <span class="math notranslate nohighlight">\(W\)</span>, we can place the stop sign at a known distance, <span class="math notranslate nohighlight">\(D\)</span>, from our camera. The detector will then detect the stop sign and provide a perceived width in pixels, <span class="math notranslate nohighlight">\(P\)</span>. Using these values we can calculate the focal length, <span class="math notranslate nohighlight">\(F\)</span> of our camera:</p>
 <p><span class="math notranslate nohighlight">\(F = \frac{(P\times D)}{W}\)</span></p>
@@ -1581,11 +1569,11 @@ scp stop_detector.py pi@robotX:/home/pi/robot_ws/src/ece495_robot_spring2021-NAM
 </div>
 </div>
 <div class="section" id="checkpoint-3">
-<h3>Checkpoint 3<a class="headerlink" href="#checkpoint-3" title="Permalink to this headline">¶</a></h3>
+<h2>Checkpoint 3<a class="headerlink" href="#checkpoint-3" title="Permalink to this headline">¶</a></h2>
 <p>Demonstrate the <strong>stop_detector</strong> node publishing distance from the stop sign.</p>
 </div>
 <div class="section" id="printing-april-tag-information">
-<h3>Printing April Tag information<a class="headerlink" href="#printing-april-tag-information" title="Permalink to this headline">¶</a></h3>
+<h2>Printing April Tag information<a class="headerlink" href="#printing-april-tag-information" title="Permalink to this headline">¶</a></h2>
 <p>Create a node on the master in lab4 called <code class="docutils literal notranslate"><span class="pre">apriltag_dist.py</span></code>. Import the appropriate AprilTag message. Subscribe to the <code class="docutils literal notranslate"><span class="pre">tag_detections</span></code> topic. Print the identified AprilTag ID and distance. If the camera sees multiple tags, it should print the information for each tag.</p>
 <p>In your callback function you will want to create a for loop such as:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">detections</span><span class="p">:</span>
@@ -1595,22 +1583,21 @@ scp stop_detector.py pi@robotX:/home/pi/robot_ws/src/ece495_robot_spring2021-NAM
 <p>Add the <code class="docutils literal notranslate"><span class="pre">apriltag_dist</span></code> node to the <strong>lab4</strong> launch file on the <strong>Robot</strong>.</p>
 </div>
 <div class="section" id="checkpoint-4">
-<h3>Checkpoint 4<a class="headerlink" href="#checkpoint-4" title="Permalink to this headline">¶</a></h3>
+<h2>Checkpoint 4<a class="headerlink" href="#checkpoint-4" title="Permalink to this headline">¶</a></h2>
 <p>Demonstrate the <code class="docutils literal notranslate"><span class="pre">apriltag_dist</span></code> node printing the ID and distance of each April Tag.</p>
 </div>
 <div class="section" id="report">
-<h3>Report<a class="headerlink" href="#report" title="Permalink to this headline">¶</a></h3>
+<h2>Report<a class="headerlink" href="#report" title="Permalink to this headline">¶</a></h2>
 <p>Complete a short 2-3 page report that utilizes the format and answers the questions within the report template. The report template and an example report can be found within the Team under <code class="docutils literal notranslate"><span class="pre">Resources/Lab</span> <span class="pre">Template</span></code>.</p>
 <blockquote>
 <div><p>📝️ <strong>Note:</strong> We will be primarily grading sections 3.1, 3.2, and 3.3 for this lab, but do include the entire lab as you will need other components for the final project report.</p>
 </div></blockquote>
 </div>
 <div class="section" id="turn-in-requirements">
-<h3>Turn-in Requirements<a class="headerlink" href="#turn-in-requirements" title="Permalink to this headline">¶</a></h3>
+<h2>Turn-in Requirements<a class="headerlink" href="#turn-in-requirements" title="Permalink to this headline">¶</a></h2>
 <p><strong>[25 points]</strong> All checkpoints marked off.</p>
 <p><strong>[50 points]</strong> Report via Gradescope.</p>
 <p><strong>[25 points]</strong> Code: push your code to your repository. Also, include a screen shot of the <strong><a class="reference external" href="http://controller.py">controller.py</a></strong> file at the end of your report.</p>
-</div>
 </div>
 </div>
 
@@ -1646,6 +1633,13 @@ scp stop_detector.py pi@robotX:/home/pi/robot_ws/src/ece495_robot_spring2021-NAM
             <p class="prev-next-title">LIDAR</p>
         </div>
     </a>
+    <a class='right-next' id="next-link" href="Module10.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Final Project</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>
@@ -1653,7 +1647,7 @@ scp stop_detector.py pi@robotX:/home/pi/robot_ws/src/ece495_robot_spring2021-NAM
     <footer class="footer">
   <p>
     
-      By Mr. Steven Beyer<br/>
+      By The Jupyter Book community<br/>
     
         &copy; Copyright 2021.<br/>
   </p>
