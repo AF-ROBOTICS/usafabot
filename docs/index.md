@@ -5,7 +5,7 @@ Welcome to ECE495: Fundamentals of Robotics Research! To get started, navigate t
 
 ## Shortcuts
 
-Below you will find some useful shortcuts you can use after completing all the steps in the "Getting Started" page. You may find these useful over the duration of this class.
+Below you will find some useful shortcuts you can use after completing all the steps in the "Getting Started" page. You may find these shortcuts useful over the duration of this class.
 
 ### 1. Opening a New Terminal
 
