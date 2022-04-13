@@ -1,0 +1,813 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 4: Computer Vision &#8212; My Jupyter Book</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">My Jupyter Book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="welcome.html">
+   Welcome and Shortcuts
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  GETTING STARTED
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="getting_started.html">
+   Getting Started
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ROBOT and MASTER SETUP
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="RobotSetup.html">
+   Robot Setup
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 00
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module0.html">
+   Module 0 - Intro and GIT
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 01
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module1.html">
+   Module 1: Robotics Operating System (ROS)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 02
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module2.html">
+   Module 2: Linux for Robotics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 03
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module3.html">
+   Python3 for Robotics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 04
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module4.html">
+   Driving the Robot
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 05
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module5.html">
+   Custom Messages
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 06
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module6.html">
+   Inertial Measurement Unit
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 07
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module7.html">
+   Launch Files
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 08
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module8.html">
+   LIDAR
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 09
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module9.html">
+   Computer Vision
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE 10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module10.html">
+   Final Project
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Lab4_ComputerVision.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Lab4_ComputerVision.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#purpose">
+   Purpose
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup-packages">
+   Setup packages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-a-ros-node-to-save-images">
+   Create a ROS node to save images
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#train-your-stop-detector">
+   Train your stop detector
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#test-your-stop-detector">
+   Test your stop detector
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#checkpoint-1">
+   Checkpoint 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#move-detector-to-robot">
+   Move detector to robot
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#launch-file">
+   Launch file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#checkpoint-2">
+   Checkpoint 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#determine-distance-from-stop-sign">
+   Determine distance from stop sign
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#edit-stop-detector-py">
+     Edit
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       stop_detector.py
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#checkpoint-3">
+   Checkpoint 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#printing-april-tag-information">
+   Printing April Tag information
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#checkpoint-4">
+   Checkpoint 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#report">
+   Report
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#turn-in-requirements">
+   Turn-in Requirements
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Lab 4: Computer Vision</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#purpose">
+   Purpose
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup-packages">
+   Setup packages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-a-ros-node-to-save-images">
+   Create a ROS node to save images
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#train-your-stop-detector">
+   Train your stop detector
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#test-your-stop-detector">
+   Test your stop detector
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#checkpoint-1">
+   Checkpoint 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#move-detector-to-robot">
+   Move detector to robot
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#launch-file">
+   Launch file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#checkpoint-2">
+   Checkpoint 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#determine-distance-from-stop-sign">
+   Determine distance from stop sign
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#edit-stop-detector-py">
+     Edit
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       stop_detector.py
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#checkpoint-3">
+   Checkpoint 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#printing-april-tag-information">
+   Printing April Tag information
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#checkpoint-4">
+   Checkpoint 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#report">
+   Report
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#turn-in-requirements">
+   Turn-in Requirements
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="lab-4-computer-vision">
+<h1>Lab 4: Computer Vision<a class="headerlink" href="#lab-4-computer-vision" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="section" id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
+<p>This lab will integrate a USB Camera with the Robot. You will use a Python script to take pictures of the stop sign and build a stop sign detector then test it using a live video feed. You will then use the detector and known size of the stop sign to estimate how far the stop sign is from the camera. Lastly, you will create a node to identify and determine how far an April Tag is from the robot.</p>
+</div>
+<div class="section" id="setup-packages">
+<h2>Setup packages<a class="headerlink" href="#setup-packages" title="Permalink to this headline">¶</a></h2>
+<p>Open a terminal on the <strong>Master</strong> and create a lab4 package:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/master_ws/src/ece495_master_spring2022-USERNAME/
+catkin_create_pkg lab4 rospy sensor_msgs std_msgs cv_bridge apriltag_ros
+</pre></div>
+</div>
+<p>Make and source your workspace.</p>
+<p>If you have not already done so, repeat on the <strong>Robot</strong></p>
+</div>
+<div class="section" id="create-a-ros-node-to-save-images">
+<h2>Create a ROS node to save images<a class="headerlink" href="#create-a-ros-node-to-save-images" title="Permalink to this headline">¶</a></h2>
+<p>Browse to your lab4 source folder on the <strong>Master</strong> and create a node called <strong>image_capture.py</strong>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="kn">import</span> <span class="nn">rospy</span><span class="o">,</span> <span class="nn">cv2</span><span class="o">,</span> <span class="nn">argparse</span>
+<span class="kn">from</span> <span class="nn">sensor_msgs.msg</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">from</span> <span class="nn">cv_bridge</span> <span class="kn">import</span> <span class="n">CvBridge</span><span class="p">,</span> <span class="n">CvBridgeError</span>
+
+<span class="k">class</span> <span class="nc">SavingImage</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+	<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img_dest</span><span class="p">):</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">img_dest</span> <span class="o">=</span> <span class="n">img_dest</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">ctrl_c</span> <span class="o">=</span> <span class="kc">False</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+        
+        <span class="c1"># subscribe to the topic created by the usb_cam node</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">image_sub</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Subscriber</span><span class="p">(</span><span class="s2">&quot;/usb_cam/image_raw&quot;</span><span class="p">,</span><span class="n">Image</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">camera_callback</span><span class="p">)</span>
+        
+        <span class="c1"># CV bridge converts between ROS Image messages and OpenCV images</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">bridge_object</span> <span class="o">=</span> <span class="n">CvBridge</span><span class="p">()</span>
+        
+        <span class="c1"># callback to save images when user presses button</span>
+		<span class="n">rospy</span><span class="o">.</span><span class="n">Timer</span><span class="p">(</span><span class="n">rospy</span><span class="o">.</span><span class="n">Duration</span><span class="p">(</span><span class="mf">.1</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">callback_save</span><span class="p">)</span>
+		
+		<span class="n">rospy</span><span class="o">.</span><span class="n">on_shutdown</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">shutdownhook</span><span class="p">)</span>
+
+	<span class="k">def</span> <span class="nf">camera_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">img</span><span class="p">):</span>
+		<span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">ctrl_c</span><span class="p">:</span>
+			<span class="k">try</span><span class="p">:</span>
+                <span class="c1"># convert ROS image to OpenCV image</span>
+				<span class="bp">self</span><span class="o">.</span><span class="n">cv_image</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bridge_object</span><span class="o">.</span><span class="n">imgmsg_to_cv2</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">desired_encoding</span><span class="o">=</span><span class="s2">&quot;bgr8&quot;</span><span class="p">)</span>
+			<span class="k">except</span> <span class="n">CvBridgeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+				<span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+			
+            <span class="c1"># show the image (waitKey(1) allows for automatic refressh creating video)</span>
+			<span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s1">&#39;image&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cv_image</span><span class="p">)</span>
+			<span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+		
+	<span class="k">def</span> <span class="nf">callback_save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="c1"># when user is ready to take picture press button</span>
+		<span class="n">_</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Press enter to save the next image.&quot;</span><span class="p">)</span>
+		<span class="n">dest</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">img_dest</span> <span class="o">+</span> <span class="s2">&quot;img&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">count</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;.jpg&quot;</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+		<span class="nb">print</span><span class="p">(</span><span class="n">dest</span><span class="p">)</span>
+		<span class="k">try</span><span class="p">:</span>
+            <span class="c1"># write to file</span>
+			<span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="n">dest</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cv_image</span><span class="p">)</span>
+		<span class="k">except</span><span class="p">:</span>
+			<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Not valid image name. Try restarting with valid path.&quot;</span><span class="p">)</span>
+			
+	<span class="k">def</span> <span class="nf">shutdownhook</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Shutting down&quot;</span><span class="p">)</span>
+		<span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+	<span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;image_saver&#39;</span><span class="p">,</span> <span class="n">anonymous</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+	<span class="n">ap</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
+	<span class="n">ap</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;-o&quot;</span><span class="p">,</span> <span class="s2">&quot;--output&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;path to output img&quot;</span><span class="p">)</span>
+	<span class="n">args</span> <span class="o">=</span> <span class="nb">vars</span><span class="p">(</span><span class="n">ap</span><span class="o">.</span><span class="n">parse_args</span><span class="p">())</span>
+	<span class="n">saving_image_object</span> <span class="o">=</span> <span class="n">SavingImage</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="s2">&quot;output&quot;</span><span class="p">])</span>
+	<span class="k">try</span><span class="p">:</span>
+		<span class="n">rospy</span><span class="o">.</span><span class="n">spin</span><span class="p">()</span>
+	<span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
+		<span class="k">pass</span>
+</pre></div>
+</div>
+<p>Save, exit, and make executable.</p>
+</div>
+<div class="section" id="train-your-stop-detector">
+<h2>Train your stop detector<a class="headerlink" href="#train-your-stop-detector" title="Permalink to this headline">¶</a></h2>
+<p>Create a new folder in your <strong>lab4</strong> package called <strong>training_images</strong>.</p>
+<p>Run the <code class="docutils literal notranslate"><span class="pre">image_capture.py</span></code> node on the <strong>Master</strong> using the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosrun lab4 image_capture.py -o /home/dfec/master_ws/src/ece495_master_spring2021-NAME/lab4/training_images/
+</pre></div>
+</div>
+<p>Store images of the stop sign by pressing <code class="docutils literal notranslate"><span class="pre">enter</span></code> when prompted. You decide how many and at what orientations to properly train your detector. When complete, hit <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code> to exit.</p>
+<p>Utilize the steps from Module 9: <a class="reference external" href="ICE9_ComputerVision.ipynb#Building-a-detector-using-HOG-features">Building a detector using HOG features</a> to label your images and train your object detector using the new images, saving the <code class="docutils literal notranslate"><span class="pre">stop_detector.svm</span></code> file within the <strong>training_images</strong> folder.</p>
+</div>
+<div class="section" id="test-your-stop-detector">
+<h2>Test your stop detector<a class="headerlink" href="#test-your-stop-detector" title="Permalink to this headline">¶</a></h2>
+<p>Create a node in the <strong>lab4</strong> package on the <strong>Master</strong> called <code class="docutils literal notranslate"><span class="pre">stop_detector.py</span></code> and copy the below into it:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="kn">import</span> <span class="nn">rospy</span><span class="o">,</span> <span class="nn">cv2</span><span class="o">,</span> <span class="nn">dlib</span>
+<span class="kn">from</span> <span class="nn">cv_bridge</span> <span class="kn">import</span> <span class="n">CvBridge</span><span class="p">,</span> <span class="n">CvBridgeError</span>
+
+<span class="c1"># TODO: import usb_cam message type</span>
+
+
+<span class="k">class</span> <span class="nc">StopDetector</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">detectorLoc</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ctrl_c</span> <span class="o">=</span> <span class="kc">False</span>
+        
+        <span class="c1">#TODO: create subscriber to usb_cam image topic</span>
+
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">bridge_object</span> <span class="o">=</span> <span class="n">CvBridge</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">detector</span> <span class="o">=</span> <span class="n">dlib</span><span class="o">.</span><span class="n">simple_object_detector</span><span class="p">(</span><span class="n">detectorLoc</span><span class="p">)</span>
+        
+        <span class="n">rospy</span><span class="o">.</span><span class="n">on_shutdown</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">shutdownhook</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">camera_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">data</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">ctrl_c</span><span class="p">:</span>
+            <span class="c1">#TODO: write code to get ROS image, convert to OpenCV image,</span>
+            <span class="c1"># apply detector, add boxes to image, and display image</span>
+            
+
+    <span class="k">def</span> <span class="nf">shutdownhook</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Shutting down&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ctrl_c</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
+        
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;stop_detector&#39;</span><span class="p">)</span>
+    <span class="n">detector</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s2">&quot;/stop_detector/detector&quot;</span><span class="p">)</span>
+    <span class="n">stop_detector</span> <span class="o">=</span> <span class="n">StopDetector</span><span class="p">(</span><span class="n">detector</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">rospy</span><span class="o">.</span><span class="n">spin</span><span class="p">()</span>
+    <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
+        <span class="k">pass</span>
+</pre></div>
+</div>
+<p>Edit the <code class="docutils literal notranslate"><span class="pre">stop_detector.py</span></code> node so it utilizes the <code class="docutils literal notranslate"><span class="pre">camera_callback()</span></code> function we used above to get images from the camera.</p>
+<p>After getting the <code class="docutils literal notranslate"><span class="pre">cv_image</span></code> within the <code class="docutils literal notranslate"><span class="pre">camera_callback()</span></code>, apply the detector in a similar method as Module 9: <a class="reference external" href="ICE9_ComputerVision.ipynb#Testing-a-detector">Testing a detector</a> creating boxes around all detected stop signs. Using a <code class="docutils literal notranslate"><span class="pre">waitKey(1)</span></code> will allow for the image to refresh automatically without user input and display the video.</p>
+</div>
+<div class="section" id="checkpoint-1">
+<h2>Checkpoint 1<a class="headerlink" href="#checkpoint-1" title="Permalink to this headline">¶</a></h2>
+<p>Demonstrate the stop detector on the <strong>Master</strong> detecting a stop sign from the <strong>Robot’s</strong> camera.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosrun lab4 stop_detector.py _detector:<span class="o">=</span>/home/dfec/master_ws/src/ece495_master_spring2021-NAME/lab4/training_images/stop_detector.svm
+</pre></div>
+</div>
+<blockquote>
+<div><p>📝️ <strong>Note:</strong> You must have the <code class="docutils literal notranslate"><span class="pre">lab4.launch</span></code> file running on the <strong>Robot</strong>.</p>
+</div></blockquote>
+</div>
+<div class="section" id="move-detector-to-robot">
+<h2>Move detector to robot<a class="headerlink" href="#move-detector-to-robot" title="Permalink to this headline">¶</a></h2>
+<p>Copy the detector and node to the robot:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>roscd lab4/training_images
+scp stop_detector.svm pi@robotX:/home/pi/robot_ws/src/ece495_robot_spring2021-NAME/lab4/training_images/stop_detector.svm
+roscd lab4/src
+scp stop_detector.py pi@robotX:/home/pi/robot_ws/src/ece495_robot_spring2021-NAME/lab4/src/stop_detector.py
+</pre></div>
+</div>
+<p>Remove the lines that display the video and instead print “Stop detected” if <code class="docutils literal notranslate"><span class="pre">boxes</span></code> is not empty.</p>
+<p>Do you note a difference in processing speed?</p>
+</div>
+<div class="section" id="launch-file">
+<h2>Launch file<a class="headerlink" href="#launch-file" title="Permalink to this headline">¶</a></h2>
+<p>Edit the <code class="docutils literal notranslate"><span class="pre">lab4.launch</span></code> file on the <strong>Robot</strong> so it will run the stop detector node with the <code class="docutils literal notranslate"><span class="pre">detector</span></code> param set to the location of the detector. For example:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;node</span> <span class="na">name=</span><span class="s">&quot;stop_detector&quot;</span> <span class="na">pkg=</span><span class="s">&quot;lab4&quot;</span> <span class="na">type=</span><span class="s">&quot;stop_detector.py&quot;</span> <span class="na">output=</span><span class="s">&quot;screen&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;detector&quot;</span> <span class="na">value=</span><span class="s">&quot;/home/pi/robot_ws/src/ece495_robot_spring2021-Name/robot/lab4/training_images/sl_detector.svm&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/node&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="checkpoint-2">
+<h2>Checkpoint 2<a class="headerlink" href="#checkpoint-2" title="Permalink to this headline">¶</a></h2>
+<p>Demonstrate the stop detector on the <strong>Robot</strong> detecting a stop sign.</p>
+</div>
+<div class="section" id="determine-distance-from-stop-sign">
+<h2>Determine distance from stop sign<a class="headerlink" href="#determine-distance-from-stop-sign" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="edit-stop-detector-py">
+<h3>Edit <code class="docutils literal notranslate"><span class="pre">stop_detector.py</span></code><a class="headerlink" href="#edit-stop-detector-py" title="Permalink to this headline">¶</a></h3>
+<p>You will edit your stop sign detector on the <strong>Robot</strong> to calculate an estimated distance between the camera and the stop sign using triangle similarity.</p>
+<p>Given a stop sign with a known width, <span class="math notranslate nohighlight">\(W\)</span>, we can place the stop sign at a known distance, <span class="math notranslate nohighlight">\(D\)</span>, from our camera. The detector will then detect the stop sign and provide a perceived width in pixels, <span class="math notranslate nohighlight">\(P\)</span>. Using these values we can calculate the focal length, <span class="math notranslate nohighlight">\(F\)</span> of our camera:</p>
+<p><span class="math notranslate nohighlight">\(F = \frac{(P\times D)}{W}\)</span></p>
+<p>We can then use the calculated focal length, <span class="math notranslate nohighlight">\(F\)</span>, known width, <span class="math notranslate nohighlight">\(W\)</span>, and perceived width in pixels, <span class="math notranslate nohighlight">\(P\)</span> to calculate the distance from the camera:</p>
+<p><span class="math notranslate nohighlight">\(D' = \frac{(W\times F)}{P}\)</span></p>
+<p>Use the above information and create two class variables, <code class="docutils literal notranslate"><span class="pre">FOCAL</span></code> and <code class="docutils literal notranslate"><span class="pre">STOP_WIDTH</span></code>, and a class function to calculate distance given a known <code class="docutils literal notranslate"><span class="pre">FOCAL</span></code> length and a known width of the stop sign, <code class="docutils literal notranslate"><span class="pre">STOP_WIDTH</span></code>. You will need to print the perceived width of the stop sign to determine the <span class="math notranslate nohighlight">\(P\)</span> value used in the calculation to find the focal length.</p>
+<blockquote>
+<div><p>💡️ <strong>Tip:</strong> Pay attention to what the <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">w</span></code> variables of the <code class="docutils literal notranslate"><span class="pre">box</span></code> actually represent!</p>
+</div></blockquote>
+<p>Create a new publisher that will publish the distance using <strong>Float32</strong> <em>std_msgs</em> messages over the <em>/stop_dist</em> topic.</p>
+<p>Publish the distance of each object seen in the image.</p>
+<p>Remove any print statements after troubleshooting!</p>
+</div>
+</div>
+<div class="section" id="checkpoint-3">
+<h2>Checkpoint 3<a class="headerlink" href="#checkpoint-3" title="Permalink to this headline">¶</a></h2>
+<p>Demonstrate the <strong>stop_detector</strong> node publishing distance from the stop sign.</p>
+</div>
+<div class="section" id="printing-april-tag-information">
+<h2>Printing April Tag information<a class="headerlink" href="#printing-april-tag-information" title="Permalink to this headline">¶</a></h2>
+<p>Create a node on the master in lab4 called <code class="docutils literal notranslate"><span class="pre">apriltag_dist.py</span></code>. Import the appropriate AprilTag message. Subscribe to the <code class="docutils literal notranslate"><span class="pre">tag_detections</span></code> topic. Print the identified AprilTag ID and distance. If the camera sees multiple tags, it should print the information for each tag.</p>
+<p>In your callback function you will want to create a for loop such as:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">detections</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>Use print statements to determine the characteristics of the message (you can also google the message).</p>
+<p>Add the <code class="docutils literal notranslate"><span class="pre">apriltag_dist</span></code> node to the <strong>lab4</strong> launch file on the <strong>Robot</strong>.</p>
+</div>
+<div class="section" id="checkpoint-4">
+<h2>Checkpoint 4<a class="headerlink" href="#checkpoint-4" title="Permalink to this headline">¶</a></h2>
+<p>Demonstrate the <code class="docutils literal notranslate"><span class="pre">apriltag_dist</span></code> node printing the ID and distance of each April Tag.</p>
+</div>
+<div class="section" id="report">
+<h2>Report<a class="headerlink" href="#report" title="Permalink to this headline">¶</a></h2>
+<p>Complete a short 2-3 page report that utilizes the format and answers the questions within the report template. The report template and an example report can be found within the Team under <code class="docutils literal notranslate"><span class="pre">Resources/Lab</span> <span class="pre">Template</span></code>.</p>
+<blockquote>
+<div><p>📝️ <strong>Note:</strong> We will be primarily grading sections 3.1, 3.2, and 3.3 for this lab, but do include the entire lab as you will need other components for the final project report.</p>
+</div></blockquote>
+</div>
+<div class="section" id="turn-in-requirements">
+<h2>Turn-in Requirements<a class="headerlink" href="#turn-in-requirements" title="Permalink to this headline">¶</a></h2>
+<p><strong>[25 points]</strong> All checkpoints marked off.</p>
+<p><strong>[50 points]</strong> Report via Gradescope.</p>
+<p><strong>[25 points]</strong> Code: push your code to your repository. Also, include a screen shot of the <strong><a class="reference external" href="http://controller.py">controller.py</a></strong> file at the end of your report.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By The Jupyter Book community<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
