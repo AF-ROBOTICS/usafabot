@@ -1,13 +1,6 @@
 # Intro and GIT
 ---
 
-
-**You must open this file as a Jupyter Notebook (link below) to run code**
-
-[Run this file as an executable Jupyter Notebook](http://localhost:8888/notebooks/Module0_Intro_GIT.ipynb)
-
-
-
 ## Syllabus
 You can find the syllabus in the repository within the [curriculum folder](../ECE495_Syllabus.pdf). The syllabus may be updated throughout the semester to adapt to changes in the schedule.
 

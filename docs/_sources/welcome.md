@@ -1,6 +1,5 @@
 # Welcome and Shortcuts
 
-
 Welcome to ECE495: Fundamentals of Robotics Research! To get started, navigate to the "Getting Started" page found on the left hand side of this site.
 
 ## Shortcuts

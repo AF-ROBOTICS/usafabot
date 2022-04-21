@@ -3,13 +3,6 @@ This guide will walk through the steps to install Ubuntu Server 20.04 LTS, ROS N
 
 ---
 
-
-**You must open this file as a Jupyter Notebook (link below) to run code**
-
-[Run this file as an executable Jupyter Notebook](http://localhost:8888/notebooks/RobotSetup.ipynb)
-
-
-
 ## Hardware
 Below is a list of recommended hardware and links. Other off-the-shelf components can replace the ones below. 
 

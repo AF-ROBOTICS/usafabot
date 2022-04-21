@@ -1,13 +1,6 @@
 # LIDAR
 ---
 
-
-**You must open this file as a Jupyter Notebook (link below) to run code**
-
-[Run this file as an executable Jupyter Notebook](http://localhost:8888/notebooks/Module8_LIDAR.ipynb)
-
-
-
 ## Purpose
 In this lesson we will enable the robot to avoid obstacles. Many sensors provide obstacle avoidance capabilities: camera, sonar, infrared, LIDAR, etc. All of these will work to enable the robot to avoid obstacles, but we will use LIDAR as it is an affordable, but very capable solution.
 

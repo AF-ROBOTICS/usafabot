@@ -1,13 +1,6 @@
 # Final Project
 ---
 
-
-**You must open this file as a Jupyter Notebook (link below) to run code**
-
-[Run this file as an executable Jupyter Notebook](http://localhost:8888/notebooks/Module10_FinalProject.ipynb)
-
-
-
 ## Purpose
 Students will utilize all previous modules to drive their robot in the DFEC halls. The LIDAR will be used to drive the robot centered between two walls, the IMU will be used to make 90/180/360 deg turns, OpenCV will be used to identify randomly placed stopped signs and act accordingly, and apriltag_ros will be used to navigate the robot throughout the halls (when the robot is a certain distance from the apriltag then turn left, right, around, or the robot has reached the goal depending on the tag ID).
 

@@ -1,13 +1,6 @@
 # Launch Files
 ---
 
-
-**You must open this file as a Jupyter Notebook (link below) to run code**
-
-[Run this file as an executable Jupyter Notebook](http://localhost:8888/notebooks/Module7_LaunchFile.ipynb)
-
-
-
 ## Purpose
 Large applications in robotics typically involve several interconnected ROS nodes, each of which have many parameters. Your current setup is a good example: as you experienced in the IMU lab, you had to open 4 different terminals to run all of the nodes necessary for our system to that point:
 

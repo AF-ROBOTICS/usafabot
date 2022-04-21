@@ -1,12 +1,6 @@
 # Driving the Robot
 ---
 
-
-**You must open this file as a Jupyter Notebook (link below) to run code**
-
-[Run this file as an executable Jupyter Notebook](http://localhost:8888/notebooks/Module4_DrivingTheRobot.ipynb)
-
-
 #### A note on this document
 Now that you have a better understanding of the Linux operating system and Python programming language the Jupyter Notebooks will be used primarily to guide you through the In-Class Exercises and Laboratories. You will execute the majority of your commands and code within the Linux terminal.
 
@@ -20,7 +14,7 @@ This In-Class Exercise will introduce you to utilizing pre-built ROS packages to
 
 1. Using the secure shell, open the source code for the **usafabot_serial** node using the nano command line editor tool through the rosed command:
 
-    `pi@robot:~$ rosed usafabot usafabot_serial.py`
+    `rosed usafabot usafabot_serial.py`
 
     > ⌨️ **Syntax:**  `rosed <package> <filename>`
 
@@ -32,33 +26,33 @@ This In-Class Exercise will introduce you to utilizing pre-built ROS packages to
 
 1. It is always a good idea to check that the robot is communicating with the master. To do this, we can list the active topics the Robot sees. Run the following within your secure shell:
 
-    `pi@robot:~$ rostopic list`
+    `rostopic list`
 
     If all is well, then there should be two topics provided by **roscore**: **/rosout** and **/rosout_agg**. We will typically ignore these topics.
 
 1. Run the **usafabot_serial** node using the rosrun command:
 
-    `pi@robot:~$ rosrun usafabot usafabot_serial.py`
+    `rosrun usafabot usafabot_serial.py`
     
     Your robot is now ready to drive and should be listening for *Twist* messages to be sent over the **/cmd_vel** topic.
 
 ### Driving the robot
 1. Open a new terminal on the Master and observe the nodes currently running:
 
-    `dfec@master:~$ rosrun rqt_graph rqt_graph`
+    `rosrun rqt_graph rqt_graph`
     
     You should only see one node running right now, **usafabot_serial**, with no connections.
 1. Open a new terminal tab and list the active topics. There should be two active topics besides the ones created by **roscore**: **/cmd_vel** and **/wheel_speeds**
 1. You can find information on pre-built packages by googling the package name along with the ROS distribution. Open up your favorite browser and google "teleop twist keyboard noetic". The first result should be from the ROS wiki page.
 1. Ensure the ROS package **teleop_twist_keyboard** is installed on your Master:
 
-    `dfec@master:~$ rospack find teleop_twist_keyboard`
+    `rospack find teleop_twist_keyboard`
     
     If installed, the command should return the absolute path to the package, similar to `/opt/ros/noetic/share/teleop_twist_keyboard`
     
     If the command instead returns an error, then you need to install the package using apt:
     
-    `dfec@master:~$ sudo apt install ros-noetic-teleop-twist-keyboard`
+    `sudo apt install ros-noetic-teleop-twist-keyboard`
     
     > 💡️ **Tip:** All packages built for Noetic can be downloaded in the above manner (ros-noetic-desired-pkg with underscores in the package name replaced by dashes). Some packages were only built for previous ROS distribution and will have to be built from source (we will demonstrate this at a future time).
     
@@ -66,7 +60,7 @@ This In-Class Exercise will introduce you to utilizing pre-built ROS packages to
 
     > 💡️ **Tip:** Don't forget your tab completion! You can start typing a package name or node and then hit tab for it to complete the command for you!
     
-    `dfec@master:~$ rosrun teleop_twist_keyboard teleop_twist_keyboard.py`
+    `rosrun teleop_twist_keyboard teleop_twist_keyboard.py`
     
 1. Before we get too excited and drive the robot off a cliff, observe how the nodes are communicating using the **rqt_graph** tool in a new terminal (if you still have the previous rqt_graph running, you can hit the refresh button in the top left corner).
 

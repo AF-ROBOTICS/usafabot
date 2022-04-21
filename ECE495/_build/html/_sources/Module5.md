@@ -1,26 +1,20 @@
 # Custom Messages
 ---
 
-
-**You must open this file as a Jupyter Notebook (link below) to run code**
-
-[Run this file as an executable Jupyter Notebook](http://localhost:8888/notebooks/Module5_CustomMessages.ipynb)
-
-
-#### A note on this document
+### A note on this document
 Now that you have a better understanding of the Linux operating system and Python programming language the Jupyter Notebooks will be used primarily to guide you through the In-Class Exercises and Laboratories. You will execute the majority of your commands and code within the Linux terminal.
 
-### Purpose
+## Purpose
 This In-Class Exercise will provide you more insight into ROS messages and how information is passed between two nodes. A node can publish specific messages over a topic and other nodes are able to subscribe to that topic to receive the message. The format of these messages must be pre-defined and each node needs to know the format of the message. ROS provides a number of pre-built messages, but also allows for developers to create custom messages. In this lesson you will learn the method for and practice creating custom messages. In the corresponding lab you will develop a custom message to drive the robot. The custom message will eventually be used to enable a controller to drive the robot based on multiple data sources (e.g., IMU, LIDAR, keyboard).
 
-### ROS msgs
-#### msg
+## ROS msgs
+### msg
 ROS utilizes a simplified message description language to describe data values that ROS nodes publish. There are a lot of built-in messages that are widely used by ROS packages ([common_msgs](http://wiki.ros.org/common_msgs?distro=noetic)). THe *geometry_msgs* package is one example of a pre-built message which provides the *Twist* message type used to drive the robot in the previous ICE.
 
-#### Custom messages
+### Custom messages
 If a pre-built message type does not meet the needs of a system, custom messages can be created. A custom message is created using a `.msg` file, a simple text file that descries the fields of a ROS message. The *catkin_make* tool uses the message file to generate source code for messages. The `.msg` files are stored in the **msg** directory of a package. There are two parts to a `.msg` file: fields and constants. Fields are the data that is sent inside of the message. Constants define useful values that can be used to interpret those fields. We will primarily use fields.
 
-#### Fields
+### Fields
 Each field consists of a type and a name, separated by a space per line. The field types you can use are:
 
 - int8, int16, int64 (plus uint*)
@@ -30,10 +24,10 @@ Each field consists of a type and a name, separated by a space per line. The fie
 - other msg files
 - variable length array[] and fixed-length array[X].
 
-#### Header
+### Header
 The header contains a timestamp and coordinate frame information that are commonly used in ROS. You will frequently see the first line in a `.msg` file have a header.
 
-#### Format
+### Format
     Header header
     fieldtype fieldname
     
@@ -44,7 +38,7 @@ For example, if we created a custom message file titled `Person.msg` that descri
     string lastname
     int32 age
     
-#### Importing messages
+### Importing messages
 To utilize a *msg* in a node it must first be imported into the script.
 
 ```python
@@ -53,7 +47,7 @@ To utilize a *msg* in a node it must first be imported into the script.
 ```
 > ⌨️ **Syntax:**  `from <package>.msg import msg`
 
-#### Using messages
+### Using messages
 After importing the *msg* you can access the fields similar to any object. For example, if we created a class instance variable to store our Person message, `person = Person()`, you would then access the fields like using the field names of the *msg*:
 
 ```python
@@ -88,41 +82,41 @@ To set the linear x and angular z values, we have to access those fields using a
     pub.publish(bot_cmd)
 ```
 
-### In-Class Exercise 5
+# In-Class Exercise 5
 In this exercise you will create a custom message that describes a person. This message will provide two strings, first and last name, and an integer age for a person. We will then create a node that publishes information about that person and a node that subscribes to that information.
 
-#### Create the custom message:
+### Create the custom message:
 1. In a new terminal on the **Master**, create an **ice5** package which depends on the *std_msgs* package and *rospy* package, compile and source the ws:
  
     ```bash
-    pi@master: cd ~/master_ws/src/ece495_master_spring2022-USERNAME/
-    pi@master: catkin_create_pkg ice5 std_msgs rospy
-    pi@master: cd ~/master_ws
-    pi@master: catkin_make
-    pi@master: source ~/.bashrc
+    cd ~/master_ws/src/ece495_master_spring2022-USERNAME/
+    catkin_create_pkg ice5 std_msgs rospy
+    cd ~/master_ws
+    catkin_make
+    source ~/.bashrc
     ```
 1. Change directory to the package folder and create a *msg* directory:
 
     ```bash
-    pi@master: roscd ice5
-    pi@master: mkdir msg
-    pi@master: cd msg
+    roscd ice5
+    mkdir msg
+    cd msg
     ```
     
 1. Create the *msg* file for the Person and add the fields previously discussed (header, firstname, lastname, and age):
 
     ```bash
-    pi@master: nano Person.msg
+    nano Person.msg
     ```
     
 1. Save and exit: `ctrl+s`, `ctrl+x`
 
-#### Write the Publisher
+### Write the Publisher
 1. Create the file for the publisher:
 
     ```bash
-    pi@master: roscd ice5/src
-    pi@master: touch ice5_publisher.py
+    roscd ice5/src
+    touch ice5_publisher.py
     ```
     
 1. Copy the below code to the ice5_publisher.py file and fill in the required lines (look for the TODO tag). You can edit via the terminal using nano, but it is often easier to use a GUI editor. Browse to the publisher in the file browser and double-click. This will open the file in thonny (if it is open in any other editor, stop, raise your hand, and get help from an instructor)
@@ -172,11 +166,11 @@ if __name__ == '__main__':
 
 4. Make the node executable.
 
-#### Write the Subscriber
+### Write the Subscriber
 1. Create the file for the subscriber:
 
     ```bash
-    pi@master: touch ice5_subscriber.py
+    touch ice5_subscriber.py
     ```
 
 1. Copy the below code to the ice5_subscriber.py file and fill in the required lines (look for the TODO tag).
@@ -215,10 +209,10 @@ if __name__ == '__main__':
 
 4. Make the node executable.
 
-#### Requirements to use custom messages.
+### Requirements to use custom messages.
 There are a number of settings that have to be set within the `package.xml` and `CMakeLists.txt` files that tell catkin to compile the messages.
 
-##### package.xml
+#### package.xml
 1. Edit `package.xml` (`rosed ice5 package.xml`) and uncomment these two lines (remove arrows on both sides of the line):
 
     ```
@@ -228,7 +222,7 @@ There are a number of settings that have to be set within the `package.xml` and 
     
 1. Save and exit.
 
-##### CMakeLists.txt
+#### CMakeLists.txt
 1. Edit `CMakeLists.txt` (`rosed ice5 CMakeLists.txt`) and make the following changes:
 
     1. Add the `message_generation` dependency to the `find_package` call so that you can generate messages:
@@ -292,13 +286,13 @@ There are a number of settings that have to be set within the `package.xml` and 
     
     1. Save and exit.
 
-#### Compile and run the code
+### Compile and run the code
 1. Make and source your package:
 
     ```bash
-    pi@master: cd ~/master_ws
-    pi@master: catkin_make
-    pi@master: source ~/.bashrc
+    cd ~/master_ws
+    catkin_make
+    source ~/.bashrc
     ```
     
 1. Run roscore!
@@ -306,37 +300,37 @@ There are a number of settings that have to be set within the `package.xml` and 
 1. The `rospy` tool can measure certain statistics for every topic connection. We can visualize this in `rqt_graph`, but we have to enable it after `roscore`, but before any nodes. In a new terminal run the following to enable statistics:
 
     ```bash
-    pi@master: rosparam set enable_statistics true
+    rosparam set enable_statistics true
     ```
     
 1. Run the publisher:
 
     ```bash
-    pi@master: rosrun ice5 ice5_publisher.py
+    rosrun ice5 ice5_publisher.py
     ```
     
 1. In a new terminal, run the subscriber:
 
     ```bash
-    pi@master: rosrun ice5 ice5_subscriber.py
+    rosrun ice5 ice5_subscriber.py
     ```
     
 1. In a new terminal observe the nodes running:
 
     ```bash
-    pi@master: rosnode list
+    rosnode list
     ```
     
 1. Observe information about each node:
 
     ```bash
-    pi@master: rosnode info /talker
+    rosnode info /talker
     ```
     
 1. Observe how information is being passed:
 
     ```bash
-    pi@master: rosrun rqt_graph rqt_graph
+    rosrun rqt_graph rqt_graph
     ```
     
     > 📝️ **Note:** You may have to hit refresh a few times to get the statistics previously mentioned.
@@ -344,28 +338,28 @@ There are a number of settings that have to be set within the `package.xml` and 
 1. Observe all active topics:
 
     ```bash
-    pi@master: rostopic list
+    rostopic list
     ```
     
 1. Observe the information about the message sent over the topics (repeat for each topic, remember we do not care about topics we did not create (e.g., rosout, rosout_agg, statistics)).
 
     ```bash
-    pi@master: rostopic info person
+    rostopic info person
     ```
     
 1. Observe the fields of the message sent over each topic:
 
     ```bash
-    pi@master: rostopic type person | rosmsg show
+    rostopic type person | rosmsg show
     ```
 
-### Checkpoint
+## Checkpoint
 Once complete, get checked off by an instructor showing the output of each of the above.
 
-### Summary
+## Summary
 In this lesson you learned about ROS pre-built and custom messages! You created your own message which described a Person. You then developed a publisher to send information about the Person to a subscriber.
 
-### Cleanup
+## Cleanup
 In each terminal window, close the node by typing `ctrl+c`. Exit any SSH connections. Shutdown the notebook server by typing `ctrl+c` within the terminal you ran `jupyter-notebook` in. Select 'y'.
 
 **Ensure roscore is terminated before moving on to the lab.**

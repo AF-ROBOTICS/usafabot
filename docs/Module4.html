@@ -450,8 +450,6 @@
   <div class="tex2jax_ignore mathjax_ignore section" id="driving-the-robot">
 <h1>Driving the Robot<a class="headerlink" href="#driving-the-robot" title="Permalink to this headline">¶</a></h1>
 <hr class="docutils" />
-<p><strong>You must open this file as a Jupyter Notebook (link below) to run code</strong></p>
-<p><a class="reference external" href="http://localhost:8888/notebooks/Module4_DrivingTheRobot.ipynb">Run this file as an executable Jupyter Notebook</a></p>
 <div class="section" id="a-note-on-this-document">
 <h2>A note on this document<a class="headerlink" href="#a-note-on-this-document" title="Permalink to this headline">¶</a></h2>
 <p>Now that you have a better understanding of the Linux operating system and Python programming language the Jupyter Notebooks will be used primarily to guide you through the In-Class Exercises and Laboratories. You will execute the majority of your commands and code within the Linux terminal.</p>
@@ -466,7 +464,7 @@
 <li><p>On the Master, open a terminal and run <strong>roscore</strong>.</p></li>
 <li><p>Open a new terminal on the Master and create a secure shell into the Robot using the SSH command you learned during Module 2. This will allow you to run commands as if you were on the Robot.</p></li>
 <li><p>Using the secure shell, open the source code for the <strong>usafabot_serial</strong> node using the nano command line editor tool through the rosed command:</p>
-<p><code class="docutils literal notranslate"><span class="pre">pi&#64;robot:~$</span> <span class="pre">rosed</span> <span class="pre">usafabot</span> <span class="pre">usafabot_serial.py</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">rosed</span> <span class="pre">usafabot</span> <span class="pre">usafabot_serial.py</span></code></p>
 <blockquote>
 <div><p>⌨️ <strong>Syntax:</strong>  <code class="docutils literal notranslate"><span class="pre">rosed</span> <span class="pre">&lt;package&gt;</span> <span class="pre">&lt;filename&gt;</span></code></p>
 </div></blockquote>
@@ -478,11 +476,11 @@ There is a lot going on in this file. We will go over the important aspects in c
 </li>
 <li><p>Close the editor by hitting <code class="docutils literal notranslate"><span class="pre">ctrl+x</span></code>.</p></li>
 <li><p>It is always a good idea to check that the robot is communicating with the master. To do this, we can list the active topics the Robot sees. Run the following within your secure shell:</p>
-<p><code class="docutils literal notranslate"><span class="pre">pi&#64;robot:~$</span> <span class="pre">rostopic</span> <span class="pre">list</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">rostopic</span> <span class="pre">list</span></code></p>
 <p>If all is well, then there should be two topics provided by <strong>roscore</strong>: <strong>/rosout</strong> and <strong>/rosout_agg</strong>. We will typically ignore these topics.</p>
 </li>
 <li><p>Run the <strong>usafabot_serial</strong> node using the rosrun command:</p>
-<p><code class="docutils literal notranslate"><span class="pre">pi&#64;robot:~$</span> <span class="pre">rosrun</span> <span class="pre">usafabot</span> <span class="pre">usafabot_serial.py</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">rosrun</span> <span class="pre">usafabot</span> <span class="pre">usafabot_serial.py</span></code></p>
 <p>Your robot is now ready to drive and should be listening for <em>Twist</em> messages to be sent over the <strong>/cmd_vel</strong> topic.</p>
 </li>
 </ol>
@@ -491,16 +489,16 @@ There is a lot going on in this file. We will go over the important aspects in c
 <h2>Driving the robot<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <ol>
 <li><p>Open a new terminal on the Master and observe the nodes currently running:</p>
-<p><code class="docutils literal notranslate"><span class="pre">dfec&#64;master:~$</span> <span class="pre">rosrun</span> <span class="pre">rqt_graph</span> <span class="pre">rqt_graph</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">rosrun</span> <span class="pre">rqt_graph</span> <span class="pre">rqt_graph</span></code></p>
 <p>You should only see one node running right now, <strong>usafabot_serial</strong>, with no connections.</p>
 </li>
 <li><p>Open a new terminal tab and list the active topics. There should be two active topics besides the ones created by <strong>roscore</strong>: <strong>/cmd_vel</strong> and <strong>/wheel_speeds</strong></p></li>
 <li><p>You can find information on pre-built packages by googling the package name along with the ROS distribution. Open up your favorite browser and google “teleop twist keyboard noetic”. The first result should be from the ROS wiki page.</p></li>
 <li><p>Ensure the ROS package <strong>teleop_twist_keyboard</strong> is installed on your Master:</p>
-<p><code class="docutils literal notranslate"><span class="pre">dfec&#64;master:~$</span> <span class="pre">rospack</span> <span class="pre">find</span> <span class="pre">teleop_twist_keyboard</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">rospack</span> <span class="pre">find</span> <span class="pre">teleop_twist_keyboard</span></code></p>
 <p>If installed, the command should return the absolute path to the package, similar to <code class="docutils literal notranslate"><span class="pre">/opt/ros/noetic/share/teleop_twist_keyboard</span></code></p>
 <p>If the command instead returns an error, then you need to install the package using apt:</p>
-<p><code class="docutils literal notranslate"><span class="pre">dfec&#64;master:~$</span> <span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">ros-noetic-teleop-twist-keyboard</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">ros-noetic-teleop-twist-keyboard</span></code></p>
 <blockquote>
 <div><p>💡️ <strong>Tip:</strong> All packages built for Noetic can be downloaded in the above manner (ros-noetic-desired-pkg with underscores in the package name replaced by dashes). Some packages were only built for previous ROS distribution and will have to be built from source (we will demonstrate this at a future time).</p>
 </div></blockquote>
@@ -509,7 +507,7 @@ There is a lot going on in this file. We will go over the important aspects in c
 <blockquote>
 <div><p>💡️ <strong>Tip:</strong> Don’t forget your tab completion! You can start typing a package name or node and then hit tab for it to complete the command for you!</p>
 </div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">dfec&#64;master:~$</span> <span class="pre">rosrun</span> <span class="pre">teleop_twist_keyboard</span> <span class="pre">teleop_twist_keyboard.py</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">rosrun</span> <span class="pre">teleop_twist_keyboard</span> <span class="pre">teleop_twist_keyboard.py</span></code></p>
 </li>
 <li><p>Before we get too excited and drive the robot off a cliff, observe how the nodes are communicating using the <strong>rqt_graph</strong> tool in a new terminal (if you still have the previous rqt_graph running, you can hit the refresh button in the top left corner).</p></li>
 <li><p>Select the terminal that has the <strong>teleop_twist_keyboard</strong> node running and observe the instructions for sending <em>Twist</em> messages. These are the same as when driving the simulated robot.</p></li>
