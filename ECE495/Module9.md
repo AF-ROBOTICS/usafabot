@@ -4,13 +4,13 @@
 
 **You must open this file as a Jupyter Notebook (link below) to run code**
 
-Navigate to the appropriate folder by copy and pasting the below command into a terminal:
+Navigate to the appropriate folder by copy and pasting the below command into a new terminal:
 
 ```bash
 cd ~/master_ws/src/usafabot/docs
 ```
 
-Then open a jupyter notebook by pasting the below command into a terminal:
+Then open a jupyter notebook by pasting the below command into the same terminal:
 
 ```bash
 jupyter notebook
