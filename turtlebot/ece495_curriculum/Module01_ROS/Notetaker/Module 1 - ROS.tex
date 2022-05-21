@@ -1,0 +1,157 @@
+\documentclass{handout}
+
+
+\SetCourseTitle{ECE495: Fundamentals of Robotics Research}
+\SetHandoutTitle{Module 1 - ROS}
+%\SetDueDate{8 Sep at 0715 (via Gradescope)}
+%\ShowAllBlanks
+
+%\showsoln \setsolncolor{red}
+
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
+	\hspace{-2.5pt}}
+\newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
+
+\usepackage{hyperref}
+
+\definecolor{code}{HTML}{ECF8F4}
+\definecolor{comments}{HTML}{5269A5}
+
+\usepackage[T1]{fontenc}
+\lstset{%
+	language=bash, upquote=true,
+	otherkeywords={rostopic, rosnode, rosrun, roscore, cd, ls, sudo, nano, echo, mkdir, touch, chmod, catkin\_make, rosmsg, rosservice, catkin\_create\_pkg, rospack, ssh, rosed},
+	showspaces=false, showtabs=false, showstringspaces=false, upquote=true, tabsize=4,
+	literate={~} {$\sim$}{1},
+	showstringspaces=false,
+	xleftmargin=0.06\textwidth,
+	linewidth=0.99\textwidth,
+	columns=fullflexible,
+	backgroundcolor=\color{code},
+	keepspaces=true,
+	breaklines=true,
+	basicstyle={\small\fontfamily{fvm}\fontseries{m}\selectfont},
+	keywordstyle={\small\fontfamily{fvm}\fontseries{b}\selectfont},
+	commentstyle={\color{comments}\small\fontfamily{fvm}\itshape\selectfont},
+	belowcaptionskip=10pt,
+	float=h
+}
+
+\graphicspath{{./figs/}}
+
+
+\begin{document}
+\maketitle
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.75\textwidth]{Cover.PNG}
+\end{figure}
+
+\textbf{Lesson Objectives:}
+\begin{enumerate} \setlength\itemsep{0em}
+	\item Learn fundamental concepts of ROS.
+	\item Develop basic operational understanding of ROS through application.
+	\item Design, build, and test a basic chat client using ROS.
+\end{enumerate}
+
+\textbf{Agenda:}
+\begin{enumerate} \setlength\itemsep{0em}
+	\item ROS Introduction.
+	\item ROS Jupyter Notebook.
+	\item ICE1 Jupyter Notebook.
+\end{enumerate}
+
+\newpage
+\clearpage
+\pagebreak
+
+\section{ROS Introduction.}
+\textbf{Robotics Operating System (\url{https://www.ros.org/about-ros/}):}
+
+The Robot Operating System (ROS) is a flexible framework for writing robot software. It is a collection of tools, libraries, and conventions that aim to simplify the task of creating complex and robust robot behavior across a wide variety of robotic platforms. ROS is sometimes called a meta operating system because it performs many functions of an operating system, but it requires a computer's operating system such as Linux. 	
+
+Why? Because creating truly robust, general-purpose robot software is hard. From the robot's perspective, problems that seem trivial to humans often vary wildly between instances of tasks and environments. Dealing with these variations is so hard that no single individual, laboratory, or institution can hope to do it on their own.
+
+As a result, ROS was built from the ground up to encourage collaborative robotics software development. For example, one laboratory might have experts in mapping indoor environments, and could contribute a world-class system for producing maps. Another group might have experts at using maps to navigate, and yet another group might have discovered a computer vision approach that works well for recognizing small objects in clutter. ROS was designed specifically for groups like these to collaborate and build upon each other's work, as is described throughout this site.
+\\
+
+\textbf{Noetic Ninjemys (\url{http://wiki.ros.org/noetic}):} \soln{1in}{Is the 13th ROS distribution release and is the distro we will be using in this course. Previously, this course used ROS Melodic. Noetic is supported until May 2025 and includes Python3 integrations. Existing capstones and research have transitioned to Noetic, and sticking to the same distro allows for better collaboration} 
+
+\textbf{Catkin (\url{http://wiki.ros.org/catkin}):} \soln{1in}{Think of this as a compiler. It is a low-level build system that provides macros and infrastructure for ROS. When doing research on projects or looking at other tutorials, you may find references to rosmake or roscreate-pkg; Ignore those and use catkin\_make and catkin\_create\_pkg. Not important at this time, but just something to keep in mind}
+
+\textbf{Master (\url{http://wiki.ros.org/Master}):} \soln{1in}{The ROS Master enables all other components in the system to communicate. It is the controller of the network. More on this later}
+
+\textbf{Packages (\url{http://wiki.ros.org/Packages}):} \soln{1in}{Software in ROS is organized in packages. You can think of a package as a component in the overall system. For example, we may have a package called ground\_robot or one called drone. You might have multiple ground\_robots in your system, but the ground\_robot package will provide common functionalities among them.}
+
+\textbf{Package.xml:} \soln{1in}{Each package contains a manifest named package.xml that describes the package in the Extensible Markup Language (XML) format. In addition to providing a minimal specification describing the pacakge, the manifest defines properties about the package such as the package name, version numbers, authors, maintainers, and any dependencies on other packages.} 
+
+\textbf{Nodes (\url{http://wiki.ros.org/Nodes}):} \soln{1in}{A node is an executable (Python in this course) that uses ROS to communicate with other nodes. Nodes communicate with each other using topics. An example might be a node that reads distance information from a LIDAR, publishes that information to a topic, and then a controller node might use that information to move the robot accordingly to avoid obstacles}  
+
+\textbf{Topics (\url{http://wiki.ros.org/Topics}):} \soln{1in}{You can think of a topic as a named bus or communication medium over which nodes exchange messages. An example topic might be current\_location which a node could use to share the ground\_robot's current location with a controller. The controller does not care what type of location source is providing the current information (it could be a Bitcraze Loco Positioning tag, a Camera Vision System, or outdoor GPS system) as long as the topic's formatting is maintained. That's a huge benefit gained when working with multiple nodes.}
+
+\textbf{Messages (\url{http://wiki.ros.org/Messages}):} \soln{1in}{Nodes comunicate with each other by publishing messages to topics. A message is a simple data structure, comprising typed fields. There are many prebuilt messages for example, the Point message contains float64 x, float64 y, and float64 z values. Custom messages can be created using a msg file and are stored in the msg subdirectory of a package.}
+
+\textbf{Publisher and Subscriber:} \soln{1in}{The publisher and subscriber concept is a way for nodes to communicate messages on certain topics. A publisher is the node that writes messages to a topic, while the subscriber reads messages from the topic. For example, a LIDAR node might publish distance information to a topic while a Controller node would subscribe to that message and take action every time the topic is updated. You can have multiple subscribers to the same topic. You can also have multiple publishers to the same topic, but realize there is no way for the subscriber to know where the message is coming from. So you may have a LIDAR and a IR sensor both publishing on a distance topic, but one may be more accurate so there would be no way to tell}
+
+\textbf{Services: (\url{http://wiki.ros.org/Services})} \soln{1in}{A service provides a request response protocol but is different than a topic. A providing ROS node (Server) offers a service under a string name and a client calls the service by sending the request message and awaiting the reply. An example would be if you provide a point A and point B to a provider and then that provider plans a path and returns back the path to the client}
+
+\textbf{Note:} \soln{1in}{The '$\sim$' character indicates the user's home directory and allows us to access that folder from anywhere in the file system (would be the same as using the absolute path /dfec/home/). e.g., sudo nano $\sim$/.bashrc would be the same as sudo nano /dfec/home/.bashrc}
+
+
+
+\newpage
+\clearpage
+\pagebreak
+
+\section{ROS Jupyter Notebook.}
+We will use a Jupyter Notebook to practice and provide more insight into the terms above.
+
+\begin{enumerate}
+\item On the master, ensure all instances of FireFox are closed then open the Jupyter Notebook server:
+
+\begin{lstlisting}[language=bash]
+dfec@master:~$ roscd usafabot_curriculum/Module1_ROS
+dfec@master:~$ jupyter-notebook
+\end{lstlisting}
+
+\item Open the ROS Jupyter Notebook, "Module1\_ROS.ipynb", and follow the instructions within the notebook.
+
+\end{enumerate}
+
+\section{ICE1 Jupyter Notebook.}
+The ICE1 Jupyter Notebook will guide you through implementation of a chat client using ROS.
+
+\begin{enumerate}\setlength\itemsep{1em}
+	\item Ensure roscore is terminated before moving on to the ICE.
+	\item On the master, open the Jupyter Notebook server (if it is not already open):
+\begin{lstlisting}[language=bash]
+dfec@master:~$ roscd usafabot_curriculum/Module1_ROS
+dfec@master:~$ jupyter-notebook
+\end{lstlisting}
+
+\item Open the ICE1 Jupyter Notebook, "ICE1\_Talker.ipynb" and follow the instructions within the notebook. 
+\end{enumerate}
+
+\textbf{Checkpoint. Take a screenshot or show the instructor the following:}
+\begin{enumerate}
+	\item The output of each of the code blocks within the "ICE1\_ROS.ipynb" notebook.
+\end{enumerate}
+
+\section{Assignments.}
+	\begin{todolist}
+		\item (Before lesson 3) Go to \url{http://wiki.ros.org/ROS/Tutorials} on your master and work through ROS tutorials 2-16 on the master (remember, you only need to look at Python tutorials). This shouldn't take more than two hours.
+	\end{todolist}
+
+\section{Next time.}
+	\begin{itemize}
+		\item Lesson 3: Quiz and ICE 1
+		\item Lesson 4: Quiz and Module 2 - Linux for ROS
+	\end{itemize}
+
+\end{document}

@@ -1,0 +1,118 @@
+\documentclass{handout}
+
+
+\SetCourseTitle{ECE495: Fundamentals of Robotics Research}
+\SetHandoutTitle{Module 3 - Python3 for Robotics}
+%\SetDueDate{8 Sep at 0715 (via Gradescope)}
+%\ShowAllBlanks
+
+%\showsoln \setsolncolor{red}
+
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
+	\hspace{-2.5pt}}
+\newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
+
+\usepackage{hyperref}
+
+\definecolor{code}{HTML}{ECF8F4}
+\definecolor{comments}{HTML}{5269A5}
+
+\usepackage[T1]{fontenc}
+\lstset{%
+	language=bash, upquote=true,
+	otherkeywords={rostopic, rosnode, rosrun, roscore, cd, ls, sudo, nano, echo, mkdir, touch, chmod, catkin\_make, rosmsg, rosservice, catkin\_create\_pkg, rospack, ssh, rosed},
+	showspaces=false, showtabs=false, showstringspaces=false, upquote=true, tabsize=4,
+	literate={~} {$\sim$}{1},
+	showstringspaces=false,
+	xleftmargin=0.06\textwidth,
+	linewidth=0.99\textwidth,
+	columns=fullflexible,
+	backgroundcolor=\color{code},
+	keepspaces=true,
+	breaklines=true,
+	basicstyle={\small\fontfamily{fvm}\fontseries{m}\selectfont},
+	keywordstyle={\small\fontfamily{fvm}\fontseries{b}\selectfont},
+	commentstyle={\color{comments}\small\fontfamily{fvm}\itshape\selectfont},
+	belowcaptionskip=10pt,
+	float=h
+}
+
+\graphicspath{{./figs/}}
+
+\begin{document}
+\maketitle
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.75\textwidth]{Cover.PNG}
+\end{figure}
+
+\textbf{Lesson Objectives:}
+\begin{enumerate} \setlength\itemsep{0em}
+	\item Learn fundamental concepts of Python
+	\item Learn basic syntax of Python
+	\item Understand Object Oriented Programming
+	\item Develop basic operational understanding of Python through application
+\end{enumerate}
+
+\textbf{Agenda:}
+\begin{enumerate} \setlength\itemsep{0em}
+	\item Python3 Jupyter Notebook.
+	\item ICE3 Jupyter Notebook.
+\end{enumerate}
+
+\newpage
+\clearpage
+\pagebreak
+
+\section{Python3 Jupyter Notebook.}
+We will use a Jupyter Notebook to practice and provide a Python3 refresher.
+
+\begin{enumerate}
+	\item On the master, open the Jupyter Notebook server:
+	
+\begin{lstlisting}[language=bash]
+dfec@master:~$ roscd usafabot_curriculum/Module3_Python3
+dfec@master:~$ jupyter-notebook
+\end{lstlisting}
+	
+	\item Open the Python3 Jupyter Notebook, "Module3\_Python3.ipynb", and follow the instructions within the notebook.
+	
+\end{enumerate}
+
+\section{ICE3 Jupyter Notebook.}
+The ICE3 Jupyter Notebook will guide you through implementation of a chat client/server using ROS and Python3.
+
+\begin{enumerate}\setlength\itemsep{1em}
+	\item Ensure roscore is terminated (ctrl+c) before moving on to the ICE.
+	\item On the master, open the Jupyter Notebook server (if it is not already open):
+\begin{lstlisting}[language=bash]
+dfec@master:~$ roscd usafabot_curriculum/Module3_Python3
+dfec@master:~$ jupyter-notebook
+\end{lstlisting}
+	
+	\item Open the ICE3 Jupyter Notebook, "ICE3\_Client.ipynb" and follow the instructions within the notebook. 
+\end{enumerate}
+
+\textbf{Checkpoint. Take a screenshot or show the instructor the following:}
+\begin{enumerate}
+	\item The output of each of the code blocks within the "ICE3\_ROS.ipynb" notebook.
+\end{enumerate}
+
+\section{Assignments.}
+	\begin{todolist}
+		\item Complete Jupyter Notebooks if not accomplished during class.
+	\end{todolist}
+
+\section{Next time.}
+	\begin{itemize}
+		\item \textbf{Lesson 8} - Quiz and ICE 3
+		\item \textbf{Lesson 9} - Quiz and Module 4 - Driving the Robot
+	\end{itemize}
+
+\end{document}
