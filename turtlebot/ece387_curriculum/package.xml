@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>usafabot_curriculum</name>
+  <name>ece387_curriculum</name>
   <version>0.0.0</version>
-  <description>The usafabot_curriculum package</description>
+  <description>The ece387_curriculum package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
