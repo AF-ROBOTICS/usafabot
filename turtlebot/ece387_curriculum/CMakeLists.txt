@@ -67,11 +67,10 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
-#   Message1.msg
-#   Message2.msg
-# )
+add_message_files(
+   FILES
+   RobotOutput.msg
+ )
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -88,10 +87,13 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   geometry_msgs#   nav_msgs#   sensor_msgs#   std_msgs
-# )
+generate_messages(
+DEPENDENCIES
+geometry_msgs
+nav_msgs
+sensor_msgs
+std_msgs
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -125,7 +127,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES usafabot_curriculum
-#  CATKIN_DEPENDS amcl apriltag_ros camera_calibration cv_bridge geometry_msgs gmapping joint_state_publisher map_server message_generation message_runtime move_base nav_msgs robot_state_publisher rospy rplidar_ros sensor_msgs std_msgs teleop_twist_keyboard um7 usafabot usafabot_description usafabot_gazebo usb_cam
+CATKIN_DEPENDS amcl apriltag_ros camera_calibration cv_bridge geometry_msgs gmapping joint_state_publisher map_server message_generation message_runtime move_base nav_msgs robot_state_publisher rospy rplidar_ros sensor_msgs std_msgs teleop_twist_keyboard um7 usafabot usafabot_description usafabot_gazebo usb_cam
 #  DEPENDS system_lib
 )
 
