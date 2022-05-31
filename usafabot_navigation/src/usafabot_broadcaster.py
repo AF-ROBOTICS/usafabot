@@ -56,20 +56,27 @@ class broadcaster:
     def callback_odom(self, event):
     
         curr_time = rospy.Time.now()
+
+        v_th = 6.7*(self.v_r - self.v_l) 
+
+        dt = (curr_time - self.last_time).to_sec()
+
+        # TODO: try putting back in and using 
+        delta_th = v_th * dt
+        self.th += delta_th
+
     
         v_x = .5*(self.v_l + self.v_r)*cos(self.th) # m/s
         v_y = .5*(self.v_l + self.v_r)*sin(self.th) # m/s
 
-        v_th = 6.7*(self.v_r - self.v_l) 
+        print("v_x: ", v_x)
+        print("v_y: ", v_y)
+
         
-        dt = (curr_time - self.last_time).to_sec()
         
         delta_x = (v_x*cos(self.th) - v_y*sin(self.th)) * dt
         delta_y = (v_x*sin(self.th) + v_y*cos(self.th)) * dt
         
-        # TODO: try putting back in and using 
-        delta_th = v_th * dt
-        self.th += delta_th
         
         self.x += delta_x
         self.y += delta_y
